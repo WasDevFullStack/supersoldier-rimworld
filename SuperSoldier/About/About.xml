@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Super Soldier</name>
+  <packageId>SuperSoldier.RimWorld</packageId>
+  <author>Washington Oliveira</author>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+  <description>V1.0
+    This mod adds a super soldier, a super human that can beat every human or thing.
+  </description>
+</ModMetaData>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TraitDef>
+		<defName>SuperNaturalMood</defName>
+		<commonality>0</commonality>
+		<degreeDatas>
+		  <li>
+			<label>Tranquilo</label>
+			<description>[PAWN_nameDef] não se abala por nada e nem ninguém</description>
+			<degree>1</degree>
+		  </li>
+		</degreeDatas>
+	</TraitDef>
+	
+	<ThoughtDef>
+		<defName>SuperNaturalMood</defName>
+		<workerClass>ThoughtWorker_AlwaysActive</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<requiredTraits>
+		  <li>SuperNaturalMood</li>
+		</requiredTraits>
+		<requiredTraitsDegree>1</requiredTraitsDegree>
+		<stages>
+		  <li>
+			<label>Tranquilo</label>
+			<description>Natural bonus from 'sanguine' trait.</description>
+			<baseMoodEffect>200</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+	
+	
+	<TraitDef>
+		<defName>MenteInabalavel</defName>
+        <commonality>0</commonality>
+		<degreeDatas>
+			<li>
+				<label>Mente inabalável</label>
+				<description>[PAWN_nameDef] tem uma mente extremamente forte, que não se abala por nada.</description>
+				<degree>1</degree>
+				<disallowedMentalStates>
+                    <li>Binging_DrugExtreme</li>
+                    <li>Binging_DrugMajor</li>
+					<li>Binging_Food</li>
+					<li>Wander_Psychotic</li>
+					<li>Berserk</li>
+					<li>WanderConfused</li>
+					<li>FireStartingSpree</li>
+					<li>Jailbreaker</li>
+					<li>Slaughterer</li>
+					<li>MurderousRage</li>
+					<li>GiveUpExit</li>
+					<li>Tantrum</li>
+					<li>CorpseObsession</li>
+					<li>Wander_Sad</li>
+					<li>Wander_OwnRoom</li>
+					<li>InsultingSpree</li>
+					<li>TargetedInsultingSpree</li>
+                </disallowedMentalStates>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
+	<ThoughtDef>
+		<defName>MenteInabalavel</defName>
+		<workerClass>ThoughtWorker_AlwaysActive</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<requiredTraits>
+		  <li>MenteInabalavel</li>
+		</requiredTraits>
+		<requiredTraitsDegree>1</requiredTraitsDegree>
+		<stages>
+		  <li>
+			<label>Mente inabalável</label>
+			<description>Tem uma mente extremamente forte, que não se abala por nada.</description>
+			<baseMoodEffect>200</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+	
+	
+    <TraitDef>
+        <defName>Overpower</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>overpower</label>
+                <description>{PAWN_nameDef} É abençoado pelo próprio divino deste universo.</description>
+				<marketValueFactorOffset>1</marketValueFactorOffset>
+                <disallowedMentalStates>
+                    <li>Binging_DrugExtreme</li>
+                    <li>Binging_DrugMajor</li>
+					<li>Binging_Food</li>
+                </disallowedMentalStates>
+                <statOffsets>
+					<MaxHitPoints>9999</MaxHitPoints>
+					<MeleeDPS>9999</MeleeDPS>
+					<TradePriceImprovement>10</TradePriceImprovement>
+					<ComfyTemperatureMin>-500</ComfyTemperatureMin>
+					<ComfyTemperatureMax>500</ComfyTemperatureMax>
+					<ResearchSpeedFactor>1000</ResearchSpeedFactor>
+					<MedicalTendQualityOffset>1000</MedicalTendQualityOffset>
+				    <ImmunityGainSpeedFactor>1000</ImmunityGainSpeedFactor>
+				    <SurgerySuccessChanceFactor>1000</SurgerySuccessChanceFactor>
+					<WorkTableWorkSpeedFactor>1000</WorkTableWorkSpeedFactor>
+					<Flammability>-1</Flammability>	
+					<PainShockThreshold>1</PainShockThreshold>
+					<ConstructionSpeedFactor>1000</ConstructionSpeedFactor>
+					<SharpDamageMultiplier>100</SharpDamageMultiplier>
+					<BluntDamageMultiplier>100</BluntDamageMultiplier>
+					<RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+					<ToxicResistance>1</ToxicResistance>
+					<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+					<CaravanRidingSpeedFactor>1000</CaravanRidingSpeedFactor>
+					<InjuryHealingFactor>1000</InjuryHealingFactor>
+					<MeleeWeapon_DamageMultiplier>100</MeleeWeapon_DamageMultiplier>
+					<MeleeWeapon_CooldownMultiplier>-100</MeleeWeapon_CooldownMultiplier>
+					<HuntingStealth>1000</HuntingStealth>
+					<!--<MaxNutrition>1000</MaxNutrition>-->
+					<ButcheryFleshSpeed>1000</ButcheryFleshSpeed>
+					<CleaningSpeed>1000</CleaningSpeed>
+					<ConstructionSpeed>1000</ConstructionSpeed>
+					<MeleeWeapon_AverageDPS>1000</MeleeWeapon_AverageDPS>
+					<MeleeWeapon_AverageArmorPenetration>1000</MeleeWeapon_AverageArmorPenetration>
+					<MeleeDPS>1000</MeleeDPS>
+					<FilthRate>-1000</FilthRate>
+					<MeleeArmorPenetration>1000</MeleeArmorPenetration>
+					<TameAnimalChance>1000</TameAnimalChance>
+					<SocialImpact>1000</SocialImpact>
+					<LifespanFactor>1000</LifespanFactor>
+					<PlantWorkSpeed>1000</PlantWorkSpeed>
+					<WorkTableEfficiencyFactor>1000</WorkTableEfficiencyFactor>
+					<FixBrokenDownBuildingSuccessChance>1000</FixBrokenDownBuildingSuccessChance>
+					<PlantHarvestYield>1000</PlantHarvestYield>
+					<!--<StatWorker_MeleeAverageDPS>1</StatWorker_MeleeAverageDPS>-->
+					<!--<StatWorker_MeleeDPS>1</StatWorker_MeleeDPS>-->
+					<MiningYield>1000</MiningYield>
+					<MiningSpeed>1000</MiningSpeed>
+					<EatingSpeed>1000</EatingSpeed>
+					<MedicalOperationSpeed>1000</MedicalOperationSpeed>
+					<NegotiationAbility>1000</NegotiationAbility>
+					
+					
+					<CarryingCapacity>1000</CarryingCapacity>
+                    <GlobalLearningFactor>9999999</GlobalLearningFactor>
+                    <MentalBreakThreshold>-10</MentalBreakThreshold>
+                    <MeleeHitChance>1000</MeleeHitChance>
+                    <MeleeDodgeChance>1000</MeleeDodgeChance>
+                    <MoveSpeed>1000</MoveSpeed>
+                    <WorkSpeedGlobal>10</WorkSpeedGlobal>
+                    <PsychicSensitivity>-10</PsychicSensitivity>
+                    <AimingDelayFactor>-10</AimingDelayFactor>
+                    <ShootingAccuracyPawn>1000</ShootingAccuracyPawn>
+                    <PawnBeauty>1000</PawnBeauty>
+                    <ImmunityGainSpeed>1000</ImmunityGainSpeed>
+					<RestRateMultiplier>1000</RestRateMultiplier>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>-10</IncomingDamageFactor>
+					<PawnTrapSpringChance>10</PawnTrapSpringChance>
+                </statFactors>
+				
+				
+                <skillGains>
+					<Melee>99</Melee>
+					<Shooting>99</Shooting>
+                    <Animals>99</Animals>
+					<Artistic>99</Artistic>
+					<Construction>99</Construction>
+					<Cooking>99</Cooking>
+					<Crafting>99</Crafting>
+                    <Mining>99</Mining>
+                    <Medicine>99</Medicine>
+                    <Intellectual>99</Intellectual>
+                    <Plants>99</Plants>
+                    <Social>99</Social>
+                </skillGains>
+				
+            </li>
+        </degreeDatas>
+    </TraitDef>
+</Defs>

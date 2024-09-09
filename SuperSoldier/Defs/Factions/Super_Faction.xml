@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    
+    <FactionDef ParentName="FactionBase" Abstract="True" Name="PlayerFactionBase">
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+        <colorSpectrum>
+        <li>(0, 0.737, 0.847)</li>
+        </colorSpectrum>
+        <!-- NOTE: Player factions lack a xenotype set. Player pawns have their xenotypes set by the player/scenario. -->
+    </FactionDef>
+  
+    <FactionDef ParentName="PlayerFactionBase">
+        <defName>SuperPlayerColony</defName>
+        <label>Os brabu</label>
+        <description>A colony of recently-arrived off-worlders.</description>
+        <isPlayer>true</isPlayer>
+        <basicMemberKind>SuperColonist</basicMemberKind>
+        <pawnSingular>colonist</pawnSingular>
+        <pawnsPlural>colonists</pawnsPlural>
+        <techLevel>Industrial</techLevel>
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <allowedCultures><li>Astropolitan</li></allowedCultures>
+        <backstoryFilters>
+        <li>
+            <categories>
+            <li>Offworld</li>
+            </categories>
+        </li>
+        </backstoryFilters>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+        <startingResearchTags>
+        <li>ClassicStart</li>
+        </startingResearchTags>
+        <startingTechprintsResearchTags>
+        <li>ClassicStart</li>
+        <li>ClassicStartTechprints</li>
+        </startingTechprintsResearchTags>
+        <apparelStuffFilter>
+        <thingDefs>
+            <li>Synthread</li>
+        </thingDefs>
+        </apparelStuffFilter>
+    </FactionDef>
+
+</Defs>

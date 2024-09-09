@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MeleeWeapon_SuperKnife</defName>
+    <label>super knife</label>
+    <techLevel>Spacer</techLevel>
+    <description>One of mankind's oldest manufactured objects. The knife has taken many forms, but the concept has always remained the same: A handle for holding and a sharp edge for cutting.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Knife</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.6</uiIconScale>
+    <weaponTags>
+      <li>MedievalMeleeBasic</li>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <costStuffCount>30</costStuffCount>
+    <statBases>
+      <WorkToMake>9999999</WorkToMake>
+      <Mass>0</Mass>
+	  <MaxHitPoints>9999999</MaxHitPoints>
+	  <Flammability>0</Flammability>
+	  <ArmorRating_Sharp>999</ArmorRating_Sharp>
+      <ArmorRating_Blunt>999</ArmorRating_Blunt>
+      <ArmorRating_Heat>999</ArmorRating_Heat>
+      <Insulation_Cold>100</Insulation_Cold>
+      <Insulation_Heat>100</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+	  <Beauty>20</Beauty>
+	  <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+
+    <costList>
+      <Plasteel>9999</Plasteel>
+      <ComponentSpacer>9999</ComponentSpacer>
+    </costList>
+
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>999</power>
+        <cooldownTime>0.1</cooldownTime>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>999</power>
+        <cooldownTime>0.1</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>999</power>
+        <cooldownTime>0.1</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <displayPriority>310</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>
