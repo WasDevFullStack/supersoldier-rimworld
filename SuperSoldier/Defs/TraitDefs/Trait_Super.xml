@@ -141,9 +141,15 @@
 					<EatingSpeed>1000</EatingSpeed>
 					<MedicalOperationSpeed>1000</MedicalOperationSpeed>
 					<NegotiationAbility>1000</NegotiationAbility>
-					
-					
+					<MortarMissRadiusFactor>-10</MortarMissRadiusFactor>
+					<StaggerDurationFactor>-10</StaggerDurationFactor>
 					<CarryingCapacity>1000</CarryingCapacity>
+					<RangedCooldownFactor>-10</RangedCooldownFactor>
+					<MeleeCooldownFactor>-10</MeleeCooldownFactor>
+					<ShootingAccuracyFactor_Touch>10</ShootingAccuracyFactor_Touch>
+					<ShootingAccuracyFactor_Short>10</ShootingAccuracyFactor_Short>
+					<ShootingAccuracyFactor_Medium>10</ShootingAccuracyFactor_Medium>
+					<ShootingAccuracyFactor_Long>10</ShootingAccuracyFactor_Long>
                     <GlobalLearningFactor>9999999</GlobalLearningFactor>
                     <MentalBreakThreshold>-10</MentalBreakThreshold>
                     <MeleeHitChance>1000</MeleeHitChance>
