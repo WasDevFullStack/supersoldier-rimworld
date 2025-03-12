@@ -106,11 +106,12 @@
 				    <SurgerySuccessChanceFactor>1000</SurgerySuccessChanceFactor>
 					<WorkTableWorkSpeedFactor>1000</WorkTableWorkSpeedFactor>
 					<Flammability>-1</Flammability>	
+					<FoodPoisonChance>-100</FoodPoisonChance>
 					<PainShockThreshold>1</PainShockThreshold>
 					<ConstructionSpeedFactor>1000</ConstructionSpeedFactor>
 					<SharpDamageMultiplier>100</SharpDamageMultiplier>
 					<BluntDamageMultiplier>100</BluntDamageMultiplier>
-					<RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+					<RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
 					<ToxicResistance>1</ToxicResistance>
 					<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 					<CaravanRidingSpeedFactor>1000</CaravanRidingSpeedFactor>
@@ -118,6 +119,8 @@
 					<MeleeWeapon_DamageMultiplier>100</MeleeWeapon_DamageMultiplier>
 					<MeleeWeapon_CooldownMultiplier>-100</MeleeWeapon_CooldownMultiplier>
 					<HuntingStealth>1000</HuntingStealth>
+					<ReadingSpeed>100</ReadingSpeed>
+					<MedicalSurgerySuccessChance>100</MedicalSurgerySuccessChance>
 					<!--<MaxNutrition>1000</MaxNutrition>-->
 					<ButcheryFleshSpeed>1000</ButcheryFleshSpeed>
 					<CleaningSpeed>1000</CleaningSpeed>
@@ -127,7 +130,11 @@
 					<MeleeDPS>1000</MeleeDPS>
 					<FilthRate>-1000</FilthRate>
 					<MeleeArmorPenetration>1000</MeleeArmorPenetration>
+					<AnimalGatherSpeed>1000</AnimalGatherSpeed>
+					<AnimalGatherYield>10</AnimalGatherYield>
 					<TameAnimalChance>1000</TameAnimalChance>
+					<TrainAnimalChance>1000</TrainAnimalChance>
+					<BondAnimalChanceFactor>1000</BondAnimalChanceFactor>
 					<SocialImpact>1000</SocialImpact>
 					<LifespanFactor>1000</LifespanFactor>
 					<PlantWorkSpeed>1000</PlantWorkSpeed>
@@ -155,6 +162,7 @@
                     <MeleeHitChance>1000</MeleeHitChance>
                     <MeleeDodgeChance>1000</MeleeDodgeChance>
                     <MoveSpeed>1000</MoveSpeed>
+					<ArrestSuccessChance>1000</ArrestSuccessChance>
                     <WorkSpeedGlobal>10</WorkSpeedGlobal>
                     <PsychicSensitivity>-10</PsychicSensitivity>
                     <AimingDelayFactor>-10</AimingDelayFactor>
