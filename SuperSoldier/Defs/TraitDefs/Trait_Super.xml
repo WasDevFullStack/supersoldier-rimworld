@@ -165,11 +165,11 @@
 					<ArrestSuccessChance>1000</ArrestSuccessChance>
                     <WorkSpeedGlobal>10</WorkSpeedGlobal>
                     <PsychicSensitivity>-10</PsychicSensitivity>
-                    <AimingDelayFactor>-10</AimingDelayFactor>
+                    <AimingDelayFactor>-1000</AimingDelayFactor>
                     <ShootingAccuracyPawn>1000</ShootingAccuracyPawn>
                     <PawnBeauty>1000</PawnBeauty>
                     <ImmunityGainSpeed>1000</ImmunityGainSpeed>
-					<RestRateMultiplier>1000</RestRateMultiplier>
+					<!--<RestRateMultiplier>1</RestRateMultiplier>-->
                 </statOffsets>
                 <statFactors>
                     <IncomingDamageFactor>-10</IncomingDamageFactor>

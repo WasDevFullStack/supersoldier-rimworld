@@ -25,7 +25,7 @@
       <IncomingDamageFactor>-10</IncomingDamageFactor>
       <PawnBeauty>1000</PawnBeauty>
       <ImmunityGainSpeed>1000</ImmunityGainSpeed>
-      <RestRateMultiplier>1000</RestRateMultiplier>
+      <RestRateMultiplier>1</RestRateMultiplier>
       <AimingDelayFactor>-10</AimingDelayFactor>
       <ShootingAccuracyPawn>1000</ShootingAccuracyPawn>
       <CarryingCapacity>10000</CarryingCapacity>
@@ -35,7 +35,7 @@
       <MeleeDodgeChance>1000</MeleeDodgeChance>
       <MiningYield>1000</MiningYield>
       <MiningSpeed>1000</MiningSpeed>
-      <EatingSpeed>1000</EatingSpeed>
+      <!--<EatingSpeed>1000</EatingSpeed>-->
       <MedicalOperationSpeed>1000</MedicalOperationSpeed>
       <PlantWorkSpeed>1000</PlantWorkSpeed>
       <WorkTableEfficiencyFactor>1000</WorkTableEfficiencyFactor>
@@ -96,6 +96,7 @@
       <AccuracyShort>1000</AccuracyShort>
       <AccuracyMedium>1000</AccuracyMedium>
       <AccuracyLong>1000</AccuracyLong>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">10</VacuumResistance>
     </statBases>
 	
     <tools>
