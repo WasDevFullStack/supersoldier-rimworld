@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    
-    <FactionDef ParentName="FactionBase" Abstract="True" Name="PlayerFactionBase">
-        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
-        <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
-        <colorSpectrum>
-        <li>(0, 0.737, 0.847)</li>
-        </colorSpectrum>
-        <!-- NOTE: Player factions lack a xenotype set. Player pawns have their xenotypes set by the player/scenario. -->
-    </FactionDef>
-  
     <FactionDef ParentName="PlayerFactionBase">
         <defName>SuperPlayerColony</defName>
-        <label>Os brabu</label>
-        <description>A colony of recently-arrived off-worlders.</description>
+        <label>People of the Void</label>
+        <description>A colony of humans created by the consciousnesses of the higher dimensions. No one knows the reason they are in this universe, except for them and their creators.</description>
         <isPlayer>true</isPlayer>
         <basicMemberKind>SuperColonist</basicMemberKind>
         <pawnSingular>colonist</pawnSingular>
@@ -43,5 +33,4 @@
         </thingDefs>
         </apparelStuffFilter>
     </FactionDef>
-
 </Defs>

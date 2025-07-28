@@ -4,8 +4,8 @@
 
 	<ThingDef Name="SuperHuman" ParentName="BasePawn">
     <defName>Super_Human</defName>
-    <label>Super human</label>
-    <description>A super human.</description>
+    <label>Being of the void</label>
+    <description>A human created by the consciousnesses of the higher dimensions. No one knows the reason they are in this universe, except for them and their creators.</description>
 	
     <statBases>
       <MarketValue>10000</MarketValue>

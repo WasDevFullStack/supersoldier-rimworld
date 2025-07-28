@@ -1,183 +1,141 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-    <ScenarioDef Name="Crashlanded">
-    <defName>Crashlanded</defName>
-    <label>Crashlanded</label>
-    <description>The three of you awake in your cryptosleep sarcophagi to the sound of sirens and ripping metal. You barely get to the escape pods before the ship is torn apart. Some time later, you land on this unknown rimworld.</description>
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>SuperHumanStory</defName>
+    <label>The being of the void</label>
+    <description>A being created by the consciousnesses of the higher dimensions. No one knows the reason they are in this universe, except for them and their creators.</description>
     <scenario>
-      <summary>Three crashlanded survivors - the classic RimWorld experience.</summary>
+      <summary>The being from the void—no one knows its purpose in this universe.</summary>
       <playerFaction>
-        <def>PlayerFaction</def>
         <factionDef>SuperPlayerColony</factionDef>
       </playerFaction>
-      <parts>
+      <parts Inherit="False">
 
-        <!-- Config pages -->
-        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
-          <def>ConfigPage_ConfigureStartingPawns</def>
-          <pawnCount>3</pawnCount>
-          <pawnChoiceCount>8</pawnChoiceCount>
-        </li>
-
-        <!-- Player starting stuff spawn method-->
-        <li Class="ScenPart_PlayerPawnsArriveMethod">
-          <def>PlayerPawnsArriveMethod</def>
-          <method>DropPods</method>
-          <visible>false</visible>
-        </li>
-
-        <!-- Player pawns modifiers -->
-        <li Class="ScenPart_ForcedHediff">
-          <def>ForcedHediff</def>
-          <visible>false</visible>
-          <context>PlayerStarter</context>
-          <chance>0.5</chance>
-          <hediff>CryptosleepSickness</hediff>
-          <hideOffMap>true</hideOffMap>
-          <severityRange>1~1</severityRange>
-        </li>
-        
-        <!-- Player starting things -->
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>Silver</thingDef>
-          <count>800</count>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>MealSurvivalPack</thingDef>
-          <count>50</count>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>MedicineIndustrial</thingDef>
-          <count>30</count>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>ComponentIndustrial</thingDef>
-          <count>30</count>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>Gun_BoltActionRifle</thingDef>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>Gun_Revolver</thingDef>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>MeleeWeapon_Knife</thingDef>
-          <stuff>Plasteel</stuff>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>Apparel_FlakPants</thingDef>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>Apparel_FlakVest</thingDef>
-        </li>
-        <li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>Apparel_AdvancedHelmet</thingDef>
-          <stuff>Plasteel</stuff>
-        </li>
-        <li Class="ScenPart_StartingAnimal">
-          <def>StartingAnimal</def>
-          <count>1</count>
-          <bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
-        </li>
-
-        <!-- Scatter some things near player start -->
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
-          <thingDef>Steel</thingDef>
-          <count>450</count>
-        </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
-          <thingDef>WoodLog</thingDef>
-          <count>300</count>
-        </li>      
-
-        <!-- Scatter some things anywhere -->
-        <li Class="ScenPart_ScatterThingsAnywhere">
-          <def>ScatterThingsAnywhere</def>
-          <thingDef>ShipChunk</thingDef>
-          <allowRoofed>false</allowRoofed>
-          <count>3</count>
-        </li>
-        <li Class="ScenPart_ScatterThingsAnywhere">
-          <def>ScatterThingsAnywhere</def>
-          <thingDef>Steel</thingDef>
-          <count>720</count>
-        </li>
-        <li Class="ScenPart_ScatterThingsAnywhere">
-          <def>ScatterThingsAnywhere</def>
-          <thingDef>MealSurvivalPack</thingDef>
-          <count>7</count>
+        <!-- Layers -->
+        <li Class="ScenPart_PlanetLayer">
+          <def>PlanetLayerFixed</def>
+          <tag>Orbit</tag>
+          <layer>Orbit</layer>
+          <settingsDef>Orbit</settingsDef>
+          <hide>true</hide>
+          <connections>
+            <Surface>
+              <zoomMode>ZoomIn</zoomMode>
+            </Surface>
+          </connections>
         </li>
         
         <!-- Game start dialog -->
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
-          <textKey>GameStartDialog</textKey>
+          <text>The being from the void—no one knows its purpose in this universe.</text>
           <closeSound>GameStartSting</closeSound>
         </li>
-        
+
+        <!-- Config pages: 7 pawns -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>6</pawnCount>
+          <pawnChoiceCount>14</pawnChoiceCount>
+        </li>
+
+        <li Class="ScenPart_ForcedMap">
+          <def>ForcedMap</def>
+          <mapGenerator>OrbitalRelay</mapGenerator>
+          <layerDef>Orbit</layerDef>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Gravship</method>
+        </li>
+
+        <li Class="ScenPart_PursuingMechanoids">
+          <def>PursuingMechanoids</def>
+        </li>
+
+        <li Class="ScenPart_DisableQuest">
+          <def>DisableQuest</def>
+          <questDef>MechanoidSignal</questDef>
+        </li>
+
+        <!-- Starting research -->
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>BasicGravtech</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>BiofuelRefining</project>
+        </li>
+
+        <!-- Player starting things -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Chemfuel</thingDef>
+          <count>10000</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WoodLog</thingDef>
+          <count>1250</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>500</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>500</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>240</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Gun_Autopistol</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Gun_MachinePistol</thingDef>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MeleeWeapon_BreachAxe</thingDef>
+          <stuff>Steel</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>1350</count>
+        </li>
+
+        <!-- Scatter some things near player start -->
+        <li Class="ScenPart_ScatterThingsAnywhere">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Silver</thingDef>
+          <count>1300</count>
+          <allowRoofed>false</allowRoofed>
+        </li>
+        <li Class="ScenPart_ScatterThingsAnywhere">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Steel</thingDef>
+          <count>1500</count>
+          <allowRoofed>false</allowRoofed>
+        </li>
+        <li Class="ScenPart_ScatterThingsAnywhere">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>GravlitePanel</thingDef>
+          <count>1600</count>
+          <allowRoofed>false</allowRoofed>
+        </li>
+
       </parts>
     </scenario>
   </ScenarioDef>
-
-
-    <ScenarioDef>
-        <defName>SuperHumanStory</defName>
-        <label>The super human</label>
-        <description>A being created by God, to bring peace in the world.</description>
-        <scenario>
-        <summary>Naked, alone, and utterly lonely. He came to defeat all the evil in the world.</summary>
-        <playerFaction>
-            <def>PlayerFaction</def>
-            <factionDef>SuperPlayerColony</factionDef>
-        </playerFaction>
-        <parts>
-
-            <!-- Config pages -->
-            <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
-            <def>ConfigPage_ConfigureStartingPawns</def>
-            <pawnCount>1</pawnCount>
-            <pawnChoiceCount>8</pawnChoiceCount>
-            </li>
-
-            <!-- Player starting stuff spawn method-->
-            <li Class="ScenPart_PlayerPawnsArriveMethod">
-            <def>PlayerPawnsArriveMethod</def>
-            <visible>false</visible>
-            <method>DropPods</method>
-            </li>
-
-            <!-- Player starting stuff spawn method-->
-            <li Class="ScenPart_Naked">
-            <def>Naked</def>
-            <context>PlayerStarter</context>
-            </li>
-
-            <!-- Player pawns start with no possessions eg. extra drugs. -->
-            <li Class="ScenPart_NoPossessions">
-            <def>NoPossessions</def>
-            </li>
-
-            <!-- Game start dialog -->
-            <li Class="ScenPart_GameStartDialog">
-            <def>GameStartDialog</def>
-            <text>Naked, alone, and utterly lonely. He came to defeat all the evil in the world.</text>
-            <closeSound>GameStartSting</closeSound>
-            </li>
-
-        </parts>
-        </scenario>
-    </ScenarioDef>
 </Defs>

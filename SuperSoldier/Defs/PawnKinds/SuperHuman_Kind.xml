@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <PawnKindDef Abstract="True" Name="SuperHumanPawnKind">
+    <PawnKindDef ParentName="BasePlayerPawnKind">
         <race>Super_Human</race>
+        <defName>SuperColonist</defName>
+        <label>Being of the void</label>
         <combatPower>999</combatPower>
         <isFighter>false</isFighter>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
@@ -10,12 +11,6 @@
         <forceNormalGearQuality>true</forceNormalGearQuality>
         <initialWillRange>0~0</initialWillRange>
         <humanPregnancyChance>0.06</humanPregnancyChance>
-    </PawnKindDef>
-
-
-    <PawnKindDef ParentName="SuperHumanPawnKind">
-        <defName>SuperColonist</defName>
-        <label>super colonist</label>
         <defaultFactionType>SuperPlayerColony</defaultFactionType>
         <chemicalAddictionChance>0.01</chemicalAddictionChance>
         <apparelTags>
@@ -36,6 +31,4 @@
         </techHediffsDisallowTags>
         <initialResistanceRange>200~300</initialResistanceRange>
     </PawnKindDef>
-
-
 </Defs>
