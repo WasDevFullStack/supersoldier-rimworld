@@ -14,7 +14,7 @@
         <defaultFactionType>SuperPlayerColony</defaultFactionType>
         <chemicalAddictionChance>0.01</chemicalAddictionChance>
         <apparelTags>
-        <li>IndustrialBasic</li>
+        <li>IndustrialBasic</li>    
         </apparelTags>
         <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
         <apparelMoney>350~600</apparelMoney>

@@ -36,6 +36,7 @@
       <MiningYield>1000</MiningYield>
       <MiningSpeed>1000</MiningSpeed>
       <!--<EatingSpeed>1000</EatingSpeed>-->
+      <!--<RestFallRateFactor>100</RestFallRateFactor>-->
       <MedicalOperationSpeed>1000</MedicalOperationSpeed>
       <PlantWorkSpeed>1000</PlantWorkSpeed>
       <WorkTableEfficiencyFactor>1000</WorkTableEfficiencyFactor>
@@ -97,6 +98,21 @@
       <AccuracyMedium>1000</AccuracyMedium>
       <AccuracyLong>1000</AccuracyLong>
       <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">10</VacuumResistance>
+      <PsychicRitualQualityOffset>100</PsychicRitualQualityOffset>
+      <EntityStudyRate>100</EntityStudyRate>
+      <MeditationFocusGain>100</MeditationFocusGain>
+      <PsychicEntropyRecoveryRate>100</PsychicEntropyRecoveryRate>
+      <MechBandwidth>100</MechBandwidth>
+      <MechControlGroups>6</MechControlGroups>
+      <WorkSpeedGlobalOffsetMech>100</WorkSpeedGlobalOffsetMech>
+      <MechRemoteRepairDistance>100</MechRemoteRepairDistance>
+      <MechFormingSpeed>100</MechFormingSpeed>
+      <MechRemoteShieldDistance>100</MechRemoteShieldDistance>
+      <MechRemoteShieldEnergy>100</MechRemoteShieldEnergy>
+      <MechRepairSpeed>100</MechRepairSpeed>
+      <LearningRateFactor>100</LearningRateFactor>
+      <HemogenGainFactor>100</HemogenGainFactor>
+      <PruningSpeed>100</PruningSpeed>
     </statBases>
 	
     <tools>
