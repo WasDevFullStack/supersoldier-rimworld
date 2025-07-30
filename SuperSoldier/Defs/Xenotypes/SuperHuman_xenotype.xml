@@ -6,27 +6,24 @@
   <descriptionShort>Um ser geneticamente modificado com habilidades sobre-humanas.</descriptionShort>
   <iconPath>Things/Pawn/SuperSer/Icon</iconPath>
   <genes>
-    <li>PerfectImmunity</li>
-    <li>DiseaseFree</li>
-    <li>TotalHealing</li>
-    <li>Deathrest</li>
-    <li>Ageless</li>
-    <li>Deathless</li>
-    <li>ArchiteMetabolism</li>
-    <li>VacuumResistance_Total</li>
-    <li>Unstoppable</li>
-    <li>WoundHealing_SuperFast</li>
-    <li>DarkVision</li>
-    <li>Superclotting</li>
-    <li>StrongStomach</li>
-    <li>RobustDigestion</li>
-    <li>KindInstinct</li>
-    <li>Instability_Major</li>
-    <li>Resurrect</li>
-    <li>XenogermReimplanter</li>
-    <li>LongjumpLegs</li>
-    <li>Coagulate</li>
-    <li>Beauty_Beautiful</li>
+    <li>SuperPerfectImmunity</li>
+    <li>SuperDiseaseFree</li>
+    <li>SuperTotalHealing</li>
+    <li>SuperAgeless</li>
+    <li>SuperDeathless</li>
+    <li>SuperArchiteMetabolism</li>
+    <li>SuperVacuumResistance_Total</li>
+    <li>SuperUnstoppable</li>
+    <li>SuperWoundHealing_SuperFast</li>
+    <li>SuperDarkVision</li>
+    <li>SuperSuperclotting</li>
+    <li>SuperStrongStomach</li>
+    <li>SuperRobustDigestion</li>
+    <li>SuperKindInstinct</li>
+    <li>SuperXenogermReimplanter</li>
+    <li>SuperLongjumpLegs</li>
+    <li>SuperCoagulate</li>
+    <li>SuperBeauty_Beautiful</li>
   </genes>
   <inheritable>true</inheritable>
 </XenotypeDef>

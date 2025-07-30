@@ -9,6 +9,7 @@
                 <SuperSer MayRequire="Ludeon.RimWorld.Biotech,Ludeon.RimWorld.Odyssey">999</SuperSer>
             </xenotypeChances>
         </xenotypeSet>
+        <useFactionXenotypes>false</useFactionXenotypes>
         <combatPower>999</combatPower>
         <isFighter>false</isFighter>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
