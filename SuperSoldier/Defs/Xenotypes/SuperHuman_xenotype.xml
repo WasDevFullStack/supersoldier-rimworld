@@ -1,0 +1,33 @@
+<Defs>
+<XenotypeDef MayRequire="Ludeon.RimWorld.Biotech,Ludeon.RimWorld.Odyssey">
+  <defName>SuperSer</defName>
+  <label>Super ser</label>
+  <description>Um ser geneticamente modificado com habilidades sobre-humanas.</description>
+  <descriptionShort>Um ser geneticamente modificado com habilidades sobre-humanas.</descriptionShort>
+  <iconPath>Things/Pawn/SuperSer/Icon</iconPath>
+  <genes>
+    <li>PerfectImmunity</li>
+    <li>DiseaseFree</li>
+    <li>TotalHealing</li>
+    <li>Deathrest</li>
+    <li>Ageless</li>
+    <li>Deathless</li>
+    <li>ArchiteMetabolism</li>
+    <li>VacuumResistance_Total</li>
+    <li>Unstoppable</li>
+    <li>WoundHealing_SuperFast</li>
+    <li>DarkVision</li>
+    <li>Superclotting</li>
+    <li>StrongStomach</li>
+    <li>RobustDigestion</li>
+    <li>KindInstinct</li>
+    <li>Instability_Major</li>
+    <li>Resurrect</li>
+    <li>XenogermReimplanter</li>
+    <li>LongjumpLegs</li>
+    <li>Coagulate</li>
+    <li>Beauty_Beautiful</li>
+  </genes>
+  <inheritable>true</inheritable>
+</XenotypeDef>
+</Defs>

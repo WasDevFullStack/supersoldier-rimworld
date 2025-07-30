@@ -4,6 +4,11 @@
         <race>Super_Human</race>
         <defName>SuperColonist</defName>
         <label>Being of the void</label>
+        <xenotypeSet>
+            <xenotypeChances>
+                <SuperSer MayRequire="Ludeon.RimWorld.Biotech,Ludeon.RimWorld.Odyssey">999</SuperSer>
+            </xenotypeChances>
+        </xenotypeSet>
         <combatPower>999</combatPower>
         <isFighter>false</isFighter>
         <apparelIgnoreSeasons>true</apparelIgnoreSeasons>

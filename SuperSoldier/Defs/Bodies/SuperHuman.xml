@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
 	<ThingDef Name="SuperHuman" ParentName="BasePawn">
     <defName>Super_Human</defName>
     <label>Being of the void</label>
     <description>A human created by the consciousnesses of the higher dimensions. No one knows the reason they are in this universe, except for them and their creators.</description>
-	
     <statBases>
       <MarketValue>10000</MarketValue>
       <MoveSpeed>10000</MoveSpeed>
@@ -98,22 +96,31 @@
       <AccuracyMedium>1000</AccuracyMedium>
       <AccuracyLong>1000</AccuracyLong>
       <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">10</VacuumResistance>
-      <PsychicRitualQualityOffset>100</PsychicRitualQualityOffset>
-      <EntityStudyRate>100</EntityStudyRate>
-      <MeditationFocusGain>100</MeditationFocusGain>
-      <PsychicEntropyRecoveryRate>100</PsychicEntropyRecoveryRate>
+      <PsychicRitualQualityOffset>1000</PsychicRitualQualityOffset>
+      <EntityStudyRate>1000</EntityStudyRate>
+      <MeditationFocusGain>1000</MeditationFocusGain>
+      <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
       <MechBandwidth>100</MechBandwidth>
       <MechControlGroups>6</MechControlGroups>
-      <WorkSpeedGlobalOffsetMech>100</WorkSpeedGlobalOffsetMech>
-      <MechRemoteRepairDistance>100</MechRemoteRepairDistance>
-      <MechFormingSpeed>100</MechFormingSpeed>
-      <MechRemoteShieldDistance>100</MechRemoteShieldDistance>
-      <MechRemoteShieldEnergy>100</MechRemoteShieldEnergy>
-      <MechRepairSpeed>100</MechRepairSpeed>
-      <LearningRateFactor>100</LearningRateFactor>
-      <HemogenGainFactor>100</HemogenGainFactor>
-      <PruningSpeed>100</PruningSpeed>
+      <WorkSpeedGlobalOffsetMech>1000</WorkSpeedGlobalOffsetMech>
+      <MechRemoteRepairDistance>1000</MechRemoteRepairDistance>
+      <MechFormingSpeed>1000</MechFormingSpeed>
+      <MechRemoteShieldDistance>1000</MechRemoteShieldDistance>
+      <MechRemoteShieldEnergy>1000</MechRemoteShieldEnergy>
+      <MechRepairSpeed>1000</MechRepairSpeed>
+      <LearningRateFactor>1000</LearningRateFactor>
+      <HemogenGainFactor>1000</HemogenGainFactor>
+      <PruningSpeed>1000</PruningSpeed>
+      <!---->
+      <StaggerDurationFactor>0</StaggerDurationFactor>
     </statBases>
+
+    <!--
+    <statFactors>
+      <AimingDelayFactor>-1000</AimingDelayFactor>
+      <ShootingAccuracyPawn>1000</ShootingAccuracyPawn>
+    </statFactors>
+    -->
 	
     <tools>
       <li>
