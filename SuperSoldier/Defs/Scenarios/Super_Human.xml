@@ -11,6 +11,19 @@
       </playerFaction>
       <parts Inherit="False">
 
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnCount>6</pawnCount>
+          <pawnChoiceCount>14</pawnChoiceCount>
+          <customSummary>Start with one adult or child sanguophage and one other colonist of any age.</customSummary>
+          <overrideKinds>
+            <li>
+              <xenotype>SuperSer</xenotype>
+              <pawnKind>SuperColonist</pawnKind>
+            </li>
+          </overrideKinds>
+        </li>
+
         <!-- Layers -->
         <li Class="ScenPart_PlanetLayer">
           <def>PlanetLayerFixed</def>
@@ -33,11 +46,13 @@
         </li>
 
         <!-- Config pages: 7 pawns -->
+        <!--
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>6</pawnCount>
           <pawnChoiceCount>14</pawnChoiceCount>
         </li>
+        -->
 
         <li Class="ScenPart_ForcedMap">
           <def>ForcedMap</def>

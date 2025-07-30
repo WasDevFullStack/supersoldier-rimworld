@@ -32,5 +32,14 @@
             <li>Synthread</li>
         </thingDefs>
         </apparelStuffFilter>
+
+
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <SuperSer MayRequire="Ludeon.RimWorld.Biotech,Ludeon.RimWorld.Odyssey">999</SuperSer>
+            </xenotypeChances>
+        </xenotypeSet>
+
+
     </FactionDef>
 </Defs>
