@@ -72,7 +72,7 @@
     <biologicalAgeTickFactorFromAgeCurve>
       <points>
         <li>(13, 1)</li>
-        <li>(18.5, 0)</li>
+        <li>(20, 0)</li>
       </points>
     </biologicalAgeTickFactorFromAgeCurve>
     <biostatCpx>0</biostatCpx>
