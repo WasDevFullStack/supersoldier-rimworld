@@ -19,7 +19,7 @@
       <ToxicResistance>100</ToxicResistance>
       <ArmorRating_Blunt>100</ArmorRating_Blunt>
       <ArmorRating_Sharp>100</ArmorRating_Sharp>
-      <PsychicSensitivity>100</PsychicSensitivity>
+      <PsychicSensitivity>10</PsychicSensitivity>
       <!--Aumenta a resistência psíquica mas também não consegue utilizar habilidade psiquicas-->
       <!--<PsychicSensitivity>100</PsychicSensitivity>-->
       <IncomingDamageFactor>-10</IncomingDamageFactor>
