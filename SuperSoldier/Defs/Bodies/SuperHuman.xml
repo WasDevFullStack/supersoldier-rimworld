@@ -128,7 +128,7 @@
       <PsychicRitualQuality>1000</PsychicRitualQuality>
       <PsychicRitualQualityOffset>1000</PsychicRitualQualityOffset>
       <!--Odssey-->
-      <PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">1000</PilotingAbility>
+      <PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">10</PilotingAbility>
       <FishingYield MayRequire="Ludeon.RimWorld.Odyssey">1000</FishingYield>
       <FishingSpeed MayRequire="Ludeon.RimWorld.Odyssey">1000</FishingSpeed>
       <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">10</VacuumResistance>
