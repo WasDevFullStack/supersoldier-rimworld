@@ -19,7 +19,9 @@
       <ToxicResistance>100</ToxicResistance>
       <ArmorRating_Blunt>100</ArmorRating_Blunt>
       <ArmorRating_Sharp>100</ArmorRating_Sharp>
-      <PsychicSensitivity>-100</PsychicSensitivity>
+      <PsychicSensitivity>100</PsychicSensitivity>
+      <!--Aumenta a resistência psíquica mas também não consegue utilizar habilidade psiquicas-->
+      <!--<PsychicSensitivity>100</PsychicSensitivity>-->
       <IncomingDamageFactor>-10</IncomingDamageFactor>
       <PawnBeauty>1000</PawnBeauty>
       <ImmunityGainSpeed>1000</ImmunityGainSpeed>
@@ -95,24 +97,43 @@
       <AccuracyShort>1000</AccuracyShort>
       <AccuracyMedium>1000</AccuracyMedium>
       <AccuracyLong>1000</AccuracyLong>
-      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">10</VacuumResistance>
       <PsychicRitualQualityOffset>1000</PsychicRitualQualityOffset>
       <EntityStudyRate>1000</EntityStudyRate>
       <MeditationFocusGain>1000</MeditationFocusGain>
       <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
+      <LearningRateFactor>1000</LearningRateFactor>
+      <HemogenGainFactor>1000</HemogenGainFactor>
+      <PruningSpeed>1000</PruningSpeed>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <CaravanBonusSpeedFactor>1000</CaravanBonusSpeedFactor>
+      <HackingSpeed>1000</HackingSpeed>
+      <ReadingSpeed>1000</ReadingSpeed>
+      <!--Ideology-->
+      <ConversionPower>100</ConversionPower>
+      <!--Biotech-->
+      <WorkSpeedGlobalOffsetMech>1000</WorkSpeedGlobalOffsetMech>
+      <ShootingAccuracyChildFactor>1000</ShootingAccuracyChildFactor>
       <MechBandwidth>100</MechBandwidth>
       <MechControlGroups>6</MechControlGroups>
-      <WorkSpeedGlobalOffsetMech>1000</WorkSpeedGlobalOffsetMech>
       <MechRemoteRepairDistance>1000</MechRemoteRepairDistance>
       <MechFormingSpeed>1000</MechFormingSpeed>
       <MechRemoteShieldDistance>1000</MechRemoteShieldDistance>
       <MechRemoteShieldEnergy>1000</MechRemoteShieldEnergy>
       <MechRepairSpeed>1000</MechRepairSpeed>
-      <LearningRateFactor>1000</LearningRateFactor>
-      <HemogenGainFactor>1000</HemogenGainFactor>
-      <PruningSpeed>1000</PruningSpeed>
-      <!---->
-      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <SubcoreEncodingSpeed>1000</SubcoreEncodingSpeed>
+      <!--Anomaly-->
+      <StudyEfficiency>1000</StudyEfficiency>
+      <ActivitySuppressionRate>1000</ActivitySuppressionRate>
+      <EntityStudyRate>1000</EntityStudyRate>
+      <PsychicRitualQuality>1000</PsychicRitualQuality>
+      <PsychicRitualQualityOffset>1000</PsychicRitualQualityOffset>
+      <!--Odssey-->
+      <PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">1000</PilotingAbility>
+      <FishingYield MayRequire="Ludeon.RimWorld.Odyssey">1000</FishingYield>
+      <FishingSpeed MayRequire="Ludeon.RimWorld.Odyssey">1000</FishingSpeed>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">10</VacuumResistance>
+      
+      
     </statBases>
 
     <!--
