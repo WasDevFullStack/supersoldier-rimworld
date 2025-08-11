@@ -1,0 +1,12 @@
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Assemblies\Debug\netcoreapp3.1\MySuperStrengthMod.deps.json
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Assemblies\Debug\netcoreapp3.1\MySuperStrengthMod.dll
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Assemblies\Debug\netcoreapp3.1\MySuperStrengthMod.pdb
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperStrengthMod.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperStrengthMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperStrengthMod.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperStrengthMod.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperStrengthMod.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperStrengthMod.sourcelink.json
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperS.F2C74339.Up2Date
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperStrengthMod.dll
+C:\Users\User\Documents\GitHub\Was\supersoldier-rimworld\SuperSoldier\Source\MySuperStrengthMod\obj\Debug\netcoreapp3.1\MySuperStrengthMod.pdb
