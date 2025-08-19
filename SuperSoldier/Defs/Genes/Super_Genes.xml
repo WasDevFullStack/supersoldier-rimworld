@@ -396,6 +396,9 @@
             <li>
                 <def>Kind</def>
             </li>
+            <li>
+                <def>MenteInabalavel</def>
+            </li>
         </forcedTraits>
         <biostatMet>0</biostatMet>
         <symbolPack>
