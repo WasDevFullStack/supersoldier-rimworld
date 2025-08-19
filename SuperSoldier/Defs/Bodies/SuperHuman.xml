@@ -105,7 +105,7 @@
       <HemogenGainFactor>1000</HemogenGainFactor>
       <PruningSpeed>1000</PruningSpeed>
       <StaggerDurationFactor>0</StaggerDurationFactor>
-      <CaravanBonusSpeedFactor>1000</CaravanBonusSpeedFactor>
+      <CaravanBonusSpeedFactor>20</CaravanBonusSpeedFactor>
       <HackingSpeed>1000</HackingSpeed>
       <ReadingSpeed>1000</ReadingSpeed>
       <!--Ideology-->
