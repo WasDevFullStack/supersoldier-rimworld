@@ -105,7 +105,7 @@
       <HemogenGainFactor>1000</HemogenGainFactor>
       <PruningSpeed>1000</PruningSpeed>
       <StaggerDurationFactor>0</StaggerDurationFactor>
-      <CaravanBonusSpeedFactor>1000</CaravanBonusSpeedFactor>
+      <CaravanBonusSpeedFactor>20</CaravanBonusSpeedFactor>
       <HackingSpeed>1000</HackingSpeed>
       <ReadingSpeed>1000</ReadingSpeed>
       <!--Ideology-->
@@ -128,12 +128,13 @@
       <PsychicRitualQuality>1000</PsychicRitualQuality>
       <PsychicRitualQualityOffset>1000</PsychicRitualQualityOffset>
       <!--Odssey-->
-      <PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">10</PilotingAbility>
+      <PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">5</PilotingAbility>
       <FishingYield MayRequire="Ludeon.RimWorld.Odyssey">1000</FishingYield>
       <FishingSpeed MayRequire="Ludeon.RimWorld.Odyssey">1000</FishingSpeed>
       <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">10</VacuumResistance>
-      
-      
+      <!--Customizados do Mod Ini-->
+      <!--<CarryingCapacity>150</CarryingCapacity>-->
+      <!--Customizados do Mod End-->
     </statBases>
 
     <!--
@@ -349,6 +350,11 @@
         <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
         <requiresImprisonment>true</requiresImprisonment>
       </li>
+      <!--
+      <li Class="MySuperStrengthMod.CompProperties_SuperStrength">
+        <strengthLevel>3</strengthLevel>
+      </li>
+      -->
     </comps>
 
   </ThingDef>

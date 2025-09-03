@@ -1,435 +1,568 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<GeneDef>
-    <defName>SuperPerfectImmunity</defName>
-    <label>perfect immunity</label>
-    <labelShortAdj>perfect-immune</labelShortAdj>
-    <description>Carriers of this gene have archite-enhanced immune systems which intelligently destroy invaders. They are totally immune to most normal illnesses.</description>
-    <iconPath>UI/Icons/Genes/Gene_PerfectImmunity</iconPath>
-    <displayCategory>Archite</displayCategory>
-    <makeImmuneTo>
-      <li>Flu</li>
-      <li>Malaria</li>
-      <li>SleepingSickness</li>
-      <li>Plague</li>
-      <li>WoundInfection</li>
-      <li>LungRot</li>
-      <li>GutWorms</li>
-      <li>MuscleParasites</li>
-      <li>OrganDecay</li>
-    </makeImmuneTo>
-    <biostatCpx>0</biostatCpx>
-    <biostatArc>0</biostatArc>
-    <exclusionTags>
-      <li>Immunity</li>
-    </exclusionTags>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperDiseaseFree</defName>
-    <label>non-senescent</label>
-    <description>Carriers of this gene do not go through senescence in the normal way. They never get chronic age-related diseases like cancer, bad back, cataracts, or dementia.</description>
-    <iconPath>UI/Icons/Genes/Gene_NonSenescent</iconPath>
-    <displayCategory>Archite</displayCategory>
-    <hediffGiversCannotGive>
-      <li>Carcinoma</li>
-      <li>HeartAttack</li>
-      <li>BadBack</li>
-      <li>Frail</li>
-      <li>Cataract</li>
-      <li>Dementia</li>
-      <li>Alzheimers</li>
-      <li>Asthma</li>
-      <li>HeartArteryBlockage</li>
-    </hediffGiversCannotGive>
-    <biostatCpx>0</biostatCpx>
-    <biostatArc>0</biostatArc>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperTotalHealing</defName>
-    <label>scarless</label>
-    <labelShortAdj>scarless</labelShortAdj>
-    <description>Carriers of this gene have a special type of regenerator cell which can heal old wounds and chronic illnesses like bad back.</description>
-    <customEffectDescriptions>
-      <li>Every (*DateTime)15-30 days(/DateTime), one old wound or chronic illness is healed.</li>
-    </customEffectDescriptions>
-    <iconPath>UI/Icons/Genes/Gene_TotalHealing</iconPath>
-    <geneClass>Gene_Healing</geneClass>
-    <preventPermanentWounds>true</preventPermanentWounds>
-    <biostatCpx>0</biostatCpx>
-    <biostatArc>0</biostatArc>
-    <displayCategory>Archite</displayCategory>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperAgeless</defName>
-    <label>ageless</label>
-    <description>Carriers of this gene have archites in the bloodstream which continuously reverse the process of aging. Starting at the age of 13, carriers begin to biologically age slower. By 18, the aging process stops completely.</description>
-    <iconPath>UI/Icons/Genes/Gene_Ageless</iconPath>
-    <displayCategory>Archite</displayCategory>
-    <biologicalAgeTickFactorFromAgeCurve>
-      <points>
-        <li>(13, 1)</li>
-        <li>(20, 0)</li>
-      </points>
-    </biologicalAgeTickFactorFromAgeCurve>
-    <biostatCpx>0</biostatCpx>
-    <biostatArc>0</biostatArc>
-    <symbolPack>
-      <wholeNameSymbols>
-        <li><symbol>immortal</symbol></li>
-        <li><symbol>methuselah</symbol></li>
-      </wholeNameSymbols>
-      <prefixSymbols>
-        <li><symbol>god</symbol></li>
-        <li><symbol>deo</symbol></li>
-        <li><symbol>deu</symbol></li>
-        <li><symbol>methu</symbol></li>
-      </prefixSymbols>
-      <suffixSymbols>
-        <li><symbol>god</symbol></li>
-        <li><symbol>deus</symbol></li>
-      </suffixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperDeathless</defName>
-    <label>deathless</label>
-    <description>Carriers of this gene have archites in the blood which will sustain their life processes no matter what. As long as the brain remains intact, a carrier of this gene will never die.</description>
-    <geneClass>Gene_Deathless</geneClass>
-    <iconPath>UI/Icons/Genes/Gene_Deathless</iconPath>
-    <displayCategory>Archite</displayCategory>
-    <marketValueFactor>2</marketValueFactor>
-    <biostatCpx>0</biostatCpx>
-    <biostatArc>0</biostatArc>
-    <customEffectDescriptions>
-      <li>Can only die from destruction of brain.</li>
-    </customEffectDescriptions>
-    <symbolPack>
-      <wholeNameSymbols>
-        <li><symbol>immortal</symbol></li>
-      </wholeNameSymbols>
-      <prefixSymbols>
-        <li><symbol>god</symbol></li>
-        <li><symbol>deo</symbol></li>
-        <li><symbol>deu</symbol></li>
-      </prefixSymbols>
-      <suffixSymbols>
-        <li><symbol>god</symbol></li>
-        <li><symbol>deus</symbol></li>
-      </suffixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperArchiteMetabolism</defName>
-    <label>archite metabolism</label>
-    <labelShortAdj>archite-metabolic</labelShortAdj>
-    <description>Carriers of this gene have special archites in their cells that facilitate and optimize metabolism. This improves overall genetic and metabolic quality.</description>
-    <iconPath>UI/Icons/Genes/Gene_ArchiteMetabolism</iconPath>
-    <displayCategory>Archite</displayCategory>
-    <marketValueFactor>1.5</marketValueFactor>
-    <biostatCpx>0</biostatCpx>
-    <biostatMet>0</biostatMet>
-    <biostatArc>0</biostatArc>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperVacuumResistance_Total</defName>
-    <label>breathless</label>
-    <labelShortAdj>breathless</labelShortAdj>
-    <description>Carriers of this gene can store concentrated oxygen in their bodies. Their cells consume much less oxygen, meaning they rarely need to breathe. These adaptations make them immune to the harmful effects of space, as well as environmental toxins, tox gas, acidic smog, and rot stink.</description>
-    <iconPath>UI/Icons/Genes/Gene_Breathless</iconPath>
-    <displayOrderInCategory>30</displayOrderInCategory>
-    <immuneToToxGasExposure>true</immuneToToxGasExposure>
-    <immuneToVacuumBurns>true</immuneToVacuumBurns>
-    <displayCategory MayRequire="Ludeon.RimWorld.Biotech">Archite</displayCategory>
-    <exclusionTags>
-      <li>ToxicEnvironmentResistance</li>
-      <li>VacuumResistance</li>
-    </exclusionTags>
-    <customEffectDescriptions>
-      <li>Tox gas immunity</li>
-    </customEffectDescriptions>
-    <statOffsets>
-      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
-      <VacuumResistance>1</VacuumResistance>
-    </statOffsets>
-    <biostatCpx>0</biostatCpx>
-    <biostatArc>0</biostatArc>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperUnstoppable</defName>
-    <label>unstoppable</label>
-    <description>Carriers of this gene are not slowed down when taking damage.</description>
-    <iconPath>UI/Icons/Genes/Gene_Unstoppable</iconPath>
-    <displayCategory>Miscellaneous</displayCategory>
-    <displayOrderInCategory>550</displayOrderInCategory>
-    <biostatCpx>0</biostatCpx>
-    <biostatMet>0</biostatMet>
-    <statFactors>
-      <StaggerDurationFactor>0</StaggerDurationFactor>
-    </statFactors>
-  </GeneDef>
-
-  <GeneDef ParentName="GeneHealingRateBase">
-    <defName>SuperWoundHealing_SuperFast</defName>
-    <label>superfast wound healing</label>
-    <labelShortAdj>super-heal</labelShortAdj>
-    <description>Carriers of this gene heal from wounds four times as fast as normal.</description>
-    <iconPath>UI/Icons/Genes/Gene_WoundHealingRateSuperfast</iconPath>
-    <displayOrderInCategory>50</displayOrderInCategory>
-    <marketValueFactor>1.25</marketValueFactor>
-    <statFactors>
-      <InjuryHealingFactor>4</InjuryHealingFactor>
-    </statFactors>
-    <biostatMet>0</biostatMet>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>stout</symbol></li>
-        <li><symbol>hard</symbol></li>
-      </prefixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperDarkVision</defName>
-    <label>dark vision</label>
-    <description>Carriers of this gene see well in low light and are unaffected by mood penalties related to darkness. They have a reflective layer behind the retina that amplifies their ability to see in the dark.</description>
-    <iconPath>UI/Icons/Genes/Gene_Darkvision</iconPath>
-    <ignoreDarkness>true</ignoreDarkness>
-    <displayCategory>Miscellaneous</displayCategory>
-    <displayOrderInCategory>60</displayOrderInCategory>
-    <biostatMet>0</biostatMet>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>dark</symbol></li>
-        <li><symbol>night</symbol></li>
-        <li><symbol>dim</symbol></li>
-        <li><symbol>gloom</symbol></li>
-        <li><symbol>murk</symbol></li>
-        <li><symbol>deep</symbol></li>
-        <li><symbol>umbra</symbol></li>
-      </prefixSymbols>
-      <suffixSymbols>
-        <li><symbol>shadow</symbol></li>
-      </suffixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperSuperclotting</defName>
-    <label>superclotting</label>
-    <description>Carriers of this gene have extra-power coagulating factors in their blood, and will stop bleeding very quickly when wounded.</description>
-    <iconPath>UI/Icons/Genes/Gene_Superclotting</iconPath>
-    <geneClass>Gene_Clotting</geneClass>
-    <displayCategory>Healing</displayCategory>
-    <displayOrderInCategory>100</displayOrderInCategory>
-    <biostatMet>0</biostatMet>
-    <customEffectDescriptions>
-      <li>Bleeding wounds close very quickly.</li>
-    </customEffectDescriptions>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>clot</symbol></li>
-        <li><symbol>scab</symbol></li>
-      </prefixSymbols>
-      <suffixSymbols>
-        <li><symbol>clot</symbol></li>
-        <li><symbol>scab</symbol></li>
-      </suffixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperStrongStomach</defName>
-    <label>strong stomach</label>
-    <description>Carriers of this gene have an extra toxin-filtering organ in their stomach and will never suffer from food poisoning even after eating rotten food.</description>
-    <iconPath>UI/Icons/Genes/Gene_StrongStomach</iconPath>
-    <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
-    <biostatMet>0</biostatMet>
-    <displayCategory>Miscellaneous</displayCategory>
-    <displayOrderInCategory>9</displayOrderInCategory>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>dura</symbol></li>
-        <li><symbol>eat</symbol></li>
-        <li><symbol>feed</symbol></li>
-        <li><symbol>cram</symbol></li>
-      </prefixSymbols>
-      <suffixSymbols>
-        <li><symbol>vore</symbol></li>
-      </suffixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperRobustDigestion</defName>
-    <label>robust digestion</label>
-    <description>Carriers of this gene grow a multi-fold stomach, allowing them to digest raw foods more efficiently than baseline humans. In general, they get the same nutrition from raw food as from if it is cooked. They also don't mind the taste of raw food at all.</description>
-    <iconPath>UI/Icons/Genes/Gene_RobustDigestion</iconPath>
-    <displayCategory>Miscellaneous</displayCategory>
-    <displayOrderInCategory>10</displayOrderInCategory>
-    <dontMindRawFood>true</dontMindRawFood>
-    <biostatCpx>0</biostatCpx>
-    <biostatMet>0</biostatMet>
-    <statFactors>
-      <RawNutritionFactor>1.8</RawNutritionFactor>
-    </statFactors>
-    <symbolPack>
-      <wholeNameSymbols>
-        <li><symbol>hardeater</symbol></li>
-        <li><symbol>muncher</symbol></li>
-        <li><symbol>grubber</symbol></li>
-      </wholeNameSymbols>
-      <prefixSymbols>
-        <li><symbol>eat</symbol></li>
-        <li><symbol>raw</symbol></li>
-        <li><symbol>quad</symbol></li>
-        <li><symbol>moo</symbol></li>
-        <li><symbol>raw</symbol></li>
-        <li><symbol>munch</symbol></li>
-        <li><symbol>cow</symbol></li>
-      </prefixSymbols>
-      <suffixSymbols>
-        <li><symbol>eater</symbol></li>
-        <li><symbol>mouth</symbol></li>
-        <li><symbol>vore</symbol></li>
-        <li><symbol>munch</symbol></li>
-      </suffixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperKindInstinct</defName>
-    <label>kind instinct</label>
-    <labelShortAdj>kind</labelShortAdj>
-    <description>Carriers of this gene are high in trait agreeableness and are very conscientious. They rarely insult others and will sometimes offer kind words to brighten the moods of those around them. They also never judge people by their appearance.</description>
-    <iconPath>UI/Icons/Genes/Gene_KindInstinct</iconPath>
-    <displayCategory>Violence</displayCategory>
-    <displayOrderInCategory>60</displayOrderInCategory>
-    <forcedTraits>
-      <li>
-        <def>Kind</def>
-      </li>
-    </forcedTraits>
-    <biostatMet>0</biostatMet>
-    <symbolPack>
-      <prefixSymbols>
-        <li>
-          <symbol>kind</symbol>
-          <weight>3</weight>
-        </li>
-        <li><symbol>nice</symbol></li>
-        <li><symbol>gentle</symbol></li>
-        <li><symbol>ami</symbol></li>
-        <li><symbol>cool</symbol></li>
-        <li><symbol>mellow</symbol></li>
-        <li><symbol>soft</symbol></li>
-        <li><symbol>tame</symbol></li>
-        <li><symbol>pleas</symbol></li>
-      </prefixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperXenogermReimplanter</defName>
-    <label>gene implanter</label>
-    <labelShortAdj>reimplanter</labelShortAdj>
-    <description>Carriers of this gene can implant a copy of their xenogerm into another person through a somewhat gross-looking injector organ. Their own genetic material will then regrow very slowly. If they implant while their genes are regrowing, they will die. Germline genes will be unaffected.</description>
-    <iconPath>UI/Icons/Genes/Gene_XenogermReimplanter</iconPath>
-    <displayCategory>Archite</displayCategory>
-    <abilities>
-      <li>ReimplantXenogerm</li>
-    </abilities>
-    <descriptionHyperlinks>
-      <AbilityDef>ReimplantXenogerm</AbilityDef>
-    </descriptionHyperlinks>
-    <biostatCpx>0</biostatCpx>
-    <biostatArc>0</biostatArc>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperLongjumpLegs</defName>
-    <label>longjump legs</label>
-    <description>Carriers have special hemogen-powered muscle fibers in their legs which allow them to jump great distances.</description>
-    <iconPath>UI/Icons/Genes/Gene_LongJumpLegs</iconPath>
-    <!--<prerequisite>Hemogenic</prerequisite>-->
-    <displayCategory>Hemogen</displayCategory>
-    <abilities>
-      <li>Longjump</li>
-    </abilities>
-    <descriptionHyperlinks>
-      <AbilityDef>Longjump</AbilityDef>
-    </descriptionHyperlinks>
-    <biostatMet>0</biostatMet>
-    <symbolPack>
-      <wholeNameSymbols>
-        <li><symbol>jumper</symbol></li>
-        <li><symbol>leaper</symbol></li>
-        <li><symbol>bouncer</symbol></li>
-      </wholeNameSymbols>
-      <prefixSymbols>
-        <li><symbol>jump</symbol></li>
-        <li><symbol>leap</symbol></li>
-        <li><symbol>vault</symbol></li>
-        <li><symbol>long</symbol></li>
-        <li><symbol>fly</symbol></li>
-        <li><symbol>hop</symbol></li>
-      </prefixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef>
-    <defName>SuperCoagulate</defName>
-    <label>coagulate</label>
-    <labelShortAdj>coagulator</labelShortAdj>
-    <description>Carriers of this gene have special glands on their hands and wrists, as well as a unique salivary compound that they can use to rapidly tend wounds.</description>
-    <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
-    <!--<prerequisite>Hemogenic</prerequisite>-->
-    <displayCategory>Hemogen</displayCategory>
-    <abilities>
-      <li>Coagulate</li>
-    </abilities>
-    <descriptionHyperlinks>
-      <AbilityDef>Coagulate</AbilityDef>
-    </descriptionHyperlinks>
-    <biostatMet>0</biostatMet>
-    <minAgeActive>3</minAgeActive>
-    <symbolPack>
-      <suffixSymbols>
-        <li><symbol>life</symbol></li>
-        <li><symbol>clotter</symbol></li>
-        <li><symbol>tender</symbol></li>
-      </suffixSymbols>
-    </symbolPack>
-  </GeneDef>
-
-  <GeneDef ParentName="GeneBeautyBase">
-    <defName>SuperBeauty_Beautiful</defName>
-    <label>very attractive</label>
-    <description>Carriers of this gene have remarkably precise and symmetrical faces. Their features are distinctive and strong without being exaggerated, and their skin is nearly perfect. They are generally seen as beautiful.</description>
-    <iconPath>UI/Icons/Genes/Gene_Beautiful</iconPath>
-    <displayOrderInCategory>30</displayOrderInCategory>
-    <statOffsets>
-      <PawnBeauty>10</PawnBeauty>
-    </statOffsets>
-    <biostatMet>0</biostatMet>
-    <symbolPack>
-      <prefixSymbols>
-        <li><symbol>charm</symbol></li>
-        <li><symbol>ele</symbol></li>
-        <li><symbol>grace</symbol></li>
-        <li><symbol>neat</symbol></li>
-        <li><symbol>cute</symbol></li>
-        <li><symbol>beauti</symbol></li>
-        <li><symbol>smooth</symbol></li>
-      </prefixSymbols>
-    </symbolPack>
-  </GeneDef>
-
+    <GeneDef>
+        <defName>SuperPerfectImmunity</defName>
+        <label>perfect immunity</label>
+        <labelShortAdj>perfect-immune</labelShortAdj>
+        <description>Carriers of this gene have archite-enhanced immune systems which intelligently destroy invaders. They are totally immune to most normal illnesses.</description>
+        <iconPath>UI/Icons/Genes/Gene_PerfectImmunity</iconPath>
+        <displayCategory>Archite</displayCategory>
+        <makeImmuneTo>
+            <li>Flu</li>
+            <li>Malaria</li>
+            <li>SleepingSickness</li>
+            <li>Plague</li>
+            <li>WoundInfection</li>
+            <li>LungRot</li>
+            <li>GutWorms</li>
+            <li>MuscleParasites</li>
+            <li>OrganDecay</li>
+        </makeImmuneTo>
+        <biostatCpx>0</biostatCpx>
+        <biostatArc>0</biostatArc>
+        <exclusionTags>
+            <li>Immunity</li>
+        </exclusionTags>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperDiseaseFree</defName>
+        <label>non-senescent</label>
+        <description>Carriers of this gene do not go through senescence in the normal way. They never get chronic age-related diseases like cancer, bad back, cataracts, or dementia.</description>
+        <iconPath>UI/Icons/Genes/Gene_NonSenescent</iconPath>
+        <displayCategory>Archite</displayCategory>
+        <hediffGiversCannotGive>
+            <li>Carcinoma</li>
+            <li>HeartAttack</li>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>Cataract</li>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
+        <biostatCpx>0</biostatCpx>
+        <biostatArc>0</biostatArc>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperTotalHealing</defName>
+        <label>scarless</label>
+        <labelShortAdj>scarless</labelShortAdj>
+        <description>Carriers of this gene have a special type of regenerator cell which can heal old wounds and chronic illnesses like bad back.</description>
+        <customEffectDescriptions>
+            <li>Every (*DateTime)15-30 days(/DateTime), one old wound or chronic illness is healed.</li>
+        </customEffectDescriptions>
+        <iconPath>UI/Icons/Genes/Gene_TotalHealing</iconPath>
+        <geneClass>Gene_Healing</geneClass>
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <biostatCpx>0</biostatCpx>
+        <biostatArc>0</biostatArc>
+        <displayCategory>Archite</displayCategory>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperAgeless</defName>
+        <label>ageless</label>
+        <description>Carriers of this gene have archites in the bloodstream which continuously reverse the process of aging. Starting at the age of 13, carriers begin to biologically age slower. By 18, the aging process stops completely.</description>
+        <iconPath>UI/Icons/Genes/Gene_Ageless</iconPath>
+        <displayCategory>Archite</displayCategory>
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(13, 1)</li>
+                <li>(20, 0)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+        <biostatCpx>0</biostatCpx>
+        <biostatArc>0</biostatArc>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>immortal</symbol>
+                </li>
+                <li>
+                    <symbol>methuselah</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>god</symbol>
+                </li>
+                <li>
+                    <symbol>deo</symbol>
+                </li>
+                <li>
+                    <symbol>deu</symbol>
+                </li>
+                <li>
+                    <symbol>methu</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>god</symbol>
+                </li>
+                <li>
+                    <symbol>deus</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperDeathless</defName>
+        <label>deathless</label>
+        <description>Carriers of this gene have archites in the blood which will sustain their life processes no matter what. As long as the brain remains intact, a carrier of this gene will never die.</description>
+        <geneClass>Gene_Deathless</geneClass>
+        <iconPath>UI/Icons/Genes/Gene_Deathless</iconPath>
+        <displayCategory>Archite</displayCategory>
+        <marketValueFactor>2</marketValueFactor>
+        <biostatCpx>0</biostatCpx>
+        <biostatArc>0</biostatArc>
+        <customEffectDescriptions>
+            <li>Can only die from destruction of brain.</li>
+        </customEffectDescriptions>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>immortal</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>god</symbol>
+                </li>
+                <li>
+                    <symbol>deo</symbol>
+                </li>
+                <li>
+                    <symbol>deu</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>god</symbol>
+                </li>
+                <li>
+                    <symbol>deus</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperArchiteMetabolism</defName>
+        <label>archite metabolism</label>
+        <labelShortAdj>archite-metabolic</labelShortAdj>
+        <description>Carriers of this gene have special archites in their cells that facilitate and optimize metabolism. This improves overall genetic and metabolic quality.</description>
+        <iconPath>UI/Icons/Genes/Gene_ArchiteMetabolism</iconPath>
+        <displayCategory>Archite</displayCategory>
+        <marketValueFactor>1.5</marketValueFactor>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <biostatArc>0</biostatArc>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperVacuumResistance_Total</defName>
+        <label>breathless</label>
+        <labelShortAdj>breathless</labelShortAdj>
+        <description>Carriers of this gene can store concentrated oxygen in their bodies. Their cells consume much less oxygen, meaning they rarely need to breathe. These adaptations make them immune to the harmful effects of space, as well as environmental toxins, tox gas, acidic smog, and rot stink.</description>
+        <iconPath>UI/Icons/Genes/Gene_Breathless</iconPath>
+        <displayOrderInCategory>30</displayOrderInCategory>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <immuneToVacuumBurns>true</immuneToVacuumBurns>
+        <displayCategory MayRequire="Ludeon.RimWorld.Biotech">Archite</displayCategory>
+        <exclusionTags>
+            <li>ToxicEnvironmentResistance</li>
+            <li>VacuumResistance</li>
+        </exclusionTags>
+        <customEffectDescriptions>
+            <li>Tox gas immunity</li>
+        </customEffectDescriptions>
+        <statOffsets>
+            <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+            <VacuumResistance>1</VacuumResistance>
+        </statOffsets>
+        <biostatCpx>0</biostatCpx>
+        <biostatArc>0</biostatArc>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperUnstoppable</defName>
+        <label>unstoppable</label>
+        <description>Carriers of this gene are not slowed down when taking damage.</description>
+        <iconPath>UI/Icons/Genes/Gene_Unstoppable</iconPath>
+        <displayCategory>Miscellaneous</displayCategory>
+        <displayOrderInCategory>550</displayOrderInCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <statFactors>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+    </GeneDef>
+    <GeneDef ParentName="GeneHealingRateBase">
+        <defName>SuperWoundHealing_SuperFast</defName>
+        <label>superfast wound healing</label>
+        <labelShortAdj>super-heal</labelShortAdj>
+        <description>Carriers of this gene heal from wounds four times as fast as normal.</description>
+        <iconPath>UI/Icons/Genes/Gene_WoundHealingRateSuperfast</iconPath>
+        <displayOrderInCategory>50</displayOrderInCategory>
+        <marketValueFactor>1.25</marketValueFactor>
+        <statFactors>
+            <InjuryHealingFactor>4</InjuryHealingFactor>
+        </statFactors>
+        <biostatMet>0</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>stout</symbol>
+                </li>
+                <li>
+                    <symbol>hard</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperDarkVision</defName>
+        <label>dark vision</label>
+        <description>Carriers of this gene see well in low light and are unaffected by mood penalties related to darkness. They have a reflective layer behind the retina that amplifies their ability to see in the dark.</description>
+        <iconPath>UI/Icons/Genes/Gene_Darkvision</iconPath>
+        <ignoreDarkness>true</ignoreDarkness>
+        <displayCategory>Miscellaneous</displayCategory>
+        <displayOrderInCategory>60</displayOrderInCategory>
+        <biostatMet>0</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>dark</symbol>
+                </li>
+                <li>
+                    <symbol>night</symbol>
+                </li>
+                <li>
+                    <symbol>dim</symbol>
+                </li>
+                <li>
+                    <symbol>gloom</symbol>
+                </li>
+                <li>
+                    <symbol>murk</symbol>
+                </li>
+                <li>
+                    <symbol>deep</symbol>
+                </li>
+                <li>
+                    <symbol>umbra</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>shadow</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperSuperclotting</defName>
+        <label>superclotting</label>
+        <description>Carriers of this gene have extra-power coagulating factors in their blood, and will stop bleeding very quickly when wounded.</description>
+        <iconPath>UI/Icons/Genes/Gene_Superclotting</iconPath>
+        <geneClass>Gene_Clotting</geneClass>
+        <displayCategory>Healing</displayCategory>
+        <displayOrderInCategory>100</displayOrderInCategory>
+        <biostatMet>0</biostatMet>
+        <customEffectDescriptions>
+            <li>Bleeding wounds close very quickly.</li>
+        </customEffectDescriptions>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>clot</symbol>
+                </li>
+                <li>
+                    <symbol>scab</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>clot</symbol>
+                </li>
+                <li>
+                    <symbol>scab</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperStrongStomach</defName>
+        <label>strong stomach</label>
+        <description>Carriers of this gene have an extra toxin-filtering organ in their stomach and will never suffer from food poisoning even after eating rotten food.</description>
+        <iconPath>UI/Icons/Genes/Gene_StrongStomach</iconPath>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <biostatMet>0</biostatMet>
+        <displayCategory>Miscellaneous</displayCategory>
+        <displayOrderInCategory>9</displayOrderInCategory>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>dura</symbol>
+                </li>
+                <li>
+                    <symbol>eat</symbol>
+                </li>
+                <li>
+                    <symbol>feed</symbol>
+                </li>
+                <li>
+                    <symbol>cram</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>vore</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperRobustDigestion</defName>
+        <label>robust digestion</label>
+        <description>Carriers of this gene grow a multi-fold stomach, allowing them to digest raw foods more efficiently than baseline humans. In general, they get the same nutrition from raw food as from if it is cooked. They also don't mind the taste of raw food at all.</description>
+        <iconPath>UI/Icons/Genes/Gene_RobustDigestion</iconPath>
+        <displayCategory>Miscellaneous</displayCategory>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <dontMindRawFood>true</dontMindRawFood>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <statFactors>
+            <RawNutritionFactor>1.8</RawNutritionFactor>
+        </statFactors>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>hardeater</symbol>
+                </li>
+                <li>
+                    <symbol>muncher</symbol>
+                </li>
+                <li>
+                    <symbol>grubber</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>eat</symbol>
+                </li>
+                <li>
+                    <symbol>raw</symbol>
+                </li>
+                <li>
+                    <symbol>quad</symbol>
+                </li>
+                <li>
+                    <symbol>moo</symbol>
+                </li>
+                <li>
+                    <symbol>raw</symbol>
+                </li>
+                <li>
+                    <symbol>munch</symbol>
+                </li>
+                <li>
+                    <symbol>cow</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>eater</symbol>
+                </li>
+                <li>
+                    <symbol>mouth</symbol>
+                </li>
+                <li>
+                    <symbol>vore</symbol>
+                </li>
+                <li>
+                    <symbol>munch</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperKindInstinct</defName>
+        <label>kind instinct</label>
+        <labelShortAdj>kind</labelShortAdj>
+        <description>Carriers of this gene are high in trait agreeableness and are very conscientious. They rarely insult others and will sometimes offer kind words to brighten the moods of those around them. They also never judge people by their appearance.</description>
+        <iconPath>UI/Icons/Genes/Gene_KindInstinct</iconPath>
+        <displayCategory>Violence</displayCategory>
+        <displayOrderInCategory>60</displayOrderInCategory>
+        <forcedTraits>
+            <li>
+                <def>Kind</def>
+            </li>
+            <li>
+                <def>MenteInabalavel</def>
+                <degree>1</degree>
+            </li>
+        </forcedTraits>
+        <biostatMet>0</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>kind</symbol>
+                    <weight>3</weight>
+                </li>
+                <li>
+                    <symbol>nice</symbol>
+                </li>
+                <li>
+                    <symbol>gentle</symbol>
+                </li>
+                <li>
+                    <symbol>ami</symbol>
+                </li>
+                <li>
+                    <symbol>cool</symbol>
+                </li>
+                <li>
+                    <symbol>mellow</symbol>
+                </li>
+                <li>
+                    <symbol>soft</symbol>
+                </li>
+                <li>
+                    <symbol>tame</symbol>
+                </li>
+                <li>
+                    <symbol>pleas</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperXenogermReimplanter</defName>
+        <label>gene implanter</label>
+        <labelShortAdj>reimplanter</labelShortAdj>
+        <description>Carriers of this gene can implant a copy of their xenogerm into another person through a somewhat gross-looking injector organ. Their own genetic material will then regrow very slowly. If they implant while their genes are regrowing, they will die. Germline genes will be unaffected.</description>
+        <iconPath>UI/Icons/Genes/Gene_XenogermReimplanter</iconPath>
+        <displayCategory>Archite</displayCategory>
+        <abilities>
+            <li>ReimplantXenogerm</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>ReimplantXenogerm</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatCpx>0</biostatCpx>
+        <biostatArc>0</biostatArc>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperLongjumpLegs</defName>
+        <label>longjump legs</label>
+        <description>Carriers have special hemogen-powered muscle fibers in their legs which allow them to jump great distances.</description>
+        <iconPath>UI/Icons/Genes/Gene_LongJumpLegs</iconPath>
+        <!-- <prerequisite>Hemogenic</prerequisite> -->
+        <displayCategory>Hemogen</displayCategory>
+        <abilities>
+            <li>Longjump</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>Longjump</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>0</biostatMet>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>jumper</symbol>
+                </li>
+                <li>
+                    <symbol>leaper</symbol>
+                </li>
+                <li>
+                    <symbol>bouncer</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>jump</symbol>
+                </li>
+                <li>
+                    <symbol>leap</symbol>
+                </li>
+                <li>
+                    <symbol>vault</symbol>
+                </li>
+                <li>
+                    <symbol>long</symbol>
+                </li>
+                <li>
+                    <symbol>fly</symbol>
+                </li>
+                <li>
+                    <symbol>hop</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef>
+        <defName>SuperCoagulate</defName>
+        <label>coagulate</label>
+        <labelShortAdj>coagulator</labelShortAdj>
+        <description>Carriers of this gene have special glands on their hands and wrists, as well as a unique salivary compound that they can use to rapidly tend wounds.</description>
+        <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
+        <!-- <prerequisite>Hemogenic</prerequisite> -->
+        <displayCategory>Hemogen</displayCategory>
+        <abilities>
+            <li>Coagulate</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>Coagulate</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>0</biostatMet>
+        <minAgeActive>3</minAgeActive>
+        <symbolPack>
+            <suffixSymbols>
+                <li>
+                    <symbol>life</symbol>
+                </li>
+                <li>
+                    <symbol>clotter</symbol>
+                </li>
+                <li>
+                    <symbol>tender</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef ParentName="GeneBeautyBase">
+        <defName>SuperBeauty_Beautiful</defName>
+        <label>very attractive</label>
+        <description>Carriers of this gene have remarkably precise and symmetrical faces. Their features are distinctive and strong without being exaggerated, and their skin is nearly perfect. They are generally seen as beautiful.</description>
+        <iconPath>UI/Icons/Genes/Gene_Beautiful</iconPath>
+        <displayOrderInCategory>30</displayOrderInCategory>
+        <statOffsets>
+            <PawnBeauty>10</PawnBeauty>
+        </statOffsets>
+        <biostatMet>0</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>charm</symbol>
+                </li>
+                <li>
+                    <symbol>ele</symbol>
+                </li>
+                <li>
+                    <symbol>grace</symbol>
+                </li>
+                <li>
+                    <symbol>neat</symbol>
+                </li>
+                <li>
+                    <symbol>cute</symbol>
+                </li>
+                <li>
+                    <symbol>beauti</symbol>
+                </li>
+                <li>
+                    <symbol>smooth</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
 </Defs>
