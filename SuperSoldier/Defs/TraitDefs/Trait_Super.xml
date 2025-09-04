@@ -75,7 +75,7 @@
 		  <li>
 			<label>Mente inabalável</label>
 			<description>Tem uma mente extremamente forte, que não se abala por nada.</description>
-			<baseMoodEffect>200</baseMoodEffect>
+			<baseMoodEffect>1000</baseMoodEffect>
 		  </li>
 		</stages>
 	</ThoughtDef>
