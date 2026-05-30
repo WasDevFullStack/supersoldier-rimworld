@@ -6,7 +6,7 @@
     <label>Being of the void</label>
     <description>A human created by the consciousnesses of the higher dimensions. No one knows the reason they are in this universe, except for them and their creators.</description>
     <statBases>
-      <MarketValue>10000</MarketValue>
+      <MarketValue>1</MarketValue>
       <MoveSpeed>10000</MoveSpeed>
       <ComfyTemperatureMin>-10000</ComfyTemperatureMin>
       <ComfyTemperatureMax>10000</ComfyTemperatureMax>
@@ -97,14 +97,11 @@
       <AccuracyShort>1000</AccuracyShort>
       <AccuracyMedium>1000</AccuracyMedium>
       <AccuracyLong>1000</AccuracyLong>
-      <PsychicRitualQualityOffset>1000</PsychicRitualQualityOffset>
-      <EntityStudyRate>1000</EntityStudyRate>
-      <MeditationFocusGain>1000</MeditationFocusGain>
-      <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
+      
       <LearningRateFactor>1000</LearningRateFactor>
       <HemogenGainFactor>1000</HemogenGainFactor>
       <PruningSpeed>1000</PruningSpeed>
-      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <StaggerDurationFactor>-1</StaggerDurationFactor>
       <CaravanBonusSpeedFactor>20</CaravanBonusSpeedFactor>
       <HackingSpeed>1000</HackingSpeed>
       <ReadingSpeed>1000</ReadingSpeed>
@@ -359,9 +356,365 @@
 
   </ThingDef>
 
+	<ThingDef Name="SuperHumanPrototype" ParentName="BasePawn">
+    <defName>Super_Human_Prototype</defName>
+    <label>Being of the void prototype</label>
+    <description>The first prototype created by the consciousnesses of the higher dimensions. An early version that paved the way for the perfect Being of the void.</description>
+    <statBases>
+      <MarketValue>1</MarketValue>
+      <MoveSpeed>10000</MoveSpeed>
+      <ComfyTemperatureMin>-10000</ComfyTemperatureMin>
+      <ComfyTemperatureMax>10000</ComfyTemperatureMax>
+      <LeatherAmount>75</LeatherAmount>
+      <RoyalFavorValue>0</RoyalFavorValue>
+      <Flammability>-1</Flammability>
+      <ToxicEnvironmentResistance>100</ToxicEnvironmentResistance>
+      <WorkSpeedGlobal>100</WorkSpeedGlobal>
+      <ArmorRating_Heat>100</ArmorRating_Heat>
+      <ToxicResistance>100</ToxicResistance>
+      <ArmorRating_Blunt>100</ArmorRating_Blunt>
+      <ArmorRating_Sharp>100</ArmorRating_Sharp>
+      <PsychicSensitivity>10</PsychicSensitivity>
+      <!--Aumenta a resistência psíquica mas também não consegue utilizar habilidade psiquicas-->
+      <!--<PsychicSensitivity>100</PsychicSensitivity>-->
+      <IncomingDamageFactor>-10</IncomingDamageFactor>
+      <PawnBeauty>1</PawnBeauty>
+      <ImmunityGainSpeed>1000</ImmunityGainSpeed>
+      <RestRateMultiplier>2</RestRateMultiplier>
+      <AimingDelayFactor>-10</AimingDelayFactor>
+      <ShootingAccuracyPawn>1000</ShootingAccuracyPawn>
+      <CarryingCapacity>10000</CarryingCapacity>
+      <GlobalLearningFactor>1</GlobalLearningFactor>
+      <MentalBreakThreshold>-10</MentalBreakThreshold>
+      <MeleeHitChance>1000</MeleeHitChance>
+      <MeleeDodgeChance>1000</MeleeDodgeChance>
+      <MiningYield>1</MiningYield>
+      <MiningSpeed>1</MiningSpeed>
+      <!--<EatingSpeed>1000</EatingSpeed>-->
+      <!--<RestFallRateFactor>100</RestFallRateFactor>-->
+      <MedicalOperationSpeed>1</MedicalOperationSpeed>
+      <PlantWorkSpeed>1</PlantWorkSpeed>
+      <WorkTableEfficiencyFactor>1</WorkTableEfficiencyFactor>
+      <FixBrokenDownBuildingSuccessChance>1</FixBrokenDownBuildingSuccessChance>
+      <PlantHarvestYield>1</PlantHarvestYield>
+      <MeleeArmorPenetration>1000</MeleeArmorPenetration>
+      <TameAnimalChance>1</TameAnimalChance>
+      <SocialImpact>1</SocialImpact>
+      <ButcheryFleshSpeed>1</ButcheryFleshSpeed>
+      <CleaningSpeed>1000</CleaningSpeed>
+      <ConstructionSpeed>1</ConstructionSpeed>
+      <MeleeWeapon_AverageDPS>1000</MeleeWeapon_AverageDPS>
+      <MeleeWeapon_AverageArmorPenetration>1000</MeleeWeapon_AverageArmorPenetration>
+      <MeleeDPS>9999</MeleeDPS>
+      <FilthRate>-1000</FilthRate>
+      <MaxHitPoints>9999999</MaxHitPoints>
+      <CaravanRidingSpeedFactor>10000</CaravanRidingSpeedFactor>
+      <InjuryHealingFactor>10000</InjuryHealingFactor>
+      <MeleeWeapon_DamageMultiplier>100</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_CooldownMultiplier>-100</MeleeWeapon_CooldownMultiplier>
+      <HuntingStealth>1000</HuntingStealth>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+      <PainShockThreshold>1</PainShockThreshold>
+      <ConstructionSpeedFactor>1000</ConstructionSpeedFactor>
+      <SharpDamageMultiplier>100</SharpDamageMultiplier>
+      <BluntDamageMultiplier>100</BluntDamageMultiplier>
+      <SurgerySuccessChanceFactor>1000</SurgerySuccessChanceFactor>
+      <MaxNutrition>1</MaxNutrition>
+      <ResearchSpeedFactor>1</ResearchSpeedFactor>
+      <MedicalTendQualityOffset>1</MedicalTendQualityOffset>
+      <NegotiationAbility>1</NegotiationAbility>
+      <!--<TradePriceImprovement>10</TradePriceImprovement>-->
+      <!--<SellPriceFactor></SellPriceFactor>-->
+      <ForagedNutritionPerDay>10</ForagedNutritionPerDay>
+      <TrainAnimalChance>1000</TrainAnimalChance>
+      <BondAnimalChanceFactor>1000</BondAnimalChanceFactor>
+      <DeepDrillingSpeed>1</DeepDrillingSpeed>
+      <SmoothingSpeed>1</SmoothingSpeed>
+      <ResearchSpeed>1</ResearchSpeed>
+      <AnimalGatherSpeed>1</AnimalGatherSpeed>
+      <AnimalGatherYield>1</AnimalGatherYield>
+      <ConstructSuccessChance>1</ConstructSuccessChance>
+      <MedicalTendSpeed>1</MedicalTendSpeed>
+      <MedicalTendQuality>1</MedicalTendQuality>
+      <MedicalSurgerySuccessChance>1</MedicalSurgerySuccessChance>
+      <SmeltingSpeed>1</SmeltingSpeed>
+      <GeneralLaborSpeed>1</GeneralLaborSpeed>
+      <CookSpeed>1</CookSpeed>
+      <FoodPoisonChance>-100</FoodPoisonChance>
+      <DoorOpenSpeed>1</DoorOpenSpeed>
+      <JoyGainFactor>1</JoyGainFactor>
+      <ArrestSuccessChance>1</ArrestSuccessChance>
+      <DrugHarvestYield>1</DrugHarvestYield>
+      <DrugSynthesisSpeed>1</DrugSynthesisSpeed>
+      <DrugCookingSpeed>1</DrugCookingSpeed>
+      <ButcheryMechanoidSpeed>1</ButcheryMechanoidSpeed>
+      <AccuracyTouch>1000</AccuracyTouch>
+      <AccuracyShort>1000</AccuracyShort>
+      <AccuracyMedium>1000</AccuracyMedium>
+      <AccuracyLong>1000</AccuracyLong>
+      <PsychicRitualQualityOffset>1000</PsychicRitualQualityOffset>
+      <EntityStudyRate>1000</EntityStudyRate>
+      <MeditationFocusGain>1000</MeditationFocusGain>
+      <PsychicEntropyRecoveryRate>1000</PsychicEntropyRecoveryRate>
+      <LearningRateFactor>1</LearningRateFactor>
+      <HemogenGainFactor>1000</HemogenGainFactor>
+      <PruningSpeed>1</PruningSpeed>
+      <StaggerDurationFactor>-1</StaggerDurationFactor>
+      <CaravanBonusSpeedFactor>20</CaravanBonusSpeedFactor>
+      <HackingSpeed>1</HackingSpeed>
+      <ReadingSpeed>1</ReadingSpeed>
+      <!--Ideology-->
+      <ConversionPower>100</ConversionPower>
+      <!--Biotech-->
+      <WorkSpeedGlobalOffsetMech>1000</WorkSpeedGlobalOffsetMech>
+      <ShootingAccuracyChildFactor>1000</ShootingAccuracyChildFactor>
+      <MechBandwidth>100</MechBandwidth>
+      <MechControlGroups>6</MechControlGroups>
+      <MechRemoteRepairDistance>1000</MechRemoteRepairDistance>
+      <MechFormingSpeed>1000</MechFormingSpeed> 
+      <MechRemoteShieldDistance>1000</MechRemoteShieldDistance>
+      <MechRemoteShieldEnergy>1000</MechRemoteShieldEnergy>
+      <MechRepairSpeed>1000</MechRepairSpeed>
+      <SubcoreEncodingSpeed>1000</SubcoreEncodingSpeed>
+      <!--Anomaly-->
+      <StudyEfficiency>1000</StudyEfficiency>
+      <ActivitySuppressionRate>1000</ActivitySuppressionRate>
+      <EntityStudyRate>1000</EntityStudyRate>
+      <PsychicRitualQuality>1000</PsychicRitualQuality>
+      <PsychicRitualQualityOffset>1000</PsychicRitualQualityOffset>
+      <!--Odssey-->
+      <PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">5</PilotingAbility>
+      <FishingYield MayRequire="Ludeon.RimWorld.Odyssey">1</FishingYield>
+      <FishingSpeed MayRequire="Ludeon.RimWorld.Odyssey">1</FishingSpeed>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">10</VacuumResistance>
+      <!--Customizados do Mod Ini-->
+      <!--<CarryingCapacity>150</CarryingCapacity>-->
+      <!--Customizados do Mod End-->
+    </statBases>
+
+    <!--
+    <statFactors>
+      <AimingDelayFactor>-1000</AimingDelayFactor>
+      <ShootingAccuracyPawn>1000</ShootingAccuracyPawn>
+    </statFactors>
+    -->
 	
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>999</power>
+        <cooldownTime>0.1</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>999</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>999</power>
+        <cooldownTime>0.1</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>999</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>999</power>
+        <cooldownTime>0.1</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.07</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>999</power>
+        <cooldownTime>0.1</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>9999999</lifeExpectancy>
+      <bloodDef>Filth_Blood</bloodDef>
+      <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
+      <leatherDef>Leather_Human</leatherDef>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>Human</body>
+      <renderTree>Humanlike</renderTree>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>10</baseHealthScale>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>18</gestationPeriodDays>
+      <meatMarketValue>0.8</meatMarketValue>
+      <manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.10</manhunterOnTameFailChance>
+      <soundCallIntervalRange>2000~5000</soundCallIntervalRange>
+      <canBecomeShambler>true</canBecomeShambler>
+      <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+      <anomalyKnowledge>1</anomalyKnowledge>
+      <hasUnnaturalCorpse>true</hasUnnaturalCorpse>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>3</minAge>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>HumanlikePreTeenager</def>
+          <minAge>9</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+        </li>
+      </lifeStageAges>
+      <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+        <Firefighter>20</Firefighter>
+        <Patient>20</Patient>
+        <Doctor>20</Doctor>
+        <PatientBedRest>20</PatientBedRest>
+        <Childcare MayRequire="Ludeon.RimWorld.Biotech">20</Childcare>
+        <BasicWorker>20</BasicWorker>
+        <Warden>20</Warden>
+        <Handling>20</Handling>
+        <Cooking>20</Cooking>
+        <Hunting>20</Hunting>
+        <Construction>20</Construction>
+        <Growing>20</Growing>
+        <Mining>20</Mining>
+        <PlantCutting>20</PlantCutting>
+        <Smithing>20</Smithing>
+        <Tailoring>20</Tailoring>
+        <Art>20</Art>
+        <Crafting>20</Crafting>
+        <Hauling>20</Hauling>
+        <Cleaning>20</Cleaning>
+        <Research>20</Research>
+        <DarkStudy MayRequire="Ludeon.RimWorld.Anomaly">20</DarkStudy>
+      </lifeStageWorkSettings>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+          <li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>  
+          <li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>      
+          <li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li><!-- End exclude -->
+          <li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+          <li>(14,0)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+        <li>Human</li>
+      </hediffGiverSets>
+    </race>
+    <recipes>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+      <li>CureScaria</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">SurgicalInspection</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">BlissLobotomy</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">GhoulInfusion</li>
+    </recipes>
+    <ingredient>
+      <mergeCompatibilityTags>
+        <li>HumanMeat</li>
+      </mergeCompatibilityTags>
+    </ingredient>
+    <comps>
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_HoldingPlatformTarget">
+        <baseEscapeIntervalMtbDays>120</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_Studiable">
+        <frequencyTicks>120000</frequencyTicks>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresImprisonment>true</requiresImprisonment>
+      </li>
+      <!--
+      <li Class="MySuperStrengthMod.CompProperties_SuperStrength">
+        <strengthLevel>3</strengthLevel>
+      </li>
+      -->
+    </comps>
 
+  </ThingDef>
 
+	
   <BodyDef>
     <defName>Super_Human</defName>
     <label>Super human</label>
