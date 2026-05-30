@@ -6,7 +6,7 @@
     <label>Being of the void</label>
     <description>A human created by the consciousnesses of the higher dimensions. No one knows the reason they are in this universe, except for them and their creators.</description>
     <statBases>
-      <MarketValue>1</MarketValue>
+      <MarketValue>0</MarketValue>
       <MoveSpeed>10000</MoveSpeed>
       <ComfyTemperatureMin>-10000</ComfyTemperatureMin>
       <ComfyTemperatureMax>10000</ComfyTemperatureMax>
@@ -361,7 +361,7 @@
     <label>Being of the void prototype</label>
     <description>The first prototype created by the consciousnesses of the higher dimensions. An early version that paved the way for the perfect Being of the void.</description>
     <statBases>
-      <MarketValue>1</MarketValue>
+      <MarketValue>0</MarketValue>
       <MoveSpeed>10000</MoveSpeed>
       <ComfyTemperatureMin>-10000</ComfyTemperatureMin>
       <ComfyTemperatureMax>10000</ComfyTemperatureMax>
