@@ -17,7 +17,7 @@
         <forceNormalGearQuality>true</forceNormalGearQuality>
         <initialWillRange>0~0</initialWillRange>
         <humanPregnancyChance>0.06</humanPregnancyChance>
-        <defaultFactionType>SuperPlayerColony</defaultFactionType>
+        <defaultFactionType>SuperPlayerColonyPrototype</defaultFactionType>
         <chemicalAddictionChance>0.01</chemicalAddictionChance>
         <apparelTags>
             <li>IndustrialBasic</li>

@@ -40,6 +40,45 @@
             </xenotypeChances>
         </xenotypeSet>
 
+    </FactionDef>
 
+    <FactionDef ParentName="PlayerFactionBase">
+        <defName>SuperPlayerColonyPrototype</defName>
+        <label>People of the Void Prototype</label>
+        <description>A prototype colony of the higher-dimensional humans, created as an experimental extension of the main SuperPlayerColony faction.</description>
+        <isPlayer>true</isPlayer>
+        <basicMemberKind>SuperColonistPrototype</basicMemberKind>
+        <pawnSingular>prototype colonist</pawnSingular>
+        <pawnsPlural>prototype colonists</pawnsPlural>
+        <techLevel>Industrial</techLevel>
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <allowedCultures><li>Astropolitan</li></allowedCultures>
+        <backstoryFilters>
+        <li>
+            <categories>
+            <li>Offworld</li>
+            </categories>
+        </li>
+        </backstoryFilters>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+        <startingResearchTags>
+        <li>ClassicStart</li>
+        </startingResearchTags>
+        <startingTechprintsResearchTags>
+        <li>ClassicStart</li>
+        <li>ClassicStartTechprints</li>
+        </startingTechprintsResearchTags>
+        <apparelStuffFilter>
+        <thingDefs>
+            <li>Synthread</li>
+        </thingDefs>
+        </apparelStuffFilter>
+
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <SuperSer MayRequire="Ludeon.RimWorld.Biotech,Ludeon.RimWorld.Odyssey">999</SuperSer>
+            </xenotypeChances>
+        </xenotypeSet>
     </FactionDef>
 </Defs>
