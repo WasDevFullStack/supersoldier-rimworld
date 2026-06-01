@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Adiciona o component SuperHumanPrototypeComponent ao pawn Super_Human_Prototype -->
+  <ThingDef ParentName="Super_Human_Prototype">
+    <defName>Super_Human_Prototype</defName>
+    <comps>
+      <li Class="SuperSoldier.SuperHumanPrototypeComponent" />
+    </comps>
+  </ThingDef>
+</Defs>

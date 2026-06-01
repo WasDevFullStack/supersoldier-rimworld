@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>SuperSoldier</AssemblyName>
+    <LangVersion>9</LangVersion>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- RimWorld DLLs -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorld_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorld_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- NuGet: HarmonyLib for Patches -->
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+  </ItemGroup>
+
+</Project>

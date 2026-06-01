@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\IsekaiLeveling\\IsekaiLeveling.csproj": {}
+    "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\SuperSoldier.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\IsekaiLeveling\\IsekaiLeveling.csproj": {
+    "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\SuperSoldier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\IsekaiLeveling\\IsekaiLeveling.csproj",
-        "projectName": "IsekaiLeveling",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\IsekaiLeveling\\IsekaiLeveling.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\SuperSoldier.csproj",
+        "projectName": "SuperSoldier",
+        "projectPath": "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\SuperSoldier.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\IsekaiLeveling\\obj\\",
+        "outputPath": "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net48"
+          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net48": {
-            "targetAlias": "net48",
+          "net472": {
+            "targetAlias": "net472",
             "projectReferences": {}
           }
         },
@@ -48,11 +48,10 @@
         "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
-        "net48": {
-          "targetAlias": "net48",
+        "net472": {
+          "targetAlias": "net472",
           "dependencies": {
             "Lib.Harmony": {
-              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "target": "Package",
               "version": "[2.2.2, )"
             }

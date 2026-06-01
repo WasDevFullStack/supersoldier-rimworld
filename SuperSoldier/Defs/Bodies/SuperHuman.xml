@@ -383,7 +383,7 @@
       <RestRateMultiplier>2</RestRateMultiplier>
       <AimingDelayFactor>-10</AimingDelayFactor>
       <ShootingAccuracyPawn>1000</ShootingAccuracyPawn>
-      <CarryingCapacity>10000</CarryingCapacity>
+      <CarryingCapacity>1000</CarryingCapacity>
       <GlobalLearningFactor>1</GlobalLearningFactor>
       <MentalBreakThreshold>-10</MentalBreakThreshold>
       <MeleeHitChance>1000</MeleeHitChance>
