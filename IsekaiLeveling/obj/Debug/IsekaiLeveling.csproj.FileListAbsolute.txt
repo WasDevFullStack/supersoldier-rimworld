@@ -1,0 +1,5 @@
+C:\Users\User\OneDrive\Documents\Jelly Creative\Modding\Rimworld\IsekaiLeveling\Source\IsekaiLeveling\obj\Debug\IsekaiLeveling.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Documents\Jelly Creative\Modding\Rimworld\IsekaiLeveling\Source\IsekaiLeveling\obj\Debug\IsekaiLeveling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Documents\Jelly Creative\Modding\Rimworld\IsekaiLeveling\Source\IsekaiLeveling\obj\Debug\IsekaiLeveling.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Documents\Jelly Creative\Modding\Rimworld\IsekaiLeveling\Assemblies\IsekaiLeveling.dll
+C:\Users\User\OneDrive\Documents\Jelly Creative\Modding\Rimworld\IsekaiLeveling\Source\IsekaiLeveling\obj\Debug\IsekaiLeveling.dll
