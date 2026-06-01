@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <EnhancedCarryingCapacity>Enhanced Carrying Capacity</EnhancedCarryingCapacity>
+
+    <EnhancedCarryingCapacity.MassMultiplier>Mass Multiplier</EnhancedCarryingCapacity.MassMultiplier>
+    <EnhancedCarryingCapacity.MassMultiplier.Tooltip>Multiplies how much mass a pawn can carry. This is Carrying Capacity in vanilla and Weight in Combat Extended.</EnhancedCarryingCapacity.MassMultiplier.Tooltip>
+    <EnhancedCarryingCapacity.MassOffset>Mass Offset</EnhancedCarryingCapacity.MassOffset>
+    <EnhancedCarryingCapacity.MassOffset.Tooltip>Increases how much mass a pawn can carry in addition to the modified original value. This is Carrying Capacity in vanilla and Weight in Combat Extended.</EnhancedCarryingCapacity.MassOffset.Tooltip>
+    <EnhancedCarryingCapacity.BulkMultiplier>Bulk Multiplier</EnhancedCarryingCapacity.BulkMultiplier>
+    <EnhancedCarryingCapacity.BulkMultiplier.Tooltip>Multiplies how much bulk a pawn can carry, only in Combat Extended.</EnhancedCarryingCapacity.BulkMultiplier.Tooltip>
+    <EnhancedCarryingCapacity.BulkOffset>Bulk Offset</EnhancedCarryingCapacity.BulkOffset>
+    <EnhancedCarryingCapacity.BulkOffset.Tooltip>Increases how much bulk a pawn can carry in addition to the modified original value, only in Combat Extended.</EnhancedCarryingCapacity.BulkOffset.Tooltip>
+
+    <StatsReport_MassModifier>Mass modifier</StatsReport_MassModifier>
+    <StatsReport_MassOffset>Mass offset</StatsReport_MassOffset>
+    <StatsReport_BulkModifier>Bulk modifier</StatsReport_BulkModifier>
+    <StatsReport_BulkOffset>Bulk offset</StatsReport_BulkOffset>
+</LanguageData>
