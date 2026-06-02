@@ -1,0 +1,13 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\1.5\Assemblies\EnhancedCarryingCapacity.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\1.5\Assemblies\EnhancedCarryingCapacity.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\EnhancedCarryingCapacity.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\EnhancedCarryingCapacity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\EnhancedCarryingCapacity.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\EnhancedCarryingCapacity.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\EnhancedCarryingCapacity.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\EnhancedCarryingCapacity.sourcelink.json
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\Enhanced.63AEF055.Up2Date
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\EnhancedCarryingCapacity.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\Source\obj\Release\EnhancedCarryingCapacity.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\1.6\Assemblies\EnhancedCarryingCapacity.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\EnhancedCarryingCapacity\1.6\Assemblies\EnhancedCarryingCapacity.pdb

@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\enhancedcarryingcapacity\\source\\statparts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|solutionrelative:statparts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\enhancedcarryingcapacity\\source\\massutility_capacitypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|solutionrelative:massutility_capacitypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\enhancedcarryingcapacity\\source\\enhancedcarryingcapacitysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|solutionrelative:enhancedcarryingcapacitysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\enhancedcarryingcapacity\\source\\enhancedcarryingcapacity.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}",
+      "RelativeMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|solutionrelative:enhancedcarryingcapacity.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\enhancedcarryingcapacity\\source\\enhancedcarryingcapacity.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4E1F7A1D-FBA8-4825-8E2D-8600384DA25F}|EnhancedCarryingCapacity.csproj|solutionrelative:enhancedcarryingcapacity.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnhancedCarryingCapacity",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\EnhancedCarryingCapacity.csproj",
+              "RelativeDocumentMoniker": "EnhancedCarryingCapacity.csproj",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\EnhancedCarryingCapacity.csproj",
+              "RelativeToolTip": "EnhancedCarryingCapacity.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2023-06-07T02:56:55.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MassUtility_CapacityPatch.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\MassUtility_CapacityPatch.cs",
+              "RelativeDocumentMoniker": "MassUtility_CapacityPatch.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\MassUtility_CapacityPatch.cs",
+              "RelativeToolTip": "MassUtility_CapacityPatch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-05-07T07:04:10.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StatParts.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\StatParts.cs",
+              "RelativeDocumentMoniker": "StatParts.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\StatParts.cs",
+              "RelativeToolTip": "StatParts.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBUAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-05-06T05:21:51.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnhancedCarryingCapacitySettings.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\EnhancedCarryingCapacitySettings.cs",
+              "RelativeDocumentMoniker": "EnhancedCarryingCapacitySettings.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\EnhancedCarryingCapacitySettings.cs",
+              "RelativeToolTip": "EnhancedCarryingCapacitySettings.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAcwBsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-05-06T05:05:46.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnhancedCarryingCapacity.csproj",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\EnhancedCarryingCapacity.csproj",
+              "RelativeDocumentMoniker": "EnhancedCarryingCapacity.csproj",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\EnhancedCarryingCapacity\\Source\\EnhancedCarryingCapacity.csproj",
+              "RelativeToolTip": "EnhancedCarryingCapacity.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2023-05-06T05:05:46.539Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
