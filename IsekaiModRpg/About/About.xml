@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-    <name>ISEKAI RPG LEVELING</name>
-    <author>Jelly Creative</author>
-    <packageId>JellyCreative.IsekaiLeveling</packageId>
-    <url>https://github.com/JellyCreative/IsekaiLeveling</url>
+    <name>RPG LEVELING</name>
+    <packageId>RPG.RimWorld</packageId>
+    <author>Washington Oliveira</author>
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
     <description>
-ISEKAI RPG LEVELING SYSTEM  -  v1.1.6
+RPG LEVELING SYSTEM  -  v1.1.6
 
 Your pawns have been transported to the Rim... but they brought something special with them - the ability to level up like heroes from another world!
 
@@ -62,7 +61,7 @@ Made by Jelly Creative
         <li>
             <version>Steam</version>
             <description>
-[h1]Isekai RPG Leveling System[/h1]
+[h1]RPG Leveling System[/h1]
 
 Your pawns have been transported to the Rim... but they brought something special with them - the ability to level up like heroes from another world!
 
@@ -402,7 +401,7 @@ Made by Jelly Creative
         <li>Jaxe.RimHUD</li> <!-- RimHUD custom widgets -->
     </loadAfter>
     <loadBefore>
-        <!-- SimpleSidearms must load AFTER Isekai so its melee auto-switch Harmony patches
+        <!-- SimpleSidearms must load AFTER so its melee auto-switch Harmony patches
              wrap our stat/combat patches correctly. Reversing this order breaks SS. -->
         <li>petetimessix.simplesidearms</li>
     </loadBefore>
