@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <!-- ==================== POWER RANK TRAITS ==================== -->
+    <!-- These traits are automatically assigned based on a pawn's power level -->
+    <!-- They significantly affect social standing, attractiveness, and value -->
+    
+    <!-- F-Rank: The Weakest -->
+    <TraitDef>
+        <defName>Isekai_Rank_F</defName>
+        <commonality>0</commonality> <!-- Never randomly assigned -->
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank F</label>
+                <description>This individual is recognized as an F-Rank - the weakest classification. Others look down on them with pity or contempt, and their presence commands no respect.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PawnBeauty>-0.5</PawnBeauty>
+                    <SocialImpact>-0.30</SocialImpact>
+                    <NegotiationAbility>-0.20</NegotiationAbility>
+                    <TradePriceImprovement>-0.10</TradePriceImprovement>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>0.5</MarketValue>
+                </statFactors>
+                <socialFightChanceFactor>1.3</socialFightChanceFactor>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_E</li>
+            <li>Isekai_Rank_D</li>
+            <li>Isekai_Rank_C</li>
+            <li>Isekai_Rank_B</li>
+            <li>Isekai_Rank_A</li>
+            <li>Isekai_Rank_S</li>
+            <li>Isekai_Rank_SS</li>
+            <li>Isekai_Rank_SSS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- E-Rank: Below Average -->
+    <TraitDef>
+        <defName>Isekai_Rank_E</defName>
+        <commonality>0</commonality>
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank E</label>
+                <description>This individual is classified as E-Rank - below average but not completely worthless. They are often overlooked and struggle to gain recognition.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PawnBeauty>-0.25</PawnBeauty>
+                    <SocialImpact>-0.15</SocialImpact>
+                    <NegotiationAbility>-0.10</NegotiationAbility>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>0.75</MarketValue>
+                </statFactors>
+                <socialFightChanceFactor>1.15</socialFightChanceFactor>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_F</li>
+            <li>Isekai_Rank_D</li>
+            <li>Isekai_Rank_C</li>
+            <li>Isekai_Rank_B</li>
+            <li>Isekai_Rank_A</li>
+            <li>Isekai_Rank_S</li>
+            <li>Isekai_Rank_SS</li>
+            <li>Isekai_Rank_SSS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- D-Rank: Average -->
+    <TraitDef>
+        <defName>Isekai_Rank_D</defName>
+        <commonality>0</commonality>
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank D</label>
+                <description>This individual holds a D-Rank classification - thoroughly average. They neither stand out nor fall behind, blending into the crowd.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <SocialImpact>0</SocialImpact>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>1.0</MarketValue>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_F</li>
+            <li>Isekai_Rank_E</li>
+            <li>Isekai_Rank_C</li>
+            <li>Isekai_Rank_B</li>
+            <li>Isekai_Rank_A</li>
+            <li>Isekai_Rank_S</li>
+            <li>Isekai_Rank_SS</li>
+            <li>Isekai_Rank_SSS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- C-Rank: Above Average -->
+    <TraitDef>
+        <defName>Isekai_Rank_C</defName>
+        <commonality>0</commonality>
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank C</label>
+                <description>This individual is recognized as C-Rank - a competent person above the common masses. They command modest respect and are seen as reliable.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PawnBeauty>0.25</PawnBeauty>
+                    <SocialImpact>0.10</SocialImpact>
+                    <NegotiationAbility>0.05</NegotiationAbility>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>1.5</MarketValue>
+                </statFactors>
+                <socialFightChanceFactor>0.9</socialFightChanceFactor>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_F</li>
+            <li>Isekai_Rank_E</li>
+            <li>Isekai_Rank_D</li>
+            <li>Isekai_Rank_B</li>
+            <li>Isekai_Rank_A</li>
+            <li>Isekai_Rank_S</li>
+            <li>Isekai_Rank_SS</li>
+            <li>Isekai_Rank_SSS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- B-Rank: Skilled -->
+    <TraitDef>
+        <defName>Isekai_Rank_B</defName>
+        <commonality>0</commonality>
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank B</label>
+                <description>This individual has achieved B-Rank status - a skilled veteran worthy of respect. Their reputation precedes them, and others treat them with deference.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PawnBeauty>0.5</PawnBeauty>
+                    <SocialImpact>0.25</SocialImpact>
+                    <NegotiationAbility>0.15</NegotiationAbility>
+                    <TradePriceImprovement>0.05</TradePriceImprovement>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>2.5</MarketValue>
+                </statFactors>
+                <socialFightChanceFactor>0.75</socialFightChanceFactor>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_F</li>
+            <li>Isekai_Rank_E</li>
+            <li>Isekai_Rank_D</li>
+            <li>Isekai_Rank_C</li>
+            <li>Isekai_Rank_A</li>
+            <li>Isekai_Rank_S</li>
+            <li>Isekai_Rank_SS</li>
+            <li>Isekai_Rank_SSS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- A-Rank: Elite -->
+    <TraitDef>
+        <defName>Isekai_Rank_A</defName>
+        <commonality>0</commonality>
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank A</label>
+                <description>This individual is an A-Rank elite - among the finest in existence. Their very presence commands attention, and they exude an aura of power and authority that few can match.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PawnBeauty>1.0</PawnBeauty>
+                    <SocialImpact>0.50</SocialImpact>
+                    <NegotiationAbility>0.30</NegotiationAbility>
+                    <TradePriceImprovement>0.10</TradePriceImprovement>
+                    <ArrestSuccessChance>0.15</ArrestSuccessChance>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>5.0</MarketValue>
+                </statFactors>
+                <socialFightChanceFactor>0.5</socialFightChanceFactor>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_F</li>
+            <li>Isekai_Rank_E</li>
+            <li>Isekai_Rank_D</li>
+            <li>Isekai_Rank_C</li>
+            <li>Isekai_Rank_B</li>
+            <li>Isekai_Rank_S</li>
+            <li>Isekai_Rank_SS</li>
+            <li>Isekai_Rank_SSS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- S-Rank: Legendary -->
+    <TraitDef>
+        <defName>Isekai_Rank_S</defName>
+        <commonality>0</commonality>
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank S</label>
+                <description>This individual holds the legendary S-Rank - a hero of incredible power. Their name is spoken with reverence, and their mere glance can silence a room. Others feel humbled in their presence.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PawnBeauty>1.5</PawnBeauty>
+                    <SocialImpact>0.75</SocialImpact>
+                    <NegotiationAbility>0.50</NegotiationAbility>
+                    <TradePriceImprovement>0.20</TradePriceImprovement>
+                    <ArrestSuccessChance>0.25</ArrestSuccessChance>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>10.0</MarketValue>
+                </statFactors>
+                <socialFightChanceFactor>0.25</socialFightChanceFactor>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_F</li>
+            <li>Isekai_Rank_E</li>
+            <li>Isekai_Rank_D</li>
+            <li>Isekai_Rank_C</li>
+            <li>Isekai_Rank_B</li>
+            <li>Isekai_Rank_A</li>
+            <li>Isekai_Rank_SS</li>
+            <li>Isekai_Rank_SSS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- SS-Rank: Demigod -->
+    <TraitDef>
+        <defName>Isekai_Rank_SS</defName>
+        <commonality>0</commonality>
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank SS</label>
+                <description>This individual has transcended to SS-Rank - a demigod walking among mortals. Their power is the stuff of legends, and entire nations would pay any price to secure their loyalty. They radiate an otherworldly magnificence.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PawnBeauty>2.0</PawnBeauty>
+                    <SocialImpact>1.0</SocialImpact>
+                    <NegotiationAbility>0.75</NegotiationAbility>
+                    <TradePriceImprovement>0.35</TradePriceImprovement>
+                    <ArrestSuccessChance>0.40</ArrestSuccessChance>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>25.0</MarketValue>
+                </statFactors>
+                <socialFightChanceFactor>0.1</socialFightChanceFactor>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_F</li>
+            <li>Isekai_Rank_E</li>
+            <li>Isekai_Rank_D</li>
+            <li>Isekai_Rank_C</li>
+            <li>Isekai_Rank_B</li>
+            <li>Isekai_Rank_A</li>
+            <li>Isekai_Rank_S</li>
+            <li>Isekai_Rank_SSS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- SSS-Rank: Godlike -->
+    <TraitDef>
+        <defName>Isekai_Rank_SSS</defName>
+        <commonality>0</commonality>
+        <disabledWorkTags />
+        <degreeDatas>
+            <li>
+                <label>Rank SSS</label>
+                <description>This individual has achieved the impossible - SSS-Rank, the absolute apex of existence. They are a god among mortals, their power beyond comprehension. Kingdoms would fall to possess them, and their very existence reshapes the world around them.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PawnBeauty>3.0</PawnBeauty>
+                    <SocialImpact>1.5</SocialImpact>
+                    <NegotiationAbility>1.0</NegotiationAbility>
+                    <TradePriceImprovement>0.50</TradePriceImprovement>
+                    <ArrestSuccessChance>0.60</ArrestSuccessChance>
+                </statOffsets>
+                <statFactors>
+                    <MarketValue>100.0</MarketValue>
+                </statFactors>
+                <socialFightChanceFactor>0.01</socialFightChanceFactor>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Rank_F</li>
+            <li>Isekai_Rank_E</li>
+            <li>Isekai_Rank_D</li>
+            <li>Isekai_Rank_C</li>
+            <li>Isekai_Rank_B</li>
+            <li>Isekai_Rank_A</li>
+            <li>Isekai_Rank_S</li>
+            <li>Isekai_Rank_SS</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+</Defs>

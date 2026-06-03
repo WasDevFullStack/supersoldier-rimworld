@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Add the Isekai component to all humanlike pawns -->
+    <ThingDef Name="Isekai_HumanPatch" Abstract="True">
+        <comps>
+            <li Class="IsekaiLeveling.IsekaiComponentProperties" />
+        </comps>
+    </ThingDef>
+</Defs>

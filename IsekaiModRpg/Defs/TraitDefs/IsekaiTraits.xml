@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- ==================== ARCHETYPE TRAITS ==================== -->
+    <!-- Legendary / Earned — these define a pawn's isekai identity -->
+    
+    <!-- Protagonist: The classic isekai MC -->
+    <TraitDef>
+        <defName>Isekai_Protagonist</defName>
+        <commonality>0.01</commonality> <!-- Extremely rare natural roll, also earned via Hero's Awakening Scroll -->
+        <degreeDatas>
+            <li>
+                <label>protagonist</label>
+                <description>This individual is the Protagonist — chosen by fate itself. They gain experience at an extraordinary rate and grow faster than anyone else.\n\n• x10 XP multiplier\n• +2 bonus stat points per level\n• Cannot have: Antagonist, Regressor, Summoned Hero</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Antagonist</li>
+            <li>Isekai_Regressor</li>
+            <li>Isekai_SummonedHero</li>
+            <li>Isekai_Reincarnated</li>
+            <li>Isekai_HollowCore</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Antagonist: The villain protagonist -->
+    <TraitDef>
+        <defName>Isekai_Antagonist</defName>
+        <commonality>0.01</commonality> <!-- Extremely rare natural roll, also earned via Villain's Mask -->
+        <degreeDatas>
+            <li>
+                <label>antagonist</label>
+                <description>This individual walks the path of the Antagonist — feared and reviled. They grow powerful through conflict, gaining massive combat bonuses, but their very presence unsettles others.\n\n• x8 XP multiplier\n• +25% melee damage\n• +10% move speed\n• -25% social impact\n• -25 opinion from all other pawns\n• Cannot have: Protagonist, Summoned Hero</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <SocialImpact>-0.25</SocialImpact>
+                </statOffsets>
+                <statFactors>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                    <MoveSpeed>1.10</MoveSpeed>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Protagonist</li>
+            <li>Isekai_SummonedHero</li>
+            <li>Isekai_Reincarnated</li>
+            <li>Isekai_HollowCore</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Reincarnated: Reborn with memories -->
+    <TraitDef>
+        <defName>Isekai_Reincarnated</defName>
+        <commonality>0</commonality> <!-- Earned only (Reincarnation Crystal) -->
+        <degreeDatas>
+            <li>
+                <label>reincarnated</label>
+                <description>This individual has been reincarnated — reborn into a new life with memories of the old. Their level and stats were reset, but they retained their constellation progress and earned powerful growth bonuses.\n\n• Resets level to 1 and all stats to base (New Game+)\n• x5 XP multiplier\n• +10 bonus star points\n• +1 star point every 3 levels instead of 5\n• Constellation tree progress preserved\n• Cannot have: Protagonist, Antagonist, Hollow Core</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Protagonist</li>
+            <li>Isekai_Antagonist</li>
+            <li>Isekai_HollowCore</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Regressor: Time-looper -->
+    <TraitDef>
+        <defName>Isekai_Regressor</defName>
+        <commonality>0</commonality> <!-- Earned only -->
+        <degreeDatas>
+            <li>
+                <label>regressor</label>
+                <description>This individual has regressed — returned to the past with fragments of future knowledge. They level faster and can freely readapt their constellation at any time.\n\n• x4 XP multiplier\n• Free constellation respec (always)\n• Cannot have: Protagonist</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Protagonist</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Summoned Hero: Otherworldly champion -->
+    <TraitDef>
+        <defName>Isekai_SummonedHero</defName>
+        <commonality>0</commonality> <!-- Earned only -->
+        <degreeDatas>
+            <li>
+                <label>summoned hero</label>
+                <description>This individual was summoned from another world as a hero. They gain power rapidly and are mentally resilient, but the displacement from their home world weighs on them.\n\n• x3 XP multiplier\n• +1 bonus stat point per level\n• Highly resistant to mental breaks\n• +25% social impact\n• -8 mood (displaced from home)\n• Cannot have: Protagonist, Antagonist</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.10</MentalBreakThreshold>
+                    <SocialImpact>0.25</SocialImpact>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Protagonist</li>
+            <li>Isekai_Antagonist</li>
+        </conflictingTraits>
+    </TraitDef>
+
+    <!-- ==================== GROWTH TRAITS ==================== -->
+    <!-- Uncommon to Rare — modify leveling/progression speed -->
+    
+    <!-- Natural Talent: Bonus star points -->
+    <TraitDef>
+        <defName>Isekai_NaturalTalent</defName>
+        <commonality>0.8</commonality>
+        <degreeDatas>
+            <li>
+                <label>natural talent</label>
+                <description>Born with exceptional latent potential. This individual earns bonus star points as they level, allowing them to unlock more constellation nodes.\n\n• +1 bonus star point every 5 levels (2 instead of 1)</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_HollowCore</li>
+            <li>Isekai_SealedPower</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Prodigy: Fast learner, fragile -->
+    <TraitDef>
+        <defName>Isekai_Prodigy</defName>
+        <commonality>0.6</commonality>
+        <degreeDatas>
+            <li>
+                <label>prodigy</label>
+                <description>A genius who absorbs knowledge at an astonishing rate. Their mind operates on another level entirely.\n\n• x2 XP multiplier\n• +50% research speed</description>
+                <degree>0</degree>
+                <statFactors>
+                    <ResearchSpeedFactor>1.50</ResearchSpeedFactor>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_SlowGrind</li>
+            <li>Isekai_BattleManiac</li>
+            <li>Isekai_Genius</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Late Bloomer: Scales over time -->
+    <TraitDef>
+        <defName>Isekai_LateBloomer</defName>
+        <commonality>0.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>late bloomer</label>
+                <description>Starts slow but becomes unstoppable. XP gain scales dramatically with level — weak early, godlike late.\n\n• Level 1-10: x0.5 XP\n• Level 11-25: x1.0 XP\n• Level 26-50: x1.5 XP\n• Level 51-100: x2.0 XP\n• Level 101+: x3.0 XP</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_QuickLearner</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Quick Learner: Simple XP boost -->
+    <TraitDef>
+        <defName>Isekai_QuickLearner</defName>
+        <commonality>1.2</commonality>
+        <degreeDatas>
+            <li>
+                <label>quick learner</label>
+                <description>Grows and gains power faster than most. A reliable, steady advantage in all situations.\n\n• x1.5 XP multiplier</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_SlowGrind</li>
+            <li>Isekai_LateBloomer</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Slow Grind: Less XP, more stats -->
+    <TraitDef>
+        <defName>Isekai_SlowGrind</defName>
+        <commonality>0.7</commonality>
+        <degreeDatas>
+            <li>
+                <label>slow grind</label>
+                <description>Levels slowly but squeezes maximum potential from every level gained. Quality over speed.\n\n• x0.5 XP multiplier\n• +2 bonus stat points per level</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_QuickLearner</li>
+            <li>Isekai_Prodigy</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Power Spike: Burst gains every 10 levels -->
+    <TraitDef>
+        <defName>Isekai_PowerSpike</defName>
+        <commonality>0.6</commonality>
+        <degreeDatas>
+            <li>
+                <label>power spike</label>
+                <description>Experiences sudden surges of power at regular intervals, gaining massive stat boosts at milestone levels.\n\n• +5 bonus stat points every 10 levels</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+    
+    <!-- Awakened Potential: Huge unlock at level 25 -->
+    <TraitDef>
+        <defName>Isekai_AwakenedPotential</defName>
+        <commonality>0.4</commonality>
+        <degreeDatas>
+            <li>
+                <label>awakened potential</label>
+                <description>Dormant power awakens at level 25, dramatically increasing all stat effectiveness. Before awakening, the pawn is unremarkable.\n\n• Below level 25: -10% all stats\n• Level 25+: +50% all stat effectiveness</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_SealedPower</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Genius: INT/WIS powerhouse, weak body -->
+    <TraitDef>
+        <defName>Isekai_Genius</defName>
+        <commonality>0.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>genius</label>
+                <description>A towering intellect in a mediocre body. Mental stats grow twice as fast, but physical stats grow at half speed.\n\n• INT and WIS stat gains doubled\n• STR and VIT stat gains halved</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Prodigy</li>
+            <li>Isekai_BattleManiac</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Battle Maniac: XP from combat only -->
+    <TraitDef>
+        <defName>Isekai_BattleManiac</defName>
+        <commonality>0.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>battle maniac</label>
+                <description>Lives only for battle. Gains massively increased combat XP but is nearly incapable of learning from peaceful activities.\n\n• x3 combat XP (damage, kills)\n• x0.1 work/social XP\n• +15% melee dodge chance</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MeleeDodgeChance>0.15</MeleeDodgeChance>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Prodigy</li>
+            <li>Isekai_Genius</li>
+            <li>Isekai_MerchantEye</li>
+            <li>Isekai_CraftsmanSoul</li>
+        </conflictingTraits>
+    </TraitDef>
+
+    <!-- ==================== COMBAT TRAITS ==================== -->
+    <!-- Common to Rare — modify combat performance -->
+    
+    <!-- Berserker Blood: Low HP = massive power -->
+    <TraitDef>
+        <defName>Isekai_BerserkerBlood</defName>
+        <commonality>0.6</commonality>
+        <degreeDatas>
+            <li>
+                <label>berserker blood</label>
+                <description>When wounded, primal rage surges through their veins. The more they bleed, the harder they fight.\n\n• Below 50% HP: +30% melee damage, +15% move speed\n• Below 25% HP: +60% melee damage, +30% move speed\n• -10% mental break threshold (easier to break)</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MentalBreakThreshold>0.10</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_IronWill</li>
+            <li>Isekai_Fortress</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Iron Will: Mental fortress -->
+    <TraitDef>
+        <defName>Isekai_IronWill</defName>
+        <commonality>0.8</commonality>
+        <degreeDatas>
+            <li>
+                <label>iron will</label>
+                <description>An unbreakable mind forged through hardship. Nearly immune to mental breaks and pain, but emotionally distant.\n\n• -25% mental break threshold\n• +30% pain shock threshold\n• -20% social impact</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.25</MentalBreakThreshold>
+                    <PainShockThreshold>0.30</PainShockThreshold>
+                    <SocialImpact>-0.20</SocialImpact>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_BerserkerBlood</li>
+            <li>Isekai_GlassCannon</li>
+            <li>Nerves</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Glass Cannon: Massive damage, paper thin -->
+    <TraitDef>
+        <defName>Isekai_GlassCannon</defName>
+        <commonality>0.7</commonality>
+        <degreeDatas>
+            <li>
+                <label>glass cannon</label>
+                <description>Devastatingly powerful but dangerously fragile. Every attack hits like a truck, but they can't take a hit.\n\n• +50% melee damage\n• +30% ranged combat effectiveness\n• VIT effectiveness halved</description>
+                <degree>0</degree>
+                <statFactors>
+                    <MeleeDamageFactor>1.50</MeleeDamageFactor>
+                    <ShootingAccuracyPawn>1.30</ShootingAccuracyPawn>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Fortress</li>
+            <li>Isekai_IronWill</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Fortress: Immovable tank -->
+    <TraitDef>
+        <defName>Isekai_Fortress</defName>
+        <commonality>0.6</commonality>
+        <degreeDatas>
+            <li>
+                <label>fortress</label>
+                <description>An immovable defensive bastion. Incredibly tough and resistant to damage, but slow and lacks offensive punch.\n\n• +20% natural armor (all types)\n• -25% move speed\n• -20% melee damage</description>
+                <degree>0</degree>
+                <statFactors>
+                    <MoveSpeed>0.75</MoveSpeed>
+                    <MeleeDamageFactor>0.80</MeleeDamageFactor>
+                </statFactors>
+                <statOffsets>
+                    <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+                    <ArmorRating_Heat>0.20</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_GlassCannon</li>
+            <li>Isekai_ShadowStep</li>
+            <li>Isekai_BerserkerBlood</li>
+            <li>Isekai_FragileVessel</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Shadow Step: Evasion master -->
+    <TraitDef>
+        <defName>Isekai_ShadowStep</defName>
+        <commonality>0.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>shadow step</label>
+                <description>Moves like a shadow, nearly impossible to pin down. Exceptional evasion and speed, but lacks the constitution to take hits.\n\n• +25% move speed\n• +20% melee dodge chance\n• -10% melee damage</description>
+                <degree>0</degree>
+                <statFactors>
+                    <MoveSpeed>1.25</MoveSpeed>
+                    <MeleeDamageFactor>0.90</MeleeDamageFactor>
+                </statFactors>
+                <statOffsets>
+                    <MeleeDodgeChance>0.20</MeleeDodgeChance>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Fortress</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Predator's Instinct: Combat awareness -->
+    <TraitDef>
+        <defName>Isekai_PredatorInstinct</defName>
+        <commonality>0.6</commonality>
+        <degreeDatas>
+            <li>
+                <label>predator's instinct</label>
+                <description>Possesses primal hunting instincts — an innate sense for combat and danger that enhances all fighting capabilities.\n\n• +15% melee hit chance\n• +15% shooting accuracy\n• -15% trap spring chance</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MeleeHitChance>0.15</MeleeHitChance>
+                    <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+                    <TrapSpringChance>-0.15</TrapSpringChance>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+    
+    <!-- Undying: Cheat death once -->
+    <TraitDef>
+        <defName>Isekai_Undying</defName>
+        <commonality>0.3</commonality>
+        <degreeDatas>
+            <li>
+                <label>undying</label>
+                <description>Fate refuses to let this individual die. When struck by a killing blow, they miraculously survive — but the experience leaves a permanent mark on their psyche.\n\n• Cheat death: Survive lethal damage once every 3 days\n• +20% pain shock threshold\n• -5 mood (touched by death) after triggering</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PainShockThreshold>0.20</PainShockThreshold>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <!-- ==================== STAT AFFINITY TRAITS ==================== -->
+    <!-- Common — boost one stat, reduce another -->
+    
+    <!-- Mighty: STR focused -->
+    <TraitDef>
+        <defName>Isekai_Mighty</defName>
+        <commonality>1.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>mighty</label>
+                <description>Blessed with exceptional physical strength but lacks finesse.\n\n• STR stat effectiveness x1.5\n• DEX stat effectiveness x0.75</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Agile</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Agile: DEX focused -->
+    <TraitDef>
+        <defName>Isekai_Agile</defName>
+        <commonality>1.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>agile</label>
+                <description>Graceful and quick with exceptional reflexes, but physically weaker.\n\n• DEX stat effectiveness x1.5\n• STR stat effectiveness x0.75</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Mighty</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Resilient: VIT focused -->
+    <TraitDef>
+        <defName>Isekai_Resilient</defName>
+        <commonality>1.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>resilient</label>
+                <description>An iron constitution that shrugs off what would fell others, but spiritually dulled.\n\n• VIT stat effectiveness x1.5\n• WIS stat effectiveness x0.75</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Enlightened</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Brilliant: INT focused -->
+    <TraitDef>
+        <defName>Isekai_Brilliant</defName>
+        <commonality>1.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>brilliant</label>
+                <description>A sharp analytical mind that processes information at incredible speeds, but socially awkward.\n\n• INT stat effectiveness x1.5\n• CHA stat effectiveness x0.75</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_SilverTongue</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Enlightened: WIS focused -->
+    <TraitDef>
+        <defName>Isekai_Enlightened</defName>
+        <commonality>1.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>enlightened</label>
+                <description>Deeply perceptive and spiritually attuned. Great wisdom comes at the cost of physical endurance.\n\n• WIS stat effectiveness x1.5\n• VIT stat effectiveness x0.75</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Resilient</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Silver Tongue: CHA focused -->
+    <TraitDef>
+        <defName>Isekai_SilverTongue</defName>
+        <commonality>1.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>silver tongue</label>
+                <description>A natural-born leader and diplomat whose words carry weight, but lacks analytical depth.\n\n• CHA stat effectiveness x1.5\n• INT stat effectiveness x0.75</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Brilliant</li>
+        </conflictingTraits>
+    </TraitDef>
+
+    <!-- ==================== UTILITY TRAITS ==================== -->
+    <!-- Common — non-combat bonuses -->
+    
+    <!-- Merchant's Eye: Trade bonuses -->
+    <TraitDef>
+        <defName>Isekai_MerchantEye</defName>
+        <commonality>1.0</commonality>
+        <degreeDatas>
+            <li>
+                <label>merchant's eye</label>
+                <description>An innate sense for value and negotiation. Always gets the best deals.\n\n• +25% trade price improvement\n• +20% negotiation ability</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <TradePriceImprovement>0.25</TradePriceImprovement>
+                    <NegotiationAbility>0.20</NegotiationAbility>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_BattleManiac</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Craftsman's Soul: Crafting bonuses -->
+    <TraitDef>
+        <defName>Isekai_CraftsmanSoul</defName>
+        <commonality>1.0</commonality>
+        <degreeDatas>
+            <li>
+                <label>craftsman's soul</label>
+                <description>A born artisan with an instinctive understanding of materials and construction. Everything they make is a cut above.\n\n• +25% work speed (all types)\n• +1 crafting quality tier chance</description>
+                <degree>0</degree>
+                <statFactors>
+                    <WorkSpeedGlobal>1.25</WorkSpeedGlobal>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_BattleManiac</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Beast Whisperer: Animal bonuses -->
+    <TraitDef>
+        <defName>Isekai_BeastWhisperer</defName>
+        <commonality>1.0</commonality>
+        <degreeDatas>
+            <li>
+                <label>beast whisperer</label>
+                <description>Has an uncanny bond with animals. Creatures of all kinds are drawn to this individual, making taming and training trivially easy.\n\n• +40% tame animal chance\n• +30% train animal chance\n• +25% animal gather yield\n• Animals won't attack unprovoked</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <TameAnimalChance>0.40</TameAnimalChance>
+                    <TrainAnimalChance>0.30</TrainAnimalChance>
+                    <AnimalGatherYield>0.25</AnimalGatherYield>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+    
+    <!-- Healer's Touch: Medical bonuses -->
+    <TraitDef>
+        <defName>Isekai_HealerTouch</defName>
+        <commonality>0.8</commonality>
+        <degreeDatas>
+            <li>
+                <label>healer's touch</label>
+                <description>Healing flows through their hands like magic. Their medical skills far exceed what training alone could explain.\n\n• +30% medical tend quality\n• +25% surgery success chance\n• +20% immunity gain speed</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MedicalTendQuality>0.30</MedicalTendQuality>
+                    <MedicalSurgerySuccessChance>0.25</MedicalSurgerySuccessChance>
+                </statOffsets>
+                <statFactors>
+                    <ImmunityGainSpeedFactor>1.20</ImmunityGainSpeedFactor>
+                </statFactors>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+    
+    <!-- Lucky: Random good things happen -->
+    <TraitDef>
+        <defName>Isekai_Lucky</defName>
+        <commonality>0.6</commonality>
+        <degreeDatas>
+            <li>
+                <label>lucky</label>
+                <description>Fortune favors them endlessly. Good things just seem to happen around this individual.\n\n• +15% surgery success\n• +10% shooting accuracy\n• +10% trade prices\n• +5 mood (feeling lucky)</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MedicalSurgerySuccessChance>0.15</MedicalSurgerySuccessChance>
+                    <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+                    <TradePriceImprovement>0.10</TradePriceImprovement>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_CursedLuck</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Cursed Luck: Random bad things, but powerful -->
+    <TraitDef>
+        <defName>Isekai_CursedLuck</defName>
+        <commonality>0.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>cursed luck</label>
+                <description>Terrible luck plagues them, yet somehow they thrive in adversity. Misfortune strengthens them in mysterious ways.\n\n• x2 XP multiplier\n• -15% surgery success\n• -10% trade prices\n• +20% melee damage\n• -5 mood (cursed by fate)</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MedicalSurgerySuccessChance>-0.15</MedicalSurgerySuccessChance>
+                    <TradePriceImprovement>-0.10</TradePriceImprovement>
+                </statOffsets>
+                <statFactors>
+                    <MeleeDamageFactor>1.20</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Lucky</li>
+        </conflictingTraits>
+    </TraitDef>
+
+    <!-- ==================== NEGATIVE / CURSE TRAITS ==================== -->
+    <!-- Powerful upsides with significant drawbacks -->
+    
+    <!-- Hollow Core: XP boost but no constellation -->
+    <TraitDef>
+        <defName>Isekai_HollowCore</defName>
+        <commonality>0.3</commonality>
+        <degreeDatas>
+            <li>
+                <label>hollow core</label>
+                <description>Their spiritual core is shattered — they can channel raw power but cannot form the connections needed for constellation skills.\n\n• x3 XP multiplier\n• Cannot unlock any constellation nodes\n• No star points gained</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_NaturalTalent</li>
+            <li>Isekai_Protagonist</li>
+            <li>Isekai_Antagonist</li>
+            <li>Isekai_Reincarnated</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Fragile Vessel: XP boost but less HP -->
+    <TraitDef>
+        <defName>Isekai_FragileVessel</defName>
+        <commonality>0.4</commonality>
+        <degreeDatas>
+            <li>
+                <label>fragile vessel</label>
+                <description>Their body wasn't built to contain this much power. They grow rapidly but their physical form deteriorates under the strain.\n\n• x2.5 XP multiplier\n• -50% max health\n• VIT effectiveness halved</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_Fortress</li>
+            <li>Isekai_Resilient</li>
+        </conflictingTraits>
+    </TraitDef>
+    
+    <!-- Echo of Defeat: XP boost after being downed -->
+    <TraitDef>
+        <defName>Isekai_EchoOfDefeat</defName>
+        <commonality>0.5</commonality>
+        <degreeDatas>
+            <li>
+                <label>echo of defeat</label>
+                <description>Grows stronger through failure. Each defeat fuels their determination to improve.\n\n• Permanent +10% XP bonus\n• x2 XP for 3 days after being downed\n• -5% melee damage</description>
+                <degree>0</degree>
+                <statFactors>
+                    <MeleeDamageFactor>0.95</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+    
+    <!-- Sealed Power: Locked until level 25 -->
+    <TraitDef>
+        <defName>Isekai_SealedPower</defName>
+        <commonality>0.3</commonality>
+        <degreeDatas>
+            <li>
+                <label>sealed power</label>
+                <description>Immense power sealed away, waiting to be unleashed. Weak and stunted until the seal breaks at level 25, then gains an explosive power surge.\n\n• Before level 25: -30% all stats, no star points\n• At level 25: Seal breaks!\n• After level 25: Double stat points per level (up to +2 bonus), +2 star points per 5 levels</description>
+                <degree>0</degree>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Isekai_AwakenedPotential</li>
+            <li>Isekai_NaturalTalent</li>
+        </conflictingTraits>
+    </TraitDef>
+
+</Defs>

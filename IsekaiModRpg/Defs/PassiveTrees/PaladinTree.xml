@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════╗
+        ║  PALADIN CONSTELLATION — 56 Nodes, 5 Branches        ║
+        ║  Layout: Full-compass star — distinct from Knight    ║
+        ║          (radial fan) and Mage (diamond+spine)       ║
+        ║          Upper: Bulwark(NW) / Ironclad(NE)           ║
+        ║          Center spine: Sanctuary (N)                 ║
+        ║          Lower: Justicar(SW) / Shepherd(SE)          ║
+        ║                                                      ║
+        ║  Branches:                                           ║
+        ║   • BULWARK    (NW) — MaxHP, armor                   ║
+        ║   • IRONCLAD   (NE) — Pain, resists, immunity        ║
+        ║   • SANCTUARY  (N)  — HP+Social + gimmick nodes      ║
+        ║   • JUSTICAR   (SW) — Counter-damage, hit chance     ║
+        ║   • SHEPHERD   (SE) — Medical, colony support        ║
+        ║   + 5 cross-connectors between branches              ║
+        ╚══════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Paladin</defName>
+        <label>Paladin</label>
+        <treeClass>Paladin</treeClass>
+        <treeDescription>Unyielding guardians of the colony, Paladins turn punishment into power. Five constellations diverge from the paladin's core — each forging a different facet of their iron will. Absorb damage through the Sanctuary's Vow to unleash Divine Retribution on your next strike.</treeDescription>
+        <classGimmick>DivineRetribution</classGimmick>
+        <classGimmickName>Divine Retribution</classGimmickName>
+        <classGimmickDescription>Every blow the Paladin endures is stored as retribution charge. The next outgoing melee strike releases that charge as a burst of bonus damage, then resets. Divine Retribution scales along the Sanctuary's Vow. Tier 1 (Saint's Guard): up to +15% bonus damage at full charge (50 dmg). Tier 2 (Iron Covenant): up to +30% (75 dmg). Tier 3 (Vow of Steel): up to +45% (100 dmg). Tier 4 (Holy Wrath): up to +60% (150 dmg). Charge is capped per tier — take hits, then retaliate.</classGimmickDescription>
+
+        <nodes>
+            <!-- ════════════ START NODE ════════════ -->
+            <li>
+                <nodeId>ST_Start</nodeId>
+                <label>Paladin's Awakening</label>
+                <description>A wall stands between the weak and destruction. Today, that wall is you.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ BULWARK (North-West) — Pure HP &amp; Armor ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>ST_BW1</nodeId>
+                <label>Fortified Stance</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-1.4</x><y>0.9</y>
+                <bonuses><li><bonusType>MaxHealth</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW2</nodeId>
+                <label>Stone Endurance</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-2.9</x><y>1.8</y>
+                <bonuses><li><bonusType>MaxHealth</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW_LivingFortress</nodeId>
+                <label>Living Fortress</label>
+                <description>Your body has become a bastion. Sharp edges glance off your skin; blunt force barely registers. You are the last line of defense — immovable and eternal.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>-4.3</x><y>2.7</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.0667</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW3</nodeId>
+                <label>Titan's Blood</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-5.5</x><y>3.7</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.05</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW4</nodeId>
+                <label>Mountain Heart</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-6.6</x><y>4.6</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.05</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW_Indomitable</nodeId>
+                <label>Indomitable</label>
+                <description>You have been struck by everything the world can throw. And still you stand. There is no wound deep enough, no enemy fierce enough, to put you down permanently.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>-7.8</x><y>5.6</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.1667</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.1</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW5</nodeId>
+                <label>Iron Constitution</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-8.7</x><y>6.6</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0667</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW_Colossus</nodeId>
+                <label>Colossus</label>
+                <description>You are no longer simply large — you are a force of nature. Weapons shatter against your frame. Your presence on the battlefield warps the flow of combat entirely.\n\nTRADEOFF: Sheer mass slows movement.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-9.8</x><y>7.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.4167</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.2</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.2</value></li>
+                    <li><bonusType>HeatArmor</bonusType><value>0.1333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>-0.2</value></li>
+                </bonuses>
+            </li>
+            <!-- Bulwark side branch (from Living Fortress → deeper NW-left flank) -->
+            <li>
+                <nodeId>ST_BW_S1</nodeId>
+                <label>Bastion Skin</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>-5.7</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>SharpArmor</bonusType><value>0.05</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW_S2</nodeId>
+                <label>Barrier Form</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>-7</x><y>1.1</y>
+                <bonuses>
+                    <li><bonusType>SharpArmor</bonusType><value>0.05</value></li>
+                    <li><bonusType>HeatArmor</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_BW_DiamondBody</nodeId>
+                <label>Diamond Body</label>
+                <description>Your skin has hardened past the point of flesh. Edges find no purchase; flames find no purchase; the universe's most hostile forces find no purchase. You simply endure.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>-8.3</x><y>0.5</y>
+                <bonuses>
+                    <li><bonusType>SharpArmor</bonusType><value>0.1333</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.1</value></li>
+                    <li><bonusType>HeatArmor</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ IRONCLAD (North-East) — Pain / Resists / Immunity ▓▓  -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>ST_IC1</nodeId>
+                <label>Tempered Will</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>1.4</x><y>0.9</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC2</nodeId>
+                <label>Battle-Scarred</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>2.9</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC_ScarTissue</nodeId>
+                <label>Scar Tissue</label>
+                <description>Every old wound has become armor. Pain is a language you have learned to ignore. Your scars speak of battles survived — and enemies who didn't walk away.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>4.3</x><y>2.7</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.0833</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC3</nodeId>
+                <label>Hardened Form</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>5.5</x><y>3.7</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC4</nodeId>
+                <label>Toxin Resistance</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>6.6</x><y>4.6</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0667</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC_IronImmune</nodeId>
+                <label>Iron Immune</label>
+                <description>Poison, plague, and pestilence slide off your immune system like rain off iron. Where others collapse from infection, you march through unaffected.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>7.8</x><y>5.6</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC5</nodeId>
+                <label>Unbreakable Will</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>8.7</x><y>6.6</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC_Undying</nodeId>
+                <label>Undying</label>
+                <description>You have stared at death so many times it has given up trying. Every disease, toxin, and physical trauma that should have ended you has only made you more terrifyingly resilient.\n\nTRADEOFF: Your obsession with survival leaves little room for peace of mind.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/chess-rook</icon>
+                <x>9.8</x><y>7.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.3333</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.25</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.25</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>-0.0833</value></li>
+                </bonuses>
+            </li>
+            <!-- Ironclad side branch (from Scar Tissue → deeper NE-right flank) -->
+            <li>
+                <nodeId>ST_IC_S1</nodeId>
+                <label>Adamant Frame</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>5.7</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>BluntArmor</bonusType><value>0.05</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC_S2</nodeId>
+                <label>Blessed Constitution</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>7</x><y>1.1</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.05</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_IC_SacredAegis</nodeId>
+                <label>Sacred Aegis</label>
+                <description>Your body is not merely resistant — it is consecrated. No disease, no toxin, and no wound can touch the sacred core of a Paladin who has walked the Ironclad path to its end.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>8.3</x><y>0.5</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.1</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1333</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ SANCTUARY (North spine) — HP+Social + GIMMICK tiers ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>ST_SN1</nodeId>
+                <label>Shield of Faith</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SN2</nodeId>
+                <label>Holy Vanguard</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0</x><y>3.2</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SN_SacredGuard</nodeId>
+                <label>Sacred Guard</label>
+                <description>The vow has been spoken. Every wound you receive now carries meaning — a debt owed by the universe, to be repaid in righteous force. Divine Retribution awakens.\n\n[GIMMICK TIER 1]: Incoming damage builds retribution charge. Next melee strike releases up to +15% bonus damage.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>4.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0833</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SN3</nodeId>
+                <label>Martyr's Resolve</label>
+                <description>[GIMMICK TIER 2]: Retribution charge cap increases to 75 damage → up to +30% bonus on release.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>0</x><y>6.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SN4</nodeId>
+                <label>Sacred Vigil</label>
+                <description>[GIMMICK TIER 3]: Retribution charge cap increases to 100 damage → up to +45% bonus on release.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0</x><y>7.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SN_VowOfRetribution</nodeId>
+                <label>Vow of Retribution</label>
+                <description>The covenant is complete. You have sworn upon every scar, every broken bone, every moment of agony — that those who strike you will be answered in kind. With interest.\n\n[GIMMICK TIER 4]: Retribution charge cap increases to 150 damage → up to +60% bonus on release. The wall has teeth.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>0</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1333</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ JUSTICAR (South-West) — Counter-damage &amp; melee hit ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>ST_JU1</nodeId>
+                <label>Striking Back</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-0.6</x><y>-1.6</y>
+                <bonuses><li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU2</nodeId>
+                <label>Counterforce</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-1.2</x><y>-3.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU_RetributorsEdge</nodeId>
+                <label>Retaliator's Edge</label>
+                <description>The warrior who fights defensively is still dangerous. Those who mistake patience for weakness discover the truth too late — every blow they landed was an investment in their own destruction.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/hand-fist</icon>
+                <x>-1.7</x><y>-4.8</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU3</nodeId>
+                <label>Vengeance</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-2</x><y>-6.3</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU4</nodeId>
+                <label>Righteous Fury</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-2.4</x><y>-7.7</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU_AvengersStance</nodeId>
+                <label>Avenger's Stance</label>
+                <description>Your fighting style is built around endurance and reprisal. You know how to take a hit — and you know exactly how to make the next one count.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/hand-fist</icon>
+                <x>-2.7</x><y>-9.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU5</nodeId>
+                <label>Final Judgment</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-2.8</x><y>-10.6</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU_DivineJustice</nodeId>
+                <label>Divine Justice</label>
+                <description>You do not fight to dominate. You fight to protect. But those who threaten what you guard will learn that the most dangerous blow is the one from a defender who has finally had enough.\n\nThe wall does not merely stand. It strikes back.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-3</x><y>-12</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.3</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.2</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.1333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <!-- Justicar side branch (from Retaliator's Edge → deeper W flank) -->
+            <li>
+                <nodeId>ST_JU_S1</nodeId>
+                <label>Vigilant Eye</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-3.4</x><y>-4.9</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU_S2</nodeId>
+                <label>Hunter's Counter</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>-4.8</x><y>-5.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_JU_ExecutionersPatience</nodeId>
+                <label>Executioner's Patience</label>
+                <description>You wait. You absorb. You study every movement. And when the moment comes, your counter-strike lands with the precision of someone who has memorised every flaw in their enemy's guard.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/hand-fist</icon>
+                <x>-6.2</x><y>-5.6</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ SHEPHERD (South-East) — Medical &amp; colony support ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>ST_SH1</nodeId>
+                <label>Protective Presence</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>0.6</x><y>-1.6</y>
+                <bonuses><li><bonusType>SocialImpact</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH2</nodeId>
+                <label>Reassuring Voice</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>1.2</x><y>-3.2</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH_ColonyGuardian</nodeId>
+                <label>Colony Guardian</label>
+                <description>You have stood between your people and catastrophe enough times that they don't question you anymore — they follow. Your presence alone keeps morale from collapsing in the darkest hours.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>1.7</x><y>-4.8</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0833</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH3</nodeId>
+                <label>Faith in Others</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>2</x><y>-6.3</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH4</nodeId>
+                <label>Steadfast Support</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>2.4</x><y>-7.7</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.05</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH_InspiringBulwark</nodeId>
+                <label>Inspiring Bulwark</label>
+                <description>You are not just effective in a fight — you are inspiring. Allies fight harder knowing you are there. Enemies think twice knowing you are there. Your reputation is itself a weapon.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>2.7</x><y>-9.2</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0833</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH5</nodeId>
+                <label>Beacon of Hope</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>2.8</x><y>-10.6</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0667</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH_ShepherdOfFallen</nodeId>
+                <label>Shepherd of the Fallen</label>
+                <description>You have pulled too many people back from the edge. The dying, the broken, the despairing — they all find their way back because you refused to let them go. It is not a gift. It is a vow.\n\nYou protect them. All of them. Always.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>3</x><y>-12</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.25</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.2</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.1333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.1333</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+            <!-- Shepherd side branch (from Colony Guardian → deeper SE flank) -->
+            <li>
+                <nodeId>ST_SH_S1</nodeId>
+                <label>Healer's Reach</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>3.4</x><y>-4.9</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.05</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH_S2</nodeId>
+                <label>Sacred Mending</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>4.8</x><y>-5.2</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.05</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>ST_SH_DivineTouch</nodeId>
+                <label>Divine Touch</label>
+                <description>Your hands have closed wounds that should have been fatal. Surgeries that other doctors wouldn't attempt, you perform as a matter of routine. The colony trusts your hands with their lives — and you have never let them down.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>6.2</x><y>-5.6</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.1167</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Cross-connectors (all require both neighbours to be active) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <!-- Bulwark (NW) ↔ Sanctuary (N) — mid-branch bridge -->
+            <li>
+                <nodeId>ST_Cross_BS</nodeId>
+                <label>Bulwark's Covenant</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-2.2</x><y>3.8</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Ironclad (NE) ↔ Sanctuary (N) — mid-branch bridge -->
+            <li>
+                <nodeId>ST_Cross_IS</nodeId>
+                <label>Ironclad's Covenant</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>2.2</x><y>3.8</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Bulwark (NW) ↔ Justicar (SW) — upper gateway bridge -->
+            <li>
+                <nodeId>ST_Cross_BJ</nodeId>
+                <label>Guardian's Fury</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-1.7</x><y>-0.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <!-- Ironclad (NE) ↔ Shepherd (SE) — upper gateway bridge -->
+            <li>
+                <nodeId>ST_Cross_IH</nodeId>
+                <label>Ironheart</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>1.7</x><y>-0.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <!-- Justicar (SW) ↔ Shepherd (SE) — lower bridge -->
+            <li>
+                <nodeId>ST_Cross_JS</nodeId>
+                <label>Unified Purpose</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0.0</x><y>-3.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- Connection pairs (bidirectional, "A~B" format)             -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <connections>
+            <!-- Start → 5 branch gateways -->
+            <li>ST_Start~ST_BW1</li>
+            <li>ST_Start~ST_IC1</li>
+            <li>ST_Start~ST_SN1</li>
+            <li>ST_Start~ST_JU1</li>
+            <li>ST_Start~ST_SH1</li>
+
+            <!-- Bulwark main path -->
+            <li>ST_BW1~ST_BW2</li>
+            <li>ST_BW2~ST_BW_LivingFortress</li>
+            <li>ST_BW_LivingFortress~ST_BW3</li>
+            <li>ST_BW3~ST_BW4</li>
+            <li>ST_BW4~ST_BW_Indomitable</li>
+            <li>ST_BW_Indomitable~ST_BW5</li>
+            <li>ST_BW5~ST_BW_Colossus</li>
+            <!-- Bulwark side branch -->
+            <li>ST_BW_LivingFortress~ST_BW_S1</li>
+            <li>ST_BW_S1~ST_BW_S2</li>
+            <li>ST_BW_S2~ST_BW_DiamondBody</li>
+
+            <!-- Ironclad main path -->
+            <li>ST_IC1~ST_IC2</li>
+            <li>ST_IC2~ST_IC_ScarTissue</li>
+            <li>ST_IC_ScarTissue~ST_IC3</li>
+            <li>ST_IC3~ST_IC4</li>
+            <li>ST_IC4~ST_IC_IronImmune</li>
+            <li>ST_IC_IronImmune~ST_IC5</li>
+            <li>ST_IC5~ST_IC_Undying</li>
+            <!-- Ironclad side branch -->
+            <li>ST_IC_ScarTissue~ST_IC_S1</li>
+            <li>ST_IC_S1~ST_IC_S2</li>
+            <li>ST_IC_S2~ST_IC_SacredAegis</li>
+
+            <!-- Sanctuary main path -->
+            <li>ST_SN1~ST_SN2</li>
+            <li>ST_SN2~ST_SN_SacredGuard</li>
+            <li>ST_SN_SacredGuard~ST_SN3</li>
+            <li>ST_SN3~ST_SN4</li>
+            <li>ST_SN4~ST_SN_VowOfRetribution</li>
+
+            <!-- Justicar main path -->
+            <li>ST_JU1~ST_JU2</li>
+            <li>ST_JU2~ST_JU_RetributorsEdge</li>
+            <li>ST_JU_RetributorsEdge~ST_JU3</li>
+            <li>ST_JU3~ST_JU4</li>
+            <li>ST_JU4~ST_JU_AvengersStance</li>
+            <li>ST_JU_AvengersStance~ST_JU5</li>
+            <li>ST_JU5~ST_JU_DivineJustice</li>
+            <!-- Justicar side branch -->
+            <li>ST_JU_RetributorsEdge~ST_JU_S1</li>
+            <li>ST_JU_S1~ST_JU_S2</li>
+            <li>ST_JU_S2~ST_JU_ExecutionersPatience</li>
+
+            <!-- Shepherd main path -->
+            <li>ST_SH1~ST_SH2</li>
+            <li>ST_SH2~ST_SH_ColonyGuardian</li>
+            <li>ST_SH_ColonyGuardian~ST_SH3</li>
+            <li>ST_SH3~ST_SH4</li>
+            <li>ST_SH4~ST_SH_InspiringBulwark</li>
+            <li>ST_SH_InspiringBulwark~ST_SH5</li>
+            <li>ST_SH5~ST_SH_ShepherdOfFallen</li>
+            <!-- Shepherd side branch -->
+            <li>ST_SH_ColonyGuardian~ST_SH_S1</li>
+            <li>ST_SH_S1~ST_SH_S2</li>
+            <li>ST_SH_S2~ST_SH_DivineTouch</li>
+
+            <!-- Cross-connectors -->
+            <li>ST_BW_LivingFortress~ST_Cross_BS</li>
+            <li>ST_Cross_BS~ST_SN_SacredGuard</li>
+            <li>ST_IC_ScarTissue~ST_Cross_IS</li>
+            <li>ST_Cross_IS~ST_SN_SacredGuard</li>
+            <li>ST_BW1~ST_Cross_BJ</li>
+            <li>ST_Cross_BJ~ST_JU1</li>
+            <li>ST_IC1~ST_Cross_IH</li>
+            <li>ST_Cross_IH~ST_SH1</li>
+            <li>ST_JU_RetributorsEdge~ST_Cross_JS</li>
+            <li>ST_Cross_JS~ST_SH_ColonyGuardian</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

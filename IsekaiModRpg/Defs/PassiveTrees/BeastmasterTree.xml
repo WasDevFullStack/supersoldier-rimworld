@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════╗
+        ║  BEASTMASTER CONSTELLATION — 56 Nodes, 5 Branches   ║
+        ║  Layout: "Claw" — radiating outward like talons      ║
+        ║                                                      ║
+        ║  Branches:                                           ║
+        ║   • TAMER     (NW) — Tame animal chance              ║
+        ║   • TRAINER   (NE) — Train animal speed              ║
+        ║   • GATHERER  (SW) — Animal gather yield             ║
+        ║   • WARDEN    (SE) — Move speed & pain threshold     ║
+        ║   • PACK      (N)  — Class gimmick spine             ║
+        ║   + 5 Cross-connectors between branches             ║
+        ╚══════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Beastmaster</defName>
+        <label>Beastmaster</label>
+        <treeClass>Beastmaster</treeClass>
+        <treeDescription>Those who command the wild hold dominion over beast and field alike. Five primal constellations mark the beastmaster's bond — each deepening the connection between handler and animal.</treeDescription>
+        <classGimmick>PackAlpha</classGimmick>
+        <classGimmickName>Pack Alpha</classGimmickName>
+        <classGimmickDescription>Each bonded animal on the same map grants passive bonuses to taming, training, and animal gather yield. Tier 1: +3% per animal (max 3). Tier 2: +4% per animal (max 5). Tier 3: +5% per animal (max 7). Tier 4: +6% per animal (max 10).</classGimmickDescription>
+
+        <nodes>
+            <!-- ═══════ START NODE ═══════ -->
+            <li>
+                <nodeId>BM_Start</nodeId>
+                <label>Beastmaster's Call</label>
+                <description>The wild answers your voice. Every creature senses your authority and kinship.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.0333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0167</value></li>
+                    <li><bonusType>BondChance</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ TAMER BRANCH (NW) — Taming ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BM_TM1</nodeId>
+                <label>Soothing Voice</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>-1.5</x><y>1.2</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TM2</nodeId>
+                <label>Animal Empathy</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>-3.0</x><y>2.4</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TM3</nodeId>
+                <label>Trust Builder</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>-4.5</x><y>3.6</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TM_Whisperer</nodeId>
+                <label>Beast Whisperer</label>
+                <description>Even the most dangerous predators sense your intent. Wild creatures approach without fear.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>-6.2</x><y>5.0</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>BondChance</bonusType><value>0.10</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TM4</nodeId>
+                <label>Wild Command</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>-7.8</x><y>6.2</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TM5</nodeId>
+                <label>Primal Bond</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>-9.4</x><y>7.4</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.0667</value></li>
+                    <li><bonusType>BondChance</bonusType><value>0.10</value></li>
+                </bonuses>
+            </li>
+            <!-- Keystone: Tamer -->
+            <li>
+                <nodeId>BM_TM_Key</nodeId>
+                <label>Lord of the Wild</label>
+                <description>No creature can resist your call. Your taming ability is unmatched — but time among beasts dulls your craftsmanship.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/trophy</icon>
+                <x>-11.2</x><y>8.8</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.25</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1</value></li>
+                    <li><bonusType>BondChance</bonusType><value>0.25</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>-0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ TRAINER BRANCH (NE) — Training ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BM_TR1</nodeId>
+                <label>Firm Hand</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>1.5</x><y>1.2</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TR2</nodeId>
+                <label>Reward Training</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>3.0</x><y>2.4</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TR3</nodeId>
+                <label>Pack Drills</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>4.5</x><y>3.6</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TR_Taskmaster</nodeId>
+                <label>Taskmaster</label>
+                <description>Your trained animals obey complex commands with ease. They perform beyond their natural capabilities.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>6.2</x><y>5.0</y>
+                <bonuses>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.1333</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TR4</nodeId>
+                <label>Battle Training</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>7.8</x><y>6.2</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_TR5</nodeId>
+                <label>War Beast</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>9.4</x><y>7.4</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Trainer -->
+            <li>
+                <nodeId>BM_TR_Key</nodeId>
+                <label>Alpha Commander</label>
+                <description>Your animals are extensions of your will. Training reaches perfection — but your obsessive focus weakens your research ability.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>11.2</x><y>8.8</y>
+                <bonuses>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.25</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.1</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>-0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ GATHERER BRANCH (SW) — Yield ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BM_GR1</nodeId>
+                <label>Forager's Eye</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-1.5</x><y>-1.2</y>
+                <bonuses><li><bonusType>GatherYield</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_GR2</nodeId>
+                <label>Efficient Harvest</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-3.0</x><y>-2.4</y>
+                <bonuses><li><bonusType>GatherYield</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_GR3</nodeId>
+                <label>Bounty Seeker</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-4.5</x><y>-3.6</y>
+                <bonuses><li><bonusType>GatherYield</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_GR_Provider</nodeId>
+                <label>Provider</label>
+                <description>Your herds produce more than their owners could dream. Milk, wool, and eggs overflow.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-6.2</x><y>-5.0</y>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.1333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_GR4</nodeId>
+                <label>Surplus Stock</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-7.8</x><y>-6.2</y>
+                <bonuses><li><bonusType>GatherYield</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_GR5</nodeId>
+                <label>Overflowing Harvest</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-9.4</x><y>-7.4</y>
+                <bonuses><li><bonusType>GatherYield</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Gatherer -->
+            <li>
+                <nodeId>BM_GR_Key</nodeId>
+                <label>Nature's Bounty</label>
+                <description>Your animals produce legendary yields. No herd has ever been so productive — but your single-minded devotion leaves you vulnerable in combat.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-11.2</x><y>-8.8</y>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.25</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>-0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ WARDEN BRANCH (SE) — Survival ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BM_WD1</nodeId>
+                <label>Tracker's Step</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>1.5</x><y>-1.2</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_WD2</nodeId>
+                <label>Hardy Constitution</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>3.0</x><y>-2.4</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_WD3</nodeId>
+                <label>Wild Endurance</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>4.5</x><y>-3.6</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_WD_Stalker</nodeId>
+                <label>Stalker</label>
+                <description>Hours of tracking game across rough terrain have hardened your body and sharpened your instincts.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>6.2</x><y>-5.0</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_WD4</nodeId>
+                <label>Thick Hide</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>7.8</x><y>-6.2</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_WD5</nodeId>
+                <label>Apex Predator</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>9.4</x><y>-7.4</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <!-- Keystone: Warden -->
+            <li>
+                <nodeId>BM_WD_Key</nodeId>
+                <label>Feral Instinct</label>
+                <description>You move like a predator, sensing danger before it strikes. Nothing escapes your awareness — but your instincts erode civilized thought.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>11.2</x><y>-8.8</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>-0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ PACK SPINE (North) — Class Gimmick ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BM_PK1</nodeId>
+                <label>First Bond</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>0</x><y>2.0</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_PK2</nodeId>
+                <label>Pack Instinct</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>0</x><y>3.6</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_PK_T1</nodeId>
+                <label>Pack Alpha I</label>
+                <description>Your first bonded animals enhance your abilities. The pack strengthens the alpha.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>5.2</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_PK3</nodeId>
+                <label>Shared Senses</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>0</x><y>6.6</y>
+                <bonuses><li><bonusType>GatherYield</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_PK_T2</nodeId>
+                <label>Pack Alpha II</label>
+                <description>Your growing pack amplifies your natural authority. More animals mean greater power.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>8.0</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_PK4</nodeId>
+                <label>Harmonious Bond</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>0</x><y>9.4</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_PK_T3</nodeId>
+                <label>Pack Alpha III</label>
+                <description>Your pack is formidable. Each bond strengthens all your animal-related abilities.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>10.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_PK5</nodeId>
+                <label>Unbreakable Pack</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>0</x><y>12.2</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BM_PK_T4</nodeId>
+                <label>Pack Alpha IV</label>
+                <description>You are the undisputed alpha. Your pack's loyalty is absolute, granting you unmatched dominion over the animal kingdom.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>13.6</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0833</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ CROSS-CONNECTORS ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BM_Cross_TT</nodeId>
+                <label>Bond Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>0</x><y>3.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.0333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_Cross_GW</nodeId>
+                <label>Wild Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>0</x><y>-3.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_Cross_TG</nodeId>
+                <label>Harvest Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>-3.8</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.0333</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_Cross_RW</nodeId>
+                <label>Patrol Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>3.8</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BM_Cross_Deep</nodeId>
+                <label>Primal Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>-7.0</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <connections>
+            <!-- Start to branches -->
+            <li>BM_Start~BM_TM1</li>
+            <li>BM_Start~BM_TR1</li>
+            <li>BM_Start~BM_GR1</li>
+            <li>BM_Start~BM_WD1</li>
+            <li>BM_Start~BM_PK1</li>
+            <!-- Tamer chain -->
+            <li>BM_TM1~BM_TM2</li>
+            <li>BM_TM2~BM_TM3</li>
+            <li>BM_TM3~BM_TM_Whisperer</li>
+            <li>BM_TM_Whisperer~BM_TM4</li>
+            <li>BM_TM4~BM_TM5</li>
+            <li>BM_TM5~BM_TM_Key</li>
+            <!-- Trainer chain -->
+            <li>BM_TR1~BM_TR2</li>
+            <li>BM_TR2~BM_TR3</li>
+            <li>BM_TR3~BM_TR_Taskmaster</li>
+            <li>BM_TR_Taskmaster~BM_TR4</li>
+            <li>BM_TR4~BM_TR5</li>
+            <li>BM_TR5~BM_TR_Key</li>
+            <!-- Gatherer chain -->
+            <li>BM_GR1~BM_GR2</li>
+            <li>BM_GR2~BM_GR3</li>
+            <li>BM_GR3~BM_GR_Provider</li>
+            <li>BM_GR_Provider~BM_GR4</li>
+            <li>BM_GR4~BM_GR5</li>
+            <li>BM_GR5~BM_GR_Key</li>
+            <!-- Warden chain -->
+            <li>BM_WD1~BM_WD2</li>
+            <li>BM_WD2~BM_WD3</li>
+            <li>BM_WD3~BM_WD_Stalker</li>
+            <li>BM_WD_Stalker~BM_WD4</li>
+            <li>BM_WD4~BM_WD5</li>
+            <li>BM_WD5~BM_WD_Key</li>
+            <!-- Pack spine -->
+            <li>BM_PK1~BM_PK2</li>
+            <li>BM_PK2~BM_PK_T1</li>
+            <li>BM_PK_T1~BM_PK3</li>
+            <li>BM_PK3~BM_PK_T2</li>
+            <li>BM_PK_T2~BM_PK4</li>
+            <li>BM_PK4~BM_PK_T3</li>
+            <li>BM_PK_T3~BM_PK5</li>
+            <li>BM_PK5~BM_PK_T4</li>
+            <!-- Cross-connectors -->
+            <li>BM_TM2~BM_Cross_TT</li>
+            <li>BM_TR2~BM_Cross_TT</li>
+            <li>BM_GR2~BM_Cross_GW</li>
+            <li>BM_WD2~BM_Cross_GW</li>
+            <li>BM_TM2~BM_Cross_TG</li>
+            <li>BM_GR2~BM_Cross_TG</li>
+            <li>BM_TR2~BM_Cross_RW</li>
+            <li>BM_WD2~BM_Cross_RW</li>
+            <li>BM_TM_Whisperer~BM_Cross_Deep</li>
+            <li>BM_GR_Provider~BM_Cross_Deep</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

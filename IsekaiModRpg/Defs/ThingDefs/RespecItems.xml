@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Rebirth Orb - Consumable item that resets stat point allocation -->
+    <!-- Requested by AstraZeneca: "Will there be a way to respec/reset the stat and skill points of a pawn? Like an item?" -->
+    <ThingDef ParentName="ResourceBase">
+        <defName>Isekai_RespecOrb</defName>
+        <label>rebirth orb</label>
+        <description>A shimmering crystal orb infused with the essence of rebirth. When used on an adventurer, it resets all allocated stat points back to their base values, returning all spent points for reallocation.\n\nThe orb dissolves upon use, its energy reshaping the adventurer's potential. Level, XP, and titles are preserved — only stat distribution is reset.\n\nCan be crafted at a machining table from mana cores, or purchased from exotic traders.</description>
+        <graphicData>
+            <texPath>Things/Item/Respec_Orb</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>10</stackLimit>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>500</MarketValue>
+            <Mass>0.15</Mass>
+            <Beauty>10</Beauty>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <thingCategories>
+            <li>ItemsMisc</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Use rebirth orb to reset stat points</useLabel>
+                <useDuration>300</useDuration>
+            </li>
+            <li Class="CompProperties_UseEffect">
+                <compClass>IsekaiLeveling.CompUseEffect_Respec</compClass>
+            </li>
+            <li Class="CompProperties_UseEffectDestroySelf"/>
+        </comps>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>Sellable</li>
+        </tradeTags>
+        <tradeability>All</tradeability>
+    </ThingDef>
+
+    <!-- Crafting recipe for Rebirth Orb -->
+    <RecipeDef>
+        <defName>Isekai_Make_RespecOrb</defName>
+        <label>craft rebirth orb</label>
+        <description>Fuse mana cores together to create a rebirth orb capable of resetting an adventurer's stat allocation.</description>
+        <jobString>Crafting rebirth orb.</jobString>
+        <workAmount>1500</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workSkill>Crafting</workSkill>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Isekai_ManaCore</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Isekai_ManaCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Isekai_RespecOrb>1</Isekai_RespecOrb>
+        </products>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+        <recipeUsers>
+            <li>TableMachining</li>
+        </recipeUsers>
+    </RecipeDef>
+
+</Defs>

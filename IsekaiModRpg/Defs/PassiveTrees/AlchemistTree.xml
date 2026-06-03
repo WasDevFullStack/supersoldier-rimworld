@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════╗
+        ║  ALCHEMIST CONSTELLATION — 56 Nodes, 5 Branches     ║
+        ║  Layout: "Flask" — bulbous top narrowing to base     ║
+        ║                                                      ║
+        ║  Branches:                                           ║
+        ║   • APOTHECARY (NW) — Tend quality & surgery         ║
+        ║   • HERBALISM  (NE) — Immunity & toxic resistance    ║
+        ║   • SYNTHESIS  (SW) — Work speed & research          ║
+        ║   • INFUSION   (SE) — Learning & meditation          ║
+        ║   • EUREKA     (N)  — Class gimmick spine            ║
+        ║   + 5 Cross-connectors between branches             ║
+        ╚══════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Alchemist</defName>
+        <label>Alchemist</label>
+        <treeClass>Alchemist</treeClass>
+        <treeDescription>Masters of medicine and chemical arts, alchemists transform knowledge into healing power. Five constellations of discovery radiate from the alchemist's core — each unlocking deeper mastery of the body's secrets.</treeDescription>
+        <classGimmick>EurekaSynthesis</classGimmick>
+        <classGimmickName>Eureka Synthesis</classGimmickName>
+        <classGimmickDescription>Successful medical tends build Eureka insight stacks that boost tend quality and work speed for crafting. Stacks decay slowly over time. Tier 1: max 5 stacks, +3% each. Tier 2: max 8 stacks, +4% each. Tier 3: max 12 stacks, +5% each. Tier 4: max 16 stacks, +6% each.</classGimmickDescription>
+
+        <nodes>
+            <!-- ═══════ START NODE ═══════ -->
+            <li>
+                <nodeId>AL_Start</nodeId>
+                <label>Alchemist's Awakening</label>
+                <description>You see the hidden chemistry in all living things. Knowledge is the ultimate medicine.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ APOTHECARY BRANCH (NW) — Healing ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>AL_AP1</nodeId>
+                <label>Gentle Touch</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-1.5</x><y>1.2</y>
+                <bonuses><li><bonusType>TendQuality</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_AP2</nodeId>
+                <label>Precise Sutures</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-3.0</x><y>2.4</y>
+                <bonuses><li><bonusType>TendQuality</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_AP3</nodeId>
+                <label>Herbal Poultice</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-4.5</x><y>3.6</y>
+                <bonuses><li><bonusType>TendQuality</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_AP_MasterHealer</nodeId>
+                <label>Master Healer</label>
+                <description>Your hands channel pure medical knowledge. Patients recover faster under your care.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/medal</icon>
+                <x>-6.2</x><y>5.0</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.0833</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_AP4</nodeId>
+                <label>Surgical Precision</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-7.8</x><y>6.2</y>
+                <bonuses><li><bonusType>SurgerySuccess</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_AP5</nodeId>
+                <label>Miracle Worker</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-9.4</x><y>7.4</y>
+                <bonuses><li><bonusType>SurgerySuccess</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Apothecary -->
+            <li>
+                <nodeId>AL_AP_Key</nodeId>
+                <label>Philosopher's Hand</label>
+                <description>Your medical skill borders on the miraculous. Surgery success soars — but you neglect physical combat training.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/trophy</icon>
+                <x>-11.2</x><y>8.8</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.2</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>-0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ HERBALISM BRANCH (NE) — Resistance ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>AL_HB1</nodeId>
+                <label>Natural Remedy</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>1.5</x><y>1.2</y>
+                <bonuses><li><bonusType>ImmunityGain</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_HB2</nodeId>
+                <label>Detoxification</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>3.0</x><y>2.4</y>
+                <bonuses><li><bonusType>ToxicResist</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_HB3</nodeId>
+                <label>Immune Boost</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>4.5</x><y>3.6</y>
+                <bonuses><li><bonusType>ImmunityGain</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_HB_Purifier</nodeId>
+                <label>Blood Purifier</label>
+                <description>You understand how to cleanse impurities from the body. Disease and poison hold little power.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>6.2</x><y>5.0</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_HB4</nodeId>
+                <label>Poison Ward</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>7.8</x><y>6.2</y>
+                <bonuses><li><bonusType>ToxicResist</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_HB5</nodeId>
+                <label>Viral Immunity</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>9.4</x><y>7.4</y>
+                <bonuses><li><bonusType>ImmunityGain</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Herbalism -->
+            <li>
+                <nodeId>AL_HB_Key</nodeId>
+                <label>Living Antidote</label>
+                <description>Your body has adapted to every toxin. Disease and poison are mere nuisances — but your immune focus dulls your reflexes.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/ghost</icon>
+                <x>11.2</x><y>8.8</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.25</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ SYNTHESIS BRANCH (SW) — Work Speed ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>AL_SY1</nodeId>
+                <label>Quick Hands</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-1.5</x><y>-1.2</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_SY2</nodeId>
+                <label>Efficient Process</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-3.0</x><y>-2.4</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_SY3</nodeId>
+                <label>Catalytic Action</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-4.5</x><y>-3.6</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_SY_Transmuter</nodeId>
+                <label>Transmuter</label>
+                <description>You transform raw materials with practiced efficiency. Every motion is optimized.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-6.2</x><y>-5.0</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_SY4</nodeId>
+                <label>Mass Production</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-7.8</x><y>-6.2</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_SY5</nodeId>
+                <label>Assembly Line</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-9.4</x><y>-7.4</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Synthesis -->
+            <li>
+                <nodeId>AL_SY_Key</nodeId>
+                <label>Grand Synthesist</label>
+                <description>Your crafting speed is unrivaled. Potions and medicines flow from your hands — but your fixation on work erodes your social graces.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/chess-rook</icon>
+                <x>-11.2</x><y>-8.8</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.25</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>-0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ INFUSION BRANCH (SE) — Knowledge ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>AL_IF1</nodeId>
+                <label>Keen Study</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>1.5</x><y>-1.2</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_IF2</nodeId>
+                <label>Deep Analysis</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>3.0</x><y>-2.4</y>
+                <bonuses><li><bonusType>LearningSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_IF3</nodeId>
+                <label>Pattern Recognition</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>4.5</x><y>-3.6</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_IF_Scholar</nodeId>
+                <label>Arcane Scholar</label>
+                <description>Hours of studying alchemical texts grant deep insight. Your understanding accelerates all learning.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>6.2</x><y>-5.0</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_IF4</nodeId>
+                <label>Breakthrough</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>7.8</x><y>-6.2</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_IF5</nodeId>
+                <label>Eureka Moment</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>9.4</x><y>-7.4</y>
+                <bonuses><li><bonusType>LearningSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Infusion -->
+            <li>
+                <nodeId>AL_IF_Key</nodeId>
+                <label>Omniscient Mind</label>
+                <description>Your intellect borders on the supernatural. Research and learning flourish — but your body atrophies from constant study.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/chess-knight</icon>
+                <x>11.2</x><y>-8.8</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.25</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ EUREKA SPINE (North) — Class Gimmick ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>AL_EU1</nodeId>
+                <label>First Aid</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0</x><y>2.0</y>
+                <bonuses><li><bonusType>TendQuality</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_EU2</nodeId>
+                <label>Clinical Eye</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0</x><y>3.6</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_EU_T1</nodeId>
+                <label>Eureka Synthesis I</label>
+                <description>Your first breakthrough! Successful medical tends now build insight stacks.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>5.2</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_EU3</nodeId>
+                <label>Compound Knowledge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0</x><y>6.6</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_EU_T2</nodeId>
+                <label>Eureka Synthesis II</label>
+                <description>Deeper insight accelerates your work. Each patient teaches you something new.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>8.0</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_EU4</nodeId>
+                <label>Refined Formula</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0</x><y>9.4</y>
+                <bonuses><li><bonusType>TendQuality</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_EU_T3</nodeId>
+                <label>Eureka Synthesis III</label>
+                <description>Your understanding of the body deepens. Medical insight flows into every creation.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>10.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_EU5</nodeId>
+                <label>Perfected Art</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0</x><y>12.2</y>
+                <bonuses><li><bonusType>TendQuality</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>AL_EU_T4</nodeId>
+                <label>Eureka Synthesis IV</label>
+                <description>You have achieved the pinnacle of alchemical insight. Healing and creation are one.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>13.6</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0833</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ CROSS-CONNECTORS ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>AL_Cross_AH</nodeId>
+                <label>Healing Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0</x><y>3.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_Cross_SI</nodeId>
+                <label>Lab Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0</x><y>-3.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_Cross_AS</nodeId>
+                <label>Remedy Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-3.8</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_Cross_HI</nodeId>
+                <label>Study Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>3.8</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>AL_Cross_Deep</nodeId>
+                <label>Deep Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-7.0</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <connections>
+            <!-- Start to branches -->
+            <li>AL_Start~AL_AP1</li>
+            <li>AL_Start~AL_HB1</li>
+            <li>AL_Start~AL_SY1</li>
+            <li>AL_Start~AL_IF1</li>
+            <li>AL_Start~AL_EU1</li>
+            <!-- Apothecary chain -->
+            <li>AL_AP1~AL_AP2</li>
+            <li>AL_AP2~AL_AP3</li>
+            <li>AL_AP3~AL_AP_MasterHealer</li>
+            <li>AL_AP_MasterHealer~AL_AP4</li>
+            <li>AL_AP4~AL_AP5</li>
+            <li>AL_AP5~AL_AP_Key</li>
+            <!-- Herbalism chain -->
+            <li>AL_HB1~AL_HB2</li>
+            <li>AL_HB2~AL_HB3</li>
+            <li>AL_HB3~AL_HB_Purifier</li>
+            <li>AL_HB_Purifier~AL_HB4</li>
+            <li>AL_HB4~AL_HB5</li>
+            <li>AL_HB5~AL_HB_Key</li>
+            <!-- Synthesis chain -->
+            <li>AL_SY1~AL_SY2</li>
+            <li>AL_SY2~AL_SY3</li>
+            <li>AL_SY3~AL_SY_Transmuter</li>
+            <li>AL_SY_Transmuter~AL_SY4</li>
+            <li>AL_SY4~AL_SY5</li>
+            <li>AL_SY5~AL_SY_Key</li>
+            <!-- Infusion chain -->
+            <li>AL_IF1~AL_IF2</li>
+            <li>AL_IF2~AL_IF3</li>
+            <li>AL_IF3~AL_IF_Scholar</li>
+            <li>AL_IF_Scholar~AL_IF4</li>
+            <li>AL_IF4~AL_IF5</li>
+            <li>AL_IF5~AL_IF_Key</li>
+            <!-- Eureka spine -->
+            <li>AL_EU1~AL_EU2</li>
+            <li>AL_EU2~AL_EU_T1</li>
+            <li>AL_EU_T1~AL_EU3</li>
+            <li>AL_EU3~AL_EU_T2</li>
+            <li>AL_EU_T2~AL_EU4</li>
+            <li>AL_EU4~AL_EU_T3</li>
+            <li>AL_EU_T3~AL_EU5</li>
+            <li>AL_EU5~AL_EU_T4</li>
+            <!-- Cross-connectors -->
+            <li>AL_AP2~AL_Cross_AH</li>
+            <li>AL_HB2~AL_Cross_AH</li>
+            <li>AL_SY2~AL_Cross_SI</li>
+            <li>AL_IF2~AL_Cross_SI</li>
+            <li>AL_AP2~AL_Cross_AS</li>
+            <li>AL_SY2~AL_Cross_AS</li>
+            <li>AL_HB2~AL_Cross_HI</li>
+            <li>AL_IF2~AL_Cross_HI</li>
+            <li>AL_AP_MasterHealer~AL_Cross_Deep</li>
+            <li>AL_SY_Transmuter~AL_Cross_Deep</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

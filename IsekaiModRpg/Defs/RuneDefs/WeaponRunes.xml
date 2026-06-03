@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  WEAPON RUNES (max 2 per weapon)          -->
+    <!-- ══════════════════════════════════════════ -->
+
+    <!-- Fury: +12% melee attack speed -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Fury</defName>
+        <label>Rune of Fury</label>
+        <description>A blazing rune that quickens the hand of its bearer, reducing melee weapon cooldown.</description>
+        <category>Weapon</category>
+        <effectType>MeleeAttackSpeed</effectType>
+        <magnitude>0.12</magnitude>
+        <runeColor>(0.95, 0.35, 0.2)</runeColor>
+        <statDescription>+12% melee attack speed</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Precision: +10% ranged accuracy -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Precision</defName>
+        <label>Rune of Precision</label>
+        <description>A calm, focused rune that steadies aim and sharpens the eye at range.</description>
+        <category>Weapon</category>
+        <effectType>RangedAccuracy</effectType>
+        <magnitude>0.10</magnitude>
+        <runeColor>(0.3, 0.6, 1.0)</runeColor>
+        <statDescription>+10% ranged accuracy</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Vampirism: 3% lifesteal on melee hit -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Vampirism</defName>
+        <label>Rune of Vampirism</label>
+        <description>A dark crimson rune that drains the life force of struck foes, healing the wielder.</description>
+        <category>Weapon</category>
+        <effectType>Lifesteal</effectType>
+        <magnitude>0.03</magnitude>
+        <runeColor>(0.6, 0.1, 0.15)</runeColor>
+        <statDescription>3% lifesteal on melee hit</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Thunder: 8% stun chance on hit (60 ticks) -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Thunder</defName>
+        <label>Rune of Thunder</label>
+        <description>A crackling rune of lightning that can briefly paralyze a struck foe.</description>
+        <category>Weapon</category>
+        <effectType>StunChance</effectType>
+        <magnitude>0.08</magnitude>
+        <runeColor>(0.9, 0.85, 0.3)</runeColor>
+        <statDescription>8% stun chance on hit (1 sec)</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Flame: +15% fire damage bonus -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Flame</defName>
+        <label>Rune of Flame</label>
+        <description>An incandescent rune that wreath strikes in scorching fire.</description>
+        <category>Weapon</category>
+        <effectType>FireDamage</effectType>
+        <magnitude>0.15</magnitude>
+        <runeColor>(1.0, 0.5, 0.1)</runeColor>
+        <statDescription>+15% bonus fire damage</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Frost: 10% chance to slow target (120 ticks) -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Frost</defName>
+        <label>Rune of Frost</label>
+        <description>A freezing rune that chills struck enemies to the bone, slowing their movements.</description>
+        <category>Weapon</category>
+        <effectType>SlowChance</effectType>
+        <magnitude>0.10</magnitude>
+        <runeColor>(0.4, 0.8, 1.0)</runeColor>
+        <statDescription>10% chance to slow on hit (2 sec)</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Sharpness: +15% armor penetration -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Sharpness</defName>
+        <label>Rune of Sharpness</label>
+        <description>A keen rune that hones the edge of any weapon to cut through the toughest armor.</description>
+        <category>Weapon</category>
+        <effectType>ArmorPenetration</effectType>
+        <magnitude>0.15</magnitude>
+        <runeColor>(0.7, 0.7, 0.75)</runeColor>
+        <statDescription>+15% armor penetration</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Havoc: +8% AoE splash (melee only) -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Havoc</defName>
+        <label>Rune of Havoc</label>
+        <description>A violent rune that channels destructive force outward, damaging enemies near the target.</description>
+        <category>Weapon</category>
+        <effectType>AoESplash</effectType>
+        <magnitude>0.08</magnitude>
+        <runeColor>(0.85, 0.3, 0.0)</runeColor>
+        <statDescription>+8% AoE splash damage (melee)</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Devastation: +12% ranged damage multiplier -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Devastation</defName>
+        <label>Rune of Devastation</label>
+        <description>A volatile rune that amplifies the destructive force of ranged projectiles, increasing their damage.</description>
+        <category>Weapon</category>
+        <effectType>RangedDamage</effectType>
+        <magnitude>0.12</magnitude>
+        <runeColor>(0.75, 0.2, 0.4)</runeColor>
+        <statDescription>+12% ranged damage</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+</Defs>

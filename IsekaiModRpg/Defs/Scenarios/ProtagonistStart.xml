@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ScenPartDef>
+    <defName>Isekai_ResetToLevel1</defName>
+    <label>reset to level 1</label>
+    <scenPartClass>IsekaiLeveling.ScenPart_IsekaiReset</scenPartClass>
+    <category>PlayerPawnModifier</category>
+    <summaryPriority>-1</summaryPriority>
+    <maxUses>1</maxUses>
+  </ScenPartDef>
+
+  <ScenarioDef>
+    <defName>Isekai_ProtagonistStart</defName>
+    <label>Isekai Protagonist</label>
+    <description>You awaken alone on an unknown rimworld with nothing but the overwhelming power of a Protagonist.\n\nWith x10 XP gain and bonus stat points every level, you'll rise from nothing to conquer the Rim — if you can survive long enough.</description>
+    <scenario>
+      <summary>One protagonist, no supplies, limitless potential.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <surfaceLayer>
+        <def>SurfaceLayerFixed</def>
+        <tag>Surface</tag>
+        <layer>Surface</layer>
+        <settingsDef>Surface</settingsDef>
+        <hide>true</hide>
+        <connections>
+          <Orbit MayRequire="Ludeon.RimWorld.Odyssey">
+            <zoomMode>ZoomOut</zoomMode>
+          </Orbit>
+        </connections>
+      </surfaceLayer>
+      <parts>
+        <li MayRequire="Ludeon.RimWorld.Odyssey" Class="ScenPart_PlanetLayer">
+          <def>PlanetLayer</def>
+          <tag>Orbit</tag>
+          <layer>Orbit</layer>
+          <settingsDef>Orbit</settingsDef>
+          <hide>true</hide>
+          <connections>
+            <Surface>
+              <zoomMode>ZoomIn</zoomMode>
+            </Surface>
+          </connections>
+        </li>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>1</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <visible>false</visible>
+          <method>DropPods</method>
+        </li>
+        <li Class="ScenPart_Naked">
+          <def>Naked</def>
+          <context>PlayerStarter</context>
+        </li>
+        <li Class="ScenPart_NoPossessions">
+          <def>NoPossessions</def>
+        </li>
+        <li Class="IsekaiLeveling.ScenPart_IsekaiReset">
+          <def>Isekai_ResetToLevel1</def>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>A blinding light. A rush of wind. The world spins.\n\nYou open your eyes to find yourself on an unknown rimworld — no memories of how you got here, no supplies, no allies. Just the raw, overwhelming power surging through your veins.\n\nYou are the Protagonist. Rise from nothing, grow stronger with every challenge, and carve your legend into this world.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+</Defs>

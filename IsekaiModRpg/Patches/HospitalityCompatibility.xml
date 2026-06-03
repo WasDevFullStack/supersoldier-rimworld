@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Hospitality Compatibility Patches -->
+    <!-- Only applied when Hospitality is active -->
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Hospitality</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!-- Guest Recruit Difficulty Factor - CHA makes recruitment easier -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="GuestRecruitDifficultyFactor"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="GuestRecruitDifficultyFactor"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_Hospitality_Recruitment" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="GuestRecruitDifficultyFactor"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_Hospitality_Recruitment" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Guest Relationship Factor - CHA improves relationship gains -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="GuestRelationshipFactor"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="GuestRelationshipFactor"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_Hospitality_SocialImpact" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="GuestRelationshipFactor"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_Hospitality_SocialImpact" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

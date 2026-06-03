@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    
+    <!-- ==================== STRENGTH STAT PATCHES ==================== -->
+    
+    <!-- MeleeDamageFactor must not be cached so the Wrath of the Fallen gimmick
+         (which reads live HP each frame) reflects instantly in combat and the UI. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/cacheable</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/cacheable</xpath>
+            <value><cacheable>false</cacheable></value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
+            <value><cacheable>false</cacheable></value>
+        </nomatch>
+    </Operation>
+
+    <!-- STR affects Melee Damage -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMeleeDamage" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMeleeDamage" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- STR affects Carry Capacity -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="CarryingCapacity"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="CarryingCapacity"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiCarryCapacity" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="CarryingCapacity"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiCarryCapacity" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- STR affects Mining Speed -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MiningSpeed"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MiningSpeed"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMiningSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MiningSpeed"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMiningSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- ==================== DEXTERITY STAT PATCHES ==================== -->
+    
+    <!-- DEX affects Move Speed -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMoveSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MoveSpeed"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMoveSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- DEX affects Melee Dodge -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMeleeDodge" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDodgeChance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMeleeDodge" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- DEX affects General Work Speed -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="WorkSpeedGlobal"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="WorkSpeedGlobal"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiWorkSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="WorkSpeedGlobal"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiWorkSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- DEX affects Melee Hit Chance (whether attacks connect) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeHitChance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeHitChance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMeleeHitChance" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeHitChance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMeleeHitChance" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- DEX reduces Aiming Delay (faster shooting) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiAimingDelay" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AimingDelayFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiAimingDelay" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- DEX affects Shooting Accuracy -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiShootingAccuracy" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiShootingAccuracy" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- ==================== VITALITY STAT PATCHES ==================== -->
+    
+    <!-- VIT affects Injury Healing Factor (Health Regen) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="InjuryHealingFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="InjuryHealingFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiHealthRegen" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="InjuryHealingFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiHealthRegen" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT affects Toxic Resistance -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ToxicResistance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ToxicResistance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiToxicResist" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ToxicResistance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiToxicResist" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT affects Immunity Gain Speed (disease resistance) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ImmunityGainSpeed"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ImmunityGainSpeed"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiImmunityGain" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ImmunityGainSpeed"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiImmunityGain" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT affects Incoming Damage Factor (lower = tankier) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiIncomingDamage" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="IncomingDamageFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiIncomingDamage" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT affects Natural Sharp Armor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ArmorRating_Sharp"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Sharp"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiArmorSharp" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Sharp"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiArmorSharp" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT affects Natural Blunt Armor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiArmorBlunt" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiArmorBlunt" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT affects Natural Heat Armor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ArmorRating_Heat"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Heat"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiArmorHeat" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Heat"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiArmorHeat" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT affects Pain Shock Threshold (how much pain before downing) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="PainShockThreshold"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="PainShockThreshold"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPainShock" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="PainShockThreshold"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPainShock" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT affects Rest Rate (how fast pawn sleeps) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="RestRateMultiplier"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="RestRateMultiplier"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiRestRate" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="RestRateMultiplier"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiRestRate" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- ==================== INTELLIGENCE STAT PATCHES ==================== -->
+    
+    <!-- INT affects Research Speed -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ResearchSpeed"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ResearchSpeed"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiResearchSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ResearchSpeed"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiResearchSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- INT affects Global Learning Factor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="GlobalLearningFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="GlobalLearningFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiLearningSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="GlobalLearningFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiLearningSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- INT affects Hacking Speed -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="HackingSpeed"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="HackingSpeed"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiHackingSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="HackingSpeed"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiHackingSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- ==================== WISDOM STAT PATCHES ==================== -->
+    
+    <!-- WIS affects Mental Break Threshold -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MentalBreakThreshold"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MentalBreakThreshold"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMentalBreakThreshold" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MentalBreakThreshold"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMentalBreakThreshold" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- WIS affects Meditation Focus Gain -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeditationFocusGain"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeditationFocusGain"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMeditationFocus" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeditationFocusGain"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMeditationFocus" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- WIS affects Medical Tend Quality.
+         MUST target MedicalTendQuality (the DOCTOR's stat), NOT MedicalTendQualityOffset:
+         RimWorld's TendUtility reads doctor.GetStatValue(MedicalTendQuality), while
+         MedicalTendQualityOffset is read from the BED. Wiring to the offset did nothing
+         for doctors (bug: "WIS medical tend quality not working"). -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MedicalTendQuality"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MedicalTendQuality"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMedicalTendQuality" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MedicalTendQuality"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMedicalTendQuality" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- WIS affects Medical Surgery Success -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MedicalSurgerySuccessChance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MedicalSurgerySuccessChance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiSurgerySuccess" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MedicalSurgerySuccessChance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiSurgerySuccess" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- WIS affects Train Animal Chance -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="TrainAnimalChance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="TrainAnimalChance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiTrainAnimal" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="TrainAnimalChance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiTrainAnimal" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- WIS affects Animal Gather Yield -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="AnimalGatherYield"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AnimalGatherYield"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiAnimalGatherYield" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AnimalGatherYield"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiAnimalGatherYield" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Raise AnimalGatherYield cap from vanilla 100% to 300% so Isekai bonuses work -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="AnimalGatherYield"]/maxValue</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/StatDef[defName="AnimalGatherYield"]/maxValue</xpath>
+            <value><maxValue>3.0</maxValue></value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AnimalGatherYield"]</xpath>
+            <value><maxValue>3.0</maxValue></value>
+        </nomatch>
+    </Operation>
+    
+    <!-- Constellation GatherYield also affects Plant Harvest Yield -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="PlantHarvestYield"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="PlantHarvestYield"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPlantHarvestYield" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="PlantHarvestYield"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPlantHarvestYield" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Raise PlantHarvestYield cap from vanilla 100% to 300% so constellation bonuses work -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="PlantHarvestYield"]/maxValue</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/StatDef[defName="PlantHarvestYield"]/maxValue</xpath>
+            <value><maxValue>3.0</maxValue></value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="PlantHarvestYield"]</xpath>
+            <value><maxValue>3.0</maxValue></value>
+        </nomatch>
+    </Operation>
+    
+    <!-- ==================== PSYCAST STAT PATCHES ==================== -->
+    
+    <!-- INT + WIS affects Psychic Sensitivity -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="PsychicSensitivity"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="PsychicSensitivity"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPsychicSensitivity" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="PsychicSensitivity"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPsychicSensitivity" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- VIT + WIS affects Neural Heat Limit (Psychic Entropy Max) - REQUIRES ROYALTY DLC -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Ludeon.RimWorld.Royalty</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/StatDef[defName="PsychicEntropyMax"]/parts</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>/Defs/StatDef[defName="PsychicEntropyMax"]/parts</xpath>
+                <value>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPsychicEntropyMax" />
+                </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/StatDef[defName="PsychicEntropyMax"]</xpath>
+                <value>
+                    <parts>
+                        <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPsychicEntropyMax" />
+                    </parts>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+    
+    <!-- WIS affects Neural Heat Recovery Rate - REQUIRES ROYALTY DLC -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Ludeon.RimWorld.Royalty</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/StatDef[defName="PsychicEntropyRecoveryRate"]/parts</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>/Defs/StatDef[defName="PsychicEntropyRecoveryRate"]/parts</xpath>
+                <value>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPsychicEntropyRecovery" />
+                </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/StatDef[defName="PsychicEntropyRecoveryRate"]</xpath>
+                <value>
+                    <parts>
+                        <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPsychicEntropyRecovery" />
+                    </parts>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+    
+    <!-- WIS psyfocus cost reduction is now handled via Harmony patch (Patch_PsyfocusCostReduction)
+         on Pawn_PsychicEntropyTracker.OffsetPsyfocusDirectly for universal Royalty + VPE support.
+         The previous XML patch targeted non-existent StatDef "PsychicEntropyGain" and was a no-op. -->
+    
+    <!-- ==================== CHARISMA STAT PATCHES ==================== -->
+    
+    <!-- CHA affects Social Impact -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="SocialImpact"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="SocialImpact"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiSocialImpact" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="SocialImpact"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiSocialImpact" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- CHA affects Negotiation Ability -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="NegotiationAbility"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="NegotiationAbility"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiNegotiation" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="NegotiationAbility"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiNegotiation" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- CHA affects Trade Price Improvement -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="TradePriceImprovement"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="TradePriceImprovement"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiTradePrices" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="TradePriceImprovement"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiTradePrices" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- CHA affects Animal Taming -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="TameAnimalChance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="TameAnimalChance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiTameAnimal" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="TameAnimalChance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiTameAnimal" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- CHA + Beastmaster tree affects Bond Chance -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="BondAnimalChanceFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="BondAnimalChanceFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiBondAnimal" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="BondAnimalChanceFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiBondAnimal" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- CHA affects Arrest Success -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ArrestSuccessChance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArrestSuccessChance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiArrest" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArrestSuccessChance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiArrest" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+    <!-- ==================== MARKET VALUE STAT PATCH ==================== -->
+    
+    <!-- Level and Stats affect Market Value - High level pawns are worth millions -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MarketValue"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MarketValue"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMarketValue" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MarketValue"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Stats.StatPart_IsekaiMarketValue" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    
+</Patch>

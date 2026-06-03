@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- 
+    RimWorld of Magic Compatibility Patches
+    These only apply when RoM is loaded.
+    
+    NOTE: RoM does NOT have StatDefs for mana/stamina (TM_MaxMana etc. don't exist).
+    Mana and stamina are handled via Need_Mana / Need_Stamina (NeedDef system).
+    All Isekai modifications to mana/stamina pools and regen are done via
+    Harmony patches in RoMHarmonyPatches.cs — no XML stat parts needed.
+    
+    Stat Effects (via Harmony patches on RoM internals):
+    - INT → +Max Mana pool (Need_Mana.MaxLevel)
+    - WIS → +Mana Regen (Need_Mana.NeedInterval)
+    - VIT → +Max Stamina pool (Need_Stamina.MaxLevel)
+    - DEX → +Stamina Regen (Need_Stamina.NeedInterval)
+    - STR → +Might damage (mightPwr)
+    - DEX → -Might cooldown, -Stamina cost
+    - WIS → +Magic damage (arcaneDmg), -Mana cost
+    - INT → -Magic cooldown, +Psionic max
+    - VIT → +Chi max (Monk)
+    - CHA → +Summon duration, +Buff duration
+    -->
+    
+    <!-- Placeholder for future RoM-specific XML patches if needed -->
+</Patch>

@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════╗
+        ║  MAGE CONSTELLATION — 55 Nodes, 5 Branches          ║
+        ║  Layout: Diamond web — distinct from Knight radial   ║
+        ║          Upper arc (Scholar/Weaver) + spine (Path)   ║
+        ║          Lower arc (Void Touched / Conjurer)         ║
+        ║                                                      ║
+        ║  Branches:                                           ║
+        ║   • ARCANE SCHOLAR  (NW) — INT, research, work       ║
+        ║   • SPIRIT WEAVER   (NE) — WIS, meditation, healing  ║
+        ║   • VOID TOUCHED    (SW) — mental stability, resist  ║
+        ║   • CONJURER        (SE) — immunity, rest, recovery  ║
+        ║   • ARCHMAGE'S PATH (N)  — INT+WIS + gimmick nodes   ║
+        ║   + 5 cross-connectors between branches              ║
+        ╚══════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Mage</defName>
+        <label>Mage</label>
+        <treeClass>Mage</treeClass>
+        <treeDescription>Wielders of arcane power, mages channel intelligence and wisdom into unstoppable mental force. Five constellations diverge from the mage's core — each refining a distinct facet of their boundless intellect and psychic potential. Keep psyfocus high to unleash Arcane Overflow.</treeDescription>
+        <classGimmick>ArcaneOverflow</classGimmick>
+        <classGimmickName>Arcane Overflow</classGimmickName>
+        <classGimmickDescription>The higher a mage's psyfocus, the more arcane energy overflows from their mind — amplifying psychic sensitivity and mental acuity. Arcane Overflow scales along the Archmage's Path. Tier 1 (Acolyte): above 50% psyfocus → up to +20% Psychic Sensitivity. Tier 2 (Adept): above 40% → up to +35%. Tier 3 (Magister): above 30% → up to +55%. Tier 4 (Archmage): above 20% → up to +80%. Also boosts research speed at half strength. Scales linearly — maximum bonus at 100% focus.</classGimmickDescription>
+
+        <nodes>
+            <!-- ════════════ START NODE ════════════ -->
+            <li>
+                <nodeId>MG_Start</nodeId>
+                <label>Mage's Awakening</label>
+                <description>The arcane flame within you ignites. All mastery begins with a single moment of clarity.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ ARCANE SCHOLAR (North-West) — INT / Research / Work ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>MG_AS1</nodeId>
+                <label>Thirst for Knowledge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-1.7</x><y>0.4</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS2</nodeId>
+                <label>Scholarly Habit</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-3.2</x><y>1</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS_MysticLore</nodeId>
+                <label>Mystic Lore</label>
+                <description>Ancient knowledge flows through the mage's mind like a living current. Research comes naturally, as if the answers were always there, waiting to be remembered.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>-4.8</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS3</nodeId>
+                <label>Accelerated Analysis</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-6</x><y>2.8</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS4</nodeId>
+                <label>Arcane Synthesis</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-7</x><y>3.9</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS_Omniscience</nodeId>
+                <label>Omniscience</label>
+                <description>The mage's mind has grown beyond its original capacity. Connections between disciplines form effortlessly — the boundaries of knowledge dissolve into infinite understanding.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>-8</x><y>5.2</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS5</nodeId>
+                <label>Boundless Inquiry</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-8.7</x><y>6.6</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS_GrandLibrary</nodeId>
+                <label>Grand Library</label>
+                <description>Your mind becomes a living archive of all knowledge. Research is a mere formality — you have already read the answers. But the obsession never sleeps.\n\nTRADEOFF: Consuming pursuit of knowledge destabilises the psyche.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-9.4</x><y>8.1</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.3333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.25</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>-0.1333</value></li>
+                </bonuses>
+            </li>
+            <!-- Arcane Scholar side branch (from Mystic Lore → lower-left) -->
+            <li>
+                <nodeId>MG_AS_S1</nodeId>
+                <label>Applied Theory</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-6</x><y>0.7</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS_S2</nodeId>
+                <label>Intellectual Efficiency</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-7.1</x><y>0.2</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AS_Polymath</nodeId>
+                <label>Polymath</label>
+                <description>Master of all disciplines, from medicine to machinery. The mage excels at every craft and can turn theory into practice with supernatural ease.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>-8.3</x><y>-0.2</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.2</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ SPIRIT WEAVER (North-East) — WIS / Meditation / Heal ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>MG_SW1</nodeId>
+                <label>Inner Calm</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>1.7</x><y>0.4</y>
+                <bonuses><li><bonusType>MeditationFocus</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW2</nodeId>
+                <label>Still Waters</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>3.2</x><y>1</y>
+                <bonuses><li><bonusType>MeditationFocus</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW_ThirdEye</nodeId>
+                <label>Third Eye</label>
+                <description>A new organ of perception opens within the mage's mind. Medical procedures become trivial — the mage perceives the flow of life itself, guiding wounds to close and bodies to heal.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>4.8</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.1333</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW3</nodeId>
+                <label>Healing Intuition</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>6</x><y>2.8</y>
+                <bonuses>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.05</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW4</nodeId>
+                <label>Empathic Resonance</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>7</x><y>3.9</y>
+                <bonuses><li><bonusType>MeditationFocus</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW_Serenity</nodeId>
+                <label>Serenity</label>
+                <description>The mage has found perfect stillness within the storm of existence. Surgical tools guided by a mind at peace cannot fail.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>8</x><y>5.2</y>
+                <bonuses>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.1667</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.1333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW5</nodeId>
+                <label>Boundless Compassion</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>8.7</x><y>6.6</y>
+                <bonuses><li><bonusType>MeditationFocus</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW_TranscendentMind</nodeId>
+                <label>Transcendent Mind</label>
+                <description>The mage has achieved perpetual enlightenment. Mind and body are in perfect harmony — illness cannot take hold, the spirit replenishes endlessly, and mental crises simply cease to occur.\n\nA soul at peace is immune to the chaos of the world.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>9.4</x><y>8.1</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.3333</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.25</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1667</value></li>
+                </bonuses>
+            </li>
+            <!-- Spirit Weaver side branch (from Third Eye → lower-right) -->
+            <li>
+                <nodeId>MG_SW_S1</nodeId>
+                <label>Surgeon's Focus</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>6</x><y>0.7</y>
+                <bonuses><li><bonusType>SurgerySuccess</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW_S2</nodeId>
+                <label>Careful Hands</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>7.1</x><y>0.2</y>
+                <bonuses>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.05</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_SW_HealingLight</nodeId>
+                <label>Healing Light</label>
+                <description>Channelling spiritual energy through their hands, the mage becomes both doctor and miracle worker. Every wound they tend heals as if blessed by nature itself.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>8.3</x><y>-0.2</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.2</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ VOID TOUCHED (South-West) — Mental resist + Toughness ▓▓ -->
+            <!-- ════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>MG_VT1</nodeId>
+                <label>Tempered Psyche</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-0.8</x><y>-1.5</y>
+                <bonuses><li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT2</nodeId>
+                <label>Void Resilience</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-1.4</x><y>-3.1</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT_VoidGaze</nodeId>
+                <label>Void Gaze</label>
+                <description>To stare into the abyss and emerge unshaken — the mage has looked upon the void and found only calm. Poisons and corruption that would unmake lesser minds slide off like water from glass.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-1.9</x><y>-4.7</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT3</nodeId>
+                <label>Dark Fortitude</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-2</x><y>-6.3</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT4</nodeId>
+                <label>Abyssal Patience</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-2</x><y>-7.8</y>
+                <bonuses><li><bonusType>MentalBreakThreshold</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT_ArcaneBarrier</nodeId>
+                <label>Arcane Barrier</label>
+                <description>An invisible screen of arcane energy perpetually intercepts harm before it reaches the mage. Both physical blows and chemical agents find their potency drained before they arrive.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-1.8</x><y>-9.4</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1667</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.1333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT5</nodeId>
+                <label>Void Mantle</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-1.4</x><y>-10.8</y>
+                <bonuses><li><bonusType>MentalBreakThreshold</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT_Untouchable</nodeId>
+                <label>Untouchable</label>
+                <description>The mage has wrapped themselves in a shell of absolute void energy. Nothing penetrates — not poison, not blight, not despair, not steel. But the weight of maintaining such constant awareness slows their steps.\n\nTRADEOFF: Total protection at the cost of mobility.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/ghost</icon>
+                <x>-0.9</x><y>-12.3</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.3333</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.25</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>-0.0833</value></li>
+                </bonuses>
+            </li>
+            <!-- Void Touched side branch (from Void Gaze → lower-left) -->
+            <li>
+                <nodeId>MG_VT_S1</nodeId>
+                <label>Toxin Filter</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-3.5</x><y>-4.9</y>
+                <bonuses><li><bonusType>ToxicResist</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT_S2</nodeId>
+                <label>Blight Ward</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-4.7</x><y>-5.4</y>
+                <bonuses><li><bonusType>ToxicResist</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_VT_PsychicWard</nodeId>
+                <label>Psychic Ward</label>
+                <description>A permanent ward against corruption and contamination. Toxins burn away before they reach the bloodstream, and the immune system operates with supernatural efficiency.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-5.9</x><y>-5.9</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.2</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ CONJURER (South-East) — Immunity, Rest, Recovery ▓▓      -->
+            <!-- ════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>MG_CJ1</nodeId>
+                <label>Life Attunement</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>0.8</x><y>-1.5</y>
+                <bonuses><li><bonusType>ImmunityGain</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ2</nodeId>
+                <label>Restful Aura</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>1.4</x><y>-3.1</y>
+                <bonuses><li><bonusType>RestRate</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ_SpiritBond</nodeId>
+                <label>Spirit Bond</label>
+                <description>The mage bonds their life force to the world around them. Rest comes swift and deep, and the body's defences against illness strengthen beyond natural limits.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>1.9</x><y>-4.7</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1333</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ3</nodeId>
+                <label>Vital Fortification</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>2</x><y>-6.3</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ4</nodeId>
+                <label>Rejuvenating Essence</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>2</x><y>-7.8</y>
+                <bonuses><li><bonusType>ImmunityGain</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ_LifeBloom</nodeId>
+                <label>Life Bloom</label>
+                <description>Life energy blooms from the mage like a beacon. Rest becomes near-instant, and the body fights infections with furious determination.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>1.8</x><y>-9.4</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1667</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.1333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ5</nodeId>
+                <label>Undying Vitality</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>1.4</x><y>-10.8</y>
+                <bonuses><li><bonusType>ImmunityGain</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ_PhilosopherStone</nodeId>
+                <label>Philosopher's Stone</label>
+                <description>The ultimate conjuration — the mage has discovered the formula for immortality. Disease cannot win, rest restores everything, and poison loses all meaning. The secret of eternal vitality is unlocked.\n\nConverts all ailments to mere inconveniences.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>0.9</x><y>-12.3</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.3333</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.25</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.1667</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <!-- Conjurer side branch (from Spirit Bond → lower-right) -->
+            <li>
+                <nodeId>MG_CJ_S1</nodeId>
+                <label>Dreaming Deep</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>3.5</x><y>-4.9</y>
+                <bonuses><li><bonusType>RestRate</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ_S2</nodeId>
+                <label>Twilight Recovery</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>4.7</x><y>-5.4</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.0333</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_CJ_EternalFlame</nodeId>
+                <label>Eternal Flame</label>
+                <description>An eternal, gentle warmth surrounds the mage at all times — accelerating healing and guiding the body toward perfect rhythm. Rest becomes a luxury of abundance rather than necessity.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>5.9</x><y>-5.9</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.2</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ ARCHMAGE'S PATH (North) — INT+WIS balance + Gimmick ▓▓    -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>MG_AM1</nodeId>
+                <label>Rising Aether</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AM2</nodeId>
+                <label>Crystalline Mind</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>0</x><y>3.6</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AM_ArcaneFocus</nodeId>
+                <label>Arcane Focus</label>
+                <description>The mage's mind crystallises into a lens of pure arcane energy. When psyfocus surges, the overflow ignites heightened psychic sensitivity — making every psychic ability more potent.\n\nUnlocks ARCANE OVERFLOW (Tier 1): above 50% psyfocus → up to +20% Psychic Sensitivity.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>5.4</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0833</value></li>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AM3</nodeId>
+                <label>Aetheric Amplifier</label>
+                <description>Unlocks ARCANE OVERFLOW (Tier 2): above 40% psyfocus → up to +35% Psychic Sensitivity.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0</x><y>6.8</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AM4</nodeId>
+                <label>Overflow Conduit</label>
+                <description>Unlocks ARCANE OVERFLOW (Tier 3): above 30% psyfocus → up to +55% Psychic Sensitivity.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>0</x><y>8.0</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.05</value></li>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_AM_ArchmageAscension</nodeId>
+                <label>Archmage Ascension</label>
+                <description>The mage has transcended ordinary consciousness. Their mind and aetheric field have fused into a single, perfect instrument of cosmic will. Psyfocus resonates like a divine chord — and when held above the threshold, the resulting overflow is overwhelming.\n\nCompletes ARCANE OVERFLOW (Tier 4): above 20% psyfocus → up to +80% Psychic Sensitivity.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>0</x><y>10.0</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.1667</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1667</value></li>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ CROSS-CONNECTORS — Bridge nodes between branches ▓▓        -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>MG_Cross_AS_AM</nodeId>
+                <label>Arcane Tide</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-2.7</x><y>3.7</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_Cross_SW_AM</nodeId>
+                <label>Spiritual Current</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>2.7</x><y>3.7</y>
+                <bonuses>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_Cross_AS_VT</nodeId>
+                <label>Grounded Logic</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-2.2</x><y>-1</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_Cross_SW_CJ</nodeId>
+                <label>Vital Harmony</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>2.2</x><y>-1</y>
+                <bonuses>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>MG_Cross_VT_CJ</nodeId>
+                <label>Equilibrium</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>0</x><y>-4.8</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ══════════════════════════════════════════════════════ -->
+        <!-- Connection pairs (bidirectional, "A~B" format)        -->
+        <!-- ══════════════════════════════════════════════════════ -->
+        <connections>
+            <!-- Start → 5 branch gateways -->
+            <li>MG_Start~MG_AS1</li>
+            <li>MG_Start~MG_SW1</li>
+            <li>MG_Start~MG_VT1</li>
+            <li>MG_Start~MG_CJ1</li>
+            <li>MG_Start~MG_AM1</li>
+
+            <!-- Arcane Scholar main path -->
+            <li>MG_AS1~MG_AS2</li>
+            <li>MG_AS2~MG_AS_MysticLore</li>
+            <li>MG_AS_MysticLore~MG_AS3</li>
+            <li>MG_AS3~MG_AS4</li>
+            <li>MG_AS4~MG_AS_Omniscience</li>
+            <li>MG_AS_Omniscience~MG_AS5</li>
+            <li>MG_AS5~MG_AS_GrandLibrary</li>
+            <!-- Arcane Scholar side branch -->
+            <li>MG_AS_MysticLore~MG_AS_S1</li>
+            <li>MG_AS_S1~MG_AS_S2</li>
+            <li>MG_AS_S2~MG_AS_Polymath</li>
+
+            <!-- Spirit Weaver main path -->
+            <li>MG_SW1~MG_SW2</li>
+            <li>MG_SW2~MG_SW_ThirdEye</li>
+            <li>MG_SW_ThirdEye~MG_SW3</li>
+            <li>MG_SW3~MG_SW4</li>
+            <li>MG_SW4~MG_SW_Serenity</li>
+            <li>MG_SW_Serenity~MG_SW5</li>
+            <li>MG_SW5~MG_SW_TranscendentMind</li>
+            <!-- Spirit Weaver side branch -->
+            <li>MG_SW_ThirdEye~MG_SW_S1</li>
+            <li>MG_SW_S1~MG_SW_S2</li>
+            <li>MG_SW_S2~MG_SW_HealingLight</li>
+
+            <!-- Void Touched main path -->
+            <li>MG_VT1~MG_VT2</li>
+            <li>MG_VT2~MG_VT_VoidGaze</li>
+            <li>MG_VT_VoidGaze~MG_VT3</li>
+            <li>MG_VT3~MG_VT4</li>
+            <li>MG_VT4~MG_VT_ArcaneBarrier</li>
+            <li>MG_VT_ArcaneBarrier~MG_VT5</li>
+            <li>MG_VT5~MG_VT_Untouchable</li>
+            <!-- Void Touched side branch -->
+            <li>MG_VT_VoidGaze~MG_VT_S1</li>
+            <li>MG_VT_S1~MG_VT_S2</li>
+            <li>MG_VT_S2~MG_VT_PsychicWard</li>
+
+            <!-- Conjurer main path -->
+            <li>MG_CJ1~MG_CJ2</li>
+            <li>MG_CJ2~MG_CJ_SpiritBond</li>
+            <li>MG_CJ_SpiritBond~MG_CJ3</li>
+            <li>MG_CJ3~MG_CJ4</li>
+            <li>MG_CJ4~MG_CJ_LifeBloom</li>
+            <li>MG_CJ_LifeBloom~MG_CJ5</li>
+            <li>MG_CJ5~MG_CJ_PhilosopherStone</li>
+            <!-- Conjurer side branch -->
+            <li>MG_CJ_SpiritBond~MG_CJ_S1</li>
+            <li>MG_CJ_S1~MG_CJ_S2</li>
+            <li>MG_CJ_S2~MG_CJ_EternalFlame</li>
+
+            <!-- Archmage's Path -->
+            <li>MG_AM1~MG_AM2</li>
+            <li>MG_AM2~MG_AM_ArcaneFocus</li>
+            <li>MG_AM_ArcaneFocus~MG_AM3</li>
+            <li>MG_AM3~MG_AM4</li>
+            <li>MG_AM4~MG_AM_ArchmageAscension</li>
+
+            <!-- Cross-connectors -->
+            <li>MG_AS_MysticLore~MG_Cross_AS_AM</li>
+            <li>MG_Cross_AS_AM~MG_AM_ArcaneFocus</li>
+            <li>MG_SW_ThirdEye~MG_Cross_SW_AM</li>
+            <li>MG_Cross_SW_AM~MG_AM_ArcaneFocus</li>
+            <li>MG_AS2~MG_Cross_AS_VT</li>
+            <li>MG_Cross_AS_VT~MG_VT2</li>
+            <li>MG_SW2~MG_Cross_SW_CJ</li>
+            <li>MG_Cross_SW_CJ~MG_CJ2</li>
+            <li>MG_VT3~MG_Cross_VT_CJ</li>
+            <li>MG_Cross_VT_CJ~MG_CJ3</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

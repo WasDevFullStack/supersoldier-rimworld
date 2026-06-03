@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Star Fragment - Rare drop from elite mobs and world bosses.
+         When absorbed by an adventurer, grants 1 Star Point for the Constellation tree. -->
+    <ThingDef>
+        <defName>Isekai_StarFragment</defName>
+        <label>star fragment</label>
+        <description>A crystallized shard of stellar energy, torn loose from a powerful creature at the moment of its death. It shimmers with a cold, ethereal light and resonates with the Constellation within an Isekai adventurer.
+
+Absorbing this fragment grants 1 Star Point and 1 Multiclass Unlock, allowing the adventurer to enter a second (or third) class tree in the Constellation. Rarely available from exotic goods traders.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>true</useHitPoints>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>25</stackLimit>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+        <pathCost>14</pathCost>
+        <graphicData>
+            <texPath>Things/Item/ConstellationStar</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>1000</MarketValue>
+            <Mass>0.05</Mass>
+            <Beauty>12</Beauty>
+        </statBases>
+        <thingCategories>
+            <li>ItemsMisc</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Absorb star fragment</useLabel>
+            </li>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectStarFragment">
+                <starPoints>1</starPoints>
+            </li>
+        </comps>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <tradeability>All</tradeability>
+    </ThingDef>
+
+</Defs>

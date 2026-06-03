@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Make mana cores buyable by most traders by adding them to trader stock generators -->
+    <!-- Uses PatchOperationConditional so missing traders don't cause errors -->
+    
+    <!-- Bulk Goods Traders (Caravans) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Exotic Goods Traders -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_ExoticGoods"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_ExoticGoods"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                    <thingDef>Isekai_StarFragment</thingDef>
+                    <countRange>1~3</countRange>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Combat Traders -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Pirate Merchants -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_PirateMerchant"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_PirateMerchant"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Orbital Traders - Bulk -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Orbital Traders - Exotic -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Orbital_ExoticGoods"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Orbital_ExoticGoods"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                    <thingDef>Isekai_StarFragment</thingDef>
+                    <countRange>1~3</countRange>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Orbital Traders - Combat -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Orbital Traders - Pirate -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Visitor/Settlement Traders -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Base Settlement Traders -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+    <!-- Empire Traders (Royalty DLC) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_SmallManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_ManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_BigManaCore</thingDef>
+                </li>
+                <li Class="StockGenerator_BuySingleDef">
+                    <thingDef>Isekai_HugeManaCore</thingDef>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    
+</Patch>

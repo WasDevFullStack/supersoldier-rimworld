@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════╗
+        ║  SAGE CONSTELLATION — 56 Nodes, 5 Branches          ║
+        ║  Layout: X-cross — Scholar(NW) / Mindkeeper(NE) /   ║
+        ║          Empath(SW) / Physician(SE) + Ascetic(N)    ║
+        ║  Distinct from Knight (fan), Mage (diamond),         ║
+        ║  Paladin (compass-star with upper focus)             ║
+        ║                                                      ║
+        ║  Branches:                                           ║
+        ║   • SCHOLAR     (NW) — ResearchSpeed, INT, learning  ║
+        ║   • MINDKEEPER  (NE) — MentalBreak, rest, calm       ║
+        ║   • EMPATH      (SW) — SocialImpact, negotiate       ║
+        ║   • PHYSICIAN   (SE) — TendQuality, surgery          ║
+        ║   • ASCETIC     (N)  — WIS + gimmick nodes           ║
+        ║   + 5 cross-connectors between adjacent branches     ║
+        ╚══════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Sage</defName>
+        <label>Sage</label>
+        <treeClass>Sage</treeClass>
+        <treeDescription>Masters of mind and medicine, Sages channel wisdom into healing, knowledge, and unshakeable mental clarity. Five constellations radiate from the sage's quiet core — each refining the art of supporting and understanding. Keep the battlefield at bay: silence restores the Sage's deepest gifts through Inner Calm.</treeDescription>
+        <classGimmick>InnerCalm</classGimmick>
+        <classGimmickName>Inner Calm</classGimmickName>
+        <classGimmickDescription>The longer a Sage goes without taking damage, the more their clarity of mind amplifies their healing and research. Any hostile hit resets the calm timer entirely. Inner Calm scales along the Ascetic Path. Tier 1 (Tranquil Mind): calm builds over 4 in-game hours → up to +20% TendQuality and SurgerySuccess, +10% Research. Tier 2 (Serene Focus): builds over 3 hours → up to +35% / +18%. Tier 3 (Sage's Peace): builds over 2 hours → up to +55% / +28%. Tier 4 (Perfect Stillness): builds over 1 hour → up to +80% / +40%. Scales linearly — maximum bonus at full calm duration.</classGimmickDescription>
+
+        <nodes>
+            <!-- ════════════ START NODE ════════════ -->
+            <li>
+                <nodeId>SG_Start</nodeId>
+                <label>Sage's Awakening</label>
+                <description>The mind quiets. The hand steadies. From stillness, all things become possible.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ SCHOLAR (North-West) — INT / Research / Learning ▓▓   -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SG_SC1</nodeId>
+                <label>Methodical Study</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-1.3</x><y>1</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC2</nodeId>
+                <label>Focused Inquiry</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-2.7</x><y>2</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC_DeepWisdom</nodeId>
+                <label>Deep Wisdom</label>
+                <description>Knowledge is not merely accumulated — it is internalized, cross-referenced, and made instinctive. Every answered question reveals three more, each deeper than the last.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-4.2</x><y>2.8</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC3</nodeId>
+                <label>Accelerated Insight</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-5.5</x><y>3.7</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC4</nodeId>
+                <label>Analytical Mind</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-6.7</x><y>4.4</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC_LivingLore</nodeId>
+                <label>Living Lore</label>
+                <description>You have become a repository of living knowledge. Colleagues come to you before the library. Your answers come before the questions finish forming. The pace of discovery on this settlement has permanently accelerated.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-8.1</x><y>5.1</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC5</nodeId>
+                <label>Boundless Curiosity</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-9.3</x><y>5.8</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC_WorldMind</nodeId>
+                <label>World-Mind</label>
+                <description>Your mind no longer just processes information — it generates it. Entire fields of knowledge have been catalogued, cross-indexed, and mastered. You are, in the most literal sense, the most capable intellect in the settlement.\n\nTRADEOFF: Obsessive pursuit of knowledge strains mental clarity.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-10.6</x><y>6.4</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.4167</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.2</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Scholar side branch (from Deep Wisdom → NW flank) -->
+            <li>
+                <nodeId>SG_SC_S1</nodeId>
+                <label>Rapid Learning</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-5.7</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC_S2</nodeId>
+                <label>Transcription Mastery</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-7</x><y>1.1</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_SC_Polymath</nodeId>
+                <label>Polymath</label>
+                <description>No discipline is foreign to you. You move between fields of knowledge with the ease of a native speaker switching languages — and the speed advantage shows in everything you do.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-8.3</x><y>0.2</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ MINDKEEPER (North-East) — MentalBreak / Rest / Calm ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SG_MK1</nodeId>
+                <label>Centred Breathing</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>1.3</x><y>1</y>
+                <bonuses><li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK2</nodeId>
+                <label>Still Waters</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>2.7</x><y>2</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK_IronMind</nodeId>
+                <label>Iron Mind</label>
+                <description>You have learned to separate the self from the chaos around it. Disasters that break other colonists are processed as information: obstacle, response, resolution. The emotional storm still exists — you have simply learned where it ends and you begin.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>4.2</x><y>2.8</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0667</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK3</nodeId>
+                <label>Restful Focus</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>5.5</x><y>3.7</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.05</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK4</nodeId>
+                <label>Mental Fortitude</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>6.7</x><y>4.4</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK_EmptyMind</nodeId>
+                <label>Empty Mind</label>
+                <description>There is a paradox at the heart of wisdom: the emptier the vessel, the more it can hold. You have stopped trying to control thoughts and started letting them pass. The result is a mind that is both quieter and far more effective.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>8.1</x><y>5.1</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1667</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.1</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK5</nodeId>
+                <label>Meditative Rest</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>9.3</x><y>5.8</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK_Unshakeable</nodeId>
+                <label>Unshakeable</label>
+                <description>You have simply stopped breaking. Not because the world has become kinder — it hasn't — but because the part of you that could be shattered has been dissolved away through years of deliberate practice.\n\nYou are present. You are clear. Nothing moves you.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/chess-rook</icon>
+                <x>10.6</x><y>6.4</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.4167</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.25</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.2</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.1333</value></li>
+                </bonuses>
+            </li>
+            <!-- Mindkeeper side branch (from Iron Mind → NE flank) -->
+            <li>
+                <nodeId>SG_MK_S1</nodeId>
+                <label>Calm Under Fire</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>5.7</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK_S2</nodeId>
+                <label>Lucid Endurance</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>7</x><y>1.1</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.05</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_MK_MindOfSteel</nodeId>
+                <label>Mind of Steel</label>
+                <description>Every hardship survived has been forged into something permanent. You don't just resist psychological pressure — you absorb it and emerge stronger. There is a reason other colonists come to you when the darkness gets heavy.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>8.3</x><y>0.2</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ EMPATH (South-West) — SocialImpact / Negotiate / Taming ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SG_EM1</nodeId>
+                <label>Open Presence</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-0.4</x><y>-1.7</y>
+                <bonuses><li><bonusType>SocialImpact</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM2</nodeId>
+                <label>Warm Regard</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-0.9</x><y>-3.3</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM_SoulReader</nodeId>
+                <label>Soul Reader</label>
+                <description>You understand people. Not because you study them, but because you genuinely care — and they can feel it. Conversations that would end in hostility with someone else end with the other party feeling heard. Understood. Safe.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-1.4</x><y>-4.9</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0833</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM3</nodeId>
+                <label>Trusted Voice</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-1.7</x><y>-6.3</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM4</nodeId>
+                <label>Calming Aura</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-2.1</x><y>-7.8</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM_WorldBridge</nodeId>
+                <label>World-Bridge</label>
+                <description>Factions that hate each other will deal through you. Prisoners who refused to speak have spoken. Animals that would attack anyone else follow you home. You have a gift for finding common ground — even when there is none left.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-2.6</x><y>-9.2</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.1</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0833</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM5</nodeId>
+                <label>Keeper of Peace</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-2.9</x><y>-10.5</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0667</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM_SoulBond</nodeId>
+                <label>Soul Bond</label>
+                <description>There is a bond between you and the people of this colony that goes beyond language. Without words, they know you are on their side. With words, you can move mountains — or stop wars.\n\nYou are not just trusted. You are beloved.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-3.4</x><y>-11.9</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.3333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.2</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.1667</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.1333</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+            <!-- Empath side branch (from Soul Reader → SW flank) -->
+            <li>
+                <nodeId>SG_EM_S1</nodeId>
+                <label>Silver Tongue</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-3.2</x><y>-5.1</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM_S2</nodeId>
+                <label>Gentle Persuasion</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-4.6</x><y>-5.4</y>
+                <bonuses>
+                    <li><bonusType>TradePrice</bonusType><value>0.05</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_EM_PeaceMaker</nodeId>
+                <label>The Peacemaker</label>
+                <description>You have talked more people down from the edge than you can count. Your presence lowers tensions before they manifest. Even your deals are unusually fair — because you make the other party feel that they're being respected.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-6.1</x><y>-5.7</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.1167</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.1</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ PHYSICIAN (South-East) — TendQuality / Surgery / Immunity ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SG_PH1</nodeId>
+                <label>Careful Hands</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0.4</x><y>-1.7</y>
+                <bonuses><li><bonusType>TendQuality</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH2</nodeId>
+                <label>Herbal Mastery</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0.9</x><y>-3.3</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.05</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH_HealingTouch</nodeId>
+                <label>Healing Touch</label>
+                <description>Your treatments are more than medicinal — they are restorative. Patients under your care recover faster than physiology alone explains. There is something in the precise way your hands work that the body responds to as if it were being remembered of its own blueprint.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>1.4</x><y>-4.9</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.0833</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH3</nodeId>
+                <label>Surgical Precision</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>1.7</x><y>-6.3</y>
+                <bonuses>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.0667</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH4</nodeId>
+                <label>Immune Boosting</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>2.1</x><y>-7.8</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0667</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH_FieldSurgeon</nodeId>
+                <label>Field Surgeon</label>
+                <description>You have operated in conditions that would make a hospital surgeon pale. Under fire, in the dark, with supplies that wouldn't fill a first aid kit. And every patient walked again. Some of them shouldn't have. They walked anyway.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>2.6</x><y>-9.2</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.1667</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH5</nodeId>
+                <label>Recovery Catalyst</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>2.9</x><y>-10.5</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH_MiracleHands</nodeId>
+                <label>Miracle Hands</label>
+                <description>There are cases in the colony's records that no one talks about in professional settings — the ones where the patient statistically should have died, and didn't, specifically and only because you were in the room.\n\nYou don't call it a miracle. You call it preparation.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>3.4</x><y>-11.9</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.4167</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.3333</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.25</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.1333</value></li>
+                </bonuses>
+            </li>
+            <!-- Physician side branch (from Healing Touch → SE flank) -->
+            <li>
+                <nodeId>SG_PH_S1</nodeId>
+                <label>Steady Scalpel</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>3.2</x><y>-5.1</y>
+                <bonuses>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.05</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH_S2</nodeId>
+                <label>Antiseptic Technique</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>4.6</x><y>-5.4</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_PH_MasterApothecary</nodeId>
+                <label>Master Apothecary</label>
+                <description>You have forgotten more about pharmacology than most doctors ever learn. Your formulations extract maximum potency from available materials. Patients treated with your preparations recover at a pace that constantly surprises visiting traders.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>6.1</x><y>-5.7</y>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.1</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ ASCETIC PATH (North spine) — WIS + Gimmick Tiers ▓▓       -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SG_AC1</nodeId>
+                <label>Inner Silence</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_AC2</nodeId>
+                <label>Patient Observation</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>0</x><y>3.2</y>
+                <bonuses>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_AC_TranquilMind</nodeId>
+                <label>Tranquil Mind</label>
+                <description>The mind has been stilled. Not suppressed — stilled. In the absence of urgency, your diagnostic instincts operate at their fullest. Your hands are steadiest, your thoughts clearest, your prescriptions most precise.\n\n[GIMMICK TIER 1]: While undisturbed, calm builds over 4 hours → up to +20% TendQuality, SurgerySuccess, and +10% Research.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>4.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0667</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_AC3</nodeId>
+                <label>Deepened Focus</label>
+                <description>[GIMMICK TIER 2]: Calm builds over 3 hours → up to +35% TendQuality / SurgerySuccess, +18% Research.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>0</x><y>6.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.05</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_AC4</nodeId>
+                <label>Sage's Clarity</label>
+                <description>[GIMMICK TIER 3]: Calm builds over 2 hours → up to +55% TendQuality / SurgerySuccess, +28% Research.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>0</x><y>7.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.05</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SG_AC_PerfectStillness</nodeId>
+                <label>Perfect Stillness</label>
+                <description>This is the end of the path. Beyond thought. Beyond effort. Everything you know, everything you can do, operating at absolute peak — because nothing is interfering.\n\nThis is what you were meant to become.\n\n[GIMMICK TIER 4]: Calm builds over 1 hour → up to +80% TendQuality / SurgerySuccess, +40% Research. The untouched Sage is the most formidable healer alive.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>0</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.1667</value></li>
+                    <li><bonusType>TendQuality</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SurgerySuccess</bonusType><value>0.1</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Cross-connectors (all require both neighbours to be active) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <!-- Scholar (NW) ↔ Ascetic (N) — mid-branch bridge -->
+            <li>
+                <nodeId>SG_Cross_SM</nodeId>
+                <label>Mindful Scholar</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-2.2</x><y>4</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <!-- Mindkeeper (NE) ↔ Ascetic (N) — mid-branch bridge -->
+            <li>
+                <nodeId>SG_Cross_MM</nodeId>
+                <label>Focused Keeper</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>2.2</x><y>4</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeditationFocus</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <!-- Scholar (NW) ↔ Empath (SW) — upper gateway bridge -->
+            <li>
+                <nodeId>SG_Cross_SE</nodeId>
+                <label>Scholarly Empathy</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-1.7</x><y>-0.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <!-- Mindkeeper (NE) ↔ Physician (SE) — upper gateway bridge -->
+            <li>
+                <nodeId>SG_Cross_MP</nodeId>
+                <label>Mindful Healer</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>1.7</x><y>-0.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Empath (SW) ↔ Physician (SE) — lower bridge -->
+            <li>
+                <nodeId>SG_Cross_EP</nodeId>
+                <label>Compassionate Care</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>0.0</x><y>-3.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>TendQuality</bonusType><value>0.0333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- Connection pairs (bidirectional, "A~B" format)             -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <connections>
+            <!-- Start → 5 branch gateways -->
+            <li>SG_Start~SG_SC1</li>
+            <li>SG_Start~SG_MK1</li>
+            <li>SG_Start~SG_EM1</li>
+            <li>SG_Start~SG_PH1</li>
+            <li>SG_Start~SG_AC1</li>
+
+            <!-- Scholar main path -->
+            <li>SG_SC1~SG_SC2</li>
+            <li>SG_SC2~SG_SC_DeepWisdom</li>
+            <li>SG_SC_DeepWisdom~SG_SC3</li>
+            <li>SG_SC3~SG_SC4</li>
+            <li>SG_SC4~SG_SC_LivingLore</li>
+            <li>SG_SC_LivingLore~SG_SC5</li>
+            <li>SG_SC5~SG_SC_WorldMind</li>
+            <!-- Scholar side branch -->
+            <li>SG_SC_DeepWisdom~SG_SC_S1</li>
+            <li>SG_SC_S1~SG_SC_S2</li>
+            <li>SG_SC_S2~SG_SC_Polymath</li>
+
+            <!-- Mindkeeper main path -->
+            <li>SG_MK1~SG_MK2</li>
+            <li>SG_MK2~SG_MK_IronMind</li>
+            <li>SG_MK_IronMind~SG_MK3</li>
+            <li>SG_MK3~SG_MK4</li>
+            <li>SG_MK4~SG_MK_EmptyMind</li>
+            <li>SG_MK_EmptyMind~SG_MK5</li>
+            <li>SG_MK5~SG_MK_Unshakeable</li>
+            <!-- Mindkeeper side branch -->
+            <li>SG_MK_IronMind~SG_MK_S1</li>
+            <li>SG_MK_S1~SG_MK_S2</li>
+            <li>SG_MK_S2~SG_MK_MindOfSteel</li>
+
+            <!-- Empath main path -->
+            <li>SG_EM1~SG_EM2</li>
+            <li>SG_EM2~SG_EM_SoulReader</li>
+            <li>SG_EM_SoulReader~SG_EM3</li>
+            <li>SG_EM3~SG_EM4</li>
+            <li>SG_EM4~SG_EM_WorldBridge</li>
+            <li>SG_EM_WorldBridge~SG_EM5</li>
+            <li>SG_EM5~SG_EM_SoulBond</li>
+            <!-- Empath side branch -->
+            <li>SG_EM_SoulReader~SG_EM_S1</li>
+            <li>SG_EM_S1~SG_EM_S2</li>
+            <li>SG_EM_S2~SG_EM_PeaceMaker</li>
+
+            <!-- Physician main path -->
+            <li>SG_PH1~SG_PH2</li>
+            <li>SG_PH2~SG_PH_HealingTouch</li>
+            <li>SG_PH_HealingTouch~SG_PH3</li>
+            <li>SG_PH3~SG_PH4</li>
+            <li>SG_PH4~SG_PH_FieldSurgeon</li>
+            <li>SG_PH_FieldSurgeon~SG_PH5</li>
+            <li>SG_PH5~SG_PH_MiracleHands</li>
+            <!-- Physician side branch -->
+            <li>SG_PH_HealingTouch~SG_PH_S1</li>
+            <li>SG_PH_S1~SG_PH_S2</li>
+            <li>SG_PH_S2~SG_PH_MasterApothecary</li>
+
+            <!-- Ascetic main path -->
+            <li>SG_AC1~SG_AC2</li>
+            <li>SG_AC2~SG_AC_TranquilMind</li>
+            <li>SG_AC_TranquilMind~SG_AC3</li>
+            <li>SG_AC3~SG_AC4</li>
+            <li>SG_AC4~SG_AC_PerfectStillness</li>
+
+            <!-- Cross-connectors -->
+            <li>SG_SC_DeepWisdom~SG_Cross_SM</li>
+            <li>SG_Cross_SM~SG_AC_TranquilMind</li>
+            <li>SG_MK_IronMind~SG_Cross_MM</li>
+            <li>SG_Cross_MM~SG_AC_TranquilMind</li>
+            <li>SG_SC1~SG_Cross_SE</li>
+            <li>SG_Cross_SE~SG_EM1</li>
+            <li>SG_MK1~SG_Cross_MP</li>
+            <li>SG_Cross_MP~SG_PH1</li>
+            <li>SG_EM_SoulReader~SG_Cross_EP</li>
+            <li>SG_Cross_EP~SG_PH_HealingTouch</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

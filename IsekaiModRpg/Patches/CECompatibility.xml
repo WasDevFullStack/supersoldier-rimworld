@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Combat Extended Compatibility Patches -->
+    <!-- Only applied when Combat Extended is active -->
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!-- Shooting Accuracy - DEX increases accuracy -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_AimingAccuracy" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_CE_AimingAccuracy" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Aim Time Factor - DEX reduces aim time -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_AimingTime" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="AimingDelayFactor"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_CE_AimingTime" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Recoil - STR reduces recoil -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="Recoil"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="Recoil"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_Recoil" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="Recoil"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_CE_Recoil" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Melee Penetration Bonus - STR increases melee armor penetration -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="MeleePenetrationFactor"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="MeleePenetrationFactor"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_MeleePenetration" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="MeleePenetrationFactor"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_CE_MeleePenetration" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Reload Speed - DEX increases reload speed -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="ReloadSpeed"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="ReloadSpeed"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_ReloadSpeed" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="ReloadSpeed"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_CE_ReloadSpeed" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Suppression Resistance - VIT increases suppression resistance -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="Suppressability"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="Suppressability"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_SuppressionResistance" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="Suppressability"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_CE_SuppressionResistance" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Melee Parry Chance - STR increases parry -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="MeleeParryChance"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="MeleeParryChance"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_MeleeParry" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations />
+                    </nomatch>
+                </li>
+                
+                <!-- Counter-Parry Bonus - STR increases counter-attack damage -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="MeleeCounterParryBonus"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="MeleeCounterParryBonus"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_MeleeCounterParry" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations />
+                    </nomatch>
+                </li>
+                
+                <!-- Melee Crit Chance - STR increases critical hits -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="MeleeCritChance"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="MeleeCritChance"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_MeleeCrit" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations />
+                    </nomatch>
+                </li>
+                
+                <!-- Melee Damage Factor - STR increases raw melee damage -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_MeleeDamage" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations />
+                    </nomatch>
+                </li>
+                
+                <!-- Toughness - VIT increases damage resistance -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="Toughness"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="Toughness"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_Toughness" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations />
+                    </nomatch>
+                </li>
+                
+                <!-- Bulk - VIT increases bulk for damage mitigation -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="Bulk"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="Bulk"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_Toughness" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations />
+                    </nomatch>
+                </li>
+                
+                <!-- CarryBulk - STR increases inventory carry capacity -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="CarryBulk"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="CarryBulk"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_CarryBulk" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="CarryBulk"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_CE_CarryBulk" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- CarryWeight - STR increases mass/weight carry capacity (kg) -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="CarryWeight"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="CarryWeight"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_CE_CarryWeight" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="CarryWeight"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_CE_CarryWeight" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

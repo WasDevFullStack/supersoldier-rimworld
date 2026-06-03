@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <Isekai_SmallManaCore.label>小型魔力核心</Isekai_SmallManaCore.label>
+    <Isekai_SmallManaCore.description>从被击杀的生物中提取的微小结晶魔力碎片。它散发着微弱的蓝色光芒。虽然不太强大，但仍然蕴含着一些可以卖给异域商品商人的魔法精华。</Isekai_SmallManaCore.description>
+    
+    <Isekai_ManaCore.label>魔力核心</Isekai_ManaCore.label>
+    <Isekai_ManaCore.description>从被击杀的生物中提取的结晶魔力碎片。它散发着稳定的蓝色光芒，触碰时会轻轻嗡鸣。这些核心受到商人和魔法文物收藏家的重视。</Isekai_ManaCore.description>
+    
+    <Isekai_BigManaCore.label>大型魔力核心</Isekai_BigManaCore.label>
+    <Isekai_BigManaCore.description>一块大型的浓缩魔力结晶核心。它散发出耀眼的蓝色光芒并释放着温暖。从强大的生物中提取，这些核心蕴含着重大的魔法能量，能从商人那里卖出高价。</Isekai_BigManaCore.description>
+    
+    <Isekai_HugeManaCore.label>巨型魔力核心</Isekai_HugeManaCore.label>
+    <Isekai_HugeManaCore.description>一块巨大的纯净浓缩魔力结晶核心。它散发着强烈的湛蓝光芒，投射出舞动的光影，周围的空气因魔法能量而噼啪作响。只有最强大的生物才能产出如此宝物，使其极为稀有和珍贵。</Isekai_HugeManaCore.description>
+    
+    <Isekai_RespecOrb.label>重生宝珠</Isekai_RespecOrb.label>
+    <Isekai_RespecOrb.description>一颗注入重生精华的闪烁水晶球。对冒险者使用时，将重置所有已分配的属性点至基础值，并返还所有已花费的点数以供重新分配。\n\n宝珠使用后会溶解，其能量重塑冒险者的潜能。等级、经验和称号将被保留——只有属性分配会被重置。\n\n可在加工台使用魔力核心制造，或从异域商人处购买。</Isekai_RespecOrb.description>
+</LanguageData>

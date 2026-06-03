@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════════╗
+        ║  SURVIVOR CONSTELLATION — 56 Nodes, 5 Branches          ║
+        ║  Layout: Pillar — Fortitude(NW) / Resilience(NE) /      ║
+        ║          Wilderness(SW) / Tenacity(SE) + Unyielding(N)   ║
+        ║                                                          ║
+        ║  Branches:                                               ║
+        ║   • FORTITUDE   (NW) — ImmunityGain, MaxHealth          ║
+        ║   • RESILIENCE  (NE) — PainThreshold, DamageReduction   ║
+        ║   • WILDERNESS  (SW) — ToxicResist, MoveSpeed           ║
+        ║   • TENACITY    (SE) — RestRate, HealthRegen             ║
+        ║   • UNYIELDING  (N)  — gimmick nodes + ImmunityGain     ║
+        ║   + 5 cross-connectors between adjacent branches         ║
+        ╚══════════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Survivor</defName>
+        <label>Survivor</label>
+        <treeClass>Survivor</treeClass>
+        <treeDescription>Unbreakable souls who thrive where others perish. Five constellations radiate from the survivor's core — each forging a different link in their chain of endurance. When conditions worsen and mood drops, Unyielding Spirit kicks in to keep the Survivor alive against all odds.</treeDescription>
+        <classGimmick>UnyieldingSpirit</classGimmick>
+        <classGimmickName>Unyielding Spirit</classGimmickName>
+        <classGimmickDescription>When the Survivor's mood drops below 50%, their body fights harder to stay alive. Immunity gain speed and rest effectiveness scale inversely with mood — the worse things get, the stronger the survival instinct. Unyielding Spirit scales along the Unyielding Path. Tier 1 (Never Yield): up to +20% at 0% mood. Tier 2 (Defiant Stand): up to +35%. Tier 3 (Last Stand): up to +55%. Tier 4 (Indomitable Will): up to +80%. The darkness fuels the will to survive.</classGimmickDescription>
+
+        <nodes>
+            <!-- ════════════ START NODE ════════════ -->
+            <li>
+                <nodeId>SV_Start</nodeId>
+                <label>Survivor's Awakening</label>
+                <description>You've stared death in the face so many times it's become familiar. While others crumble under hardship, something inside you hardens. Today you begin to understand that suffering isn't your enemy — it's your fuel.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ FORTITUDE (North-West) — ImmunityGain / MaxHealth   ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SV_FT1</nodeId>
+                <label>Strong Blood</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-0.7</x><y>1.3</y>
+                <bonuses><li><bonusType>ImmunityGain</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT2</nodeId>
+                <label>Fever Fighter</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-1.4</x><y>2.6</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT_IronBlood</nodeId>
+                <label>Iron Blood</label>
+                <description>Disease is something that happens to other people. Your immune system attacks infections with a ferocity that startles doctors — fevers that should last days break in hours, and wounds that should fester heal clean. Your blood runs hot with an ancient defiance against mortality.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>-2.1</x><y>3.9</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0833</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT3</nodeId>
+                <label>Plague Resistant</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-2.8</x><y>5.3</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT4</nodeId>
+                <label>Hearty Constitution</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-3.4</x><y>6.6</y>
+                <bonuses><li><bonusType>MaxHealth</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT_PlagueDefier</nodeId>
+                <label>Plague Defier</label>
+                <description>Plagues, infections, toxins — your body treats them all as minor inconveniences. Where entire colonies succumb to disease, you stand untouched, a living monument to biological resilience. Doctors study your blood samples with disbelief and fascination in equal measure.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>-4.1</x><y>7.9</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.1</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT5</nodeId>
+                <label>Undying Vigour</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-4.8</x><y>9.2</y>
+                <bonuses><li><bonusType>ImmunityGain</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT_UnkillableSpirit</nodeId>
+                <label>Unkillable Spirit</label>
+                <description>Your body refuses to die. Infections that should be fatal are shrugged off in days. Wounds that should cripple heal with startling speed. You've survived things that killed everyone else in the room — not through luck, but through a biological stubbornness that borders on the supernatural.\n\nTRADEOFF: Your body's focus on survival diverts energy from raw physical strength.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-5.5</x><y>10.5</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.3333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.2</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Fortitude side branch (from Iron Blood → NW flank) -->
+            <li>
+                <nodeId>SV_FT_S1</nodeId>
+                <label>Thick Skin</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-3.4</x><y>3.0</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.05</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT_S2</nodeId>
+                <label>Rapid Mending</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-4.7</x><y>2.1</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.05</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_FT_Regeneration</nodeId>
+                <label>Regeneration</label>
+                <description>Your body mends itself with unsettling speed. Cuts close in hours instead of days, bruises fade before they fully form, and broken bones knit with a determination that makes surgeons obsolete for minor injuries. Others call it miraculous — you call it Tuesday.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>-6.0</x><y>1.1</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.1333</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ RESILIENCE (North-East) — PainThreshold / DmgReduc  ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SV_RS1</nodeId>
+                <label>Numb to Pain</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>0.7</x><y>1.3</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS2</nodeId>
+                <label>Hardened Body</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>1.4</x><y>2.6</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS_IronSkin</nodeId>
+                <label>Iron Skin</label>
+                <description>Pain has become background noise — always present, never dominant. Your body has been battered so many times that it's developed a callous indifference to injury. Wounds that drop others barely register, and you keep fighting through damage that would leave most people screaming.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>2.1</x><y>3.9</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0833</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS3</nodeId>
+                <label>Battle Scars</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>2.8</x><y>5.3</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0667</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS4</nodeId>
+                <label>Scar Tissue</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>3.4</x><y>6.6</y>
+                <bonuses><li><bonusType>DamageReduction</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS_Unbreakable</nodeId>
+                <label>Unbreakable</label>
+                <description>Your tolerance for pain and punishment has reached inhuman levels. Blows that shatter armour barely dent your resolve. You've been shot, stabbed, burned, and crushed — and every time, you've gotten back up. Your body isn't just tough, it's a fortress of flesh and stubborn will.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>4.1</x><y>7.9</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1667</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.1</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS5</nodeId>
+                <label>Adamantine</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>4.8</x><y>9.2</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS_DiamondBody</nodeId>
+                <label>Diamond Body</label>
+                <description>Your body has transcended normal biological limits. Pain is a distant memory, damage is reduced to a fraction of its intended force, and your skin seems to have developed its own natural armour. Bullets glance, blades slide, and blunt force dissipates across a frame that simply refuses to break.\n\nTRADEOFF: Your fortress-like frame sacrifices agility for raw endurance.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/medal</icon>
+                <x>5.5</x><y>10.5</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.3333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.2</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Resilience side branch (from Iron Skin → NE flank) -->
+            <li>
+                <nodeId>SV_RS_S1</nodeId>
+                <label>Deflecting Hide</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>3.4</x><y>3.0</y>
+                <bonuses>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS_S2</nodeId>
+                <label>Impact Absorption</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>4.7</x><y>2.1</y>
+                <bonuses>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_RS_StoneWall</nodeId>
+                <label>Stone Wall</label>
+                <description>You absorb punishment the way a stone wall absorbs rain — steadily, without complaint, and with no visible effect. Attackers tire themselves out against your defenses while you stand unmoved, waiting for the perfect moment to end the fight on your terms.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>6.0</x><y>1.1</y>
+                <bonuses>
+                    <li><bonusType>DamageReduction</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.0667</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ WILDERNESS (South-West) — ToxicResist / MoveSpeed   ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SV_WD1</nodeId>
+                <label>Tough Stomach</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-0.7</x><y>-1.3</y>
+                <bonuses><li><bonusType>ToxicResist</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD2</nodeId>
+                <label>Rough Terrain</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-1.4</x><y>-2.6</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.05</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD_NaturalImmunity</nodeId>
+                <label>Natural Immunity</label>
+                <description>The wild holds no terrors for you. Toxic spill zones that kill others in days are merely uncomfortable. Your body has adapted to the Rim's hostile environment — metabolising poisons, resisting radiation, and moving through terrain that would trap anyone else.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-2.1</x><y>-3.9</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD3</nodeId>
+                <label>Toxin Filter</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-2.8</x><y>-5.3</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD4</nodeId>
+                <label>Endurance Runner</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>-3.4</x><y>-6.6</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD_StormRunner</nodeId>
+                <label>Storm Runner</label>
+                <description>Rain, snow, toxic fallout — none of it slows you down. You move through the world's worst conditions with the ease of someone taking a casual stroll. Your body has become a filtering machine, and your legs never tire no matter how hostile the environment.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-4.1</x><y>-7.9</y>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD5</nodeId>
+                <label>Apex Survivor</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-4.8</x><y>-9.2</y>
+                <bonuses><li><bonusType>ToxicResist</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD_ApexPredator</nodeId>
+                <label>Apex Predator</label>
+                <description>You are the ultimate survivor — adapted to every biome, resistant to every toxin, and faster than anything that tries to catch you. The Rim's hostility is your element. While others hide behind walls, you thrive in the open, drawing strength from the very dangers that kill the unprepared.\n\nTRADEOFF: Your feral independence erodes social graces.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-5.5</x><y>-10.5</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.3333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.2</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Wilderness side branch (from Natural Immunity → SW flank) -->
+            <li>
+                <nodeId>SV_WD_S1</nodeId>
+                <label>Fleet Foot</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>-3.4</x><y>-3.0</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD_S2</nodeId>
+                <label>Forager</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>-4.7</x><y>-2.1</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_WD_Pathfinder</nodeId>
+                <label>Pathfinder</label>
+                <description>You move through the wilderness with preternatural speed and efficiency, finding paths through terrain that would stop a caravan dead. Every step is placed with the confidence of someone who's mapped every inch of the world in their head.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>-6.0</x><y>-1.1</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ TENACITY (South-East) — RestRate / HealthRegen      ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SV_TN1</nodeId>
+                <label>Light Sleeper</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>0.7</x><y>-1.3</y>
+                <bonuses><li><bonusType>RestRate</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN2</nodeId>
+                <label>Quick Naps</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>1.4</x><y>-2.6</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.05</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN_QuickRecovery</nodeId>
+                <label>Quick Recovery</label>
+                <description>Sleep is a tool, not a luxury. You've learned to extract maximum restoration from minimum rest — a skill born from countless nights sleeping in dangerous places where every hour of unconsciousness was a risk you couldn't afford.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>2.1</x><y>-3.9</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.1333</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0833</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN3</nodeId>
+                <label>Restful Sleep</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>2.8</x><y>-5.3</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.0667</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN4</nodeId>
+                <label>Natural Healer</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>3.4</x><y>-6.6</y>
+                <bonuses><li><bonusType>HealthRegen</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN_SecondWind</nodeId>
+                <label>Second Wind</label>
+                <description>Just when others think you're done, you surge back with renewed energy. Your body has an inexhaustible reserve of recovery potential — injuries knit faster, fatigue evaporates sooner, and you bounce back from the brink with alarming regularity.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>4.1</x><y>-7.9</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.1667</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.1</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN5</nodeId>
+                <label>Iron Will</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>4.8</x><y>-9.2</y>
+                <bonuses><li><bonusType>RestRate</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN_PhoenixReborn</nodeId>
+                <label>Phoenix Reborn</label>
+                <description>Death has tried and failed so many times that your body has learned its tricks. You recover from injuries that should be permanent, bounce back from the edge of death like it's a minor setback, and your rest is so efficient that a short nap leaves you fully refreshed and ready for battle.\n\nTRADEOFF: Your intense recovery focus comes at the cost of ranged precision.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/ghost</icon>
+                <x>5.5</x><y>-10.5</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.3333</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.2</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Tenacity side branch (from Quick Recovery → SE flank) -->
+            <li>
+                <nodeId>SV_TN_S1</nodeId>
+                <label>Wound Care</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>3.4</x><y>-3.0</y>
+                <bonuses>
+                    <li><bonusType>HealthRegen</bonusType><value>0.05</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN_S2</nodeId>
+                <label>Body Awareness</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>4.7</x><y>-2.1</y>
+                <bonuses>
+                    <li><bonusType>HealthRegen</bonusType><value>0.05</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_TN_VitalSurge</nodeId>
+                <label>Vital Surge</label>
+                <description>Your body regenerates with a vitality that borders on the miraculous. Minor wounds close in minutes, broken bones mend in days instead of weeks, and your natural healing factor makes medical intervention almost unnecessary for anything short of catastrophic injury.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>6.0</x><y>-1.1</y>
+                <bonuses>
+                    <li><bonusType>HealthRegen</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0667</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ UNYIELDING (North spine) — Gimmick Tiers + ImmunityGain ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>SV_UY1</nodeId>
+                <label>Stubborn Streak</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_UY2</nodeId>
+                <label>Grim Resolve</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>0</x><y>3.5</y>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_UY_NeverYield</nodeId>
+                <label>Never Yield</label>
+                <description>When conditions worsen — when morale crumbles and despair sets in — your survival instincts sharpen rather than dull. The lower your mood drops, the harder your body fights to keep you alive. Immunity and rest effectiveness spike as your will refuses to surrender.\n\n[GIMMICK TIER 1]: Below 50% mood, up to +20% Immunity/Rest at 0% mood.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>5.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0667</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_UY3</nodeId>
+                <label>Defiant Stand</label>
+                <description>[GIMMICK TIER 2]: Below 50% mood, up to +35% Immunity/Rest at 0% mood.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>0</x><y>6.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_UY4</nodeId>
+                <label>Last Stand</label>
+                <description>[GIMMICK TIER 3]: Below 50% mood, up to +55% Immunity/Rest at 0% mood.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>0</x><y>8.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>SV_UY_IndomitableWill</nodeId>
+                <label>Indomitable Will</label>
+                <description>You are the embodiment of stubborn survival. When the world throws its worst at you — plague, famine, despair — your body responds not with collapse, but with an iron refusal to die. At maximum potency, a Survivor at rock-bottom mood gains up to +80% immunity and rest effectiveness. The darkness doesn't weaken you. It makes you stronger.\n\n[GIMMICK TIER 4]: Below 50% mood, up to +80% Immunity/Rest at 0% mood. Unbreakable.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>0</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.1333</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0667</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Cross-connectors (all require both neighbours to be active) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <!-- Fortitude (NW) ↔ Unyielding (N) -->
+            <li>
+                <nodeId>SV_Cross_FU</nodeId>
+                <label>Defiant Blood</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-1.1</x><y>4.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Resilience (NE) ↔ Unyielding (N) -->
+            <li>
+                <nodeId>SV_Cross_RU</nodeId>
+                <label>Hardened Will</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>1.1</x><y>4.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Fortitude (NW) ↔ Wilderness (SW) -->
+            <li>
+                <nodeId>SV_Cross_FW</nodeId>
+                <label>Toxic Blood</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>-1.4</x><y>0.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Resilience (NE) ↔ Tenacity (SE) -->
+            <li>
+                <nodeId>SV_Cross_RT</nodeId>
+                <label>Battle Rest</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>1.4</x><y>0.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.0333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Wilderness (SW) ↔ Tenacity (SE) -->
+            <li>
+                <nodeId>SV_Cross_WT</nodeId>
+                <label>Endure All</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>0</x><y>-4.5</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ToxicResist</bonusType><value>0.0333</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- Connection pairs (bidirectional, "A~B" format)             -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <connections>
+            <!-- Start → 5 branch gateways -->
+            <li>SV_Start~SV_FT1</li>
+            <li>SV_Start~SV_RS1</li>
+            <li>SV_Start~SV_WD1</li>
+            <li>SV_Start~SV_TN1</li>
+            <li>SV_Start~SV_UY1</li>
+
+            <!-- Fortitude main path -->
+            <li>SV_FT1~SV_FT2</li>
+            <li>SV_FT2~SV_FT_IronBlood</li>
+            <li>SV_FT_IronBlood~SV_FT3</li>
+            <li>SV_FT3~SV_FT4</li>
+            <li>SV_FT4~SV_FT_PlagueDefier</li>
+            <li>SV_FT_PlagueDefier~SV_FT5</li>
+            <li>SV_FT5~SV_FT_UnkillableSpirit</li>
+            <!-- Fortitude side branch -->
+            <li>SV_FT_IronBlood~SV_FT_S1</li>
+            <li>SV_FT_S1~SV_FT_S2</li>
+            <li>SV_FT_S2~SV_FT_Regeneration</li>
+
+            <!-- Resilience main path -->
+            <li>SV_RS1~SV_RS2</li>
+            <li>SV_RS2~SV_RS_IronSkin</li>
+            <li>SV_RS_IronSkin~SV_RS3</li>
+            <li>SV_RS3~SV_RS4</li>
+            <li>SV_RS4~SV_RS_Unbreakable</li>
+            <li>SV_RS_Unbreakable~SV_RS5</li>
+            <li>SV_RS5~SV_RS_DiamondBody</li>
+            <!-- Resilience side branch -->
+            <li>SV_RS_IronSkin~SV_RS_S1</li>
+            <li>SV_RS_S1~SV_RS_S2</li>
+            <li>SV_RS_S2~SV_RS_StoneWall</li>
+
+            <!-- Wilderness main path -->
+            <li>SV_WD1~SV_WD2</li>
+            <li>SV_WD2~SV_WD_NaturalImmunity</li>
+            <li>SV_WD_NaturalImmunity~SV_WD3</li>
+            <li>SV_WD3~SV_WD4</li>
+            <li>SV_WD4~SV_WD_StormRunner</li>
+            <li>SV_WD_StormRunner~SV_WD5</li>
+            <li>SV_WD5~SV_WD_ApexPredator</li>
+            <!-- Wilderness side branch -->
+            <li>SV_WD_NaturalImmunity~SV_WD_S1</li>
+            <li>SV_WD_S1~SV_WD_S2</li>
+            <li>SV_WD_S2~SV_WD_Pathfinder</li>
+
+            <!-- Tenacity main path -->
+            <li>SV_TN1~SV_TN2</li>
+            <li>SV_TN2~SV_TN_QuickRecovery</li>
+            <li>SV_TN_QuickRecovery~SV_TN3</li>
+            <li>SV_TN3~SV_TN4</li>
+            <li>SV_TN4~SV_TN_SecondWind</li>
+            <li>SV_TN_SecondWind~SV_TN5</li>
+            <li>SV_TN5~SV_TN_PhoenixReborn</li>
+            <!-- Tenacity side branch -->
+            <li>SV_TN_QuickRecovery~SV_TN_S1</li>
+            <li>SV_TN_S1~SV_TN_S2</li>
+            <li>SV_TN_S2~SV_TN_VitalSurge</li>
+
+            <!-- Unyielding main path -->
+            <li>SV_UY1~SV_UY2</li>
+            <li>SV_UY2~SV_UY_NeverYield</li>
+            <li>SV_UY_NeverYield~SV_UY3</li>
+            <li>SV_UY3~SV_UY4</li>
+            <li>SV_UY4~SV_UY_IndomitableWill</li>
+
+            <!-- Cross-connectors -->
+            <li>SV_FT_IronBlood~SV_Cross_FU</li>
+            <li>SV_Cross_FU~SV_UY_NeverYield</li>
+            <li>SV_RS_IronSkin~SV_Cross_RU</li>
+            <li>SV_Cross_RU~SV_UY_NeverYield</li>
+            <li>SV_FT1~SV_Cross_FW</li>
+            <li>SV_Cross_FW~SV_WD1</li>
+            <li>SV_RS1~SV_Cross_RT</li>
+            <li>SV_Cross_RT~SV_TN1</li>
+            <li>SV_WD_NaturalImmunity~SV_Cross_WT</li>
+            <li>SV_Cross_WT~SV_TN_QuickRecovery</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

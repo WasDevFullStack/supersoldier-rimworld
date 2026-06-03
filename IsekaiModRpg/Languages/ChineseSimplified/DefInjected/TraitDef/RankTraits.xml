@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- F-Rank -->
+    <Isekai_Rank_F.degreeDatas.0.label>F 阶</Isekai_Rank_F.degreeDatas.0.label>
+    <Isekai_Rank_F.degreeDatas.0.description>此人被认定为F阶——最弱的等级。他人以怜悯或蔑视的目光看待他们，他们的存在毫无威望可言。</Isekai_Rank_F.degreeDatas.0.description>
+    
+    <!-- E-Rank -->
+    <Isekai_Rank_E.degreeDatas.0.label>E 阶</Isekai_Rank_E.degreeDatas.0.label>
+    <Isekai_Rank_E.degreeDatas.0.description>此人被归为E阶——低于平均水平但并非完全无用。他们经常被忽视，难以获得认可。</Isekai_Rank_E.degreeDatas.0.description>
+    
+    <!-- D-Rank -->
+    <Isekai_Rank_D.degreeDatas.0.label>D 阶</Isekai_Rank_D.degreeDatas.0.label>
+    <Isekai_Rank_D.degreeDatas.0.description>此人持有D阶等级——完全普通。他们既不出众也不落后，融入人群之中。</Isekai_Rank_D.degreeDatas.0.description>
+    
+    <!-- C-Rank -->
+    <Isekai_Rank_C.degreeDatas.0.label>C 阶</Isekai_Rank_C.degreeDatas.0.label>
+    <Isekai_Rank_C.degreeDatas.0.description>此人被认定为C阶——一个超越普通大众的能干之人。他们赢得了适度的尊重，被视为可靠之人。</Isekai_Rank_C.degreeDatas.0.description>
+    
+    <!-- B-Rank -->
+    <Isekai_Rank_B.degreeDatas.0.label>B 阶</Isekai_Rank_B.degreeDatas.0.label>
+    <Isekai_Rank_B.degreeDatas.0.description>此人达到了B阶——一位值得尊敬的熟练老兵。他们的名声先于他们传播，他人对其恭敬有加。</Isekai_Rank_B.degreeDatas.0.description>
+    
+    <!-- A-Rank -->
+    <Isekai_Rank_A.degreeDatas.0.label>A 阶</Isekai_Rank_A.degreeDatas.0.label>
+    <Isekai_Rank_A.degreeDatas.0.description>此人是A阶精英——世间最顶尖的存在之一。他们的出现就能吸引所有目光，散发着少有人能匹敌的力量与威严光环。</Isekai_Rank_A.degreeDatas.0.description>
+    
+    <!-- S-Rank -->
+    <Isekai_Rank_S.degreeDatas.0.label>S 阶</Isekai_Rank_S.degreeDatas.0.label>
+    <Isekai_Rank_S.degreeDatas.0.description>此人持有传奇S阶——一位拥有不可思议力量的英雄。他们的名字被人们以敬畏之情提起，仅一眼便能让全场沉默。他人在其面前感到自惭形秽。</Isekai_Rank_S.degreeDatas.0.description>
+    
+    <!-- SS-Rank -->
+    <Isekai_Rank_SS.degreeDatas.0.label>SS 阶</Isekai_Rank_SS.degreeDatas.0.label>
+    <Isekai_Rank_SS.degreeDatas.0.description>此人已超越至SS阶——行走于凡人之间的半神。他们的力量是传说中的存在，整个国家都愿不惜一切代价争夺他们的效忠。他们散发着超凡的光辉。</Isekai_Rank_SS.degreeDatas.0.description>
+    
+    <!-- SSS-Rank -->
+    <Isekai_Rank_SSS.degreeDatas.0.label>SSS 阶</Isekai_Rank_SSS.degreeDatas.0.label>
+    <Isekai_Rank_SSS.degreeDatas.0.description>此人实现了不可能——SSS阶，存在的绝对巅峰。他们是凡人中的神，力量超越理解。王国会为拥有他们而倾覆，他们的存在本身就在重塑周围的世界。</Isekai_Rank_SSS.degreeDatas.0.description>
+</LanguageData>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <Isekai_Berserk.label>狂暴之怒</Isekai_Berserk.label>
+    <Isekai_Berserk.description>处于狂暴怒火中，造成更高伤害但防御降低。</Isekai_Berserk.description>
+    <Isekai_Berserk.stages.0.label>暴怒中</Isekai_Berserk.stages.0.label>
+    
+    <Isekai_Shield.label>奥术护盾</Isekai_Shield.label>
+    <Isekai_Shield.description>被一道吸收伤害的魔法屏障保护着。</Isekai_Shield.description>
+    <Isekai_Shield.stages.0.label>护盾中</Isekai_Shield.stages.0.label>
+    
+    <Isekai_Regeneration.label>再生中</Isekai_Regeneration.label>
+    <Isekai_Regeneration.description>正在快速治愈伤口。</Isekai_Regeneration.description>
+    <Isekai_Regeneration.stages.0.label>治愈中</Isekai_Regeneration.stages.0.label>
+    
+    <Isekai_Haste.label>加速</Isekai_Haste.label>
+    <Isekai_Haste.description>以超自然的速度移动。</Isekai_Haste.description>
+    <Isekai_Haste.stages.0.label>加速中</Isekai_Haste.stages.0.label>
+    
+    <Isekai_Inspired.label>受到鼓舞</Isekai_Inspired.label>
+    <Isekai_Inspired.description>被一位激励人心的领袖注入了新的活力和决心。</Isekai_Inspired.description>
+    <Isekai_Inspired.stages.0.label>鼓舞中</Isekai_Inspired.stages.0.label>
+    
+    <Isekai_Awakening.label>异世界觉醒</Isekai_Awakening.label>
+    <Isekai_Awakening.description>此人已觉醒了异世界潜能，获得了通过经验变得更强的能力。</Isekai_Awakening.description>
+    <Isekai_Awakening.stages.0.label>已觉醒</Isekai_Awakening.stages.0.label>
+    
+    <Isekai_StoneSkin.label>石肤</Isekai_StoneSkin.label>
+    <Isekai_StoneSkin.description>皮肤获得了石头般的坚韧，大幅提升护甲。</Isekai_StoneSkin.description>
+    <Isekai_StoneSkin.stages.0.label>硬化</Isekai_StoneSkin.stages.0.label>
+    
+    <Isekai_EarthSense.label>大地感知</Isekai_EarthSense.label>
+    <Isekai_EarthSense.description>与地面的振动调和，感知附近的动静。</Isekai_EarthSense.description>
+    <Isekai_EarthSense.stages.0.label>感知中</Isekai_EarthSense.stages.0.label>
+    
+    <Isekai_KnockedDown.label>击倒</Isekai_KnockedDown.label>
+    <Isekai_KnockedDown.description>被强烈的震颤击倒在地。</Isekai_KnockedDown.description>
+    <Isekai_KnockedDown.stages.0.label>倒地</Isekai_KnockedDown.stages.0.label>
+    
+    <Isekai_MountainsEmbrace.label>山之拥抱</Isekai_MountainsEmbrace.label>
+    <Isekai_MountainsEmbrace.description>受到山灵的庇护，获得极大的耐久力。</Isekai_MountainsEmbrace.description>
+    <Isekai_MountainsEmbrace.stages.0.label>被拥抱</Isekai_MountainsEmbrace.stages.0.label>
+    
+    <Isekai_AvatarOfStone.label>石之化身</Isekai_AvatarOfStone.label>
+    <Isekai_AvatarOfStone.description>变身为拥有巨大力量的活石化身。</Isekai_AvatarOfStone.description>
+    <Isekai_AvatarOfStone.stages.0.label>化身</Isekai_AvatarOfStone.stages.0.label>
+    
+    <Isekai_GlacialArmor.label>冰川铠甲</Isekai_GlacialArmor.label>
+    <Isekai_GlacialArmor.description>被保护性的冰甲包裹。</Isekai_GlacialArmor.description>
+    <Isekai_GlacialArmor.stages.0.label>冰甲</Isekai_GlacialArmor.stages.0.label>
+    
+    <Isekai_Chilled.label>寒冷</Isekai_Chilled.label>
+    <Isekai_Chilled.description>体温降低，移动速度减慢。</Isekai_Chilled.description>
+    <Isekai_Chilled.stages.0.label>寒冷</Isekai_Chilled.stages.0.label>
+    
+    <Isekai_Frostbitten.label>冻伤</Isekai_Frostbitten.label>
+    <Isekai_Frostbitten.description>遭受魔法冻伤，严重减速。</Isekai_Frostbitten.description>
+    <Isekai_Frostbitten.stages.0.label>冻结</Isekai_Frostbitten.stages.0.label>
+    
+    <Isekai_IcePrison.label>冰牢</Isekai_IcePrison.label>
+    <Isekai_IcePrison.description>被困在冰的牢笼中，无法移动。</Isekai_IcePrison.description>
+    <Isekai_IcePrison.stages.0.label>监禁</Isekai_IcePrison.stages.0.label>
+    
+    <Isekai_DeepFreeze.label>深度冻结</Isekai_DeepFreeze.label>
+    <Isekai_DeepFreeze.description>被强烈的魔法寒冷冻至核心。</Isekai_DeepFreeze.description>
+    <Isekai_DeepFreeze.stages.0.label>冻结</Isekai_DeepFreeze.stages.0.label>
+    
+    <Isekai_IceShield.label>冰盾</Isekai_IceShield.label>
+    <Isekai_IceShield.description>被一道魔法冰的屏障保护。</Isekai_IceShield.description>
+    <Isekai_IceShield.stages.0.label>护盾</Isekai_IceShield.stages.0.label>
+    
+    <Isekai_SoothingBreeze.label>治愈微风</Isekai_SoothingBreeze.label>
+    <Isekai_SoothingBreeze.description>被清凉的微风环绕，治愈并恢复精神。</Isekai_SoothingBreeze.description>
+    <Isekai_SoothingBreeze.stages.0.label>清爽</Isekai_SoothingBreeze.stages.0.label>
+    
+    <Isekai_AbsoluteZero.label>绝对零度</Isekai_AbsoluteZero.label>
+    <Isekai_AbsoluteZero.description>被冻至绝对零度，完全不能动弹。</Isekai_AbsoluteZero.description>
+    <Isekai_AbsoluteZero.stages.0.label>全面冻结</Isekai_AbsoluteZero.stages.0.label>
+    
+    <Isekai_InnerFire.label>内在之火</Isekai_InnerFire.label>
+    <Isekai_InnerFire.description>内心燃烧着火焰，提升战斗力。</Isekai_InnerFire.description>
+    <Isekai_InnerFire.stages.0.label>燃烧</Isekai_InnerFire.stages.0.label>
+    
+    <Isekai_BurningInferno.label>烈焰地狱</Isekai_BurningInferno.label>
+    <Isekai_BurningInferno.description>被魔法火焰吞没，增强攻击力。</Isekai_BurningInferno.description>
+    <Isekai_BurningInferno.stages.0.label>炼狱</Isekai_BurningInferno.stages.0.label>
+    
+    <Isekai_FlameShield.label>烈焰护盾</Isekai_FlameShield.label>
+    <Isekai_FlameShield.description>被一道保护性的火焰屏障环绕。</Isekai_FlameShield.description>
+    <Isekai_FlameShield.stages.0.label>护盾</Isekai_FlameShield.stages.0.label>
+    
+    <Isekai_BlazingSpeed.label>闪耀之速</Isekai_BlazingSpeed.label>
+    <Isekai_BlazingSpeed.description>以烈火般的速度移动。</Isekai_BlazingSpeed.description>
+    <Isekai_BlazingSpeed.stages.0.label>闪耀</Isekai_BlazingSpeed.stages.0.label>
+    
+    <Isekai_PhoenixBlessing.label>凤凰祝福</Isekai_PhoenixBlessing.label>
+    <Isekai_PhoenixBlessing.description>受到凤凰的祝福，死亡后将会复活。</Isekai_PhoenixBlessing.description>
+    <Isekai_PhoenixBlessing.stages.0.label>祝福</Isekai_PhoenixBlessing.stages.0.label>
+    
+    <Isekai_Shocked.label>电击</Isekai_Shocked.label>
+    <Isekai_Shocked.description>肌肉因电击而痉挛。</Isekai_Shocked.description>
+    <Isekai_Shocked.stages.0.label>痉挛</Isekai_Shocked.stages.0.label>
+    
+    <Isekai_AMP.label>增幅</Isekai_AMP.label>
+    <Isekai_AMP.description>电能在体内奔涌，增幅力量。</Isekai_AMP.description>
+    <Isekai_AMP.stages.0.label>增幅中</Isekai_AMP.stages.0.label>
+    
+    <Isekai_Electrified.label>带电</Isekai_Electrified.label>
+    <Isekai_Electrified.description>充溢着电能。</Isekai_Electrified.description>
+    <Isekai_Electrified.stages.0.label>充电</Isekai_Electrified.stages.0.label>
+    
+    <Isekai_Overcharged.label>过载</Isekai_Overcharged.label>
+    <Isekai_Overcharged.description>被电力过度充能。</Isekai_Overcharged.description>
+    <Isekai_Overcharged.stages.0.label>超载</Isekai_Overcharged.stages.0.label>
+    
+    <Isekai_Stunned.label>眩晕</Isekai_Stunned.label>
+    <Isekai_Stunned.description>被强烈电击暂时丧失行动能力。</Isekai_Stunned.description>
+    <Isekai_Stunned.stages.0.label>失能</Isekai_Stunned.stages.0.label>
+    
+    <Isekai_ElectricField.label>电场</Isekai_ElectricField.label>
+    <Isekai_ElectricField.description>被噼啪作响的电场环绕。</Isekai_ElectricField.description>
+    <Isekai_ElectricField.stages.0.label>带电</Isekai_ElectricField.stages.0.label>
+    
+    <Isekai_StormAvatar.label>风暴化身</Isekai_StormAvatar.label>
+    <Isekai_StormAvatar.description>变身为拥有不可思议力量的活风暴。</Isekai_StormAvatar.description>
+    <Isekai_StormAvatar.stages.0.label>化身</Isekai_StormAvatar.stages.0.label>
+    
+    <Isekai_Blessed.label>祝福</Isekai_Blessed.label>
+    <Isekai_Blessed.description>被神圣之光祝福，获得保护和治愈。</Isekai_Blessed.description>
+    <Isekai_Blessed.stages.0.label>祝福</Isekai_Blessed.stages.0.label>
+    
+    <Isekai_ShieldOfLight.label>光之护盾</Isekai_ShieldOfLight.label>
+    <Isekai_ShieldOfLight.description>被一道辉煌的神圣光之盾保护。</Isekai_ShieldOfLight.description>
+    <Isekai_ShieldOfLight.stages.0.label>护盾</Isekai_ShieldOfLight.stages.0.label>
+    
+    <Isekai_DivineProtection.label>神圣庇护</Isekai_DivineProtection.label>
+    <Isekai_DivineProtection.description>处于神圣力量的保护之下。</Isekai_DivineProtection.description>
+    <Isekai_DivineProtection.stages.0.label>庇护中</Isekai_DivineProtection.stages.0.label>
+    
+    <Isekai_AvatarOfLight.label>光之化身</Isekai_AvatarOfLight.label>
+    <Isekai_AvatarOfLight.description>变身为辉煌的神圣光之化身。</Isekai_AvatarOfLight.description>
+    <Isekai_AvatarOfLight.stages.0.label>化身</Isekai_AvatarOfLight.stages.0.label>
+    
+    <Isekai_CloakedInShadows.label>暗影隐匿</Isekai_CloakedInShadows.label>
+    <Isekai_CloakedInShadows.description>隐藏在暗影中，难以被发现。</Isekai_CloakedInShadows.description>
+    <Isekai_CloakedInShadows.stages.0.label>隐匿</Isekai_CloakedInShadows.stages.0.label>
+    
+    <Isekai_Cursed.label>诅咒</Isekai_Cursed.label>
+    <Isekai_Cursed.description>被黑暗诅咒所困扰，身体衰弱。</Isekai_Cursed.description>
+    <Isekai_Cursed.stages.0.label>受诅</Isekai_Cursed.stages.0.label>
+    
+    <Isekai_Nightshade.label>夜影</Isekai_Nightshade.label>
+    <Isekai_Nightshade.description>被黑暗能量笼罩，增强隐蔽性。</Isekai_Nightshade.description>
+    <Isekai_Nightshade.stages.0.label>笼罩</Isekai_Nightshade.stages.0.label>
+    
+    <Isekai_VeiledInShadows.label>暗影之幕</Isekai_VeiledInShadows.label>
+    <Isekai_VeiledInShadows.description>完全隐藏在暗影中，几乎透明。</Isekai_VeiledInShadows.description>
+    <Isekai_VeiledInShadows.stages.0.label>隐形</Isekai_VeiledInShadows.stages.0.label>
+    
+    <Isekai_MarkedForDeath.label>死亡印记</Isekai_MarkedForDeath.label>
+    <Isekai_MarkedForDeath.description>被黑暗魔法标记，受到更多伤害。</Isekai_MarkedForDeath.description>
+    <Isekai_MarkedForDeath.stages.0.label>被标记</Isekai_MarkedForDeath.stages.0.label>
+    
+    <Isekai_AvatarOfShadow.label>暗影化身</Isekai_AvatarOfShadow.label>
+    <Isekai_AvatarOfShadow.description>变身为拥有恐怖力量的活暗影。</Isekai_AvatarOfShadow.description>
+    <Isekai_AvatarOfShadow.stages.0.label>化身</Isekai_AvatarOfShadow.stages.0.label>
+</LanguageData>

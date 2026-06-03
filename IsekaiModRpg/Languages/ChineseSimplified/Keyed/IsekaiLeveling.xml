@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- Tab Labels -->
+    <TabIsekai>异世界</TabIsekai>
+    <TabStatus>状态</TabStatus>
+    
+    <!-- Class Names -->
+    <Isekai_Warrior.label>战士</Isekai_Warrior.label>
+    <Isekai_Mage.label>法师</Isekai_Mage.label>
+    <Isekai_Ranger.label>游侠</Isekai_Ranger.label>
+    <Isekai_Crafter.label>工匠</Isekai_Crafter.label>
+    <Isekai_Leader.label>领袖</Isekai_Leader.label>
+    
+    <!-- UI Strings -->
+    <IsekaiLevel>等级</IsekaiLevel>
+    <IsekaiXP>经验值</IsekaiXP>
+    <IsekaiSkillPoints>技能点</IsekaiSkillPoints>
+    <IsekaiChooseClass>选择你的职业</IsekaiChooseClass>
+    <IsekaiOpenSkillTree>打开星座盘</IsekaiOpenSkillTree>
+    <IsekaiLevelUp>{0} 已达到 {1} 级！</IsekaiLevelUp>
+    
+    <!-- Skill Names -->
+    <Skill_IronSkin.label>铁皮</Skill_IronSkin.label>
+    <Skill_BladeMastery.label>剑术精通</Skill_BladeMastery.label>
+    <Skill_Berserker.label>狂战士</Skill_Berserker.label>
+    <Skill_CriticalStrike.label>致命一击</Skill_CriticalStrike.label>
+    <Skill_Unstoppable.label>势不可挡</Skill_Unstoppable.label>
+    <Skill_Meditation.label>冥想</Skill_Meditation.label>
+    <Skill_ArcaneShield.label>奥术护盾</Skill_ArcaneShield.label>
+    <Skill_Teleport.label>传送</Skill_Teleport.label>
+    <Skill_EagleEye.label>鹰眼</Skill_EagleEye.label>
+    <Skill_QuickDraw.label>快速拔枪</Skill_QuickDraw.label>
+    <Skill_Evasion.label>闪避</Skill_Evasion.label>
+    <Skill_Swiftness.label>迅捷</Skill_Swiftness.label>
+    <Skill_EfficientWork.label>高效工作</Skill_EfficientWork.label>
+    <Skill_MasterCrafter.label>工艺大师</Skill_MasterCrafter.label>
+    <Skill_Charisma.label>魅力</Skill_Charisma.label>
+    <Skill_Inspiration.label>激励</Skill_Inspiration.label>
+    <Skill_NegotiationMaster.label>谈判大师</Skill_NegotiationMaster.label>
+    <Skill_Regeneration.label>再生</Skill_Regeneration.label>
+    <Skill_Vitality.label>活力</Skill_Vitality.label>
+    
+    <!-- Ability Names -->
+    <Ability_Berserk.label>狂暴</Ability_Berserk.label>
+    <Ability_Shield.label>奥术护盾</Ability_Shield.label>
+    <Ability_Regeneration.label>再生</Ability_Regeneration.label>
+    <Ability_Haste.label>加速</Ability_Haste.label>
+    <Ability_Inspire.label>鼓舞</Ability_Inspire.label>
+    <Ability_Teleport.label>传送</Ability_Teleport.label>
+    <Ability_CriticalStrike.label>致命一击</Ability_CriticalStrike.label>
+    <Ability_Lifesteal.label>生命汲取</Ability_Lifesteal.label>
+    
+    <!-- Hediff Labels -->
+    <Isekai_Berserk.label>狂暴之怒</Isekai_Berserk.label>
+    <Isekai_Shield.label>奥术护盾</Isekai_Shield.label>
+    <Isekai_Regeneration.label>再生中</Isekai_Regeneration.label>
+    <Isekai_Haste.label>加速</Isekai_Haste.label>
+    <Isekai_Inspired.label>受到鼓舞</Isekai_Inspired.label>
+    <Isekai_Awakening.label>异世界觉醒</Isekai_Awakening.label>
+    
+    <!-- Messages -->
+    <IsekaiXPGained>+{0} 经验值</IsekaiXPGained>
+    <IsekaiLevelUpTitle>{0} 升级了！</IsekaiLevelUpTitle>
+    <IsekaiLevelUpMessage>{0} 已达到 {1} 级！有 {2} 个技能点可分配。</IsekaiLevelUpMessage>
+    <IsekaiClassChosen>{0} 已觉醒为 {1}！</IsekaiClassChosen>
+    <IsekaiSkillUnlocked>{0} 解锁了 {1}！</IsekaiSkillUnlocked>
+    
+    <!-- Navigation Buttons -->
+    <Isekai_Inventory>物品栏</Isekai_Inventory>
+    <Isekai_Stats>属性</Isekai_Stats>
+    <Isekai_SkillTree>星座盘</Isekai_SkillTree>
+    <Isekai_SkillTreeSoon>星座盘 — 即将推出！</Isekai_SkillTreeSoon>
+    
+    <!-- Stats Window -->
+    <Isekai_StatPoints>属性点</Isekai_StatPoints>
+    <Isekai_StatPointsAvailable>● {0} 可用属性点</Isekai_StatPointsAvailable>
+    <Isekai_GlobalRank>全球等级</Isekai_GlobalRank>
+    <Isekai_LevelRankDisplay>等级 {0} 阶级 {1}</Isekai_LevelRankDisplay>
+    <Isekai_LevelRankDisplayFull>等级 {0}  •  阶级 {1}</Isekai_LevelRankDisplayFull>
+    <Isekai_Apply>应用</Isekai_Apply>
+    <Isekai_Reset>重置</Isekai_Reset>
+    <Isekai_Close>关闭</Isekai_Close>
+    <Isekai_Points>点数</Isekai_Points>
+    <Isekai_BulkAllocHint>Shift: +5  Ctrl: +20\nCtrl+Shift: +100</Isekai_BulkAllocHint>
+    <Isekai_BulkAllocHintShort>Shift:+5  Ctrl:+20</Isekai_BulkAllocHintShort>
+    <Isekai_AutoAssign>自动</Isekai_AutoAssign>
+    <Isekai_AutoAssign_Tooltip>根据当前属性比例自动分配所有可用点数。</Isekai_AutoAssign_Tooltip>
+    <Isekai_StatsUpdated>{0}的属性已更新！</Isekai_StatsUpdated>
+    
+    <!-- Stat Names -->
+    <Isekai_Stat_STR>力量</Isekai_Stat_STR>
+    <Isekai_Stat_DEX>敏捷</Isekai_Stat_DEX>
+    <Isekai_Stat_VIT>体质</Isekai_Stat_VIT>
+    <Isekai_Stat_INT>智力</Isekai_Stat_INT>
+    <Isekai_Stat_WIS>感知</Isekai_Stat_WIS>
+    <Isekai_Stat_CHA>魅力</Isekai_Stat_CHA>
+    
+    <Isekai_Stat_Strength>力量 (STR)</Isekai_Stat_Strength>
+    <Isekai_Stat_Dexterity>敏捷 (DEX)</Isekai_Stat_Dexterity>
+    <Isekai_Stat_Vitality>体质 (VIT)</Isekai_Stat_Vitality>
+    <Isekai_Stat_Intelligence>智力 (INT)</Isekai_Stat_Intelligence>
+    <Isekai_Stat_Wisdom>感知 (WIS)</Isekai_Stat_Wisdom>
+    <Isekai_Stat_Charisma>魅力 (CHA)</Isekai_Stat_Charisma>
+    
+    <!-- Stat Descriptions -->
+    <Isekai_Desc_STR>物理力量和原始肌肉。\n\n影响：\n• 近战伤害\n• 负重能力</Isekai_Desc_STR>
+    <Isekai_Desc_DEX>敏捷性和精确度。\n\n影响：\n• 移动速度\n• 近战闪避\n• 射击精度\n• 近战命中\n• 瞄准延迟</Isekai_Desc_DEX>
+    <Isekai_Desc_VIT>体魄和韧性。\n\n影响：\n• 最大生命值\n• 生命恢复\n• 毒素抵抗\n• 受伤减免\n• 自然护甲（锐利/钝击/热能）\n• 疼痛阈值\n• 休息恢复\n• 寿命\n• 神经热上限（与感知共同）</Isekai_Desc_VIT>
+    <Isekai_Desc_INT>心智敏锐和学习能力。\n\n影响：\n• 工作速度\n• 研究速度\n• 学习速度\n• 制造品质\n• 黑客速度\n• 灵能敏感度（与感知共同）</Isekai_Desc_INT>
+    <Isekai_Desc_WIS>洞察力和心智坚韧。\n\n影响：\n• 精神崩溃阈值\n• 冥想聚焦\n• 医疗护理质量\n• 手术成功率\n• 训练动物概率\n• 动物采集产量\n• 灵能敏感度（与智力共同）\n• 神经热上限（与体质共同）\n• 神经热恢复\n• 灵能焦点效率</Isekai_Desc_WIS>
+    <Isekai_Desc_CHA>社交影响力和气场。\n\n影响：\n• 社交影响\n• 谈判能力\n• 交易价格\n• 驯服动物几率\n• 逮捕成功率</Isekai_Desc_CHA>
+    
+    <!-- RoM-only stat description suffixes (appended when RimWorld of Magic is loaded) -->
+    <Isekai_Desc_STR_RoM>\n\n[RoM]\n• 武力伤害</Isekai_Desc_STR_RoM>
+    <Isekai_Desc_DEX_RoM>\n\n[RoM]\n• 体力恢复\n• 武力冷却\n• 体力消耗</Isekai_Desc_DEX_RoM>
+    <Isekai_Desc_VIT_RoM>\n\n[RoM]\n• 最大体力\n• 最大气（武僧）</Isekai_Desc_VIT_RoM>
+    <Isekai_Desc_INT_RoM>\n\n[RoM]\n• 最大法力\n• 魔法冷却\n• 最大灵能</Isekai_Desc_INT_RoM>
+    <Isekai_Desc_WIS_RoM>\n\n[RoM]\n• 法力恢复\n• 魔法伤害（奥术）\n• 法力消耗</Isekai_Desc_WIS_RoM>
+    <Isekai_Desc_CHA_RoM>\n\n[RoM]\n• 召唤持续\n• 增益持续</Isekai_Desc_CHA_RoM>
+    
+    <!-- Short Stat Descriptions (for compact view) -->
+    <Isekai_Desc_STR_Short>近战伤害 • 负重</Isekai_Desc_STR_Short>
+    <Isekai_Desc_VIT_Short>生命恢复 • 伤害减免 • 护甲 • 寿命</Isekai_Desc_VIT_Short>
+    <Isekai_Desc_DEX_Short>移动 • 精度 • 闪避</Isekai_Desc_DEX_Short>
+    <Isekai_Desc_INT_Short>研究 • 工作速度 • 制造品质</Isekai_Desc_INT_Short>
+    <Isekai_Desc_WIS_Short>心理稳定 • 冥想 • 灵能</Isekai_Desc_WIS_Short>
+    <Isekai_Desc_CHA_Short>交易价格 • 社交 • 驯服</Isekai_Desc_CHA_Short>
+    
+    <!-- 标签页区域标题 -->
+    <Isekai_CoreAttributes>核心属性</Isekai_CoreAttributes>
+    <Isekai_CombatPerformance>战斗表现</Isekai_CombatPerformance>
+    <Isekai_PassiveBonuses>被动加成</Isekai_PassiveBonuses>
+    <Isekai_ActiveSkills>主动技能</Isekai_ActiveSkills>
+    <Isekai_ActiveAbilities>主动能力</Isekai_ActiveAbilities>
+    <Isekai_MagicSpells>魔法技能</Isekai_MagicSpells>
+    <Isekai_ComingSoon>即将推出</Isekai_ComingSoon>
+    <Isekai_NoAbilitiesYet>尚未解锁任何能力</Isekai_NoAbilitiesYet>
+    <Isekai_AbilitiesHint1>能力将通过星座盘进度</Isekai_AbilitiesHint1>
+    <Isekai_AbilitiesHint2>和职业精通来解锁。</Isekai_AbilitiesHint2>
+    
+    <!-- 标签页页面标题 -->
+    <Isekai_PawnSkills>{0}的技能</Isekai_PawnSkills>
+    <Isekai_PawnFullStats>{0}的完整属性</Isekai_PawnFullStats>
+    <Isekai_PawnAbilities>{0}的能力</Isekai_PawnAbilities>
+    
+    <!-- 战斗表现标签 -->
+    <Isekai_Combat_ATK>攻击</Isekai_Combat_ATK>
+    <Isekai_Combat_ACC>精度</Isekai_Combat_ACC>
+    <Isekai_Combat_SPD>速度</Isekai_Combat_SPD>
+    <Isekai_Combat_WRK>工作</Isekai_Combat_WRK>
+    
+    <!-- 被动加成标签 -->
+    <Isekai_Passive_MeleePower>近战威力</Isekai_Passive_MeleePower>
+    <Isekai_Passive_MeleePower_Desc>源自力量。提升近战攻击伤害。</Isekai_Passive_MeleePower_Desc>
+    <Isekai_Passive_Toughness>坚韧</Isekai_Passive_Toughness>
+    <Isekai_Passive_Toughness_Desc>源自体质。提升伤害抗性和耐久度。</Isekai_Passive_Toughness_Desc>
+    <Isekai_Passive_Evasion>闪避</Isekai_Passive_Evasion>
+    <Isekai_Passive_Evasion_Desc>源自敏捷。提升闪避几率和灵活性。</Isekai_Passive_Evasion_Desc>
+    <Isekai_Passive_Focus>专注</Isekai_Passive_Focus>
+    <Isekai_Passive_Focus_Desc>源自智力。提升工作效率和精确度。</Isekai_Passive_Focus_Desc>
+    <Isekai_Passive_Insight>洞察</Isekai_Passive_Insight>
+    <Isekai_Passive_Insight_Desc>源自感知。提升治疗和精神感应。</Isekai_Passive_Insight_Desc>
+    <Isekai_Passive_Presence>气场</Isekai_Passive_Presence>
+    <Isekai_Passive_Presence_Desc>源自魅力。提升社交影响力和领导力。</Isekai_Passive_Presence_Desc>
+    
+    <!-- Stat Effect Labels -->
+    <Isekai_Effect_MeleeDamage>近战伤害</Isekai_Effect_MeleeDamage>
+    <Isekai_Effect_CarryCapacity>负重能力</Isekai_Effect_CarryCapacity>
+    <Isekai_Effect_MiningSpeed>采矿速度</Isekai_Effect_MiningSpeed>
+    <Isekai_Effect_MaxHealth>最大生命值</Isekai_Effect_MaxHealth>
+    <Isekai_Effect_HealthRegen>生命恢复</Isekai_Effect_HealthRegen>
+    <Isekai_Effect_PainResistance>疼痛抵抗</Isekai_Effect_PainResistance>
+    <Isekai_Effect_MoveSpeed>移动速度</Isekai_Effect_MoveSpeed>
+    <Isekai_Effect_RangedAttackSpeed>远程攻击速度</Isekai_Effect_RangedAttackSpeed>
+    <Isekai_Effect_WorkSpeed>工作速度</Isekai_Effect_WorkSpeed>
+    <Isekai_Effect_ResearchSpeed>研究速度</Isekai_Effect_ResearchSpeed>
+    <Isekai_Effect_CraftingQuality>制造品质</Isekai_Effect_CraftingQuality>
+    <Isekai_Effect_LearningRate>学习速度</Isekai_Effect_LearningRate>
+    <Isekai_Effect_HackingSpeed>黑客速度</Isekai_Effect_HackingSpeed>
+    <Isekai_Effect_MentalBreakResist>精神崩溃抵抗</Isekai_Effect_MentalBreakResist>
+    <Isekai_Effect_MeditationGain>冥想增益</Isekai_Effect_MeditationGain>
+    <Isekai_Effect_SocialImpact>社交影响</Isekai_Effect_SocialImpact>
+    <Isekai_Effect_TradePriceImprove>交易价格改善</Isekai_Effect_TradePriceImprove>
+    <Isekai_Effect_SocialInfluence>社会影响力</Isekai_Effect_SocialInfluence>
+    <Isekai_Effect_RecruitChance>招募几率</Isekai_Effect_RecruitChance>
+    
+    <!-- Rank Names -->
+    <Isekai_Rank_F>F</Isekai_Rank_F>
+    <Isekai_Rank_E>E</Isekai_Rank_E>
+    <Isekai_Rank_D>D</Isekai_Rank_D>
+    <Isekai_Rank_C>C</Isekai_Rank_C>
+    <Isekai_Rank_B>B</Isekai_Rank_B>
+    <Isekai_Rank_A>A</Isekai_Rank_A>
+    <Isekai_Rank_S>S</Isekai_Rank_S>
+    <Isekai_Rank_SS>SS</Isekai_Rank_SS>
+    <Isekai_Rank_SSS>SSS</Isekai_Rank_SSS>
+    
+    <!-- Rank Titles -->
+    <Isekai_Title_Awakened>觉醒者</Isekai_Title_Awakened>
+    <Isekai_Title_Apprentice>学徒</Isekai_Title_Apprentice>
+    <Isekai_Title_Adventurer>冒险者</Isekai_Title_Adventurer>
+    <Isekai_Title_Warrior>战士</Isekai_Title_Warrior>
+    <Isekai_Title_Champion>冠军</Isekai_Title_Champion>
+    <Isekai_Title_Hero>英雄</Isekai_Title_Hero>
+    <Isekai_Title_Legend>传奇</Isekai_Title_Legend>
+    <Isekai_Title_Monarch>君主</Isekai_Title_Monarch>
+    <Isekai_Title_Overlord>霸主</Isekai_Title_Overlord>
+    
+    <!-- Floating Status Panel -->
+    <Isekai_Panel_Subtitle>异世界英雄</Isekai_Panel_Subtitle>
+    <Isekai_Panel_Rank>阶级</Isekai_Panel_Rank>
+    <Isekai_Panel_EXP>经验</Isekai_Panel_EXP>
+    <Isekai_Panel_AllocateStats>分配属性</Isekai_Panel_AllocateStats>
+    <Isekai_Panel_LevelBadge>Lv{0}</Isekai_Panel_LevelBadge>
+    
+    <!-- 升级浮动文字 -->
+    <Isekai_LevelUpMote>升级了！</Isekai_LevelUpMote>
+    <Isekai_LevelMote>Lv.{0}</Isekai_LevelMote>
+    
+    <!-- 阶级显示后缀 -->
+    <Isekai_RankWithSuffix>{0}阶</Isekai_RankWithSuffix>
+    
+    <!-- RimHUD 等级格式 -->
+    <Isekai_RimHUD_LevelFormat>Lv.{0}  [{1}] {2}</Isekai_RimHUD_LevelFormat>
+    
+    <!-- Settings Labels -->
+    <Isekai_Settings_Title>异世界升级设置</Isekai_Settings_Title>
+    <Isekai_Settings_RestartWarning>⚠ 注意：大部分设置需要重启游戏才能完全生效。</Isekai_Settings_RestartWarning>
+    
+    <!-- General Settings Section -->
+    <Isekai_Settings_XPLevelingHeader>经验与升级</Isekai_Settings_XPLevelingHeader>
+    <Isekai_Settings_XPMultiplier>经验倍率</Isekai_Settings_XPMultiplier>
+    <Isekai_Settings_SkillPointsPerLevel>每级技能点</Isekai_Settings_SkillPointsPerLevel>
+    <Isekai_Settings_EnableXPNotifications>启用经验通知</Isekai_Settings_EnableXPNotifications>
+    <Isekai_Settings_EnableXPNotifications_Desc>当殖民者获得经验值时显示浮动文字</Isekai_Settings_EnableXPNotifications_Desc>
+    <Isekai_Settings_EnableLevelUpNotifications>启用升级通知</Isekai_Settings_EnableLevelUpNotifications>
+    <Isekai_Settings_EnableLevelUpNotifications_Desc>当殖民者升级时显示信件通知</Isekai_Settings_EnableLevelUpNotifications_Desc>
+    <Isekai_Settings_MaxLevel>最大等级</Isekai_Settings_MaxLevel>
+    <Isekai_Settings_MaxStatCap>属性最大值</Isekai_Settings_MaxStatCap>
+    <Isekai_Settings_MaxStatCap_Desc>任何属性（力量、体质、敏捷等）能达到的最大值。设为9999代表无上限。</Isekai_Settings_MaxStatCap_Desc>
+    <Isekai_Settings_MaxStatCap_Unlimited>无上限</Isekai_Settings_MaxStatCap_Unlimited>
+    <Isekai_Settings_StartingLevel>新殖民者初始等级</Isekai_Settings_StartingLevel>
+    <Isekai_Settings_StartingLevel_Desc>新殖民者的初始等级。设为0为基于阶级的随机生成（默认）。更高的值会给殖民者一个领先优势。在开始新游戏前调整。</Isekai_Settings_StartingLevel_Desc>
+    <Isekai_Settings_StartingLevel_Random>随机（基于阶级）</Isekai_Settings_StartingLevel_Random>
+    <Isekai_Settings_NewbornsUseRankRolling>新生儿使用随机阶级</Isekai_Settings_NewbornsUseRankRolling>
+    <Isekai_Settings_NewbornsUseRankRolling_Desc>启用后，新生婴儿将使用与其他角色相同的随机阶级分配，而不是从1级/F阶级开始。默认关闭——婴儿从空白开始，通过经验成长。</Isekai_Settings_NewbornsUseRankRolling_Desc>
+    
+    <Isekai_Settings_MobRankingHeader>怪物阶级</Isekai_Settings_MobRankingHeader>
+    <Isekai_Settings_ShowMobRanks>显示怪物阶级</Isekai_Settings_ShowMobRanks>
+    <Isekai_Settings_ShowMobRanks_Desc>在怪物检查面板中显示阶级信息</Isekai_Settings_ShowMobRanks_Desc>
+    <Isekai_Settings_ExcludeAnimals>排除动物</Isekai_Settings_ExcludeAnimals>
+    <Isekai_Settings_ExcludeAnimals_Desc>启用后，动物将不会获得怪物阶级或基于阶级的属性加成。它们将表现为原版。</Isekai_Settings_ExcludeAnimals_Desc>
+    <Isekai_Settings_ExcludeMechs>排除机械体</Isekai_Settings_ExcludeMechs>
+    <Isekai_Settings_ExcludeMechs_Desc>启用后，机械体将不会获得怪物阶级或基于阶级的属性加成。它们将表现为原版。</Isekai_Settings_ExcludeMechs_Desc>
+    <Isekai_Settings_ExcludeEntities>排除异常实体</Isekai_Settings_ExcludeEntities>
+    <Isekai_Settings_ExcludeEntities_Desc>启用后，异常DLC实体（窃视者、亡灵、蹒跚者、奇美拉等）将不会获得怪物阶级或基于阶级的属性加成。它们将表现为原版。</Isekai_Settings_ExcludeEntities_Desc>
+    <Isekai_Settings_TamedBonusRetention>驯服动物阶级保留</Isekai_Settings_TamedBonusRetention>
+    <Isekai_Settings_TamedBonusRetention_Desc>驯服的动物保留多少阶级加成（生命、护甲、速度、伤害、疼痛阈值）。0% = 无加成（原版属性），50% = 一半加成，100% = 保留全部加成。</Isekai_Settings_TamedBonusRetention_Desc>
+    <Isekai_Settings_TamedBonusRetention_None>无（原版）</Isekai_Settings_TamedBonusRetention_None>
+    <Isekai_Settings_MobSpeedMultiplier>怪物速度倍率</Isekai_Settings_MobSpeedMultiplier>
+    <Isekai_Settings_MobSpeedMultiplier_Desc>控制有阶级的怪物获得多少速度加成。0.0 = 无速度加成，1.0 = 默认（S=+50%），2.0 = 双倍加成（S=+100%）</Isekai_Settings_MobSpeedMultiplier_Desc>
+    <Isekai_Settings_MobArmorMultiplier>怪物护甲倍率</Isekai_Settings_MobArmorMultiplier>
+    <Isekai_Settings_MobArmorMultiplier_Desc>控制有阶级的怪物获得多少护甲加成。0.0 = 无护甲加成，1.0 = 默认（S=+90%），2.0 = 双倍加成（S=+180%）</Isekai_Settings_MobArmorMultiplier_Desc>
+    <Isekai_Settings_MobHealthMultiplier>怪物生命倍率</Isekai_Settings_MobHealthMultiplier>
+    <Isekai_Settings_MobHealthMultiplier_Desc>控制有阶级的怪物获得多少生命加成。0.0 = 无生命加成（原版血量），1.0 = 默认（S=5倍），2.0 = 双倍加成（S=9倍）</Isekai_Settings_MobHealthMultiplier_Desc>
+    <Isekai_Settings_MobRankValueMultiplier>怪物阶级市场价值倍率</Isekai_Settings_MobRankValueMultiplier>
+    <Isekai_Settings_MobRankValueMultiplier_Desc>控制有阶级的怪物获得多少市场价值加成。0.0 = 无价值加成，1.0 = 默认（SSS=10倍），2.0 = 双倍加成（SSS=19倍）</Isekai_Settings_MobRankValueMultiplier_Desc>
+    <Isekai_Settings_PawnLevelValueMultiplier>殖民者等级市场价值倍率</Isekai_Settings_PawnLevelValueMultiplier>
+    <Isekai_Settings_PawnLevelValueMultiplier_Desc>控制殖民者等级对市场价值的影响程度。0.0 = 无价值加成，1.0 = 默认（高等级 = 5倍），2.0 = 双倍加成（高等级 = 9倍）</Isekai_Settings_PawnLevelValueMultiplier_Desc>
+    
+    <Isekai_Settings_RaidEnemyRanksHeader>突袭敌人阶级</Isekai_Settings_RaidEnemyRanksHeader>
+    <Isekai_Settings_EnableRaidRanking>启用突袭阶级</Isekai_Settings_EnableRaidRanking>
+    <Isekai_Settings_EnableRaidRanking_Desc>根据突袭强度为突袭敌人分配阶级</Isekai_Settings_EnableRaidRanking_Desc>
+    <Isekai_Settings_RaidPointsMultiplier>突袭点数倍率</Isekai_Settings_RaidPointsMultiplier>
+    <Isekai_Settings_RaidPointsMultiplier_Desc>数值越低 = 突袭越弱。如果敌人对你的殖民地来说太强，请降低此值。</Isekai_Settings_RaidPointsMultiplier_Desc>
+    <Isekai_Settings_RaidRankCapAtS>突袭阶级上限S</Isekai_Settings_RaidRankCapAtS>
+    <Isekai_Settings_RaidRankCapAtS_Desc>普通突袭最高S阶（SS/SSS保留给特殊事件）</Isekai_Settings_RaidRankCapAtS_Desc>
+    <Isekai_Settings_MaxRaidRank>突袭最高阶级</Isekai_Settings_MaxRaidRank>
+    <Isekai_Settings_MaxRaidRank_Desc>普通突袭中可出现的最高阶级。如果高阶级突袭者让你难以承受，请降低此值。SS/SSS始终保留给任务和特殊事件。</Isekai_Settings_MaxRaidRank_Desc>
+    <Isekai_Settings_ClassicRNGRaids>经典随机突袭</Isekai_Settings_ClassicRNGRaids>
+    <Isekai_Settings_ClassicRNGRaids_Desc>使用经典混沌随机 - 突袭可能比预期强得多或弱得多。更刺激但可能压垮早期殖民地！</Isekai_Settings_ClassicRNGRaids_Desc>    <Isekai_Settings_AdaptiveRaidRanks>自适应突袭阶级</Isekai_Settings_AdaptiveRaidRanks>
+    <Isekai_Settings_AdaptiveRaidRanks_Desc>将突袭敌人阶级限制在殖民地最强殖民者的±1阶级范围内。防止S级敌人出现在新殖民地，也防止D级敌人出现在后期殖民地。默认关闭。</Isekai_Settings_AdaptiveRaidRanks_Desc>    
+    <Isekai_Settings_MechanitorXPHeader>机械师经验（生物科技）</Isekai_Settings_MechanitorXPHeader>
+    <Isekai_Settings_EnableMechanitorXP>机械师获得机械体击杀经验</Isekai_Settings_EnableMechanitorXP>
+    <Isekai_Settings_EnableMechanitorXP_Desc>机械师在其控制的机械体造成伤害或击杀敌人时获得经验</Isekai_Settings_EnableMechanitorXP_Desc>
+    
+    <!-- Guild Quest Settings -->
+    <Isekai_Settings_GuildQuestsHeader>公会任务</Isekai_Settings_GuildQuestsHeader>
+    <Isekai_Settings_EnableGuildQuests>启用公会任务</Isekai_Settings_EnableGuildQuests>
+    <Isekai_Settings_EnableGuildQuests_Desc>每日狩猎任务，含有阶级生物和奖励</Isekai_Settings_EnableGuildQuests_Desc>
+    <Isekai_Settings_GuildQuestFrequency>任务频率</Isekai_Settings_GuildQuestFrequency>
+    <Isekai_Settings_GuildQuestFrequency_Desc>新公会任务出现的频率</Isekai_Settings_GuildQuestFrequency_Desc>
+    <Isekai_Settings_GuildQuestFrequency_PerDay>每天{0}次</Isekai_Settings_GuildQuestFrequency_PerDay>
+    <Isekai_Settings_GuildQuestFrequency_Days>每{0}天</Isekai_Settings_GuildQuestFrequency_Days>
+    <Isekai_Settings_MaxActiveGuildQuests>最大可用任务数</Isekai_Settings_MaxActiveGuildQuests>
+    <Isekai_Settings_MaxActiveGuildQuests_Desc>可用标签中同时等待的最大公会任务数量。在旧任务被接受或过期之前，不会出现新任务。</Isekai_Settings_MaxActiveGuildQuests_Desc>
+    <Isekai_Settings_MinQuestRank>最低任务等级</Isekai_Settings_MinQuestRank>
+    <Isekai_Settings_MinQuestRank_Desc>低于此等级的任务将不会出现。适合在高等级时减少任务标签的杂乱。</Isekai_Settings_MinQuestRank_Desc>
+    <Isekai_Settings_MinQuestRank_All>全部</Isekai_Settings_MinQuestRank_All>
+    
+    <!-- Elite Mob Settings -->
+    <Isekai_Settings_EliteMobsHeader>精英怪物</Isekai_Settings_EliteMobsHeader>
+    <Isekai_Settings_ShowEliteMobTitles>显示精英怪物覆盖层</Isekai_Settings_ShowEliteMobTitles>
+    <Isekai_Settings_ShowEliteMobTitles_Desc>显示精英怪物的名牌、血条和悬停效果。禁用此选项将完全跳过所有逐帧覆盖层检查，提高性能。</Isekai_Settings_ShowEliteMobTitles_Desc>
+    <Isekai_Settings_EnableTraitColors>彩色特性标签</Isekai_Settings_EnableTraitColors>
+    <Isekai_Settings_EnableTraitColors_Desc>按稀有度为异世界特性名称上色（金色=原型，紫色=稀有，绿色=普通，红色=诅咒）。禁用后显示纯白色标签。</Isekai_Settings_EnableTraitColors_Desc>
+    
+    <!-- Quest Creature Mod Blacklist -->
+    <Isekai_Settings_QuestBlacklistHeader>任务生物模组黑名单</Isekai_Settings_QuestBlacklistHeader>
+    <Isekai_Settings_QuestBlacklistDesc>排除特定模组的生物作为任务目标。输入逗号分隔的关键词，匹配模组名称或包ID。</Isekai_Settings_QuestBlacklistDesc>
+    <Isekai_Settings_QuestBlacklistHint>示例："ayameduki, alpha animals" — 支持部分匹配。请查看您的模组列表获取确切的模组名称。</Isekai_Settings_QuestBlacklistHint>
+    <Isekai_Settings_QuestBlacklistBuiltIn>内置排除（始终生效）：异常DLC实体、魔法之缘世界召唤物/构造体、幼虫、载具。</Isekai_Settings_QuestBlacklistBuiltIn>
+    
+    <Isekai_Settings_ResetStatMultipliers>重置所有属性倍率为默认值</Isekai_Settings_ResetStatMultipliers>
+    
+    <Isekai_Settings_ResetWindowPosition>重置属性窗口位置</Isekai_Settings_ResetWindowPosition>
+    <Isekai_Settings_WindowPositionReset>属性窗口位置已重置至中心。</Isekai_Settings_WindowPositionReset>
+    <Isekai_Settings_WindowPositionHeader>属性窗口位置</Isekai_Settings_WindowPositionHeader>
+    <Isekai_Settings_WindowPositionDesc>属性窗口可以通过点击并按住顶部区域来拖动。您的位置会自动保存。如需要可使用下面的按钮重置至中心。</Isekai_Settings_WindowPositionDesc>
+    
+    <!-- Visual Effects Settings -->
+    <Isekai_Settings_UIStyleHeader>界面风格</Isekai_Settings_UIStyleHeader>
+    <Isekai_Settings_UseIsekaiUI>自定义异世界界面</Isekai_Settings_UseIsekaiUI>
+    <Isekai_Settings_UseIsekaiUI_Desc>使用自定义主题的异世界界面显示状态标签和面板。禁用后使用标准原版RimWorld界面风格。</Isekai_Settings_UseIsekaiUI_Desc>
+    <Isekai_Settings_VisualEffectsHeader>视觉效果设置</Isekai_Settings_VisualEffectsHeader>
+    <Isekai_Settings_EnableManaCoreDrops>启用魔力核心掉落</Isekai_Settings_EnableManaCoreDrops>
+    <Isekai_Settings_EnableManaCoreDrops_Desc>切换所有有阶级生物（D阶及以上）的魔力水晶掉落。取消勾选以禁用所有魔力核心战利品。</Isekai_Settings_EnableManaCoreDrops_Desc>
+    <Isekai_Settings_AutoAllowCrystalHauling>自动允许搬运水晶</Isekai_Settings_AutoAllowCrystalHauling>
+    <Isekai_Settings_AutoAllowCrystalHauling_Desc>启用后，魔力核心和星之碎片生成时默认允许搬运，而非禁止。适用于和平/社区建设者等不会遇到危险的玩法。</Isekai_Settings_AutoAllowCrystalHauling_Desc>
+    
+    <!-- 魔力核心使用 -->
+    <Isekai_ManaCore_Source>魔力核心</Isekai_ManaCore_Source>
+    <Isekai_ManaCore_NoPawn>此殖民者无法吸收魔力核心。</Isekai_ManaCore_NoPawn>
+    <Isekai_ManaCore_AbsorbAll>吸收所有魔力核心 ({0}个, {1} 经验)</Isekai_ManaCore_AbsorbAll>
+    <Isekai_ManaCore_BulkAbsorb>{0} 吸收了 {1} 个魔力核心，获得 {2} 经验。</Isekai_ManaCore_BulkAbsorb>
+    
+    <Isekai_Settings_DraftedAuraHeader>征召光环效果（龙珠风格）</Isekai_Settings_DraftedAuraHeader>
+    <Isekai_Settings_DraftedAuraSubtext>带有光芒和粒子的垂直能量火焰</Isekai_Settings_DraftedAuraSubtext>
+    <Isekai_Settings_EnableDraftedAura>启用征召光环</Isekai_Settings_EnableDraftedAura>
+    <Isekai_Settings_EnableDraftedAura_Desc>在征召的殖民者周围显示能量光环（仅B阶及以上）</Isekai_Settings_EnableDraftedAura_Desc>
+    <Isekai_Settings_AuraOpacity>光环不透明度</Isekai_Settings_AuraOpacity>
+    <Isekai_Settings_AuraSizeMultiplier>光环大小倍率</Isekai_Settings_AuraSizeMultiplier>
+    <Isekai_Settings_EnableAuraPulse>启用光环脉冲</Isekai_Settings_EnableAuraPulse>
+    <Isekai_Settings_EnableAuraPulse_Desc>火焰动态脉冲和闪烁</Isekai_Settings_EnableAuraPulse_Desc>
+    <Isekai_Settings_AuraPulseSpeed>脉冲速度</Isekai_Settings_AuraPulseSpeed>
+    <Isekai_Settings_AuraUseFavoriteColor>使用殖民者最爱颜色</Isekai_Settings_AuraUseFavoriteColor>
+    <Isekai_Settings_AuraUseFavoriteColor_Desc>启用后，光环颜色将匹配殖民者最爱的颜色，而不是基于阶级的配色方案。非常适合个性化！</Isekai_Settings_AuraUseFavoriteColor_Desc>
+    
+    <!-- Stat Multiplier Settings -->
+    <Isekai_Settings_StatPointsPerLevel>每级属性点</Isekai_Settings_StatPointsPerLevel>
+    <Isekai_Settings_STRMultipliers>力量 (STR) 倍率</Isekai_Settings_STRMultipliers>
+    <Isekai_Settings_DEXMultipliers>敏捷 (DEX) 倍率</Isekai_Settings_DEXMultipliers>
+    <Isekai_Settings_VITMultipliers>体质 (VIT) 倍率</Isekai_Settings_VITMultipliers>
+    <Isekai_Settings_INTMultipliers>智力 (INT) 倍率</Isekai_Settings_INTMultipliers>
+    <Isekai_Settings_WISMultipliers>感知 (WIS) 倍率</Isekai_Settings_WISMultipliers>
+    <Isekai_Settings_CHAMultipliers>魅力 (CHA) 倍率</Isekai_Settings_CHAMultipliers>
+    <Isekai_Settings_BonusPerPoint>基础5点以上每点加成百分比</Isekai_Settings_BonusPerPoint>
+    <Isekai_Settings_MeleeDamage>近战伤害</Isekai_Settings_MeleeDamage>
+    <Isekai_Settings_CarryCapacity>负重能力</Isekai_Settings_CarryCapacity>
+    <Isekai_Settings_MiningSpeed>采矿速度</Isekai_Settings_MiningSpeed>
+    <Isekai_Settings_MoveSpeed>移动速度</Isekai_Settings_MoveSpeed>
+    <Isekai_Settings_WorkSpeed>工作速度</Isekai_Settings_WorkSpeed>
+    <Isekai_Settings_RangedAttackSpeed>远程攻击速度</Isekai_Settings_RangedAttackSpeed>
+    <Isekai_Settings_MaxHealth>最大生命值</Isekai_Settings_MaxHealth>
+    <Isekai_Settings_HealthRegen>生命恢复</Isekai_Settings_HealthRegen>
+    <Isekai_Settings_ResearchSpeed>研究速度</Isekai_Settings_ResearchSpeed>
+    <Isekai_Settings_LearningSpeed>学习速度</Isekai_Settings_LearningSpeed>
+    <Isekai_Settings_CraftingQuality>制造品质加成</Isekai_Settings_CraftingQuality>
+    <Isekai_Settings_ConstructionSpeed>建造速度</Isekai_Settings_ConstructionSpeed>
+    <Isekai_Settings_MeleeHitChance>近战命中率</Isekai_Settings_MeleeHitChance>
+    <Isekai_Settings_MeleeDodgeChance>近战闪避率</Isekai_Settings_MeleeDodgeChance>
+    <Isekai_Settings_ShootingAccuracy>射击精度</Isekai_Settings_ShootingAccuracy>
+    <Isekai_Settings_HealthRegenFactor>生命恢复系数</Isekai_Settings_HealthRegenFactor>
+    <Isekai_Settings_ToxicResistance>毒素抵抗</Isekai_Settings_ToxicResistance>
+    <Isekai_Settings_ImmunityGainSpeed>免疫获取速度</Isekai_Settings_ImmunityGainSpeed>
+    <Isekai_Settings_DamageReduction>伤害减免</Isekai_Settings_DamageReduction>
+    <Isekai_Settings_LifespanFactor>寿命倍率</Isekai_Settings_LifespanFactor>
+    <Isekai_Settings_GeneralWorkSpeed>通用工作速度</Isekai_Settings_GeneralWorkSpeed>
+    <Isekai_Settings_MentalBreakThreshold>精神崩溃阈值</Isekai_Settings_MentalBreakThreshold>
+    <Isekai_Settings_MeditationFocus>冥想专注</Isekai_Settings_MeditationFocus>    <Isekai_Settings_MedicalTendQuality>医疗护理质量</Isekai_Settings_MedicalTendQuality>
+    <Isekai_Settings_SurgerySuccess>手术成功率</Isekai_Settings_SurgerySuccess>
+    <Isekai_Settings_TrainAnimal>训练动物概率</Isekai_Settings_TrainAnimal>
+    <Isekai_Settings_AnimalGatherYield>动物采集产量</Isekai_Settings_AnimalGatherYield>
+    <Isekai_Settings_PsychicSensitivity>灵能敏感度 (智力+感知 平均)</Isekai_Settings_PsychicSensitivity>
+    <Isekai_Settings_NeuralHeatLimit>灵能熵上限 (体质+感知 平均)</Isekai_Settings_NeuralHeatLimit>
+    <Isekai_Settings_NeuralHeatRecovery>灵能熵恢复速度</Isekai_Settings_NeuralHeatRecovery>
+    <Isekai_Settings_PsyfocusCost>灵集消耗减少</Isekai_Settings_PsyfocusCost>
+    <Isekai_Settings_SocialImpact>社交影响</Isekai_Settings_SocialImpact>
+    <Isekai_Settings_NegotiationAbility>谈判能力</Isekai_Settings_NegotiationAbility>
+    <Isekai_Settings_TradePriceBonus>交易价格加成</Isekai_Settings_TradePriceBonus>
+    <Isekai_Settings_ArrestSuccess>逮捕成功率</Isekai_Settings_ArrestSuccess>
+    <Isekai_Settings_ResetDefault>重置为默认</Isekai_Settings_ResetDefault>
+    
+    <!-- Stat Effect Labels (additional) -->
+    <Isekai_Effect_ToxicResist>毒素抵抗</Isekai_Effect_ToxicResist>
+    <Isekai_Effect_ImmunityGain>免疫获取</Isekai_Effect_ImmunityGain>
+    <Isekai_Effect_DamageReduction>伤害减免</Isekai_Effect_DamageReduction>
+    <Isekai_Effect_SharpArmor>锌利护甲</Isekai_Effect_SharpArmor>
+    <Isekai_Effect_BluntArmor>钝击护甲</Isekai_Effect_BluntArmor>
+    <Isekai_Effect_HeatArmor>热能护甲</Isekai_Effect_HeatArmor>
+    <Isekai_Effect_PainThreshold>疼痛阈值</Isekai_Effect_PainThreshold>
+    <Isekai_Effect_BleedRate>出血速率</Isekai_Effect_BleedRate>
+    <Isekai_Effect_RestRate>休息速率</Isekai_Effect_RestRate>
+    <Isekai_Effect_Lifespan>寿命</Isekai_Effect_Lifespan>
+    <Isekai_Effect_MeleeHit>近战命中率</Isekai_Effect_MeleeHit>
+    <Isekai_Effect_DodgeChance>闪避率</Isekai_Effect_DodgeChance>
+    <Isekai_Effect_ShootingAccuracy>射击精度</Isekai_Effect_ShootingAccuracy>
+    <Isekai_Effect_AimingDelay>瞄准延迟</Isekai_Effect_AimingDelay>
+    <Isekai_Effect_PsychicSensitivity>心灵敏感度</Isekai_Effect_PsychicSensitivity>
+    <Isekai_Effect_NeuralHeatLimit>心灵热量上限</Isekai_Effect_NeuralHeatLimit>
+    <Isekai_Effect_NeuralRecovery>心灵热量恢复</Isekai_Effect_NeuralRecovery>
+    <Isekai_Effect_PsyfocusCost>心灵集中消耗</Isekai_Effect_PsyfocusCost>
+    <Isekai_WIS_PsyfocusCostReduction>异世界 WIS：-{0}% 灵能消耗</Isekai_WIS_PsyfocusCostReduction>
+    <Isekai_Effect_TendQuality>护理质量</Isekai_Effect_TendQuality>
+    <Isekai_Effect_SurgerySuccess>手术成功率</Isekai_Effect_SurgerySuccess>
+    <Isekai_Effect_TrainAnimal>训练动物</Isekai_Effect_TrainAnimal>
+    <Isekai_Effect_GatherYield>采集产量</Isekai_Effect_GatherYield>
+    <Isekai_Effect_Negotiation>谈判能力</Isekai_Effect_Negotiation>
+    <Isekai_Effect_Taming>驯化能力</Isekai_Effect_Taming>
+    <Isekai_Effect_ArrestSuccess>逮捕成功率</Isekai_Effect_ArrestSuccess>
+    <Isekai_Effect_GimmickTier>职业特性等级</Isekai_Effect_GimmickTier>
+    <Isekai_Effect_ClassPassive>职业被动</Isekai_Effect_ClassPassive>
+    <Isekai_Tier>阶</Isekai_Tier>
+    
+    <!-- Button Labels -->
+    <Isekai_Confirm>确认</Isekai_Confirm>
+    <Isekai_ValueMultiplier>价值倍率 x{0}</Isekai_ValueMultiplier>
+
+    <!-- Character Creation Panel -->
+    <Isekai_CharCreate_Title>异世界属性</Isekai_CharCreate_Title>
+    <Isekai_CharCreate_Level>Lv.</Isekai_CharCreate_Level>
+    <Isekai_CharCreate_Reroll>重新随机属性</Isekai_CharCreate_Reroll>
+
+    <!-- Quest/Hunt System -->
+    <!-- Quest Type Labels by Rank -->
+    <Isekai_QuestType_Hunt>狩猎</Isekai_QuestType_Hunt>
+    <Isekai_QuestType_Expedition>远征</Isekai_QuestType_Expedition>
+    <Isekai_QuestType_Raid>讨伐</Isekai_QuestType_Raid>
+    
+    <!-- Difficulty Recommendations by Rank -->
+    <Isekai_Difficulty_F>适合任何已觉醒的冒险者。</Isekai_Difficulty_F>
+    <Isekai_Difficulty_E>推荐：E阶冒险者或更高。</Isekai_Difficulty_E>
+    <Isekai_Difficulty_D>推荐：D阶冒险者或小型队伍。</Isekai_Difficulty_D>
+    <Isekai_Difficulty_C>推荐：C阶冒险者或装备精良的队伍。</Isekai_Difficulty_C>
+    <Isekai_Difficulty_B>推荐：装备精良的B阶队伍。</Isekai_Difficulty_B>
+    <Isekai_Difficulty_A>推荐：A阶队伍或多名B阶冒险者。</Isekai_Difficulty_A>
+    <Isekai_Difficulty_S>要求：至少一支完整的A阶冒险者队伍。</Isekai_Difficulty_S>
+    <Isekai_Difficulty_SS>要求：多名S阶冒险者协同作战。</Isekai_Difficulty_SS>
+    <Isekai_Difficulty_SSS>要求：S阶冒险者精英团队。传说级威胁。</Isekai_Difficulty_SSS>
+    
+    <!-- F-D Rank: HUNT (Local Map) -->
+    <Isekai_Quest_Offer_Label_Hunt>[公会] {0}阶狩猎委托</Isekai_Quest_Offer_Label_Hunt>
+    <Isekai_Quest_Offer_Text_Hunt><![CDATA[<color=#FFD700>━━━ 冒险者公会 ━━━</color>
+
+新的狩猎委托已发布！
+
+目标：{1}
+威胁等级：{0}阶
+赏金：{3} 白银 + {2} 经验
+
+<color=#888888>难度：适合初级至中级冒险者。</color>
+
+<color=#999999>公会已将此生物标记为消灭目标。对有志于成为猎人的冒险者来说，这是一份简单的工作。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Offer_Text_Hunt>
+    <Isekai_Quest_Name_Hunt>[公会] {0}阶狩猎：{1}</Isekai_Quest_Name_Hunt>
+    <Isekai_Quest_Description_Hunt><![CDATA[<color=#FFD700>━━━ 狩猎委托 ━━━</color>
+
+目标：{1}（{0}阶）
+
+<color=#888888>⚔ 难度：适合初级至中级冒险者。
+任何经过基础战斗训练的殖民者都能胜任。</color>
+
+任务简报：
+该区域已报告发现一只生物。公会正为消灭它提供赏金。
+
+完成后：
+• {2} 经验分配给所有猎人
+• {3} 白银赏金
+• 来自生物的额外战利品
+
+接受此委托以将目标召唤至你的狩猎场。
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Description_Hunt>
+    <Isekai_Hunt_Started_Hunt>[公会] 狩猎委托已激活！你的目标 {1}（{0}阶）正等待着你。</Isekai_Hunt_Started_Hunt>
+    <Isekai_Hunt_Complete_Label_Hunt>[公会] {0}阶狩猎完成！</Isekai_Hunt_Complete_Label_Hunt>
+    <Isekai_Hunt_Complete_Text_Hunt><![CDATA[<color=#FFD700>━━━ 委托完成 ━━━</color>
+
+干得好，猎人！
+
+你已成功消灭了{0}阶目标。
+
+已领取奖励：
+• {1} 经验 <color=#888888>（已分配给殖民者）</color>
+• {2} 白银
+
+<color=#999999>公会注意到你日益增长的实力。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Hunt_Complete_Text_Hunt>
+    
+    <!-- B-A Rank: EXPEDITION (World Map) -->
+    <Isekai_Quest_Offer_Label_Expedition>[公会] {0}阶远征委托</Isekai_Quest_Offer_Label_Expedition>
+    <Isekai_Quest_Offer_Text_Expedition><![CDATA[<color=#FFD700>━━━ 冒险者公会 ━━━</color>
+
+远征委托已发布！
+
+目标：{1}
+威胁等级：{0}阶
+赏金：{3} 白银 + {2} 经验
+
+<color=#FFAA00>⚔ 难度：推荐B阶队伍或多名经验丰富的冒险者。</color>
+
+<color=#999999>此生物已在你的边境之外建立了领地。公会正寻找愿意组建远征队消灭此威胁的经验猎人。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Offer_Text_Expedition>
+    <Isekai_Quest_Name_Expedition>[公会] {0}阶远征：{1}</Isekai_Quest_Name_Expedition>
+    <Isekai_Quest_Description_Expedition><![CDATA[<color=#FFD700>━━━ 远征委托 ━━━</color>
+
+目标：{1}（{0}阶）
+位置：约{4}格距离
+
+<color=#FFAA00>⚔ 难度：推荐B阶冒险者或更高。
+派遣装备精良的队伍——单独行动风险极高。</color>
+
+任务简报：
+一只强大的生物在远方区域建立了领地。公会为愿意前往消灭此威胁的猎人提供丰厚赏金。
+
+完成后：
+• {2} 经验分配给所有猎人
+• {3} 白银赏金
+• 来自生物的额外战利品
+
+组建商队并前往标记位置。到达后远征正式开始。
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Description_Expedition>
+    <Isekai_Hunt_Started_Expedition>[公会] 远征委托已激活！{1}（{0}阶）正在标记位置等待。</Isekai_Hunt_Started_Expedition>
+    <Isekai_Hunt_SiteRevealed_Expedition>[公会] 委托已接受！{1}（{0}阶）已被定位。组建远征队前往标记位置。</Isekai_Hunt_SiteRevealed_Expedition>
+    <Isekai_Hunt_Complete_Label_Expedition>[公会] {0}阶远征完成！</Isekai_Hunt_Complete_Label_Expedition>
+    <Isekai_Hunt_Complete_Text_Expedition><![CDATA[<color=#FFD700>━━━ 远征成功 ━━━</color>
+
+出色的工作，冒险者！
+
+你的远征队已成功消灭了{0}阶目标。
+
+已领取奖励：
+• {1} 经验 <color=#888888>（已分配给殖民者）</color>
+• {2} 白银
+
+<color=#999999>你在公会中的声望越来越高。更具挑战性的委托正等着你。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Hunt_Complete_Text_Expedition>
+    
+    <!-- S-SSS Rank: RAID (World Map, Legendary) -->
+    <Isekai_Quest_Offer_Label_Raid>[公会] {0}阶讨伐委托</Isekai_Quest_Offer_Label_Raid>
+    <Isekai_Quest_Offer_Text_Raid><![CDATA[<color=#FFD700>━━━ 冒险者公会 ━━━</color>
+
+<color=#FF4444>⚠ 紧急：讨伐委托已发布 ⚠</color>
+
+目标：{1}
+威胁等级：{0}阶（极度危险）
+赏金：{3} 白银 + {2} 经验
+
+<color=#FF6666>⚔ 难度警告 ⚔
+S阶：需要一支完整的A阶冒险者队伍。
+SS阶：需要多名S阶冒险者。
+SSS阶：需要S阶冒险者精英团队。传说级威胁！</color>
+
+<color=#999999>一只传说级生物正在肆虐整个区域。公会仅向最精锐的猎人发布此委托。集结你最强的战士——这不是狩猎，这是讨伐。</color>
+
+<color=#666666>— 冒险者公会最高委员会</color>]]></Isekai_Quest_Offer_Text_Raid>
+    <Isekai_Quest_Name_Raid>[公会] {0}阶讨伐：{1}</Isekai_Quest_Name_Raid>
+    <Isekai_Quest_Description_Raid><![CDATA[<color=#FFD700>━━━ 讨伐委托 ━━━</color>
+
+<color=#FF4444>威胁等级：极端</color>
+
+目标：{1}（{0}阶）
+位置：约{4}格距离
+
+<color=#FF6666>⚔ 难度要求 ⚔
+• S阶讨伐：至少一支完整的A阶冒险者队伍。
+• SS阶讨伐：多名S阶冒险者协同作战。
+• SSS阶讨伐：需要S阶冒险者精英团队。这是传说级威胁——请做好充分准备！</color>
+
+任务简报：
+一只拥有巨大力量的传说级生物已被发现。这不是普通的狩猎——这是对已知世界中最危险存在之一的讨伐。只有最强大的猎人才应尝试此委托。
+
+完成后：
+• {2} 经验分配给所有猎人
+• {3} 白银赏金
+• 来自生物的传说级战利品
+
+集结你的精英战士。带上你最好的武器和护甲。胜利将铸就你的传说。
+
+<color=#666666>— 冒险者公会最高委员会</color>]]></Isekai_Quest_Description_Raid>
+    <Isekai_Hunt_Started_Raid>[公会] ⚔ 讨伐委托已激活 ⚔ 传说级 {1}（{0}阶）正等待你的挑战！</Isekai_Hunt_Started_Raid>
+    <Isekai_Hunt_SiteRevealed_Raid>[公会] ⚔ 讨伐地点已揭示 ⚔ 传说级 {1}（{0}阶）正在等待。集结你的S阶精英战士，向荣耀进军！</Isekai_Hunt_SiteRevealed_Raid>
+    <Isekai_Hunt_Complete_Label_Raid>[公会] {0}阶讨伐胜利！</Isekai_Hunt_Complete_Label_Raid>
+    <Isekai_Hunt_Complete_Text_Raid><![CDATA[<color=#FFD700>━━━ 传说级胜利 ━━━</color>
+
+<color=#FFD700>★ 猎人们的荣耀 ★</color>
+
+你的讨伐队已击败了传说级{0}阶生物！
+
+已领取奖励：
+• {1} 经验 <color=#888888>（已分配给殖民者）</color>
+• {2} 白银
+
+<color=#999999>你的胜利传说将流传千古。公会向你的英勇致敬。</color>
+
+<color=#666666>— 冒险者公会最高委员会</color>]]></Isekai_Hunt_Complete_Text_Raid>
+    
+    <!-- Legacy/Fallback keys -->
+    <Isekai_Quest_Offer_Label>[公会] {0}阶狩猎委托</Isekai_Quest_Offer_Label>
+    <Isekai_Quest_Offer_Text><![CDATA[<color=#FFD700>━━━ 冒险者公会 ━━━</color>
+
+新的狩猎委托已发布！
+
+目标：{1}
+威胁等级：{0}阶
+赏金：{3} 白银 + {2} 经验
+
+<color=#999999>公会已将此生物标记为消灭目标。接受委托以开始你的狩猎。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Offer_Text>
+    <Isekai_Quest_Offer_Desc>公会委托：狩猎{0}阶 {1} 获取赏金。</Isekai_Quest_Offer_Desc>
+    <Isekai_Hunt_Accept>接受委托</Isekai_Hunt_Accept>
+    <Isekai_Hunt_Decline>拒绝</Isekai_Hunt_Decline>
+    <Isekai_Hunt_Postpone>稍后查看</Isekai_Hunt_Postpone>
+    <Isekai_Hunt_Started>[公会] 委托已激活！你的目标 {1}（{0}阶）正等待着你。</Isekai_Hunt_Started>
+    <Isekai_Hunt_NoMap>没有可用的有效位置。</Isekai_Hunt_NoMap>
+    <Isekai_Hunt_Deferred>公会委托已接受。目标将在你到达定居点时出现。</Isekai_Hunt_Deferred>
+    <Isekai_Hunt_SpawnFailed>无法定位该生物。委托已作废。</Isekai_Hunt_SpawnFailed>
+    <Isekai_Hunt_Letter_Label>[公会] {0}阶目标已发现！</Isekai_Hunt_Letter_Label>
+    <Isekai_Hunt_Letter_Text><![CDATA[<color=#FFD700>━━━ 冒险者公会 ━━━</color>
+
+你的委托目标已被定位！
+
+目标：{1}
+威胁等级：{0}阶
+赏金：{3} 白银 + {2} 经验
+
+<color=#999999>该生物就在附近但尚未产生敌意……你可以选择何时出击。准备好后发起攻击以领取赏金。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Hunt_Letter_Text>
+    <Isekai_Hunt_Complete_Label>[公会] {0}阶委托完成！</Isekai_Hunt_Complete_Label>
+    <Isekai_Hunt_Complete_Text><![CDATA[<color=#FFD700>━━━ 委托完成 ━━━</color>
+
+出色的工作，猎人！
+
+你已成功消灭了{0}阶目标。
+
+已领取奖励：
+• {1} 经验 <color=#888888>（已分配给殖民者）</color>
+• {2} 白银
+
+<color=#999999>你在公会中的声望越来越高。更具挑战性的委托正等着你。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Hunt_Complete_Text>
+    
+    <!-- Quest Tab Display -->
+    <Isekai_Quest_Name>[公会] {0}阶委托：{1}</Isekai_Quest_Name>
+    <Isekai_Quest_Description><![CDATA[<color=#FFD700>━━━ 狩猎委托 ━━━</color>
+
+目标：{1}（{0}阶）
+
+任务简报：
+该区域已报告发现一只生物。公会正为消灭它提供赏金。
+
+完成后：
+• {2} 经验分配给所有猎人
+• {3} 白银赏金
+• 来自生物的额外战利品
+
+接受此委托以将目标召唤至你的狩猎场。
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Description>
+    <Isekai_Quest_Description_World><![CDATA[<color=#FFD700>━━━ 远征委托 ━━━</color>
+
+目标：{1}（{0}阶）
+位置：约{4}格距离
+
+任务简报：
+一只强大的生物在远方区域建立了领地。公会为愿意前往消灭此威胁的猎人提供丰厚赏金。
+
+完成后：
+• {2} 经验分配给所有猎人
+• {3} 白银赏金
+• 来自生物的额外战利品
+
+组建商队并前往标记位置。到达后任务正式开始。
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Description_World>
+    <Isekai_Quest_Local_Pending>等待接受中……目标{0}将出现在你的地图上。</Isekai_Quest_Local_Pending>
+    <Isekai_Quest_Local_Deferred>委托已接受。{0}将在你到达定居点时出现。</Isekai_Quest_Local_Deferred>
+    <Isekai_Quest_World_Pending>等待接受中……接受以揭示{0}的位置。</Isekai_Quest_World_Pending>
+    <Isekai_Quest_World_Travel>前往{0}以开始任务。</Isekai_Quest_World_Travel>
+    <Isekai_Quest_Target_Alive>目标：{0}（存活）</Isekai_Quest_Target_Alive>
+    <Isekai_Quest_Target_Dead>目标：已消灭 ✓</Isekai_Quest_Target_Dead>
+    <Isekai_Quest_OfferExpiry>委托将在{0}后过期</Isekai_Quest_OfferExpiry>
+    <Isekai_Quest_OfferExpiry_Tip>如果未及时接受，公会将重新分配此委托。</Isekai_Quest_OfferExpiry_Tip>
+    <Isekai_Quest_Expiry>狩猎委托完成期限</Isekai_Quest_Expiry>
+    <Isekai_Quest_Expiry_Tip>公会要求及时完成已接受的委托。未能在截止日期前完成将导致委托取消。</Isekai_Quest_Expiry_Tip>
+    <Isekai_Quest_RewardDisplay>赏金：{0} 白银 + {1} 经验</Isekai_Quest_RewardDisplay>
+    <Isekai_Quest_XPReward>✦ 奖励：{0} 经验（分配给所有参与者）</Isekai_Quest_XPReward>
+    <Isekai_Quest_LootRewards>额外战利品：</Isekai_Quest_LootRewards>
+    <Isekai_Hunt_Site_Label>[公会] {0}阶委托：{1}</Isekai_Hunt_Site_Label>
+    <Isekai_Hunt_SiteRevealed>[公会] 委托已接受！{1}（{0}阶）已被定位。前往标记位置以开始。</Isekai_Hunt_SiteRevealed>
+    <Isekai_Hunt_Appeared>⚔ 战斗警报 ⚔
+
+{0}阶 {1} 已发现你的存在！它充满敌意——准备战斗！</Isekai_Hunt_Appeared>
+    <Isekai_Hunt_Complete_CanLeave><![CDATA[<color=#FFD700>✓ 委托完成</color>
+
+目标已被消灭。在离开前收集战利品。赏金将在返回后发放。
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Hunt_Complete_CanLeave>
+    <Isekai_Reward_XP>{0} 经验</Isekai_Reward_XP>
+    <Isekai_Reward_XP_Desc>经验将分配给所有参与的猎人</Isekai_Reward_XP_Desc>
+    
+    <!-- Hunt Site Inspect Strings -->
+    <Isekai_Hunt_Site_Header>━━ 冒险者公会委托 ━━</Isekai_Hunt_Site_Header>
+    <Isekai_Hunt_Site_Target>目标：{0}</Isekai_Hunt_Site_Target>
+    <Isekai_Hunt_Site_Rank>威胁等级：{0}阶</Isekai_Hunt_Site_Rank>
+    <Isekai_Hunt_Site_Rewards>赏金：{0} 白银 + {1} 经验</Isekai_Hunt_Site_Rewards>
+    <Isekai_Hunt_Site_Instructions>派遣商队以开始狩猎。</Isekai_Hunt_Site_Instructions>
+    <Isekai_Hunt_ViewQuest>查看委托</Isekai_Hunt_ViewQuest>
+    <Isekai_Hunt_ViewQuestDesc>打开任务标签查看此委托的详情。</Isekai_Hunt_ViewQuestDesc>
+    <Isekai_Hunt_JumpToTarget>跳转至目标</Isekai_Hunt_JumpToTarget>
+    <Isekai_Hunt_JumpToTargetDesc>将镜头跳转至地图上的{0}</Isekai_Hunt_JumpToTargetDesc>
+    <Isekai_Hunt_TargetSpawned>狩猎目标：{0} 已在 {1} 出现。点击跳转至目标。</Isekai_Hunt_TargetSpawned>
+    <Isekai_Hunt_Unknown>未知位置</Isekai_Hunt_Unknown>
+    <Isekai_Hunt_BeginHunt>开始狩猎</Isekai_Hunt_BeginHunt>
+    
+    <!-- Bounty Pack Quest Keys (B-A rank bounties spawn a squad of hostiles) -->
+    <!-- {0}=rank, {1}=creatureKind, {2}=packSize -->
+    <Isekai_Quest_Name_BountyPack>[公会] {0}阶赏金：{1} x{2}</Isekai_Quest_Name_BountyPack>
+    <Isekai_Quest_Offer_Label_BountyPack>[公会] {0}阶赏金委托（小队）</Isekai_Quest_Offer_Label_BountyPack>
+    <!-- {0}=rank, {1}=creatureKind, {2}=xp, {3}=silver, {4}=packSize -->
+    <Isekai_Quest_Offer_Text_BountyPack><![CDATA[<color=#FFD700>━━━ 冒险者公会 ━━━</color>
+
+<color=#FF8800>⚔ 赏金委托已发布 ⚔</color>
+
+目标：一支{4}人小队 {1}
+威胁等级：{0}阶
+赏金：{3} 白银 + {2} 经验
+
+<color=#FF8800>⚔ 这些是敌对战斗人员——预计将面临激烈的武装抵抗。</color>
+
+<color=#999999>一群危险的个体已被公会标记为消灭目标。这是一项小队消灭委托——所有{4}个目标必须被歼灭。他们武装且危险。请带上装备精良的队伍。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Offer_Text_BountyPack>
+    <!-- {0}=rank, {1}=creatureKind, {2}=xp, {3}=silver, {4}=distance, {5}=packSize -->
+    <Isekai_Quest_Description_BountyPack><![CDATA[<color=#FFD700>━━━ 赏金委托 ━━━</color>
+
+<color=#FF8800>目标：敌对小队（{5} 名战斗人员）</color>
+
+目标：{5}x {1}（{0}阶）
+距离：~{4}格
+
+<color=#FF8800>⚔ 这是一项小队消灭委托。所有目标必须被歼灭。</color>
+
+任务简报：
+一支{5}名敌对战斗人员的小队已被标记为消灭目标。不同于单人赏金，你将面对多个协同作战的武装敌人。请带上武装精良的队伍，并预期有组织的抵抗。
+
+完成后：
+• {2} 经验分配给所有猎人
+• {3} 白银赏金
+• 来自目标的额外战利品
+
+接受此委托以迎击赏金小队。
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Description_BountyPack>
+    <Isekai_Hunt_SiteRevealed_BountyPack>[公会] 赏金委托已接受！一支{2}人的{1}小队（{0}阶）已被定位。组建猎人队伍前往标记位置。</Isekai_Hunt_SiteRevealed_BountyPack>
+
+    <!-- Expedition Pack Quest Keys (B-A rank non-bounty expeditions spawn a pack of creatures) -->
+    <!-- {0}=rank, {1}=creatureKind, {2}=packSize -->
+    <Isekai_Quest_Name_ExpeditionPack>[公会] {0}阶远征：{1} x{2}</Isekai_Quest_Name_ExpeditionPack>
+    <Isekai_Quest_Offer_Label_ExpeditionPack>[公会] {0}阶远征委托（群体）</Isekai_Quest_Offer_Label_ExpeditionPack>
+    <!-- {0}=rank, {1}=creatureKind, {2}=xp, {3}=silver, {4}=packSize -->
+    <Isekai_Quest_Offer_Text_ExpeditionPack><![CDATA[<color=#FFD700>━━━ 冒险者公会 ━━━</color>
+
+远征委托已发布！
+
+目标：一群{4}只 {1}
+威胁等级：{0}阶
+赏金：{3} 白银 + {2} 经验
+
+<color=#FFAA00>⚔ 难度：多只生物——建议B阶及以上队伍前往。</color>
+
+<color=#999999>一群危险的生物已在你的边境之外建立了领地。公会正在寻找有经验的猎人组建远征队前往消灭整个群体。</color>
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Offer_Text_ExpeditionPack>
+    <!-- {0}=rank, {1}=creatureKind, {2}=xp, {3}=silver, {4}=distance, {5}=packSize -->
+    <Isekai_Quest_Description_ExpeditionPack><![CDATA[<color=#FFD700>━━━ 远征委托 ━━━</color>
+
+<color=#FFAA00>目标：生物群体（{5}只生物）</color>
+
+目标：{5}x {1}（{0}阶）
+位置：~{4}格外
+
+<color=#FFAA00>⚔ 难度：多只生物——请派出装备精良的队伍。
+单人前往极为危险。</color>
+
+任务简报：
+一群{5}只危险的生物已在远方区域建立了领地。公会为愿意前往消灭整个群体的猎人提供丰厚赏金。
+
+完成后：
+• {2} 经验分配给所有猎人
+• {3} 白银赏金
+• 来自生物的额外战利品
+
+组建商队前往标记位置。抵达后远征即刻开始。
+
+<color=#666666>— 冒险者公会</color>]]></Isekai_Quest_Description_ExpeditionPack>
+    <Isekai_Hunt_SiteRevealed_ExpeditionPack>[公会] 远征委托已接受！一群{2}只{1}（{0}阶）已被定位。组建远征队前往标记位置。</Isekai_Hunt_SiteRevealed_ExpeditionPack>
+
+    <!-- Pack Expedition Messages -->
+    <Isekai_Hunt_PackProgress>[公会] 群体成员已击败！剩余{0}只。</Isekai_Hunt_PackProgress>
+    <Isekai_Hunt_PackStatus>群体状态：剩余{0}/{1}</Isekai_Hunt_PackStatus>
+    
+    <!-- Guild Flavor -->
+    <Isekai_Guild_Signature>— 冒险者公会</Isekai_Guild_Signature>
+    <Isekai_Guild_Motto>崛起。狩猎。征服。</Isekai_Guild_Motto>
+    
+    <!-- Respec Orb -->
+    <Isekai_Respec_NoPawn>此殖民者没有可重置的异世界属性。</Isekai_Respec_NoPawn>
+    <Isekai_Respec_NoPoints>此殖民者没有已分配的属性点可重置。</Isekai_Respec_NoPoints>
+    <Isekai_Respec_Success>{0} 使用了重生宝珠！{1} 点属性点已返还以供重新分配。</Isekai_Respec_Success>
+    <Isekai_Respec_Effect>+{0} 点已返还！</Isekai_Respec_Effect>
+    <Isekai_Respec_Success_Full>{0} 使用了重生宝珠！{1} 属性点和 {2} 星座点已返还。职业已重置——请选择新的星座。</Isekai_Respec_Success_Full>
+    <Isekai_Respec_LimitReached>{0} 已用完全部3次星座重置机会。</Isekai_Respec_LimitReached>
+    <Isekai_TreeRespecRemaining>重置次数：{0}/3</Isekai_TreeRespecRemaining>
+    <Isekai_TreeRespecNone>无剩余重置次数</Isekai_TreeRespecNone>
+    
+    <!-- Mech Scaling -->
+    <Isekai_Settings_MechScalingHeader>机械师机械体缩放</Isekai_Settings_MechScalingHeader>
+    <Isekai_Settings_MechScalingDesc>玩家的机械体继承其机械师的异世界等级和属性加成，使它们随你的进度一同成长。</Isekai_Settings_MechScalingDesc>
+    
+    <!-- RimHUD 集成 -->
+    <Isekai_RimHUD_Rank>异世界</Isekai_RimHUD_Rank>
+    <Isekai_RimHUD_XP>经验</Isekai_RimHUD_XP>
+    <Isekai_RimHUD_StatPoints>属性点</Isekai_RimHUD_StatPoints>
+    <Isekai_RimHUD_Tooltip_Level>等级：{0}</Isekai_RimHUD_Tooltip_Level>
+    <Isekai_RimHUD_Tooltip_Rank>阶级：{0} — {1}</Isekai_RimHUD_Tooltip_Rank>
+    <Isekai_RimHUD_Tooltip_XP>经验值：{0} / {1}</Isekai_RimHUD_Tooltip_XP>
+    <Isekai_RimHUD_Tooltip_StatPoints>未分配属性点：{0}</Isekai_RimHUD_Tooltip_StatPoints>
+    <Isekai_RimHUD_Tooltip_Title>当前称号：{0}</Isekai_RimHUD_Tooltip_Title>
+    <Isekai_RimHUD_Tooltip_XPBar>经验进度：{0} / {1}（{2}%）</Isekai_RimHUD_Tooltip_XPBar>
+    <Isekai_RimHUD_Tooltip_AllocateStats>该殖民者有未分配的属性点！打开异世界标签页进行分配。</Isekai_RimHUD_Tooltip_AllocateStats>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- 世界Boss系统（v1.1.0）                                    -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    
+    <!-- 任务创建 -->
+    <Isekai_WorldBoss_QuestName>&lt;color=#9933FF&gt;世界Boss&lt;/color&gt;：{0}</Isekai_WorldBoss_QuestName>
+    <Isekai_WorldBoss_QuestDesc>&lt;color=#FF4444&gt;⚠ 公会紧急警报 ⚠&lt;/color&gt;\n\n检测到一个灾难性实体——一只&lt;color=#9933FF&gt;{0}&lt;/color&gt;，其力量之强大已被归类为&lt;color=#9933FF&gt;国家级&lt;/color&gt;，是足以摧毁整个定居点的威胁。\n\n冒险者公会现为其消灭提供天文数字的赏金：\n  • &lt;color=#FFD700&gt;{1} 经验&lt;/color&gt;\n  • &lt;color=#FFD700&gt;{2} 白银&lt;/color&gt;\n  • &lt;color=#FFD700&gt;传说装备、高科技部件和稀有材料&lt;/color&gt;\n\n该生物已在你的殖民地约{3}格处被发现。你有&lt;color=#FF4444&gt;7天&lt;/color&gt;的时间到达该地点。\n\n&lt;color=#FF4444&gt;警告&lt;/color&gt;：&lt;color=#9933FF&gt;国家级&lt;/color&gt;生物拥有压倒性的力量。带上你最强的战力。其他派系可能已经在与目标交战。\n\n— 冒险者公会，紧急事务部</Isekai_WorldBoss_QuestDesc>
+    
+    <!-- 通知信件 -->
+    <Isekai_WorldBoss_LetterLabel>&lt;color=#FF4444&gt;[公会]&lt;/color&gt; &lt;color=#9933FF&gt;世界Boss&lt;/color&gt; 已出现！</Isekai_WorldBoss_LetterLabel>
+    <Isekai_WorldBoss_LetterText>&lt;color=#FF4444&gt;紧急——紧急调令&lt;/color&gt;\n\n致所有&lt;color=#FFD700&gt;S阶&lt;/color&gt;及以上冒险者：\n\n一只拥有难以想象力量的生物已被定位——一只&lt;color=#9933FF&gt;{0}&lt;/color&gt;，现已被归类为&lt;color=#9933FF&gt;国家级&lt;/color&gt;。仅其能量特征便已触发了百里范围内的所有探测结界。\n\n该生物已在距你约{1}格处被发现。公会正调动一切可用力量，而你是我们最大的希望。\n\n&lt;color=#FF4444&gt;这不是狩猎。这是一场战争。&lt;/color&gt;\n\n请极度谨慎行事。其他派系已收到警报，可能会独自行动。\n\n赏金：&lt;color=#FFD700&gt;最高等级&lt;/color&gt;\n\n— 冒险者公会，紧急事务部</Isekai_WorldBoss_LetterText>
+    
+    <!-- 地点 -->
+    <Isekai_WorldBoss_SiteLabel>&lt;color=#9933FF&gt;世界Boss&lt;/color&gt; 领地：{0}</Isekai_WorldBoss_SiteLabel>
+    <Isekai_WorldBoss_SiteRevealed>&lt;color=#FFD700&gt;[公会]&lt;/color&gt; &lt;color=#9933FF&gt;世界Boss&lt;/color&gt; 领地已标记在世界地图上！一只&lt;color=#9933FF&gt;{0}&lt;/color&gt;（&lt;color=#9933FF&gt;国家级&lt;/color&gt;）正在等待。在线索消失前前往那里。</Isekai_WorldBoss_SiteRevealed>
+    
+    <!-- Boss到达 -->
+    <Isekai_WorldBoss_Arrived_Label>&lt;color=#9933FF&gt;世界Boss觉醒了&lt;/color&gt;</Isekai_WorldBoss_Arrived_Label>
+    <Isekai_WorldBoss_Arrived_Text>大地震颤。空气变得沉重。\n\n&lt;color=#9933FF&gt;{0}&lt;/color&gt;矗立在你面前——一个拥有恐怖力量的&lt;color=#9933FF&gt;国家级&lt;/color&gt;实体。它的存在令你汗毛倒立。\n\n&lt;color=#FF4444&gt;这是你一生中最大的战斗。无路可退。&lt;/color&gt;\n\n竭尽全力战斗。</Isekai_WorldBoss_Arrived_Text>
+    
+    <!-- 派系群组 -->
+    <Isekai_WorldBoss_FactionArrived>{0}已派出&lt;color=#FFD700&gt;{1}名战士&lt;/color&gt;前来与&lt;color=#9933FF&gt;世界Boss&lt;/color&gt;作战！</Isekai_WorldBoss_FactionArrived>
+    <Isekai_WorldBoss_FactionAllied>&lt;color=#FFD700&gt;{0}&lt;/color&gt;与你并肩对抗&lt;color=#9933FF&gt;世界Boss&lt;/color&gt;。</Isekai_WorldBoss_FactionAllied>
+    <Isekai_WorldBoss_FactionHostile>&lt;color=#FF4444&gt;{0}是敌对的！&lt;/color&gt;他们将同时攻击你和&lt;color=#9933FF&gt;世界Boss&lt;/color&gt;。</Isekai_WorldBoss_FactionHostile>
+    
+    <!-- 波次生成 -->
+    <Isekai_WorldBoss_WaveTrigger_Label>&lt;color=#FF4444&gt;世界Boss暴怒了！&lt;/color&gt;</Isekai_WorldBoss_WaveTrigger_Label>
+    <Isekai_WorldBoss_WaveTrigger_Text>&lt;color=#9933FF&gt;{0}&lt;/color&gt;发出了震耳欲聋的怒吼，身体涌动着澎湃的能量！\n\n它的力量正在分裂。生物的分身——虽然较小但依然极具破坏力——正从Boss溢出的能量中显现。\n\n&lt;color=#FF4444&gt;S阶生物正在出现！坚守阵线！&lt;/color&gt;</Isekai_WorldBoss_WaveTrigger_Text>
+    <Isekai_WorldBoss_WaveSpawn>&lt;color=#FF4444&gt;[警报]&lt;/color&gt; 第{2}波：&lt;color=#FF4444&gt;{0}只S阶 {1}&lt;/color&gt; 从&lt;color=#9933FF&gt;世界Boss&lt;/color&gt;的能量中出现！</Isekai_WorldBoss_WaveSpawn>
+    
+    <!-- Boss击败 -->
+    <Isekai_WorldBoss_Defeated>&lt;color=#FFD700&gt;[公会]&lt;/color&gt; &lt;color=#9933FF&gt;世界Boss {0}&lt;/color&gt; 已被&lt;color=#FFD700&gt;击败&lt;/color&gt;！一场非凡的胜利！公会向你的勇气致敬。</Isekai_WorldBoss_Defeated>
+    <Isekai_WorldBoss_Victory_Label>&lt;color=#9933FF&gt;世界Boss {0}&lt;/color&gt; — &lt;color=#FFD700&gt;已击败！&lt;/color&gt;</Isekai_WorldBoss_Victory_Label>
+    <Isekai_WorldBoss_Victory_Text>&lt;color=#FFD700&gt;[公会紧急事务——已解决]&lt;/color&gt;\n\n&lt;color=#9933FF&gt;国家级&lt;/color&gt;威胁"&lt;color=#9933FF&gt;{0}&lt;/color&gt;"已被消灭。\n\n冒险者公会向所有参与这场传奇狩猎的人授予最高荣誉。\n\n&lt;color=#FFD700&gt;奖励已发放：&lt;/color&gt;\n• &lt;color=#FFD700&gt;{1} 经验&lt;/color&gt; 分配给所有参与的冒险者\n• &lt;color=#FFD700&gt;{2} 白银&lt;/color&gt; 从战场回收\n• &lt;color=#FFD700&gt;传说级战利品和稀有材料已被获取&lt;/color&gt;\n\n这场胜利将被各国铭记。公会向你非凡的勇气致敬。</Isekai_WorldBoss_Victory_Text>
+    
+    <!-- 任务描述状态 -->
+    <Isekai_WorldBoss_Pending>冒险者公会已探测到一只&lt;color=#9933FF&gt;{0}&lt;/color&gt;（&lt;color=#9933FF&gt;国家级&lt;/color&gt;）。接受此任务以获取坐标。</Isekai_WorldBoss_Pending>
+    <Isekai_WorldBoss_Travel>前往{0}并与&lt;color=#9933FF&gt;世界Boss&lt;/color&gt;交战。&lt;color=#FF4444&gt;时间所剩无几。&lt;/color&gt;</Isekai_WorldBoss_Travel>
+    <Isekai_WorldBoss_Slain>&lt;color=#9933FF&gt;国家级 {0}&lt;/color&gt; 已被击杀。&lt;color=#FFD700&gt;一场传奇般的胜利。&lt;/color&gt;</Isekai_WorldBoss_Slain>
+    <Isekai_WorldBoss_Fighting>&lt;color=#FF4444&gt;交战中&lt;/color&gt;：&lt;color=#9933FF&gt;{0}&lt;/color&gt;\nBoss血量：{1}%</Isekai_WorldBoss_Fighting>
+    
+    <!-- 国家级称号 -->
+    <Isekai_Rank_Nation>国家级</Isekai_Rank_Nation>
+    <Isekai_Rank_Nation_Title>世界Boss</Isekai_Rank_Nation_Title>
+
+    <!-- 派系增援 -->
+    <Isekai_WorldBoss_Reinforcement_Label>&lt;color=#FFD700&gt;增援到达！&lt;/color&gt;</Isekai_WorldBoss_Reinforcement_Label>
+    <Isekai_WorldBoss_Reinforcement_Text>&lt;color=#FFD700&gt;[公会广播]&lt;/color&gt;\n\n来自{0}的一支队伍已抵达&lt;color=#9933FF&gt;世界Boss&lt;/color&gt;战场，参与对抗&lt;color=#9933FF&gt;{1}&lt;/color&gt;的战斗。\n\n&lt;color=#FF4444&gt;战斗仍在继续！&lt;/color&gt;</Isekai_WorldBoss_Reinforcement_Text>
+
+    <!-- ═══ 被动技能树（v1.1.1）═══ -->
+    <Isekai_PassivePoints>{0} 被动点数</Isekai_PassivePoints>
+    <Isekai_PassiveAllocated>已分配 {0} 点</Isekai_PassiveAllocated>
+    <Isekai_PassiveRespec>重置</Isekai_PassiveRespec>
+    <Isekai_TreeComingSoon>即将推出！</Isekai_TreeComingSoon>
+    <Isekai_NoTreeData>未找到星座盘数据</Isekai_NoTreeData>
+    <Isekai_NodeKeystone>核心天赋</Isekai_NodeKeystone>
+    <Isekai_NodeNotable>重要天赋</Isekai_NodeNotable>
+    <Isekai_NodeMinor>小型天赋</Isekai_NodeMinor>
+    <Isekai_NodeStart>起始节点</Isekai_NodeStart>
+    <Isekai_NodeAllocated>已分配</Isekai_NodeAllocated>
+    <Isekai_NodeCost>消耗：{0} 点</Isekai_NodeCost>
+
+    <!-- 详细面板 -->
+    <Isekai_DetailSelectNode>选择一个节点查看详情</Isekai_DetailSelectNode>
+    <Isekai_DetailClickToAllocate>点击分配</Isekai_DetailClickToAllocate>
+    <Isekai_UnlockNode>解锁节点</Isekai_UnlockNode>
+    <Isekai_DetailNotEnoughPoints>点数不足</Isekai_DetailNotEnoughPoints>
+    <Isekai_DetailNotConnected>未连接</Isekai_DetailNotConnected>
+    <Isekai_DetailTreeSummary>星座盘概览</Isekai_DetailTreeSummary>
+    <Isekai_DetailNodes>节点</Isekai_DetailNodes>
+    <Isekai_DetailKeystones>核心天赋</Isekai_DetailKeystones>
+    <Isekai_DetailPointsSpent>已消耗点数</Isekai_DetailPointsSpent>
+    <Isekai_DetailPointsAvail>可用点数</Isekai_DetailPointsAvail>
+    <Isekai_DetailActiveBonuses>当前增益：</Isekai_DetailActiveBonuses>
+    <Isekai_DetailNoBonuses>暂无增益</Isekai_DetailNoBonuses>
+    <Isekai_DetailClassPassive>职业被动</Isekai_DetailClassPassive>
+    <Isekai_DetailGimmickLocked>选择此职业以激活</Isekai_DetailGimmickLocked>
+
+    <!-- 星辉碎片 -->
+    <Isekai_StarFragment_RequiresFragment>需要：已吸收星辉碎片（多职业）</Isekai_StarFragment_RequiresFragment>
+    <Isekai_StarFragment_HasFragment>多职业解锁：就绪 ✓</Isekai_StarFragment_HasFragment>
+    <Isekai_RequiresDRank>需要：D阶（等级11）</Isekai_RequiresDRank>
+
+    <!-- 设置 -->
+    <Isekai_Settings_EnableStarFragmentDrops>启用星辉碎片掉落</Isekai_Settings_EnableStarFragmentDrops>
+    <Isekai_Settings_EnableStarFragmentDrops_Desc>星辉碎片从精英S/SS/SSS阶生物和世界Boss处掉落。当冒险者吸收后，每个碎片提供1个星辉点数和1次多职业解锁。</Isekai_Settings_EnableStarFragmentDrops_Desc>
+    <Isekai_Settings_ConstellationHeader>星座盘</Isekai_Settings_ConstellationHeader>
+    <Isekai_Settings_ConstellationBonusMultiplier>星座加成倍率</Isekai_Settings_ConstellationBonusMultiplier>
+    <Isekai_Settings_ConstellationBonusMultiplier_Desc>缩放星座节点的所有属性加成。0.50x时，+10%的节点变为+5%。2.00x时，变为+20%。职业被动层级不受影响。</Isekai_Settings_ConstellationBonusMultiplier_Desc>
+
+    <!-- ==================== 异世界特质 ==================== -->
+    <!-- 原型特质 -->
+    <Isekai_Trait_Protagonist>主角</Isekai_Trait_Protagonist>
+    <Isekai_Trait_Antagonist>反派</Isekai_Trait_Antagonist>
+    <Isekai_Trait_Reincarnated>转生者</Isekai_Trait_Reincarnated>
+    <Isekai_Trait_Regressor>回归者</Isekai_Trait_Regressor>
+    <Isekai_Trait_SummonedHero>召唤勇者</Isekai_Trait_SummonedHero>
+    
+    <!-- 成长特质 -->
+    <Isekai_Trait_NaturalTalent>天赋异禀</Isekai_Trait_NaturalTalent>
+    <Isekai_Trait_Prodigy>神童</Isekai_Trait_Prodigy>
+    <Isekai_Trait_LateBloomer>大器晚成</Isekai_Trait_LateBloomer>
+    <Isekai_Trait_QuickLearner>快速学习</Isekai_Trait_QuickLearner>
+    <Isekai_Trait_SlowGrind>厚积薄发</Isekai_Trait_SlowGrind>
+    <Isekai_Trait_PowerSpike>力量爆发</Isekai_Trait_PowerSpike>
+    <Isekai_Trait_AwakenedPotential>觉醒潜能</Isekai_Trait_AwakenedPotential>
+    <Isekai_Trait_Genius>天才</Isekai_Trait_Genius>
+    <Isekai_Trait_BattleManiac>战斗狂人</Isekai_Trait_BattleManiac>
+    
+    <!-- 战斗特质 -->
+    <Isekai_Trait_BerserkerBlood>狂战之血</Isekai_Trait_BerserkerBlood>
+    <Isekai_Trait_IronWill>钢铁意志</Isekai_Trait_IronWill>
+    <Isekai_Trait_GlassCannon>玻璃大炮</Isekai_Trait_GlassCannon>
+    <Isekai_Trait_Fortress>堡垒</Isekai_Trait_Fortress>
+    <Isekai_Trait_ShadowStep>暗影步</Isekai_Trait_ShadowStep>
+    <Isekai_Trait_PredatorInstinct>掠食本能</Isekai_Trait_PredatorInstinct>
+    <Isekai_Trait_Undying>不死</Isekai_Trait_Undying>
+    
+    <!-- 属性亲和特质 -->
+    <Isekai_Trait_Mighty>刚猛</Isekai_Trait_Mighty>
+    <Isekai_Trait_Agile>敏锐</Isekai_Trait_Agile>
+    <Isekai_Trait_Resilient>坚韧</Isekai_Trait_Resilient>
+    <Isekai_Trait_Brilliant>睿智</Isekai_Trait_Brilliant>
+    <Isekai_Trait_Enlightened>开悟</Isekai_Trait_Enlightened>
+    <Isekai_Trait_SilverTongue>银舌</Isekai_Trait_SilverTongue>
+    
+    <!-- 实用特质 -->
+    <Isekai_Trait_MerchantEye>商人之眼</Isekai_Trait_MerchantEye>
+    <Isekai_Trait_CraftsmanSoul>匠人之魂</Isekai_Trait_CraftsmanSoul>
+    <Isekai_Trait_BeastWhisperer>驭兽师</Isekai_Trait_BeastWhisperer>
+    <Isekai_Trait_HealerTouch>治愈之触</Isekai_Trait_HealerTouch>
+    <Isekai_Trait_Lucky>幸运</Isekai_Trait_Lucky>
+    <Isekai_Trait_CursedLuck>霉运</Isekai_Trait_CursedLuck>
+    
+    <!-- 负面/诅咒特质 -->
+    <Isekai_Trait_HollowCore>空心核</Isekai_Trait_HollowCore>
+    <Isekai_Trait_FragileVessel>脆弱容器</Isekai_Trait_FragileVessel>
+    <Isekai_Trait_EchoOfDefeat>败北回响</Isekai_Trait_EchoOfDefeat>
+    <Isekai_Trait_SealedPower>封印之力</Isekai_Trait_SealedPower>
+    
+    <!-- 特质物品名称 -->
+    <Isekai_Item_HerosAwakening>英雄觉醒卷轴</Isekai_Item_HerosAwakening>
+    <Isekai_Item_HerosAwakening_Desc>一卷散发金色光芒的古老卷轴。使用后，觉醒殖民者的主角特质，获得10倍经验和每级+2属性点，但会降低社交能力。</Isekai_Item_HerosAwakening_Desc>
+    <Isekai_Item_ReincarnationCrystal>转生水晶</Isekai_Item_ReincarnationCrystal>
+    <Isekai_Item_ReincarnationCrystal_Desc>一颗闪烁着前世记忆的水晶。使用后重置殖民者的等级和属性，并赋予转生者特质——5倍经验、+10星辉点数和加速的星座成长。星座盘进度保留。</Isekai_Item_ReincarnationCrystal_Desc>
+    <Isekai_Item_VillainsMask>恶人面具</Isekai_Item_VillainsMask>
+    <Isekai_Item_VillainsMask_Desc>一副散发邪恶能量的面具。佩戴后觉醒反派特质——8倍经验和毁灭性的战斗力，但佩戴者将被所有人厌恶。</Isekai_Item_VillainsMask_Desc>
+    <Isekai_Item_SummoningCircle>召唤阵卷轴</Isekai_Item_SummoningCircle>
+    <Isekai_Item_SummoningCircle_Desc>一卷刻有异世界符文的神秘卷轴。激活后撕裂世界之间的裂缝，召唤一名拥有召唤勇者特质的新殖民者。不影响使用者。</Isekai_Item_SummoningCircle_Desc>
+    <Isekai_Item_RegressionOrb>回归之球</Isekai_Item_RegressionOrb>
+    <Isekai_Item_RegressionOrb_Desc>一颗能将意识送回过去的时间球体。赋予回归者特质——4倍经验和随时免费重置星座盘。</Isekai_Item_RegressionOrb_Desc>
+    
+    <!-- 特质消息 -->
+    <Isekai_Trait_Awakened>{0}已觉醒为{1}！</Isekai_Trait_Awakened>
+    <Isekai_Trait_SealBroken>{0}的封印之力已经挣脱！强大的能量涌出！</Isekai_Trait_SealBroken>
+    <Isekai_Trait_Awakening>{0}沉睡的潜能终于觉醒！所有属性提升50%！</Isekai_Trait_Awakening>
+    <Isekai_Trait_UndyingSaved>{0}本应死去，但不死特质拯救了他们！</Isekai_Trait_UndyingSaved>
+    <Isekai_Trait_EchoActive>{0}从失败中学习——经验翻倍持续3天！</Isekai_Trait_EchoActive>
+    
+    <!-- 召唤勇者生成消息 -->
+    <Isekai_SummonHero_Title>勇者降临——{0}！</Isekai_SummonHero_Title>
+    <Isekai_SummonHero_Text>召唤阵撕开了世界之间的裂缝！\n\n{0}从异次元被召唤而来，作为召唤勇者加入你的殖民地。</Isekai_SummonHero_Text>
+    <Isekai_SummonHero_Mote>勇者已被召唤！</Isekai_SummonHero_Mote>
+    
+    <!-- 转生消息 -->
+    <Isekai_Reincarnation_Reset>{0}已经转生！等级和属性重置为基础值——星座盘进度保留。</Isekai_Reincarnation_Reset>
+    
+    <!-- 锻造系统 -->
+    <Isekai_Forge_Title>精炼锻造炉</Isekai_Forge_Title>
+    <Isekai_Forge_Disabled>锻造系统已在模组设置中禁用。</Isekai_Forge_Disabled>
+    <Isekai_Forge_SelectEquipment>选择装备进行精炼</Isekai_Forge_SelectEquipment>
+    <Isekai_Forge_Refinement>精炼</Isekai_Forge_Refinement>
+    <Isekai_Forge_RefineButton>精炼</Isekai_Forge_RefineButton>
+    <Isekai_Forge_ConfirmRisky>超过+5的精炼有破坏物品的风险！\n\n成功率：{0}%\n降级率：{1}%\n破坏率：{2}%\n\n是否继续？</Isekai_Forge_ConfirmRisky>
+    <Isekai_Forge_Success>精炼成功！{0}现在为+{1}。</Isekai_Forge_Success>
+    <Isekai_Forge_Downgrade>{0}精炼失败，降级至+{1}。</Isekai_Forge_Downgrade>
+    <Isekai_Forge_Destroyed>{0}在精炼过程中被毁坏了！</Isekai_Forge_Destroyed>
+    <Isekai_Forge_Materials>所需材料</Isekai_Forge_Materials>
+    <Isekai_Forge_SuccessRate>成功率</Isekai_Forge_SuccessRate>
+    <Isekai_Forge_DestroyRisk>破坏风险</Isekai_Forge_DestroyRisk>
+    
+    <!-- 符文工作台 -->
+    <Isekai_Rune_Title>符文工作台</Isekai_Rune_Title>
+    <Isekai_Rune_SelectEquipment>选择装备以查看符文插槽</Isekai_Rune_SelectEquipment>
+    <Isekai_Rune_Slots>符文插槽</Isekai_Rune_Slots>
+    <Isekai_Rune_EmptySlot>[ 空插槽 ]</Isekai_Rune_EmptySlot>
+    <Isekai_Rune_Available>可用符文</Isekai_Rune_Available>
+    <Isekai_Rune_Apply>镶嵌</Isekai_Rune_Apply>
+    <Isekai_Rune_Remove>移除</Isekai_Rune_Remove>
+    <Isekai_Rune_RemoveConfirm>从{1}上移除{0}？\n\n符文将被永久摧毁。</Isekai_Rune_RemoveConfirm>
+    <Isekai_Rune_SlotsFull>已满</Isekai_Rune_SlotsFull>
+    <Isekai_Rune_NoRunesAvailable>地图上未找到兼容的符文物品。请在符文工作台的工单标签中制作符文。</Isekai_Rune_NoRunesAvailable>
+    
+    <!-- 武器精通 -->
+    <Isekai_Mastery_Header>武器精通</Isekai_Mastery_Header>
+    <Isekai_Mastery_Novice>新手</Isekai_Mastery_Novice>
+    <Isekai_Mastery_Apprentice>学徒</Isekai_Mastery_Apprentice>
+    <Isekai_Mastery_Journeyman>熟练工</Isekai_Mastery_Journeyman>
+    <Isekai_Mastery_Expert>专家</Isekai_Mastery_Expert>
+    <Isekai_Mastery_Master>大师</Isekai_Mastery_Master>
+    <Isekai_Mastery_Grandmaster>宗师</Isekai_Mastery_Grandmaster>
+    
+    <!-- 锻造掉落 -->
+    <Isekai_Drop_ReinforcementCore>{0}掉落了一个强化核心！</Isekai_Drop_ReinforcementCore>
+    <Isekai_Drop_Rune>{0}掉落了一个{1}！</Isekai_Drop_Rune>
+    
+    <!-- 锻造建筑交互按钮 -->
+    <Isekai_Gizmo_OpenForge>打开锻造炉</Isekai_Gizmo_OpenForge>
+    <Isekai_Gizmo_OpenForge_Desc>打开精炼锻造炉来强化武器和护甲。</Isekai_Gizmo_OpenForge_Desc>
+    <Isekai_Gizmo_OpenRunicStation>符文工作台</Isekai_Gizmo_OpenRunicStation>
+    <Isekai_Gizmo_OpenRunicStation_Desc>打开符文工作台来镶嵌或移除装备上的符文。</Isekai_Gizmo_OpenRunicStation_Desc>
+    
+    <!-- 浮动菜单 -->
+    <Isekai_FloatMenu_OpenForge>打开精炼锻造炉</Isekai_FloatMenu_OpenForge>
+    <Isekai_FloatMenu_OpenRunicStation>打开符文工作台</Isekai_FloatMenu_OpenRunicStation>
+    
+    <!-- 共用界面 -->
+    <Isekai_UI_Search>搜索...</Isekai_UI_Search>
+    <Isekai_UI_InStorage>储存中</Isekai_UI_InStorage>
+    
+    <!-- 符文效果显示名称 -->
+    <Isekai_Effect_MeleeAttackSpeed>近战攻速</Isekai_Effect_MeleeAttackSpeed>
+    <Isekai_Effect_RangedAccuracy>远程精准</Isekai_Effect_RangedAccuracy>
+    <Isekai_Effect_Lifesteal>生命汲取</Isekai_Effect_Lifesteal>
+    <Isekai_Effect_StunChance>眩晕几率</Isekai_Effect_StunChance>
+    <Isekai_Effect_FireDamage>火焰伤害</Isekai_Effect_FireDamage>
+    <Isekai_Effect_SlowChance>减速几率</Isekai_Effect_SlowChance>
+    <Isekai_Effect_ArmorPenetration>穿甲</Isekai_Effect_ArmorPenetration>
+    <Isekai_Effect_AoESplash>范围溅射</Isekai_Effect_AoESplash>
+    <Isekai_Effect_RangedDamage>远程伤害</Isekai_Effect_RangedDamage>
+    <Isekai_Effect_MaxHealth>最大生命值</Isekai_Effect_MaxHealth>
+    <Isekai_Effect_DodgeChance>闪避几率</Isekai_Effect_DodgeChance>
+    <Isekai_Effect_Resistance>伤害减免</Isekai_Effect_Resistance>
+    <Isekai_Effect_HealRate>治疗速度</Isekai_Effect_HealRate>
+    <Isekai_Effect_MentalBreakReduce>精神崩溃阈值</Isekai_Effect_MentalBreakReduce>
+    <Isekai_Effect_ImmunityGain>免疫力增长</Isekai_Effect_ImmunityGain>
+    <Isekai_Effect_MoveSpeedEffect>移动速度</Isekai_Effect_MoveSpeedEffect>
+    <Isekai_Effect_DamageReduction>伤害减免</Isekai_Effect_DamageReduction>
+    
+    <!-- 符文效果简称 -->
+    <Isekai_EffectShort_MeleeAttackSpeed>近战攻速</Isekai_EffectShort_MeleeAttackSpeed>
+    <Isekai_EffectShort_RangedAccuracy>远程精准</Isekai_EffectShort_RangedAccuracy>
+    <Isekai_EffectShort_Lifesteal>生命汲取</Isekai_EffectShort_Lifesteal>
+    <Isekai_EffectShort_StunChance>眩晕几率</Isekai_EffectShort_StunChance>
+    <Isekai_EffectShort_FireDamage>附加火焰伤害</Isekai_EffectShort_FireDamage>
+    <Isekai_EffectShort_SlowChance>减速几率</Isekai_EffectShort_SlowChance>
+    <Isekai_EffectShort_ArmorPenetration>穿甲</Isekai_EffectShort_ArmorPenetration>
+    <Isekai_EffectShort_AoESplash>范围溅射伤害</Isekai_EffectShort_AoESplash>
+    <Isekai_EffectShort_RangedDamage>远程伤害</Isekai_EffectShort_RangedDamage>
+    <Isekai_EffectShort_MaxHealth>最大生命值</Isekai_EffectShort_MaxHealth>
+    <Isekai_EffectShort_DodgeChance>闪避几率</Isekai_EffectShort_DodgeChance>
+    <Isekai_EffectShort_Resistance>伤害减免</Isekai_EffectShort_Resistance>
+    <Isekai_EffectShort_HealRate>治疗速度</Isekai_EffectShort_HealRate>
+    <Isekai_EffectShort_MentalBreakReduce>精神崩溃阈值</Isekai_EffectShort_MentalBreakReduce>
+    <Isekai_EffectShort_ImmunityGain>免疫力增长</Isekai_EffectShort_ImmunityGain>
+    <Isekai_EffectShort_MoveSpeedEffect>移动速度</Isekai_EffectShort_MoveSpeedEffect>
+    <Isekai_EffectShort_DamageReduction>伤害减免</Isekai_EffectShort_DamageReduction>
+    
+    <!-- 符文描述格式 -->
+    <Isekai_RuneDesc_Format>{0}{1}% {2}</Isekai_RuneDesc_Format>
+    
+    <!-- 检查面板字符串 -->
+    <Isekai_Inspect_RefineInfo>精炼：+{0}（{1}）</Isekai_Inspect_RefineInfo>
+    <Isekai_Inspect_MeleeBonus>+{0}%伤害，-{1}%冷却，-{2}%质量</Isekai_Inspect_MeleeBonus>
+    <Isekai_Inspect_RangedBonus>+{0}%伤害，-{1}%冷却，+{2}%精准</Isekai_Inspect_RangedBonus>
+    <Isekai_Inspect_ArmorBonus>+{0}%护甲，+{1}%速度，-{2}%质量</Isekai_Inspect_ArmorBonus>
+    <Isekai_Inspect_Runes>符文（{0}/{1}）：{2}</Isekai_Inspect_Runes>
+    <Isekai_Inspect_RuneSlots>符文插槽：{0}/{1}</Isekai_Inspect_RuneSlots>
+    
+    <!-- 物品属性条目 -->
+    <Isekai_Stat_RefinedDesc>此物品已在精炼锻造炉中精炼至+{0}。</Isekai_Stat_RefinedDesc>
+    <Isekai_Stat_MeleeDmg>近战伤害：+{0}%</Isekai_Stat_MeleeDmg>
+    <Isekai_Stat_AttackCooldown>攻击冷却：-{0}%</Isekai_Stat_AttackCooldown>
+    <Isekai_Stat_WeaponMass>武器质量：-{0}%</Isekai_Stat_WeaponMass>
+    <Isekai_Stat_RangedDmg>远程伤害：+{0}%</Isekai_Stat_RangedDmg>
+    <Isekai_Stat_Cooldown>冷却时间：-{0}%</Isekai_Stat_Cooldown>
+    <Isekai_Stat_AccuracyStat>精准度：+{0}%</Isekai_Stat_AccuracyStat>
+    <Isekai_Stat_ArmorRating>护甲评级：+{0}%</Isekai_Stat_ArmorRating>
+    <Isekai_Stat_MoveSpeedStat>移动速度：+{0}%</Isekai_Stat_MoveSpeedStat>
+    <Isekai_Stat_ArmorMass>护甲质量：-{0}%</Isekai_Stat_ArmorMass>
+    <Isekai_Stat_RefinementMaxHint>可在精炼锻造炉中将精炼等级提升至最高+10。</Isekai_Stat_RefinementMaxHint>
+    <Isekai_Stat_ForgeRefinement>锻造精炼</Isekai_Stat_ForgeRefinement>
+    <Isekai_Stat_RuneSlotsDesc>此物品有{0}个符文插槽，当前已使用{1}个。</Isekai_Stat_RuneSlotsDesc>
+    <Isekai_Stat_AppliedRunes>已镶嵌符文：</Isekai_Stat_AppliedRunes>
+    <Isekai_Stat_RuneHint>可在符文工作台上镶嵌符文。</Isekai_Stat_RuneHint>
+    <Isekai_Stat_TotalEffect>{0}总计：{1}</Isekai_Stat_TotalEffect>
+    <Isekai_Stat_Sources>来源：</Isekai_Stat_Sources>
+    <Isekai_Stat_RuneLabel>符文：{0}</Isekai_Stat_RuneLabel>
+    
+    <!-- 属性说明字符串 -->
+    <Isekai_StatExp_RefineDmg>精炼+{0}：+{1}%</Isekai_StatExp_RefineDmg>
+    <Isekai_StatExp_RefineCooldown>精炼+{0}：-{1}%冷却</Isekai_StatExp_RefineCooldown>
+    <Isekai_StatExp_RefineArmor>锻造精炼：+{0}%</Isekai_StatExp_RefineArmor>
+    <Isekai_StatExp_RefineArmorItem>精炼+{0}：+{1}%</Isekai_StatExp_RefineArmorItem>
+    <Isekai_StatExp_RefineAccuracy>精炼+{0}：+{1}%精准</Isekai_StatExp_RefineAccuracy>
+    <Isekai_StatExp_RefineMass>精炼+{0}：-{1}%质量</Isekai_StatExp_RefineMass>
+    <Isekai_StatExp_RefineMoveSpeed>锻造精炼：+{0}%移动速度</Isekai_StatExp_RefineMoveSpeed>
+    <Isekai_StatExp_RefineDurability>精炼+{0}：+{1}%耐久</Isekai_StatExp_RefineDurability>
+    <Isekai_StatExp_RefineRangedDmg>精炼+{0}：+{1}%伤害</Isekai_StatExp_RefineRangedDmg>
+    <Isekai_StatExp_Mastery>武器精通：{0}</Isekai_StatExp_Mastery>
+    <Isekai_StatExp_RuneEnchant>符文附魔：{0}</Isekai_StatExp_RuneEnchant>
+    <Isekai_StatExp_RefineMarket>精炼+{0}：+{1}%</Isekai_StatExp_RefineMarket>
+    <Isekai_StatExp_RuneMarket>符文附魔：+{0}%</Isekai_StatExp_RuneMarket>
+    
+    <!-- 锻造炉界面 -->
+    <Isekai_Forge_SelectFromList>从列表中\n选择装备</Isekai_Forge_SelectFromList>
+    <Isekai_Forge_CannotEnhance>此物品无法强化。</Isekai_Forge_CannotEnhance>
+    <Isekai_Forge_Quality>品质：{0}</Isekai_Forge_Quality>
+    <Isekai_Forge_RefinementLevel>精炼：+{0}</Isekai_Forge_RefinementLevel>
+    <Isekai_Forge_RefinementNone>精炼：无</Isekai_Forge_RefinementNone>
+    <Isekai_Forge_MeleeDmgBonus>+{0}%近战伤害</Isekai_Forge_MeleeDmgBonus>
+    <Isekai_Forge_MeleeCdBonus>-{0}%攻击冷却</Isekai_Forge_MeleeCdBonus>
+    <Isekai_Forge_WeaponMassBonus>-{0}%武器质量</Isekai_Forge_WeaponMassBonus>
+    <Isekai_Forge_RangedDmgBonus>+{0}%远程伤害</Isekai_Forge_RangedDmgBonus>
+    <Isekai_Forge_CooldownBonus>-{0}%冷却时间</Isekai_Forge_CooldownBonus>
+    <Isekai_Forge_AccuracyBonus>+{0}%精准度</Isekai_Forge_AccuracyBonus>
+    <Isekai_Forge_WeaponMassBonus2>-{0}%武器质量</Isekai_Forge_WeaponMassBonus2>
+    <Isekai_Forge_ArmorRatingBonus>+{0}%护甲评级</Isekai_Forge_ArmorRatingBonus>
+    <Isekai_Forge_MoveSpeedBonus>+{0}%移动速度</Isekai_Forge_MoveSpeedBonus>
+    <Isekai_Forge_ArmorMassBonus>-{0}%护甲质量</Isekai_Forge_ArmorMassBonus>
+    <Isekai_Forge_RuneSlotsInfo>符文插槽：{0}/{1}</Isekai_Forge_RuneSlotsInfo>
+    <Isekai_Forge_MaxRefinement>已达最高精炼\n+10</Isekai_Forge_MaxRefinement>
+    <Isekai_Forge_RefineTo>精炼至+{0}</Isekai_Forge_RefineTo>
+    <Isekai_Forge_MaterialsLabel>材料：</Isekai_Forge_MaterialsLabel>
+    <Isekai_Forge_SuccessLabel>成功率：{0}%</Isekai_Forge_SuccessLabel>
+    <Isekai_Forge_DowngradeLabel>降级率：{0}%</Isekai_Forge_DowngradeLabel>
+    <Isekai_Forge_DestroyLabel>毁坏率：{0}%</Isekai_Forge_DestroyLabel>
+    <Isekai_Forge_MissingMaterials>材料不足</Isekai_Forge_MissingMaterials>
+    <Isekai_Forge_ConfirmDestroy>精炼至+{0}有{1}%的几率毁坏物品。\n\n是否继续？</Isekai_Forge_ConfirmDestroy>
+    <Isekai_Forge_Durability>耐久度：{0}/{1}（{2}%）</Isekai_Forge_Durability>
+    <Isekai_Forge_NeedEssence>需要魔力精华</Isekai_Forge_NeedEssence>
+    <Isekai_Forge_Repair>修复</Isekai_Forge_Repair>
+    <Isekai_Forge_Repaired>修复完成！</Isekai_Forge_Repaired>
+    <Isekai_Forge_ResultSuccess>成功！+{0}</Isekai_Forge_ResultSuccess>
+    <Isekai_Forge_ResultDowngrade>失败...→+{0}</Isekai_Forge_ResultDowngrade>
+    <Isekai_Forge_ResultDestroyed>已毁坏！</Isekai_Forge_ResultDestroyed>
+    
+    <!-- 符文工作台界面 -->
+    <Isekai_Rune_SelectFromList>选择装备\n查看符文插槽</Isekai_Rune_SelectFromList>
+    <Isekai_Rune_CannotHoldRunes>此物品无法镶嵌符文。</Isekai_Rune_CannotHoldRunes>
+    <Isekai_Rune_TypeWeapon>类型：武器</Isekai_Rune_TypeWeapon>
+    <Isekai_Rune_TypeArmor>类型：护甲</Isekai_Rune_TypeArmor>
+    <Isekai_Rune_SlotsHeader>符文插槽（{0}/{1}）</Isekai_Rune_SlotsHeader>
+    <Isekai_Rune_RemoveButton>移除</Isekai_Rune_RemoveButton>
+    <Isekai_Rune_RemoveWithName>移除{0}（将被摧毁）</Isekai_Rune_RemoveWithName>
+    <Isekai_Rune_SelectFirst>请先选择装备</Isekai_Rune_SelectFirst>
+    <Isekai_Rune_DevLabel>开发</Isekai_Rune_DevLabel>
+</LanguageData>

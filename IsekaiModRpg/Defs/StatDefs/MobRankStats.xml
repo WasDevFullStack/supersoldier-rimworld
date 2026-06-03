@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <StatCategoryDef>
+        <defName>Isekai_CreatureStats</defName>
+        <label>isekai</label>
+        <displayOrder>100</displayOrder>
+    </StatCategoryDef>
+
+    <!-- Creature Rank: F / E / D / C / B / A / S / SS / SSS / Nation -->
+    <StatDef>
+        <defName>Isekai_CreatureRank</defName>
+        <label>creature rank</label>
+        <description>The Isekai rank of this creature, from F (weakest) to Nation (world boss). Higher ranks have stronger stats and are more dangerous.</description>
+        <category>Isekai_CreatureStats</category>
+        <defaultBaseValue>-1</defaultBaseValue>
+        <hideAtValue>-1</hideAtValue>
+        <minValue>-1</minValue>
+        <maxValue>9</maxValue>
+        <toStringStyle>Integer</toStringStyle>
+        <showIfUndefined>false</showIfUndefined>
+        <workerClass>IsekaiLeveling.Stats.StatWorker_MobRank</workerClass>
+        <parts>
+            <li Class="IsekaiLeveling.Stats.StatPart_MobRank" />
+        </parts>
+    </StatDef>
+
+    <!-- Creature Level -->
+    <StatDef>
+        <defName>Isekai_CreatureLevel</defName>
+        <label>creature level</label>
+        <description>The Isekai level of this creature. Creatures gain XP and level up when owned by the player.</description>
+        <category>Isekai_CreatureStats</category>
+        <defaultBaseValue>-1</defaultBaseValue>
+        <hideAtValue>-1</hideAtValue>
+        <minValue>-1</minValue>
+        <maxValue>99999</maxValue>
+        <toStringStyle>Integer</toStringStyle>
+        <showIfUndefined>false</showIfUndefined>
+        <workerClass>IsekaiLeveling.Stats.StatWorker_MobLevel</workerClass>
+        <parts>
+            <li Class="IsekaiLeveling.Stats.StatPart_MobLevel" />
+        </parts>
+    </StatDef>
+
+</Defs>

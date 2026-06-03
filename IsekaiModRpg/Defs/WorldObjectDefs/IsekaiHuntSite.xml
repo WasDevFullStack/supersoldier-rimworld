@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- 
+    SitePartDef for Isekai Hunt sites
+    
+    IMPORTANT: When used as a site "core" (the first/main SitePartDef), it MUST have:
+    - siteTexture: The main texture displayed on the world map
+    - expandingIconTexture: The overlay shown when selected/expanding
+    
+    The Site.get_Material() method uses siteTexture to render on the world map.
+    Without it, you get: ArgumentNullException: Value cannot be null. Parameter name: key
+    -->
+    <SitePartDef>
+        <defName>Isekai_HuntGrounds</defName>
+        <label>hunt grounds</label>
+        <description>A guild-designated hunting ground where a powerful creature has established territory.</description>
+        <workerClass>RimWorld.SitePartWorker</workerClass>
+        <wantsThreatPoints>false</wantsThreatPoints>
+        <gravShipsCanLandOn>true</gravShipsCanLandOn>
+        
+        <!-- Custom hunt grounds texture - use Isekai_Hunt icon -->
+        <siteTexture>World/Sites/Isekai_Hunt</siteTexture>
+        
+        <!-- Expanding/selection overlay - uses same texture -->
+        <expandingIconTexture>World/Sites/Isekai_Hunt</expandingIconTexture>
+        
+        <!-- Empty site - no baseGen symbols, no structures -->
+        <tags>
+            <li>Isekai_Hunt</li>
+        </tags>
+    </SitePartDef>
+</Defs>

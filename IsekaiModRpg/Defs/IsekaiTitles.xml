@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Starter Titles - Earned by leveling -->
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_Newcomer</defName>
+        <label>Newcomer</label>
+        <titleName>Newcomer</titleName>
+        <titleDescription>A fresh arrival to this world. The journey has just begun.</titleDescription>
+        <unlockType>Level</unlockType>
+        <requiredLevel>1</requiredLevel>
+        <rarity>Common</rarity>
+        <xpGainBonus>0.05</xpGainBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_Adventurer</defName>
+        <label>Adventurer</label>
+        <titleName>Adventurer</titleName>
+        <titleDescription>One who has taken their first steps on the path of power.</titleDescription>
+        <unlockType>Level</unlockType>
+        <requiredLevel>5</requiredLevel>
+        <rarity>Common</rarity>
+        <xpGainBonus>0.10</xpGainBonus>
+        <allStatsBonus>1</allStatsBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_Veteran</defName>
+        <label>Veteran</label>
+        <titleName>Veteran</titleName>
+        <titleDescription>A seasoned survivor who has proven their worth.</titleDescription>
+        <unlockType>Level</unlockType>
+        <requiredLevel>10</requiredLevel>
+        <rarity>Uncommon</rarity>
+        <xpGainBonus>0.15</xpGainBonus>
+        <allStatsBonus>2</allStatsBonus>
+        <enduranceRegenBonus>0.10</enduranceRegenBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_Elite</defName>
+        <label>Elite</label>
+        <titleName>Elite</titleName>
+        <titleDescription>Among the strongest in the land, feared and respected.</titleDescription>
+        <unlockType>Level</unlockType>
+        <requiredLevel>20</requiredLevel>
+        <rarity>Rare</rarity>
+        <xpGainBonus>0.20</xpGainBonus>
+        <allStatsBonus>3</allStatsBonus>
+        <manaRegenBonus>0.15</manaRegenBonus>
+        <enduranceRegenBonus>0.15</enduranceRegenBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_Champion</defName>
+        <label>Champion</label>
+        <titleName>Champion</titleName>
+        <titleDescription>A legendary figure whose deeds are sung in tales.</titleDescription>
+        <unlockType>Level</unlockType>
+        <requiredLevel>35</requiredLevel>
+        <rarity>Epic</rarity>
+        <xpGainBonus>0.25</xpGainBonus>
+        <allStatsBonus>5</allStatsBonus>
+        <manaRegenBonus>0.20</manaRegenBonus>
+        <enduranceRegenBonus>0.20</enduranceRegenBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_Hero</defName>
+        <label>Hero</label>
+        <titleName>Hero</titleName>
+        <titleDescription>One whose power transcends mortal limits.</titleDescription>
+        <unlockType>Level</unlockType>
+        <requiredLevel>50</requiredLevel>
+        <rarity>Legendary</rarity>
+        <xpGainBonus>0.30</xpGainBonus>
+        <allStatsBonus>8</allStatsBonus>
+        <manaRegenBonus>0.30</manaRegenBonus>
+        <enduranceRegenBonus>0.30</enduranceRegenBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <!-- Class-specific Titles -->
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_WarriorInitiate</defName>
+        <label>Warrior Initiate</label>
+        <titleName>Warrior Initiate</titleName>
+        <titleDescription>One who walks the path of the warrior.</titleDescription>
+        <unlockType>Class</unlockType>
+        <rarity>Common</rarity>
+        <strengthBonus>3</strengthBonus>
+        <vitalityBonus>2</vitalityBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_MageInitiate</defName>
+        <label>Mage Initiate</label>
+        <titleName>Mage Initiate</titleName>
+        <titleDescription>One who seeks the arcane mysteries.</titleDescription>
+        <unlockType>Class</unlockType>
+        <rarity>Common</rarity>
+        <intelligenceBonus>3</intelligenceBonus>
+        <wisdomBonus>2</wisdomBonus>
+        <manaRegenBonus>0.15</manaRegenBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_RangerInitiate</defName>
+        <label>Ranger Initiate</label>
+        <titleName>Ranger Initiate</titleName>
+        <titleDescription>One who moves with the swiftness of the wind.</titleDescription>
+        <unlockType>Class</unlockType>
+        <rarity>Common</rarity>
+        <dexterityBonus>3</dexterityBonus>
+        <vitalityBonus>2</vitalityBonus>
+        <enduranceRegenBonus>0.15</enduranceRegenBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_ArtisanInitiate</defName>
+        <label>Artisan Initiate</label>
+        <titleName>Artisan Initiate</titleName>
+        <titleDescription>One whose hands create wonders.</titleDescription>
+        <unlockType>Class</unlockType>
+        <rarity>Common</rarity>
+        <intelligenceBonus>2</intelligenceBonus>
+        <dexterityBonus>3</dexterityBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+    <IsekaiLeveling.IsekaiTitleDef>
+        <defName>Title_LeaderInitiate</defName>
+        <label>Leader Initiate</label>
+        <titleName>Leader Initiate</titleName>
+        <titleDescription>One who commands the respect of others.</titleDescription>
+        <unlockType>Class</unlockType>
+        <rarity>Common</rarity>
+        <charismaBonus>3</charismaBonus>
+        <wisdomBonus>2</wisdomBonus>
+    </IsekaiLeveling.IsekaiTitleDef>
+    
+</Defs>

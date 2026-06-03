@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════════╗
+        ║  DUELIST CONSTELLATION — 56 Nodes, 5 Branches            ║
+        ║  Layout: Arrowhead — Bladework(NW) / Footwork(NE) /     ║
+        ║          Riposte(SW) / Executioner(SE) + Centerpoint(N)  ║
+        ║                                                          ║
+        ║  Branches:                                               ║
+        ║   • BLADEWORK    (NW) — MeleeDamage, MeleeHitChance     ║
+        ║   • FOOTWORK     (NE) — MoveSpeed, MeleeDodge           ║
+        ║   • RIPOSTE      (SW) — MeleeHitChance, MeleeDodge      ║
+        ║   • EXECUTIONER  (SE) — MeleeDamage, PainThreshold       ║
+        ║   • CENTERPOINT  (N)  — gimmick nodes + MeleeDodge core  ║
+        ║   + 5 cross-connectors between adjacent branches         ║
+        ╚══════════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Duelist</defName>
+        <label>Duelist</label>
+        <treeClass>Duelist</treeClass>
+        <treeDescription>Masters of the blade who turn defense into devastation. Five constellations radiate from the duelist's core — each honing a different edge of their relentless technique. Dodge incoming strikes to charge Counter Strike, then unleash every stored charge in a single devastating blow.</treeDescription>
+        <classGimmick>CounterStrike</classGimmick>
+        <classGimmickName>Counter Strike</classGimmickName>
+        <classGimmickDescription>Every melee attack that misses the Duelist (dodge) stores a counter charge. The next outgoing melee hit consumes ALL charges for bonus melee damage. Counter Strike scales along the Centerpoint Path. Tier 1 (Parry): max 3 charges, +7% melee damage each (max +21%). Tier 2 (Riposte): max 5 charges, +8% each (max +40%). Tier 3 (Blade Dance): max 7 charges, +9% each (max +63%). Tier 4 (Perfect Counter): max 10 charges, +10% each (max +100%). Turn their mistakes into your victory.</classGimmickDescription>
+
+        <nodes>
+            <!-- ════════════ START NODE ════════════ -->
+            <li>
+                <nodeId>DL_Start</nodeId>
+                <label>Duelist's Awakening</label>
+                <description>The first rule of the blade: every attack is an opportunity — yours or theirs. Today you learn to make every opening count.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ BLADEWORK (North-West) — MeleeDamage / MeleeHitChance ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>DL_BW1</nodeId>
+                <label>Sharp Edge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-1.6</x><y>0.6</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW2</nodeId>
+                <label>Clean Cuts</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-3.2</x><y>1.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW_SwordSaint</nodeId>
+                <label>Sword Saint</label>
+                <description>Your blade work has transcended mere combat training. Each swing carries the weight of ten thousand practice strokes, and every movement flows with deliberate, lethal elegance. Opponents find themselves cut before they even register the flash of steel.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-4.8</x><y>1.7</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW3</nodeId>
+                <label>Honed Edge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-6.1</x><y>2.4</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW4</nodeId>
+                <label>Piercing Thrust</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-7.4</x><y>3.2</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW_CrimsonBlade</nodeId>
+                <label>Crimson Blade</label>
+                <description>Your blade never stops moving. In the time between heartbeats you deliver combinations that lesser fighters couldn't manage in a full second. The precision of each strike compounds — every wound opens the way for the next.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-8.8</x><y>3.9</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW5</nodeId>
+                <label>Death Blossom</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-9.9</x><y>4.7</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW_LethalGrace</nodeId>
+                <label>Lethal Grace</label>
+                <description>You have reached the pinnacle of offensive swordsmanship. Your strikes are so fast they blur, so precise they find gaps in armor that shouldn't exist. Combat against you isn't a fight — it's an execution with extra steps.\n\nTRADEOFF: Extreme aggression sacrifices defensive posture.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-11.1</x><y>5.4</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.3333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.2</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Bladework side branch (from Sword Saint → NW flank) -->
+            <li>
+                <nodeId>DL_BW_S1</nodeId>
+                <label>Bleed Through</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-6</x><y>0.5</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW_S2</nodeId>
+                <label>Vital Strike</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-7.1</x><y>-0.3</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_BW_Decimate</nodeId>
+                <label>Decimation</label>
+                <description>Every strike is aimed at maximizing destruction. You don't just wound — you systematically dismantle your opponent's ability to fight. Ligaments, tendons, blood vessels: you know exactly where to cut to make the next cut easier.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-8.3</x><y>-1.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0667</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ FOOTWORK (North-East) — MoveSpeed / MeleeDodge ▓▓      -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>DL_FW1</nodeId>
+                <label>Quick Feet</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>1.6</x><y>0.6</y>
+                <bonuses><li><bonusType>MeleeDodge</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW2</nodeId>
+                <label>Sidestep</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>3.2</x><y>1.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW_DancingBlade</nodeId>
+                <label>Dancing Blade</label>
+                <description>Your footwork transforms melee combat into a performance. You weave between strikes with fluid, practiced movements that leave attackers swinging at air. Every step is deliberate — every dodge sets up your counter.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>4.8</x><y>1.7</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW3</nodeId>
+                <label>Feint</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>6.1</x><y>2.4</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW4</nodeId>
+                <label>Mirage Step</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>7.4</x><y>3.2</y>
+                <bonuses><li><bonusType>MeleeDodge</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW_ShadowDance</nodeId>
+                <label>Shadow Dance</label>
+                <description>You exist in the spaces between attacks. When an enemy commits to a swing, you've already moved — positioning yourself for a devastating riposte while they struggle to recover. Your evasion isn't reactive. It's prophetic.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>8.8</x><y>3.9</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW5</nodeId>
+                <label>Vanishing Act</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>9.9</x><y>4.7</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW_Untouchable</nodeId>
+                <label>Untouchable</label>
+                <description>Attacks pass through where you were a heartbeat ago. Blades miss by millimeters that feel like miles. You have achieved such mastery over movement that hitting you in melee requires luck that borders on the miraculous. Your enemies exhaust themselves swinging at ghosts.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/ghost</icon>
+                <x>11.1</x><y>5.4</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.3333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.2</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Footwork side branch (from Dancing Blade → NE flank) -->
+            <li>
+                <nodeId>DL_FW_S1</nodeId>
+                <label>Roll &amp; Recover</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>6</x><y>0.5</y>
+                <bonuses>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW_S2</nodeId>
+                <label>Combat Flow</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>7.1</x><y>-0.3</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_FW_Afterimage</nodeId>
+                <label>Afterimage</label>
+                <description>You move so quickly in combat that enemies see double — then triple. By the time they process your actual position, you've already repositioned for the killing blow. Your evasion borders on supernatural.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>8.3</x><y>-1.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ RIPOSTE (South-West) — MeleeHitChance / MeleeDodge / Damage ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>DL_RP1</nodeId>
+                <label>Reading Blows</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-1.3</x><y>-1.1</y>
+                <bonuses><li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP2</nodeId>
+                <label>Counter Timing</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-2.6</x><y>-2.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP_Deflect</nodeId>
+                <label>Deflection</label>
+                <description>You don't just block — you redirect. Enemy strikes glance off your guard and carry their wielder off-balance, creating openings you exploit with surgical precision. Defense and offense become one fluid motion.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-3.9</x><y>-3.3</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP3</nodeId>
+                <label>Exploit Opening</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>-4.9</x><y>-4.4</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP4</nodeId>
+                <label>Punish</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-5.9</x><y>-5.5</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP_ReturnStrike</nodeId>
+                <label>Return Strike</label>
+                <description>Every attack against you is a gift — an opening wrapped in aggression. You've trained until your body responds to incoming strikes with automatic, devastating counters. The more they swing, the worse it gets for them.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-6.9</x><y>-6.6</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP5</nodeId>
+                <label>Reversal</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-7.7</x><y>-7.8</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP_VenomStrike</nodeId>
+                <label>Venom Strike</label>
+                <description>Your counters have become so refined that each riposte targets nerve clusters and pressure points. The pain you inflict is disproportionate to the wound itself — a shallow cut that drops enemies to their knees, screaming.\n\nTRADEOFF: The constant vigilance required for perfect counters erodes your mental resilience.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-8.6</x><y>-8.9</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.3</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.2</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1667</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Riposte side branch (from Deflection → SW flank) -->
+            <li>
+                <nodeId>DL_RP_S1</nodeId>
+                <label>Parry &amp; Thrust</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>-5.4</x><y>-2.5</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP_S2</nodeId>
+                <label>Whirlwind Guard</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-6.8</x><y>-2.1</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_RP_Retribution</nodeId>
+                <label>Just Retribution</label>
+                <description>You have become the embodiment of karmic justice in melee. Every attack an enemy makes is returned twofold — their aggression fuels your precision, their overcommitment becomes their undoing.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-8.2</x><y>-1.7</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ EXECUTIONER (South-East) — MeleeDamage / PainThreshold ▓▓      -->
+            <!-- ══════════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>DL_EX1</nodeId>
+                <label>Grit</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>1.3</x><y>-1.1</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX2</nodeId>
+                <label>Steel Nerve</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>2.6</x><y>-2.2</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX_IronWill</nodeId>
+                <label>Iron Will</label>
+                <description>Pain is information, nothing more. You've trained yourself to process agony as data — location, severity, threat assessment — without the emotional response that makes lesser fighters buckle. When others collapse, you keep fighting.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>3.9</x><y>-3.3</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0833</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX3</nodeId>
+                <label>Cold Fury</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>4.9</x><y>-4.4</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX4</nodeId>
+                <label>Merciless</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>5.9</x><y>-5.5</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX_Finisher</nodeId>
+                <label>Finisher</label>
+                <description>You recognize the moment an opponent's guard falters. That fraction-of-a-second window when exhaustion or pain compromises their stance. In that instant, you deliver the decisive blow. Fights that others prolong, you end.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>6.9</x><y>-6.6</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX5</nodeId>
+                <label>No Mercy</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>7.7</x><y>-7.8</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX_Reaper</nodeId>
+                <label>Reaper</label>
+                <description>You are the end of the fight. Your blade falls with the inevitability of a headsman's axe, and your body absorbs punishment that would kill anyone else outright. Pain fuels you. Wounds make you more dangerous. Enemies who manage to hurt you quickly realize they've only made their situation worse.\n\nNothing survives sustained combat with you.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>8.6</x><y>-8.9</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.3</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.2</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+            <!-- Executioner side branch (from Iron Will → SE flank) -->
+            <li>
+                <nodeId>DL_EX_S1</nodeId>
+                <label>Battle Scars</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>5.4</x><y>-2.5</y>
+                <bonuses>
+                    <li><bonusType>SharpArmor</bonusType><value>0.05</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX_S2</nodeId>
+                <label>Scarred Veteran</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>6.8</x><y>-2.1</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_EX_Unkillable</nodeId>
+                <label>Unkillable</label>
+                <description>Your body has been broken and rebuilt so many times that it has forgotten how to quit. Where others see mortal wounds, you see temporary inconveniences. Your threshold for pain is so high that injuries that incapacitate others barely register.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>8.2</x><y>-1.7</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.0833</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ CENTERPOINT (North spine) — Gimmick Tiers + MeleeDodge ▓▓  -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>DL_CP1</nodeId>
+                <label>Combat Instinct</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_CP2</nodeId>
+                <label>Anticipation</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>0</x><y>3.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_CP_Parry</nodeId>
+                <label>Parry</label>
+                <description>You've learned to read an opponent's intent before they swing. Every dodge becomes an opportunity, every miss a stored lesson in your muscles. The dance of combat accelerates — and you're always one step ahead.\n\n[GIMMICK TIER 1]: Max 3 charges, +7% melee damage each (max +21%).</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>4.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_CP3</nodeId>
+                <label>Riposte Mastery</label>
+                <description>[GIMMICK TIER 2]: Max 5 charges, +8% melee damage each (max +40%).</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>0</x><y>6.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_CP4</nodeId>
+                <label>Blade Dance</label>
+                <description>[GIMMICK TIER 3]: Max 7 charges, +9% melee damage each (max +63%).</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>0</x><y>7.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>DL_CP_PerfectCounter</nodeId>
+                <label>Perfect Counter</label>
+                <description>You have achieved the pinnacle of reactive combat. Incoming attacks are no longer threats — they are fuel. Every dodged blow charges your response, and when you finally strike, it carries the accumulated force of every attack that failed to land. At maximum stacks, a single counter blow can end a fight.\n\n[GIMMICK TIER 4]: Max 10 charges, +10% melee damage each (max +100%). One perfect counter. One devastating blow.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>0</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Cross-connectors (all require both neighbours to be active) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <!-- Bladework (NW) ↔ Centerpoint (N) -->
+            <li>
+                <nodeId>DL_Cross_BC</nodeId>
+                <label>Strike Through</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-2.7</x><y>3.7</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Footwork (NE) ↔ Centerpoint (N) -->
+            <li>
+                <nodeId>DL_Cross_FC</nodeId>
+                <label>Counter Step</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>2.7</x><y>3.7</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Bladework (NW) ↔ Riposte (SW) -->
+            <li>
+                <nodeId>DL_Cross_BR</nodeId>
+                <label>Flowing Guard</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-1.8</x><y>-0.3</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <!-- Footwork (NE) ↔ Executioner (SE) -->
+            <li>
+                <nodeId>DL_Cross_FE</nodeId>
+                <label>Deadly Poise</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>1.8</x><y>-0.3</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Riposte (SW) ↔ Executioner (SE) -->
+            <li>
+                <nodeId>DL_Cross_RE</nodeId>
+                <label>Relentless</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0</x><y>-3.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- Connection pairs (bidirectional, "A~B" format)             -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <connections>
+            <!-- Start → 5 branch gateways -->
+            <li>DL_Start~DL_BW1</li>
+            <li>DL_Start~DL_FW1</li>
+            <li>DL_Start~DL_RP1</li>
+            <li>DL_Start~DL_EX1</li>
+            <li>DL_Start~DL_CP1</li>
+
+            <!-- Bladework main path -->
+            <li>DL_BW1~DL_BW2</li>
+            <li>DL_BW2~DL_BW_SwordSaint</li>
+            <li>DL_BW_SwordSaint~DL_BW3</li>
+            <li>DL_BW3~DL_BW4</li>
+            <li>DL_BW4~DL_BW_CrimsonBlade</li>
+            <li>DL_BW_CrimsonBlade~DL_BW5</li>
+            <li>DL_BW5~DL_BW_LethalGrace</li>
+            <!-- Bladework side branch -->
+            <li>DL_BW_SwordSaint~DL_BW_S1</li>
+            <li>DL_BW_S1~DL_BW_S2</li>
+            <li>DL_BW_S2~DL_BW_Decimate</li>
+
+            <!-- Footwork main path -->
+            <li>DL_FW1~DL_FW2</li>
+            <li>DL_FW2~DL_FW_DancingBlade</li>
+            <li>DL_FW_DancingBlade~DL_FW3</li>
+            <li>DL_FW3~DL_FW4</li>
+            <li>DL_FW4~DL_FW_ShadowDance</li>
+            <li>DL_FW_ShadowDance~DL_FW5</li>
+            <li>DL_FW5~DL_FW_Untouchable</li>
+            <!-- Footwork side branch -->
+            <li>DL_FW_DancingBlade~DL_FW_S1</li>
+            <li>DL_FW_S1~DL_FW_S2</li>
+            <li>DL_FW_S2~DL_FW_Afterimage</li>
+
+            <!-- Riposte main path -->
+            <li>DL_RP1~DL_RP2</li>
+            <li>DL_RP2~DL_RP_Deflect</li>
+            <li>DL_RP_Deflect~DL_RP3</li>
+            <li>DL_RP3~DL_RP4</li>
+            <li>DL_RP4~DL_RP_ReturnStrike</li>
+            <li>DL_RP_ReturnStrike~DL_RP5</li>
+            <li>DL_RP5~DL_RP_VenomStrike</li>
+            <!-- Riposte side branch -->
+            <li>DL_RP_Deflect~DL_RP_S1</li>
+            <li>DL_RP_S1~DL_RP_S2</li>
+            <li>DL_RP_S2~DL_RP_Retribution</li>
+
+            <!-- Executioner main path -->
+            <li>DL_EX1~DL_EX2</li>
+            <li>DL_EX2~DL_EX_IronWill</li>
+            <li>DL_EX_IronWill~DL_EX3</li>
+            <li>DL_EX3~DL_EX4</li>
+            <li>DL_EX4~DL_EX_Finisher</li>
+            <li>DL_EX_Finisher~DL_EX5</li>
+            <li>DL_EX5~DL_EX_Reaper</li>
+            <!-- Executioner side branch -->
+            <li>DL_EX_IronWill~DL_EX_S1</li>
+            <li>DL_EX_S1~DL_EX_S2</li>
+            <li>DL_EX_S2~DL_EX_Unkillable</li>
+
+            <!-- Centerpoint main path -->
+            <li>DL_CP1~DL_CP2</li>
+            <li>DL_CP2~DL_CP_Parry</li>
+            <li>DL_CP_Parry~DL_CP3</li>
+            <li>DL_CP3~DL_CP4</li>
+            <li>DL_CP4~DL_CP_PerfectCounter</li>
+
+            <!-- Cross-connectors -->
+            <li>DL_BW_SwordSaint~DL_Cross_BC</li>
+            <li>DL_Cross_BC~DL_CP_Parry</li>
+            <li>DL_FW_DancingBlade~DL_Cross_FC</li>
+            <li>DL_Cross_FC~DL_CP_Parry</li>
+            <li>DL_BW1~DL_Cross_BR</li>
+            <li>DL_Cross_BR~DL_RP1</li>
+            <li>DL_FW1~DL_Cross_FE</li>
+            <li>DL_Cross_FE~DL_EX1</li>
+            <li>DL_RP_Deflect~DL_Cross_RE</li>
+            <li>DL_Cross_RE~DL_EX_IronWill</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

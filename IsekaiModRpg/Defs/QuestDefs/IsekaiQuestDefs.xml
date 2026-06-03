@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Dummy QuestScriptDef just to provide the icon -->
+    <QuestScriptDef>
+        <defName>Isekai_HuntQuestScript</defName>
+        <label>Isekai Hunt</label>
+        <isRootSpecial>true</isRootSpecial>
+        <autoAccept>false</autoAccept>
+        <expireDaysRange>3~5</expireDaysRange>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <!-- Empty root since we create quests manually -->
+        <root Class="QuestNode_Sequence">
+            <nodes />
+        </root>
+    </QuestScriptDef>
+
+</Defs>

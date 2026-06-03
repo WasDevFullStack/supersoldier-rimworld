@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <Title_Newcomer.label>新手</Title_Newcomer.label>
+    <Title_Newcomer.titleName>新手</Title_Newcomer.titleName>
+    <Title_Newcomer.titleDescription>初来乍到这个世界的人。旅程才刚刚开始。</Title_Newcomer.titleDescription>
+    
+    <Title_Adventurer.label>冒险者</Title_Adventurer.label>
+    <Title_Adventurer.titleName>冒险者</Title_Adventurer.titleName>
+    <Title_Adventurer.titleDescription>已踏上力量之路的第一步。</Title_Adventurer.titleDescription>
+    
+    <Title_Veteran.label>老兵</Title_Veteran.label>
+    <Title_Veteran.titleName>老兵</Title_Veteran.titleName>
+    <Title_Veteran.titleDescription>一位久经沙场、证明了自身价值的幸存者。</Title_Veteran.titleDescription>
+    
+    <Title_Elite.label>精英</Title_Elite.label>
+    <Title_Elite.titleName>精英</Title_Elite.titleName>
+    <Title_Elite.titleDescription>大陆上最强者之一，令人畏惧且受人尊敬。</Title_Elite.titleDescription>
+    
+    <Title_Champion.label>冠军</Title_Champion.label>
+    <Title_Champion.titleName>冠军</Title_Champion.titleName>
+    <Title_Champion.titleDescription>一位传奇人物，其事迹被传唱在故事中。</Title_Champion.titleDescription>
+    
+    <Title_Hero.label>英雄</Title_Hero.label>
+    <Title_Hero.titleName>英雄</Title_Hero.titleName>
+    <Title_Hero.titleDescription>力量超越凡人极限的存在。</Title_Hero.titleDescription>
+    
+    <Title_WarriorInitiate.label>战士学徒</Title_WarriorInitiate.label>
+    <Title_WarriorInitiate.titleName>战士学徒</Title_WarriorInitiate.titleName>
+    <Title_WarriorInitiate.titleDescription>踏上战士之路的人。</Title_WarriorInitiate.titleDescription>
+    
+    <Title_MageInitiate.label>法师学徒</Title_MageInitiate.label>
+    <Title_MageInitiate.titleName>法师学徒</Title_MageInitiate.titleName>
+    <Title_MageInitiate.titleDescription>探寻奥秘的人。</Title_MageInitiate.titleDescription>
+    
+    <Title_RangerInitiate.label>游侠学徒</Title_RangerInitiate.label>
+    <Title_RangerInitiate.titleName>游侠学徒</Title_RangerInitiate.titleName>
+    <Title_RangerInitiate.titleDescription>身姿如风般迅捷的人。</Title_RangerInitiate.titleDescription>
+    
+    <Title_ArtisanInitiate.label>工匠学徒</Title_ArtisanInitiate.label>
+    <Title_ArtisanInitiate.titleName>工匠学徒</Title_ArtisanInitiate.titleName>
+    <Title_ArtisanInitiate.titleDescription>双手能创造奇迹的人。</Title_ArtisanInitiate.titleDescription>
+    
+    <Title_LeaderInitiate.label>领袖学徒</Title_LeaderInitiate.label>
+    <Title_LeaderInitiate.titleName>领袖学徒</Title_LeaderInitiate.titleName>
+    <Title_LeaderInitiate.titleDescription>赢得他人尊敬的人。</Title_LeaderInitiate.titleDescription>
+</LanguageData>

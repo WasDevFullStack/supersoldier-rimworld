@@ -1,0 +1,1414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    RimWorld of Magic – Constellation Tree Patches
+    Adds mana/stamina/ability bonuses to existing Notable and Keystone nodes
+    across all 12 Isekai passive trees. Only applied when RoM is loaded.
+
+    Design: Instead of separate RoM-only branches, each class tree has
+    RoM bonuses sprinkled on thematically appropriate existing nodes:
+      • Magic-leaning trees → Max Mana, Mana Regen, Magic bonuses
+      • Physical trees      → Max Stamina, Stamina Regen, Might bonuses
+      • Hybrid/Support      → Mixed mana + stamina bonuses
+-->
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods><li>A RimWorld of Magic</li></mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ MAGE TREE — Mana + Magic bonuses          ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AS_Omniscience"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_SW_Serenity"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_VT_ArcaneBarrier"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MagicDamage</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_CJ_SpiritBond"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AM_ArchmageAscension"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MagicCooldown</bonusType><value>0.06</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ WARRIOR TREE — Stamina + Might bonuses     ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_JG_IronSkin"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_BK_BloodFrenzy"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_GL_EvasiveFootwork"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_CH_CommandingPresence"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_WL_WarlordsDomain"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MightCooldown</bonusType><value>0.06</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ SAGE TREE — Mana + Psionic bonuses         ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_SC_DeepWisdom"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_MK_IronMind"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_PsionicMax</bonusType><value>0.06</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_EM_SoulReader"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_BuffDuration</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_AC_PerfectStillness"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_PsionicMax</bonusType><value>0.06</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ PALADIN TREE — Hybrid Mana + Stamina + Chi ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_BW_LivingFortress"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_IC_ScarTissue"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_JU_RetributorsEdge"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_ChiMax</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_SN_VowOfRetribution"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_ChiMax</bonusType><value>0.06</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ BERSERKER TREE — Stamina + Might bonuses   ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_CG_BoneCrusher"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_RP_Blitz"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_BL_Vampiric"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_FC_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MightCooldown</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ RANGER TREE — Stamina + Might bonuses      ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_SK_SwiftShadow"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_TR_Fieldcraft"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaCost</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_BM_PackLeader"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_HE_ApexPredator"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MightCooldown</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ DUELIST TREE — Stamina + Might bonuses     ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_FW_DancingBlade"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_EX_IronWill"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_RP_Deflect"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_CP_PerfectCounter"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_StaminaCost</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ LEADER TREE — Mana + Buff bonuses          ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_DP_MasterDiplomat"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_CM_MarketMastery"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_BuffDuration</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_GV_StoicResolve"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_RL_SupremeCommander"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_BuffDuration</bonusType><value>0.06</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ ALCHEMIST TREE — Mana bonuses              ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_AP_MasterHealer"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_SY_Transmuter"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MagicDamage</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_HB_Purifier"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_IF_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MagicCooldown</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ BEASTMASTER TREE — Hybrid + Summon bonuses ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TM_Whisperer"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_SummonDuration</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_WD_Stalker"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TR_Taskmaster"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_BuffDuration</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_GR_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_SummonDuration</bonusType><value>0.06</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ CRAFTER TREE — Hybrid Mana + Stamina      ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_EN_Eureka"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_ED_BeastOfBurden"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_AR_MasterCraftsman"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_MC_GrandMaster"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.05</value></li>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.05</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════ -->
+                <!-- ▓▓ SURVIVOR TREE — Stamina bonuses            ▓▓ -->
+                <!-- ═══════════════════════════════════════════════ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_RS_StoneWall"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_TN_QuickRecovery"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_WD_StormRunner"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_UY_IndomitableWill"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.06</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MightCooldown</bonusType><value>0.05</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════════════ -->
+                <!-- ▓▓ DENSITY PASS — additional notable nodes per class ▓▓ -->
+                <!-- ═══════════════════════════════════════════════════════ -->
+                <!-- Goal: ensure each class has RoM bonuses spread across   -->
+                <!-- 3+ branches with multiple nodes per branch.             -->
+
+                <!-- ──────────── Mage (extra) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AS_MysticLore"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.02</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_SW_TranscendentMind"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MagicDamage</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_VT_PsychicWard"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MagicCooldown</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_CJ_PhilosopherStone"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Warrior / Knight (extra) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_JG_Endurance"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_BK_SavageStrikes"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_GL_BladeStorm"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_CH_TrueChampion"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_BuffDuration</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MightCooldown</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Sage (extra, includes new PH branch) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_PH_HealingTouch"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_SC_LivingLore"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_MK_MindOfSteel"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_PsionicMax</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_EM_SoulBond"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_BuffDuration</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Paladin (extra, includes new SH branch) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_SH_DivineTouch"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_BW_DiamondBody"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_IC_SacredAegis"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_JU_DivineJustice"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_ChiMax</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Berserker (extra) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_FC_Juggernaut"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_CG_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_RP_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightCooldown</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_BL_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Ranger (extra, includes new MS branch) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_MS_EagleEye"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_SK_Phantom"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_TR_LandMaster"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_BM_AlphaHunter"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_SummonDuration</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Duelist (extra, includes new BW branch) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_BW_LethalGrace"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_FW_ShadowDance"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_EX_Reaper"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightCooldown</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_RP_VenomStrike"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaCost</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Leader (extra, includes new CO branch) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_CO_BeastLord"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_SummonDuration</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_DP_PeerlessEnvoy"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_CM_TradeBaron"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_BuffDuration</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_GV_UnshakeableWill"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Alchemist (extra) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_AP_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_SY_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MagicDamage</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_HB_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_ManaCost</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_IF_Scholar"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MagicCooldown</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Beastmaster (extra) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TM_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_SummonDuration</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_WD_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TR_Key"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_BuffDuration</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_GR_Provider"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_SummonDuration</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Crafter (extra, includes new HV branch) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_HV_NaturesBounty"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_EN_GrandArchitect"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_ManaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_AR_ArtisanSupreme"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxMana</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_ED_PerpetualMotion"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+
+                <!-- ──────────── Survivor (extra, includes new FT branch) ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_FT_PlagueDefier"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_RS_Unbreakable"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_TN_SecondWind"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_StaminaRegen</bonusType><value>0.04</value></li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_WD_ApexPredator"]/bonuses</xpath>
+                    <value>
+                        <li><bonusType>RoM_MightDamage</bonusType><value>0.04</value></li>
+                        <li><bonusType>RoM_MaxStamina</bonusType><value>0.03</value></li>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════════════ -->
+                <!-- ▓▓ SMALL NODES — tiny RoM bonuses on filler (numbered) ▓ -->
+                <!-- ═══════════════════════════════════════════════════════ -->
+                <!-- Values kept at 0.01-0.02 to reward path travel without   -->
+                <!-- inflating power per point.                               -->
+
+                <!-- ──────────── Mage small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AS2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AS4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.01</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_SW2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_SW4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_VT3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_CJ2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_CJ4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaCost</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AM2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AM3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Warrior/Knight small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_JG2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_JG4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.01</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_BK2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_BK4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_GL3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaCost</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_CH3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_BuffDuration</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_WL2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Sage small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_SC2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_SC4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_MK3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_PsionicMax</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_EM2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_AC3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_PH3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_PH5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Paladin small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_BW2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_BW4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_IC3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_JU3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_SN2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_SH3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Berserker small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_CG2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_CG4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaCost</bonusType><value>0.01</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_RP3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_BL2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_FC3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_FR2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Ranger small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_SK2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaCost</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_SK4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_TR3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_BM3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_HE2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_MS3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Duelist small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_FW2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_FW4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaCost</bonusType><value>0.01</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_EX3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_RP3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_CP2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_BW3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Leader small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_DP3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_BuffDuration</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_CM3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_GV3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_RL2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_BuffDuration</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_CO3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Alchemist small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_AP3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_SY3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_HB3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaCost</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_IF3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_EU3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Beastmaster small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TM3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_WD3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TR3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_GR3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_PK3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Crafter small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_EN3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_ED3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_AR3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.01</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_HV3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_MC2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──────────── Survivor small nodes ──────────── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_RS3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_TN3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_WD3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_UY2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightCooldown</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_FT3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+                <!-- ▓▓ COHERENT BRANCH SCALING — 2 themed branches filled per class ▓ -->
+                <!-- ═══════════════════════════════════════════════════════════════ -->
+                <!-- For each class, two branches are designated "RoM deep paths"    -->
+                <!-- where numbered nodes 1/3/5 also receive bonuses matching the    -->
+                <!-- branch's theme, so that allocating down the branch gives        -->
+                <!-- consistent, predictable scaling of the relevant RoM stat.       -->
+
+                <!-- ──── Mage · AS (Arcane Scholar → MaxMana/Regen) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AS1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AS3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AS5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Mage · AM (Archmage → MagicDamage) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AM1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Mage"]/nodes/li[nodeId="MG_AM4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MagicDamage</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──── Knight · JG (Juggernaut → MaxStamina) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_JG1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_JG3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_JG5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Knight · BK (Berserker → MightDamage) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_BK1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_BK3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Knight"]/nodes/li[nodeId="WR_BK5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Sage · MK (Monk → ChiMax) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_MK1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ChiMax</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_MK5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ChiMax</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Sage · PH (Physician → ManaRegen) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_PH1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_PH2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Sage"]/nodes/li[nodeId="SG_PH4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+
+                <!-- ──── Paladin · SH (Shepherd → ManaRegen/MaxMana) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_SH1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_SH2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_SH4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_SH5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <!-- ──── Paladin · JU (Justice → MightDamage) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_JU1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_JU2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Paladin"]/nodes/li[nodeId="ST_JU5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Berserker · CG (Carnage → MightDamage) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_CG1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_CG3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_CG5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Berserker · FC (Juggernaut → MaxStamina) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_FC1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_FC2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Berserker"]/nodes/li[nodeId="BK_FC5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Ranger · MS (Marksman → MightDamage) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_MS1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_MS2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_MS5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Ranger · BM (Beastmaster → SummonDuration) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_BM1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_BM2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Ranger"]/nodes/li[nodeId="RG_BM5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Duelist · FW (Footwork → StaminaRegen) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_FW1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_FW3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_FW5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Duelist · EX (Executioner → MightDamage) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_EX1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_EX2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Duelist"]/nodes/li[nodeId="DL_EX5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MightDamage</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Leader · CO (Companion → SummonDuration) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_CO1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_CO2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_CO5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Leader · DP (Diplomat → BuffDuration) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_DP1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_BuffDuration</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_DP2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_BuffDuration</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Leader"]/nodes/li[nodeId="LD_DP5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_BuffDuration</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Alchemist · AP (Apothecary → ManaRegen) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_AP1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_AP2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_AP5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_ManaRegen</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Alchemist · IF (Infuser → MaxMana) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_IF1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_IF2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Alchemist"]/nodes/li[nodeId="AL_IF5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Beastmaster · TM (Tamer → SummonDuration) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TM1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TM2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_TM5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_SummonDuration</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Beastmaster · WD (Wild → MaxStamina) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_WD1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_WD2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Beastmaster"]/nodes/li[nodeId="BM_WD5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Crafter · ED (Endurance → MaxStamina) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_ED1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_ED2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_ED5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Crafter · EN (Engineer → MaxMana) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_EN1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_EN2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Crafter"]/nodes/li[nodeId="CR_EN5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxMana</bonusType><value>0.025</value></li></value>
+                </li>
+
+                <!-- ──── Survivor · FT (Fortitude → StaminaRegen) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_FT1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_FT2"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_FT5"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_StaminaRegen</bonusType><value>0.025</value></li></value>
+                </li>
+                <!-- ──── Survivor · UY (Unyielding → MaxStamina) ──── -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_UY1"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.015</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_UY3"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/IsekaiLeveling.SkillTree.PassiveTreeDef[defName="PassiveTree_Survivor"]/nodes/li[nodeId="SV_UY4"]/bonuses</xpath>
+                    <value><li><bonusType>RoM_MaxStamina</bonusType><value>0.02</value></li></value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>

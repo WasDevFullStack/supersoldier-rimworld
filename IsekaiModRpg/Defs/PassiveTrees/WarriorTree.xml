@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+        â'  WARRIOR CONSTELLATION â" 56 Nodes, 5 Branches     â'
+        â  Inspired by Path of Exile 2's web-like layout       â
+        â                                                      â
+        â  Branches:                                           â
+        â   â¢ BERSERKER  (NW) â Raw offense & lifesteal       â
+        â   â¢ JUGGERNAUT (NE) â Armor, HP, damage reduction   â
+        â   â¢ GLADIATOR  (SW) â Dodge, speed, precision       â
+        â   â¢ CHAMPION   (SE) â Leadership, social, support   â
+        â   â¢ WARLORD    (N)  â Balanced melee + tank         â
+        â   + 5 Cross-connectors between branches             â
+        ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Knight</defName>
+        <label>Knight</label>
+        <treeClass>Knight</treeClass>
+        <treeDescription>Masters of melee combat, knights channel raw strength and iron discipline into devastating physical prowess. Five constellations diverge from the knight's core  each leading to a unique keystone that defines your fighting style.</treeDescription>
+        <classGimmick>WrathOfTheFallen</classGimmick>
+        <classGimmickName>Wrath of the Fallen</classGimmickName>
+        <classGimmickDescription>The lower a knight's health, the fiercer they fight. Wrath unlocks progressively along the Warlord's Path. Tier 1 (Knight's Resolve): below 50% HP ? up to +25% melee damage. Tier 2 (Hardened Veteran): below 50% HP ? up to +35%. Tier 3 (Conqueror's Will): below 50% HP ? up to +50%. Tier 4 (Warlord's Domain): below 50% HP ? up to +75%.</classGimmickDescription>
+
+        <nodes>
+            <!-- ââââââââ START NODE ââââââââ -->
+            <li>
+                <nodeId>WR_Start</nodeId>
+                <label>Knight's Awakening</label>
+                <description>The spark of a knight ignites within. All great journeys begin with a single step.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <!-- ââ BERSERKER BRANCH (North-West) â Pure Offense ââ -->
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <li>
+                <nodeId>WR_BK1</nodeId>
+                <label>Sharpened Edge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-1.2</x><y>1.2</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK2</nodeId>
+                <label>Relentless Fury</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-2.4</x><y>2.4</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK_BloodFrenzy</nodeId>
+                <label>Blood Frenzy</label>
+                <description>Combat fuels an insatiable bloodlust. Each swing carries the weight of primal rage.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/burst</icon>
+                <x>-3.6</x><y>3.6</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK3</nodeId>
+                <label>Vicious Cuts</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-4.5</x><y>4.8</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK4</nodeId>
+                <label>Brutality</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-5.4</x><y>6.0</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK_SavageStrikes</nodeId>
+                <label>Savage Strikes</label>
+                <description>Strikes land with bone-shattering precision. Each blow finds the weakest point in the enemy's guard.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/hand-fist</icon>
+                <x>-6.3</x><y>7.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK5</nodeId>
+                <label>Overwhelming Force</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-7.0</x><y>8.4</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK_BloodRage</nodeId>
+                <label>Blood Rage</label>
+                <description>Abandon all defense. Let the crimson tide of battle consume you. Your strikes become devastating  but your guard is wide open.\n\nTRADEOFF: Sacrifices armor for raw killing power.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-7.8</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.4167</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.25</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>-0.25</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>-0.25</value></li>
+                </bonuses>
+            </li>
+            <!-- Berserker Side Branch (from Blood Frenzy â left) -->
+            <li>
+                <nodeId>WR_BK_S1</nodeId>
+                <label>Frenzied Swings</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-5.2</x><y>3.0</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK_S2</nodeId>
+                <label>Reckless Abandon</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-6.6</x><y>2.7</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_BK_Carnage</nodeId>
+                <label>Carnage</label>
+                <description>In the midst of slaughter, every muscle fiber works in concert. You hit harder and carry the spoils of war with ease.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/dumbbell</icon>
+                <x>-8.0</x><y>2.4</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.2</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <!-- ââ JUGGERNAUT BRANCH (North-East) â Pure Defense  ââ -->
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <li>
+                <nodeId>WR_JG1</nodeId>
+                <label>Thick Skin</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>1.2</x><y>1.2</y>
+                <bonuses><li><bonusType>MaxHealth</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG2</nodeId>
+                <label>Hardy Constitution</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>2.4</x><y>2.4</y>
+                <bonuses><li><bonusType>MaxHealth</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG_IronSkin</nodeId>
+                <label>Iron Skin</label>
+                <description>Skin hardens to the consistency of forged iron. Blades glance off where they once cut deep.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>3.6</x><y>3.6</y>
+                <bonuses>
+                    <li><bonusType>SharpArmor</bonusType><value>0.1333</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG3</nodeId>
+                <label>Damage Absorption</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shield-halved</icon>
+                <x>4.5</x><y>4.8</y>
+                <bonuses><li><bonusType>DamageReduction</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG4</nodeId>
+                <label>Reinforced Body</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>5.4</x><y>6.0</y>
+                <bonuses><li><bonusType>MaxHealth</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG_Unbreakable</nodeId>
+                <label>Unbreakable</label>
+                <description>An immovable wall of flesh and will. Attacks that would fell lesser warriors barely register.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shield</icon>
+                <x>6.3</x><y>7.2</y>
+                <bonuses>
+                    <li><bonusType>DamageReduction</bonusType><value>0.1667</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.1333</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.1333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG5</nodeId>
+                <label>Titan's Vitality</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>7.0</x><y>8.4</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0833</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG_Fortress</nodeId>
+                <label>Fortress</label>
+                <description>Become an immovable bastion. Your body is a living fortress â near impervious to harm, but heavy as the mountains themselves.\n\nTRADEOFF: Massive durability at the cost of mobility.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/chess-rook</icon>
+                <x>7.8</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.4167</value></li>
+                    <li><bonusType>SharpArmor</bonusType><value>0.3333</value></li>
+                    <li><bonusType>BluntArmor</bonusType><value>0.3333</value></li>
+                    <li><bonusType>HeatArmor</bonusType><value>0.3333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.25</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>-0.25</value></li>
+                </bonuses>
+            </li>
+            <!-- Juggernaut Side Branch (from Iron Skin â right) -->
+            <li>
+                <nodeId>WR_JG_S1</nodeId>
+                <label>Pain Tolerance</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>5.2</x><y>3.0</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG_S2</nodeId>
+                <label>Iron Will</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>6.6</x><y>2.7</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_JG_Endurance</nodeId>
+                <label>Endurance</label>
+                <description>The body recuperates with supernatural speed. Wounds seal, diseases recede, and exhaustion fades as if by magic.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>8.0</x><y>2.4</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1667</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <!-- ââ GLADIATOR BRANCH (South-West) â Speed & Evasion ââ -->
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <li>
+                <nodeId>WR_GL1</nodeId>
+                <label>Nimble Feet</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-1.2</x><y>-1.2</y>
+                <bonuses><li><bonusType>MeleeDodge</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL2</nodeId>
+                <label>Quick Step</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>-2.4</x><y>-2.4</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL_EvasiveFootwork</nodeId>
+                <label>Evasive Footwork</label>
+                <description>Every step is a feint, every movement a misdirection. Enemies swing at afterimages while you're already behind them.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>-3.6</x><y>-3.6</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL3</nodeId>
+                <label>Precise Evasion</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-4.5</x><y>-4.8</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL4</nodeId>
+                <label>Wind Walker</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-5.4</x><y>-6.0</y>
+                <bonuses><li><bonusType>MeleeDodge</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL_Riposte</nodeId>
+                <label>Riposte</label>
+                <description>Turn defense into offense. Every dodge creates an opening, every parry sets up a devastating counter-strike.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bullseye</icon>
+                <x>-6.3</x><y>-7.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL5</nodeId>
+                <label>Phantom Steps</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-7.0</x><y>-8.4</y>
+                <bonuses><li><bonusType>MeleeDodge</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL_ShadowDancer</nodeId>
+                <label>Shadow Dancer</label>
+                <description>Move like a shadow, strike like lightning. You become nearly impossible to hit â a blur of steel and motion. But a body trained for evasion sacrifices bulk.\n\nTRADEOFF: Supreme agility at the cost of max health.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/ghost</icon>
+                <x>-7.8</x><y>-9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.4167</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.25</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>-0.3333</value></li>
+                </bonuses>
+            </li>
+            <!-- Gladiator Side Branch (from Evasive Footwork â left) -->
+            <li>
+                <nodeId>WR_GL_S1</nodeId>
+                <label>Fleet Footed</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>-5.2</x><y>-3.0</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL_S2</nodeId>
+                <label>Keen Edge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-6.6</x><y>-2.7</y>
+                <bonuses><li><bonusType>MeleeHitChance</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_GL_BladeStorm</nodeId>
+                <label>Blade Storm</label>
+                <description>A whirlwind of calculated strikes. Every angle covered, every opening exploited â even ranged training improves from this precision.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-8.0</x><y>-2.4</y>
+                <bonuses>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <!-- ââ CHAMPION BRANCH (South-East) â Leadership & Social ââ -->
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <li>
+                <nodeId>WR_CH1</nodeId>
+                <label>Commanding Voice</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>1.2</x><y>-1.2</y>
+                <bonuses><li><bonusType>SocialImpact</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH2</nodeId>
+                <label>Silver Tongue</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>2.4</x><y>-2.4</y>
+                <bonuses><li><bonusType>Negotiation</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH_CommandingPresence</nodeId>
+                <label>Commanding Presence</label>
+                <description>Your presence alone commands respect. Merchants offer better prices, and enemies think twice before defying you.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>3.6</x><y>-3.6</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0833</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH3</nodeId>
+                <label>Steeled Resolve</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>4.5</x><y>-4.8</y>
+                <bonuses><li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH4</nodeId>
+                <label>Authority</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>5.4</x><y>-6.0</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH_InspiringLeader</nodeId>
+                <label>Inspiring Leader</label>
+                <description>Your words rally the broken, your courage fortifies the fearful. Under your banner, no one falters.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/trophy</icon>
+                <x>6.3</x><y>-7.2</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH5</nodeId>
+                <label>Unshakable Aura</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>7.0</x><y>-8.4</y>
+                <bonuses><li><bonusType>SocialImpact</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH_TrueChampion</nodeId>
+                <label>True Champion</label>
+                <description>A true champion leads not with the blade but with the soul. Your diplomatic mastery is unmatched â but the pen dulls the sword.\n\nTRADEOFF: Supreme social power at the cost of melee damage.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/medal</icon>
+                <x>7.8</x><y>-9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.3333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.25</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.1667</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>-0.1667</value></li>
+                </bonuses>
+            </li>
+            <!-- Champion Side Branch (from Commanding Presence â right) -->
+            <li>
+                <nodeId>WR_CH_S1</nodeId>
+                <label>Beast Whisperer</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>5.2</x><y>-3.0</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH_S2</nodeId>
+                <label>Iron Grip</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>6.6</x><y>-2.7</y>
+                <bonuses><li><bonusType>ArrestSuccess</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>WR_CH_TacticalMind</nodeId>
+                <label>Tactical Mind</label>
+                <description>A warrior's discipline extends beyond the battlefield. Strategic thinking accelerates research and sharpens the mind against mental intrusion.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>8.0</x><y>-2.4</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <!-- ââ WARLORD BRANCH (North, straight up) â Balanced Core ââ -->
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <li>
+                <nodeId>WR_WL1</nodeId>
+                <label>Battle Ready</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0</x><y>2.0</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_WL2</nodeId>
+                <label>War Tempered</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0</x><y>3.5</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_WL_WarriorsResolve</nodeId>
+                <label>Knight's Resolve</label>
+                <description>True strength comes from balance. A knight who masters both blade and body fears nothing on the battlefield.\n\nUnlocks WRATH OF THE FALLEN (Tier 1): Below 30% HP, melee damage increases  up to +25%.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/chess-knight</icon>
+                <x>0</x><y>5.0</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0833</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_WL3</nodeId>
+                <label>Hardened Veteran</label>
+                <description>Battle-hardened by years of combat, your body adapts to endure greater punishment while fighting at peak intensity.\n\nUpgrades WRATH OF THE FALLEN (Tier 2): Threshold rises to 40% HP, max bonus +35%.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0</x><y>6.5</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.05</value></li>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_WL4</nodeId>
+                <label>Conqueror's Will</label>
+                <description>The will of a true conqueror knows no bounds. Pain becomes fuel, adversity becomes strength.\n\nUpgrades WRATH OF THE FALLEN (Tier 3): Threshold rises to 50% HP, max bonus +50%.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0</x><y>8.0</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_WL_WarlordsDomain</nodeId>
+                <label>Warlord's Domain</label>
+                <description>You have transcended the limits of a mere fighter. In your domain, blade and body operate as one  every strike lands true, every wound heals faster. The perfect balance of offense and defense.\n\nCompletes WRATH OF THE FALLEN (Tier 4): Threshold 50% HP, max bonus +75%.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/chess-knight</icon>
+                <x>0</x><y>10.0</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.25</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.25</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1667</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.1667</value></li>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <!-- ââ CROSS-CONNECTORS â Bridge nodes between branches ââ -->
+            <!-- ââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+            <li>
+                <nodeId>WR_Cross_BW</nodeId>
+                <label>Raging Vitality</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>-1.8</x><y>4.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_Cross_WJ</nodeId>
+                <label>Stalwart Guard</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>1.8</x><y>4.2</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_Cross_BG</nodeId>
+                <label>Ferocious Agility</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>-3.6</x><y>0</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_Cross_JC</nodeId>
+                <label>Protective Presence</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>3.6</x><y>0</y>
+                <bonuses>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>WR_Cross_GC</nodeId>
+                <label>Graceful Authority</label>
+                <nodeType>Minor</nodeType>
+                <requireAllConnected>true</requireAllConnected>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>-3.6</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ââââââââââââââââââââââââââââââââââââââââââââââ -->
+        <!-- Connection pairs (bidirectional, "A~B" format) -->
+        <!-- ââââââââââââââââââââââââââââââââââââââââââââââ -->
+        <connections>
+            <!-- Start â 5 branch gateways -->
+            <li>WR_Start~WR_BK1</li>
+            <li>WR_Start~WR_JG1</li>
+            <li>WR_Start~WR_GL1</li>
+            <li>WR_Start~WR_CH1</li>
+            <li>WR_Start~WR_WL1</li>
+
+            <!-- Berserker main path -->
+            <li>WR_BK1~WR_BK2</li>
+            <li>WR_BK2~WR_BK_BloodFrenzy</li>
+            <li>WR_BK_BloodFrenzy~WR_BK3</li>
+            <li>WR_BK3~WR_BK4</li>
+            <li>WR_BK4~WR_BK_SavageStrikes</li>
+            <li>WR_BK_SavageStrikes~WR_BK5</li>
+            <li>WR_BK5~WR_BK_BloodRage</li>
+            <!-- Berserker side branch -->
+            <li>WR_BK_BloodFrenzy~WR_BK_S1</li>
+            <li>WR_BK_S1~WR_BK_S2</li>
+            <li>WR_BK_S2~WR_BK_Carnage</li>
+
+            <!-- Juggernaut main path -->
+            <li>WR_JG1~WR_JG2</li>
+            <li>WR_JG2~WR_JG_IronSkin</li>
+            <li>WR_JG_IronSkin~WR_JG3</li>
+            <li>WR_JG3~WR_JG4</li>
+            <li>WR_JG4~WR_JG_Unbreakable</li>
+            <li>WR_JG_Unbreakable~WR_JG5</li>
+            <li>WR_JG5~WR_JG_Fortress</li>
+            <!-- Juggernaut side branch -->
+            <li>WR_JG_IronSkin~WR_JG_S1</li>
+            <li>WR_JG_S1~WR_JG_S2</li>
+            <li>WR_JG_S2~WR_JG_Endurance</li>
+
+            <!-- Gladiator main path -->
+            <li>WR_GL1~WR_GL2</li>
+            <li>WR_GL2~WR_GL_EvasiveFootwork</li>
+            <li>WR_GL_EvasiveFootwork~WR_GL3</li>
+            <li>WR_GL3~WR_GL4</li>
+            <li>WR_GL4~WR_GL_Riposte</li>
+            <li>WR_GL_Riposte~WR_GL5</li>
+            <li>WR_GL5~WR_GL_ShadowDancer</li>
+            <!-- Gladiator side branch -->
+            <li>WR_GL_EvasiveFootwork~WR_GL_S1</li>
+            <li>WR_GL_S1~WR_GL_S2</li>
+            <li>WR_GL_S2~WR_GL_BladeStorm</li>
+
+            <!-- Champion main path -->
+            <li>WR_CH1~WR_CH2</li>
+            <li>WR_CH2~WR_CH_CommandingPresence</li>
+            <li>WR_CH_CommandingPresence~WR_CH3</li>
+            <li>WR_CH3~WR_CH4</li>
+            <li>WR_CH4~WR_CH_InspiringLeader</li>
+            <li>WR_CH_InspiringLeader~WR_CH5</li>
+            <li>WR_CH5~WR_CH_TrueChampion</li>
+            <!-- Champion side branch -->
+            <li>WR_CH_CommandingPresence~WR_CH_S1</li>
+            <li>WR_CH_S1~WR_CH_S2</li>
+            <li>WR_CH_S2~WR_CH_TacticalMind</li>
+
+            <!-- Warlord main path -->
+            <li>WR_WL1~WR_WL2</li>
+            <li>WR_WL2~WR_WL_WarriorsResolve</li>
+            <li>WR_WL_WarriorsResolve~WR_WL3</li>
+            <li>WR_WL3~WR_WL4</li>
+            <li>WR_WL4~WR_WL_WarlordsDomain</li>
+
+            <!-- Cross-connectors -->
+            <li>WR_BK_BloodFrenzy~WR_Cross_BW</li>
+            <li>WR_Cross_BW~WR_WL_WarriorsResolve</li>
+            <li>WR_JG_IronSkin~WR_Cross_WJ</li>
+            <li>WR_Cross_WJ~WR_WL_WarriorsResolve</li>
+            <li>WR_BK1~WR_Cross_BG</li>
+            <li>WR_Cross_BG~WR_GL1</li>
+            <li>WR_JG1~WR_Cross_JC</li>
+            <li>WR_Cross_JC~WR_CH1</li>
+            <li>WR_GL2~WR_Cross_GC</li>
+            <li>WR_Cross_GC~WR_CH2</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

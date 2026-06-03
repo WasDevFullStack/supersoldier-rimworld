@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- ==================== BASE ABSTRACT ==================== -->
+    <ThingDef Name="IsekaiTraitItemBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>true</useHitPoints>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>1</stackLimit>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+        <pathCost>14</pathCost>
+        <thingCategories>
+            <li>Artifacts</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+        </comps>
+        <tradeability>None</tradeability>
+    </ThingDef>
+
+    <!-- ==================== HERO'S AWAKENING SCROLL ==================== -->
+    <!-- Grants Protagonist trait: x10 XP, +2 stat pts/level, -50% social -->
+    <ThingDef ParentName="IsekaiTraitItemBase">
+        <defName>Isekai_HerosAwakeningScroll</defName>
+        <label>hero's awakening scroll</label>
+        <description>An ancient scroll radiating golden light. When used, it awakens the Protagonist trait within a pawn, granting them x10 XP gain and +2 stat points per level at the cost of social standing.
+
+This is the power of the chosen one — overwhelming, isolating, and absolute.</description>
+        <graphicData>
+            <texPath>Things/Item/HerosAwakeningScroll</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <MarketValue>2500</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Read awakening scroll</useLabel>
+            </li>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectIsekaiTrait">
+                <traitDefName>Isekai_Protagonist</traitDefName>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ==================== REINCARNATION CRYSTAL ==================== -->
+    <!-- Grants Reincarnated trait: Resets level/stats, x5 XP, +10 star points, star points every 3 levels -->
+    <ThingDef ParentName="IsekaiTraitItemBase">
+        <defName>Isekai_ReincarnationCrystal</defName>
+        <label>reincarnation crystal</label>
+        <description>A shimmering crystal containing memories from another life. When used, it resets the pawn's level to 1 and all stats to base, then grants the Reincarnated trait — a New Game+ rebirth with x5 XP gain, +10 bonus star points, and accelerated constellation growth.
+
+Constellation tree progress is preserved. The bearer starts over with past-life memories, growing far faster the second time around.</description>
+        <graphicData>
+            <texPath>Things/Item/ReincarnationCrystal</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>2000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Absorb reincarnation crystal</useLabel>
+            </li>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectIsekaiTrait">
+                <traitDefName>Isekai_Reincarnated</traitDefName>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ==================== VILLAIN'S MASK ==================== -->
+    <!-- Grants Antagonist trait: x8 XP, +25% melee, +10% speed, -75% social -->
+    <ThingDef ParentName="IsekaiTraitItemBase">
+        <defName>Isekai_VillainsMask</defName>
+        <label>villain's mask</label>
+        <description>A sinister mask radiating malevolent energy. When worn, it awakens the Antagonist trait — x8 XP gain and devastating combat power, but the wearer becomes reviled by all.
+
+Those who don this mask gain terrifying strength at the cost of all bonds.</description>
+        <graphicData>
+            <texPath>Things/Item/VillainsMask</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0.1</Flammability>
+            <MarketValue>2200</MarketValue>
+            <Mass>0.8</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Don the villain's mask</useLabel>
+            </li>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectIsekaiTrait">
+                <traitDefName>Isekai_Antagonist</traitDefName>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ==================== SUMMONING CIRCLE SCROLL ==================== -->
+    <!-- Summons a new colonist with the Summoned Hero trait -->
+    <ThingDef ParentName="IsekaiTraitItemBase">
+        <defName>Isekai_SummoningCircleScroll</defName>
+        <label>summoning circle scroll</label>
+        <description>A mystical scroll inscribed with otherworldly runes. Activating it tears open a rift between worlds, summoning a brand new hero from another dimension who joins your colony.
+
+The summoned hero arrives with the Summoned Hero trait: x3 XP, +1 stat point per level, mental break immunity, and a permanent mood penalty from dimensional displacement.
+
+This scroll does not affect the user — it creates a new colonist.</description>
+        <graphicData>
+            <texPath>Things/Item/SummoningCircleScroll</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <MarketValue>1500</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>Sellable</li>
+        </tradeTags>
+        <tradeability>All</tradeability>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Activate summoning circle</useLabel>
+            </li>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectSummonHero"/>
+        </comps>
+    </ThingDef>
+
+    <!-- ==================== REGRESSION ORB ==================== -->
+    <!-- Grants Regressor trait: x4 XP, free respec -->
+    <ThingDef ParentName="IsekaiTraitItemBase">
+        <defName>Isekai_RegressionOrb</defName>
+        <label>regression orb</label>
+        <description>A temporal orb that sends one's consciousness backward. Grants the Regressor trait — x4 XP gain and free constellation respec at will.
+
+The regressor knows what's coming — armed with knowledge from timelines yet to unfold.</description>
+        <graphicData>
+            <texPath>Things/Item/RegressionOrb</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>1800</MarketValue>
+            <Mass>0.4</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Activate regression orb</useLabel>
+            </li>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectIsekaiTrait">
+                <traitDefName>Isekai_Regressor</traitDefName>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

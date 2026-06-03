@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- 
+    World Boss Incident - rare catastrophic event
+    A Nation-ranked creature appears on the world map.
+    Requires A-rank colonists (level 51+) to fire.
+    -->
+    <IncidentDef>
+        <defName>Isekai_WorldBossSpawn</defName>
+        <label>world boss sighting</label>
+        <category>GiveQuest</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>IsekaiLeveling.WorldBoss.IncidentWorker_WorldBoss</workerClass>
+        <baseChance>8.0</baseChance>
+        <minRefireDays>15</minRefireDays>
+        <earliestDay>7</earliestDay>
+    </IncidentDef>
+
+</Defs>

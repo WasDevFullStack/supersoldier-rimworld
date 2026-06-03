@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  Reinforcement Core — rare drop from S+ elites, required for +6 to +10 refinement -->
+    <!-- ══════════════════════════════════════════ -->
+    <ThingDef>
+        <defName>Isekai_ReinforcementCore</defName>
+        <label>reinforcement core</label>
+        <description>A dense crystallized core imbued with extraordinary magical energy. Extracted from the most powerful elite creatures, this core stabilizes equipment during high-level refinement. Without it, pushing a weapon or armor beyond +5 is impossible.
+
+Required for refinement from +6 to +10 at the Refinement Forge.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>true</useHitPoints>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>25</stackLimit>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+        <pathCost>14</pathCost>
+        <graphicData>
+            <texPath>Things/Item/ReinforcementCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>800</MarketValue>
+            <Mass>0.3</Mass>
+            <Beauty>15</Beauty>
+        </statBases>
+        <thingCategories>
+            <li>ItemsMisc</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+        </comps>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>Sellable</li>
+        </tradeTags>
+        <tradeability>All</tradeability>
+    </ThingDef>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  Mana Essence — intermediate crafting material for runes -->
+    <!-- ══════════════════════════════════════════ -->
+    <ThingDef>
+        <defName>Isekai_ManaEssence</defName>
+        <label>mana essence</label>
+        <description>A refined and purified essence of mana, distilled from mana cores at a Refinement Forge. This shimmering liquid is the primary ingredient for crafting runes at a Runic Station.
+
+Produced at the Refinement Forge by distilling mana cores.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>true</useHitPoints>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>75</stackLimit>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+        <pathCost>14</pathCost>
+        <graphicData>
+            <texPath>Things/Item/ManaEssence</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.5</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>150</MarketValue>
+            <Mass>0.05</Mass>
+            <Beauty>5</Beauty>
+        </statBases>
+        <thingCategories>
+            <li>ItemsMisc</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+        </comps>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>Sellable</li>
+        </tradeTags>
+        <tradeability>All</tradeability>
+    </ThingDef>
+
+</Defs>

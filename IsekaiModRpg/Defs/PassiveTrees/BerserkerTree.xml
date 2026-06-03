@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════╗
+        ║  BERSERKER CONSTELLATION — 56 Nodes, 5 Branches     ║
+        ║  Layout: "Axe" — wide top tapering to a point       ║
+        ║                                                      ║
+        ║  Branches:                                           ║
+        ║   • CARNAGE   (NW) — Raw melee damage & crits       ║
+        ║   • RAMPAGE   (NE) — Move speed & attack speed      ║
+        ║   • BLOODLUST (SW) — Health regen & lifesteal       ║
+        ║   • FEROCITY  (SE) — Carry capacity & pain thresh   ║
+        ║   • FRENZY    (N)  — Class gimmick spine             ║
+        ║   + 5 Cross-connectors between branches             ║
+        ╚══════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Berserker</defName>
+        <label>Berserker</label>
+        <treeClass>Berserker</treeClass>
+        <treeDescription>Unstoppable killing machines who grow stronger with every foe they fell. Five constellations of fury diverge from the berserker's core — each channeling primal rage into devastating power.</treeDescription>
+        <classGimmick>BloodFrenzy</classGimmick>
+        <classGimmickName>Blood Frenzy</classGimmickName>
+        <classGimmickDescription>Every kill within a short time window stacks Blood Frenzy, boosting melee damage and move speed. Keep the carnage flowing or lose your stacks. Tier 1: max 3 stacks, +5% each. Tier 2: max 5 stacks, +6% each. Tier 3: max 7 stacks, +7% each. Tier 4: max 10 stacks, +8% each.</classGimmickDescription>
+
+        <nodes>
+            <!-- ═══════ START NODE ═══════ -->
+            <li>
+                <nodeId>BK_Start</nodeId>
+                <label>Berserker's Awakening</label>
+                <description>Primal fury stirs in your blood. The battlefield calls — answer with violence.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ CARNAGE BRANCH (North-West) — Raw Damage ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BK_CG1</nodeId>
+                <label>Savage Strike</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-1.4</x><y>1.0</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_CG2</nodeId>
+                <label>Brutal Force</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-2.8</x><y>2.0</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_CG3</nodeId>
+                <label>Rending Blow</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-4.2</x><y>3.0</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_CG_BoneCrusher</nodeId>
+                <label>Bone Crusher</label>
+                <description>Your strikes shatter bone and rend flesh. Each blow lands with devastating force.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-5.8</x><y>4.2</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.0667</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_CG4</nodeId>
+                <label>War Fury</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-7.2</x><y>5.2</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_CG5</nodeId>
+                <label>Annihilating Force</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-8.8</x><y>6.4</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Carnage -->
+            <li>
+                <nodeId>BK_CG_Key</nodeId>
+                <label>Avatar of Carnage</label>
+                <description>You become destruction incarnate. Your melee power reaches terrifying heights — but your mind warps, weakening social bonds.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-10.5</x><y>7.8</y>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.25</value></li>
+                    <li><bonusType>MeleeHitChance</bonusType><value>0.1</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>-0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ RAMPAGE BRANCH (North-East) — Speed ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BK_RP1</nodeId>
+                <label>Quick Feet</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>1.4</x><y>1.0</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_RP2</nodeId>
+                <label>Charging Bull</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>2.8</x><y>2.0</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_RP3</nodeId>
+                <label>Unstoppable Rush</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>4.2</x><y>3.0</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_RP_Blitz</nodeId>
+                <label>Blitz</label>
+                <description>You close the gap before enemies can react. Lightning-fast charges leave them reeling.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>5.8</x><y>4.2</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_RP4</nodeId>
+                <label>Whirlwind</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>7.2</x><y>5.2</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_RP5</nodeId>
+                <label>Tempest Speed</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>8.8</x><y>6.4</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Rampage -->
+            <li>
+                <nodeId>BK_RP_Key</nodeId>
+                <label>Endless Rampage</label>
+                <description>Nothing stops your charge. You move with terrifying speed — but your reckless advance weakens your defenses.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>10.5</x><y>7.8</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.25</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ BLOODLUST BRANCH (South-West) — Sustain ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BK_BL1</nodeId>
+                <label>Taste of Blood</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-1.4</x><y>-1.0</y>
+                <bonuses><li><bonusType>HealthRegen</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_BL2</nodeId>
+                <label>Blood Drinker</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-2.8</x><y>-2.0</y>
+                <bonuses><li><bonusType>HealthRegen</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_BL3</nodeId>
+                <label>Crimson Tide</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-4.2</x><y>-3.0</y>
+                <bonuses><li><bonusType>HealthRegen</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_BL_Vampiric</nodeId>
+                <label>Vampiric Vigor</label>
+                <description>The blood of your enemies sustains you. Wounds knit closed as adrenaline surges.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-5.8</x><y>-4.2</y>
+                <bonuses>
+                    <li><bonusType>HealthRegen</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0833</value></li>
+                    <li><bonusType>ImmunityGain</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_BL4</nodeId>
+                <label>Undying Rage</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-7.2</x><y>-5.2</y>
+                <bonuses><li><bonusType>HealthRegen</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_BL5</nodeId>
+                <label>Regenerative Fury</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/heart</icon>
+                <x>-8.8</x><y>-6.4</y>
+                <bonuses><li><bonusType>HealthRegen</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Bloodlust -->
+            <li>
+                <nodeId>BK_BL_Key</nodeId>
+                <label>Sanguine Immortal</label>
+                <description>Your body regenerates at supernatural speed. Pain fuels your recovery — but your research abilities wither from neglect.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-10.5</x><y>-7.8</y>
+                <bonuses>
+                    <li><bonusType>HealthRegen</bonusType><value>0.25</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>-0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ FEROCITY BRANCH (South-East) — Toughness ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BK_FC1</nodeId>
+                <label>Thick Skin</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>1.4</x><y>-1.0</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FC2</nodeId>
+                <label>Hardened Body</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>2.8</x><y>-2.0</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FC3</nodeId>
+                <label>Ironclad Will</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/dumbbell</icon>
+                <x>4.2</x><y>-3.0</y>
+                <bonuses><li><bonusType>CarryCapacity</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FC_Juggernaut</nodeId>
+                <label>Juggernaut</label>
+                <description>Pain means nothing. You shrug off wounds that would fell lesser warriors.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/hand-fist</icon>
+                <x>5.8</x><y>-4.2</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.0833</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FC4</nodeId>
+                <label>Endure</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>7.2</x><y>-5.2</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FC5</nodeId>
+                <label>Unyielding Flesh</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>8.8</x><y>-6.4</y>
+                <bonuses><li><bonusType>PainThreshold</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <!-- Keystone: Ferocity -->
+            <li>
+                <nodeId>BK_FC_Key</nodeId>
+                <label>Unbreakable Beast</label>
+                <description>Your body is a fortress of muscle and scar tissue. Pain barely registers — but your dulled senses hinder ranged combat.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>10.5</x><y>-7.8</y>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.25</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.1</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>-0.1</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ FRENZY SPINE (North) — Class Gimmick ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BK_FR1</nodeId>
+                <label>Bloodthirst</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FR2</nodeId>
+                <label>Rising Fury</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>0</x><y>3.2</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FR_T1</nodeId>
+                <label>Blood Frenzy I</label>
+                <description>The first taste of blood ignites your fury. Kills now build frenzy stacks.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>4.6</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FR3</nodeId>
+                <label>Feral Instinct</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0</x><y>5.8</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FR_T2</nodeId>
+                <label>Blood Frenzy II</label>
+                <description>Your killing spree intensifies. More stacks, stronger fury.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>7.0</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FR4</nodeId>
+                <label>Primal Wrath</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>0</x><y>8.2</y>
+                <bonuses><li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FR_T3</nodeId>
+                <label>Blood Frenzy III</label>
+                <description>The battlefield trembles at your approach. Your frenzy deepens with each slain foe.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>9.4</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FR5</nodeId>
+                <label>Apex Predator</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>0</x><y>10.6</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>BK_FR_T4</nodeId>
+                <label>Blood Frenzy IV</label>
+                <description>You are an avatar of war. No living thing can stand before your crimson fury.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>11.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0833</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- ▓▓ CROSS-CONNECTORS ▓▓ -->
+            <!-- ═══════════════════════════════════════════ -->
+            <li>
+                <nodeId>BK_Cross_CF</nodeId>
+                <label>Savage Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-3.5</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_Cross_RF</nodeId>
+                <label>Swift Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>3.5</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_Cross_CR</nodeId>
+                <label>Fury Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/skull</icon>
+                <x>0</x><y>-3.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                    <li><bonusType>HealthRegen</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_Cross_BF</nodeId>
+                <label>Blood Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/khanda</icon>
+                <x>-6.5</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MeleeDamage</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>BK_Cross_RG</nodeId>
+                <label>Rage Bridge</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>6.5</x><y>0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <connections>
+            <!-- Start to branches -->
+            <li>BK_Start~BK_CG1</li>
+            <li>BK_Start~BK_RP1</li>
+            <li>BK_Start~BK_BL1</li>
+            <li>BK_Start~BK_FC1</li>
+            <li>BK_Start~BK_FR1</li>
+            <!-- Carnage chain -->
+            <li>BK_CG1~BK_CG2</li>
+            <li>BK_CG2~BK_CG3</li>
+            <li>BK_CG3~BK_CG_BoneCrusher</li>
+            <li>BK_CG_BoneCrusher~BK_CG4</li>
+            <li>BK_CG4~BK_CG5</li>
+            <li>BK_CG5~BK_CG_Key</li>
+            <!-- Rampage chain -->
+            <li>BK_RP1~BK_RP2</li>
+            <li>BK_RP2~BK_RP3</li>
+            <li>BK_RP3~BK_RP_Blitz</li>
+            <li>BK_RP_Blitz~BK_RP4</li>
+            <li>BK_RP4~BK_RP5</li>
+            <li>BK_RP5~BK_RP_Key</li>
+            <!-- Bloodlust chain -->
+            <li>BK_BL1~BK_BL2</li>
+            <li>BK_BL2~BK_BL3</li>
+            <li>BK_BL3~BK_BL_Vampiric</li>
+            <li>BK_BL_Vampiric~BK_BL4</li>
+            <li>BK_BL4~BK_BL5</li>
+            <li>BK_BL5~BK_BL_Key</li>
+            <!-- Ferocity chain -->
+            <li>BK_FC1~BK_FC2</li>
+            <li>BK_FC2~BK_FC3</li>
+            <li>BK_FC3~BK_FC_Juggernaut</li>
+            <li>BK_FC_Juggernaut~BK_FC4</li>
+            <li>BK_FC4~BK_FC5</li>
+            <li>BK_FC5~BK_FC_Key</li>
+            <!-- Frenzy spine -->
+            <li>BK_FR1~BK_FR2</li>
+            <li>BK_FR2~BK_FR_T1</li>
+            <li>BK_FR_T1~BK_FR3</li>
+            <li>BK_FR3~BK_FR_T2</li>
+            <li>BK_FR_T2~BK_FR4</li>
+            <li>BK_FR4~BK_FR_T3</li>
+            <li>BK_FR_T3~BK_FR5</li>
+            <li>BK_FR5~BK_FR_T4</li>
+            <!-- Cross-connectors -->
+            <li>BK_CG2~BK_Cross_CF</li>
+            <li>BK_BL2~BK_Cross_CF</li>
+            <li>BK_RP2~BK_Cross_RF</li>
+            <li>BK_FC2~BK_Cross_RF</li>
+            <li>BK_BL1~BK_Cross_CR</li>
+            <li>BK_FC1~BK_Cross_CR</li>
+            <li>BK_CG_BoneCrusher~BK_Cross_BF</li>
+            <li>BK_BL_Vampiric~BK_Cross_BF</li>
+            <li>BK_RP_Blitz~BK_Cross_RG</li>
+            <li>BK_FC_Juggernaut~BK_Cross_RG</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

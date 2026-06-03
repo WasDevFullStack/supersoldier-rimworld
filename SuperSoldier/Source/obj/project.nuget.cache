@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J2wEhvU5auI=",
+  "dgSpecHash": "RzzA3mlV2qk=",
   "success": true,
-  "projectFilePath": "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4523\\krafs.rimworld.ref.1.6.4523.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\lib.harmony\\2.3.6\\lib.harmony.2.3.6.nupkg.sha512"

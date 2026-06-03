@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Designer225")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.3.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3+2b1b0248f8f22a1b4e720d8deee58bc9fb9b345a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3+f77f360f7e7bde6809b18b4d0d427b91c9635b8f")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnhancedCarryingCapacity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnhancedCarryingCapacity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.3.0")]

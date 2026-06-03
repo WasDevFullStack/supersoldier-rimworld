@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- 
+    Vanilla Psycasts Expanded Compatibility Patches
+    These only apply when VPE is loaded.
+    
+    Stat Effects:
+    - WIS → Meditation Focus Gain (+1% per point above 5)
+    - INT → Neural Heat Recovery (+1.5% per point above 5)
+    - WIS → Psyfocus Sensitivity (+0.8% per point above 5)
+    - WIS → Psyfocus Cost Reduction (-0.8% per point above 5, via VPE_PsyfocusCostFactor)
+    -->
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Psycasts Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!-- Inject Meditation Focus Gain StatPart -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="MeditationFocusGain"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="MeditationFocusGain"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_VPE_MeditationFocus"/>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="MeditationFocusGain"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_VPE_MeditationFocus"/>
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Inject Neural Heat Recovery StatPart -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="PsychicEntropyRecoveryRate"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="PsychicEntropyRecoveryRate"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_VPE_NeuralHeatRecovery"/>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="PsychicEntropyRecoveryRate"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_VPE_NeuralHeatRecovery"/>
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Inject Psyfocus Sensitivity StatPart -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="PsychicSensitivity"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="PsychicSensitivity"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_VPE_PsyfocusSensitivity"/>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="PsychicSensitivity"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_VPE_PsyfocusSensitivity"/>
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Inject WIS Psyfocus Cost Reduction into VPE's dedicated cost factor stat -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="VPE_PsyfocusCostFactor"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="VPE_PsyfocusCostFactor"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPsyfocusCost"/>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="VPE_PsyfocusCostFactor"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiPsyfocusCost"/>
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

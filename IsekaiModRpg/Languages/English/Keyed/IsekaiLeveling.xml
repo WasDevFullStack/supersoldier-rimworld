@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- Tab Labels -->
+    <TabIsekai>Isekai</TabIsekai>
+    <TabStatus>Status</TabStatus>
+    
+    <!-- Class Names -->
+    <Isekai_Warrior.label>Warrior</Isekai_Warrior.label>
+    <Isekai_Mage.label>Mage</Isekai_Mage.label>
+    <Isekai_Ranger.label>Ranger</Isekai_Ranger.label>
+    <Isekai_Crafter.label>Crafter</Isekai_Crafter.label>
+    <Isekai_Leader.label>Leader</Isekai_Leader.label>
+    
+    <!-- UI Strings -->
+    <IsekaiLevel>Level</IsekaiLevel>
+    <IsekaiXP>XP</IsekaiXP>
+    <IsekaiSkillPoints>Skill Points</IsekaiSkillPoints>
+    <IsekaiChooseClass>Choose Your Class</IsekaiChooseClass>
+    <IsekaiOpenSkillTree>Open Constellation</IsekaiOpenSkillTree>
+    <IsekaiLevelUp>{0} has reached level {1}!</IsekaiLevelUp>
+    
+    <!-- Skill Names -->
+    <Skill_IronSkin.label>Iron Skin</Skill_IronSkin.label>
+    <Skill_BladeMastery.label>Blade Mastery</Skill_BladeMastery.label>
+    <Skill_Berserker.label>Berserker</Skill_Berserker.label>
+    <Skill_CriticalStrike.label>Critical Strike</Skill_CriticalStrike.label>
+    <Skill_Unstoppable.label>Unstoppable</Skill_Unstoppable.label>
+    <Skill_Meditation.label>Meditation</Skill_Meditation.label>
+    <Skill_ArcaneShield.label>Arcane Shield</Skill_ArcaneShield.label>
+    <Skill_Teleport.label>Teleport</Skill_Teleport.label>
+    <Skill_EagleEye.label>Eagle Eye</Skill_EagleEye.label>
+    <Skill_QuickDraw.label>Quick Draw</Skill_QuickDraw.label>
+    <Skill_Evasion.label>Evasion</Skill_Evasion.label>
+    <Skill_Swiftness.label>Swiftness</Skill_Swiftness.label>
+    <Skill_EfficientWork.label>Efficient Work</Skill_EfficientWork.label>
+    <Skill_MasterCrafter.label>Master Crafter</Skill_MasterCrafter.label>
+    <Skill_Charisma.label>Charisma</Skill_Charisma.label>
+    <Skill_Inspiration.label>Inspiration</Skill_Inspiration.label>
+    <Skill_NegotiationMaster.label>Negotiation Master</Skill_NegotiationMaster.label>
+    <Skill_Regeneration.label>Regeneration</Skill_Regeneration.label>
+    <Skill_Vitality.label>Vitality</Skill_Vitality.label>
+    
+    <!-- Ability Names -->
+    <Ability_Berserk.label>Berserk</Ability_Berserk.label>
+    <Ability_Shield.label>Arcane Shield</Ability_Shield.label>
+    <Ability_Regeneration.label>Regeneration</Ability_Regeneration.label>
+    <Ability_Haste.label>Haste</Ability_Haste.label>
+    <Ability_Inspire.label>Inspire</Ability_Inspire.label>
+    <Ability_Teleport.label>Teleport</Ability_Teleport.label>
+    <Ability_CriticalStrike.label>Critical Strike</Ability_CriticalStrike.label>
+    <Ability_Lifesteal.label>Lifesteal</Ability_Lifesteal.label>
+    
+    <!-- Hediff Labels -->
+    <Isekai_Berserk.label>berserk rage</Isekai_Berserk.label>
+    <Isekai_Shield.label>arcane shield</Isekai_Shield.label>
+    <Isekai_Regeneration.label>regenerating</Isekai_Regeneration.label>
+    <Isekai_Haste.label>haste</Isekai_Haste.label>
+    <Isekai_Inspired.label>inspired</Isekai_Inspired.label>
+    <Isekai_Awakening.label>isekai awakening</Isekai_Awakening.label>
+    
+    <!-- Messages -->
+    <IsekaiXPGained>+{0} XP</IsekaiXPGained>
+    <IsekaiLevelUpTitle>{0} Leveled Up!</IsekaiLevelUpTitle>
+    <IsekaiLevelUpMessage>{0} has reached level {1}! They have {2} skill point(s) to spend.</IsekaiLevelUpMessage>
+    <IsekaiClassChosen>{0} has awakened as a {1}!</IsekaiClassChosen>
+    <IsekaiSkillUnlocked>{0} unlocked {1}!</IsekaiSkillUnlocked>
+    
+    <!-- Navigation Buttons -->
+    <Isekai_Mastery>Mastery</Isekai_Mastery>
+    <Isekai_Stats>Stats</Isekai_Stats>
+    <Isekai_SkillTree>Constellation</Isekai_SkillTree>
+    <Isekai_SkillTreeSoon>Constellation — Coming soon!</Isekai_SkillTreeSoon>
+    
+    <!-- Stats Window -->
+    <Isekai_StatPoints>Stat Points</Isekai_StatPoints>
+    <Isekai_StatPointsAvailable>● {0} Stat Points Available</Isekai_StatPointsAvailable>
+    <Isekai_GlobalRank>Global Rank</Isekai_GlobalRank>
+    <Isekai_LevelRankDisplay>Level {0} Rank {1}</Isekai_LevelRankDisplay>
+    <Isekai_LevelRankDisplayFull>Level {0}  •  Rank {1}</Isekai_LevelRankDisplayFull>
+    <Isekai_Apply>Apply</Isekai_Apply>
+    <Isekai_Reset>Reset</Isekai_Reset>
+    <Isekai_Close>Close</Isekai_Close>
+    <Isekai_Points>Points</Isekai_Points>
+    <Isekai_BulkAllocHint>Shift: +5  Ctrl: +20\nCtrl+Shift: +100</Isekai_BulkAllocHint>
+    <Isekai_BulkAllocHintShort>Shift:+5  Ctrl:+20</Isekai_BulkAllocHintShort>
+    <Isekai_AutoAssign>Auto</Isekai_AutoAssign>
+    <Isekai_AutoAssign_Tooltip>Automatically distribute all available points proportionally based on current stat ratios.</Isekai_AutoAssign_Tooltip>
+    <Isekai_StatsUpdated>{0}'s stats have been updated!</Isekai_StatsUpdated>
+    
+    <!-- Stat Names -->
+    <Isekai_Stat_STR>STR</Isekai_Stat_STR>
+    <Isekai_Stat_DEX>DEX</Isekai_Stat_DEX>
+    <Isekai_Stat_VIT>VIT</Isekai_Stat_VIT>
+    <Isekai_Stat_INT>INT</Isekai_Stat_INT>
+    <Isekai_Stat_WIS>WIS</Isekai_Stat_WIS>
+    <Isekai_Stat_CHA>CHA</Isekai_Stat_CHA>
+    
+    <Isekai_Stat_Strength>Strength (STR)</Isekai_Stat_Strength>
+    <Isekai_Stat_Dexterity>Dexterity (DEX)</Isekai_Stat_Dexterity>
+    <Isekai_Stat_Vitality>Vitality (VIT)</Isekai_Stat_Vitality>
+    <Isekai_Stat_Intelligence>Intelligence (INT)</Isekai_Stat_Intelligence>
+    <Isekai_Stat_Wisdom>Wisdom (WIS)</Isekai_Stat_Wisdom>
+    <Isekai_Stat_Charisma>Charisma (CHA)</Isekai_Stat_Charisma>
+    
+    <!-- Stat Descriptions -->
+    <Isekai_Desc_STR>Physical power and raw muscle.\n\nAffects:\n• Melee Damage\n• Carry Capacity</Isekai_Desc_STR>
+    <Isekai_Desc_DEX>Agility and precision.\n\nAffects:\n• Move Speed\n• Melee Dodge Chance\n• Shooting Accuracy\n• Melee Hit Chance\n• Aiming Delay</Isekai_Desc_DEX>
+    <Isekai_Desc_VIT>Constitution and toughness.\n\nAffects:\n• Max Health\n• Health Regen\n• Toxic Resistance\n• Incoming Damage Reduction\n• Natural Armor (Sharp/Blunt/Heat)\n• Pain Shock Threshold\n• Rest Rate\n• Lifespan\n• Neural Heat Limit (with WIS)</Isekai_Desc_VIT>
+    <Isekai_Desc_INT>Mental acuity and learning.\n\nAffects:\n• Work Speed\n• Research Speed\n• Learning Speed\n• Crafting Quality\n• Hacking Speed\n• Psychic Sensitivity (with WIS)</Isekai_Desc_INT>
+    <Isekai_Desc_WIS>Insight and mental fortitude.\n\nAffects:\n• Mental Break Threshold\n• Meditation Focus Gain\n• Medical Tend Quality\n• Surgery Success\n• Train Animal Chance\n• Animal Gather Yield\n• Psychic Sensitivity (with INT)\n• Neural Heat Limit (with VIT)\n• Neural Heat Recovery\n• Psyfocus Efficiency</Isekai_Desc_WIS>
+    <Isekai_Desc_CHA>Social influence and presence.\n\nAffects:\n• Social Impact\n• Negotiation Ability\n• Trade Prices\n• Tame Animal Chance\n• Arrest Success Chance</Isekai_Desc_CHA>
+    
+    <!-- RoM-only stat description suffixes (appended when RimWorld of Magic is loaded) -->
+    <Isekai_Desc_STR_RoM>\n\n[RoM]\n• Might Damage</Isekai_Desc_STR_RoM>
+    <Isekai_Desc_DEX_RoM>\n\n[RoM]\n• Stamina Regen\n• Might Cooldown\n• Stamina Cost</Isekai_Desc_DEX_RoM>
+    <Isekai_Desc_VIT_RoM>\n\n[RoM]\n• Max Stamina\n• Max Chi (Monk)</Isekai_Desc_VIT_RoM>
+    <Isekai_Desc_INT_RoM>\n\n[RoM]\n• Max Mana\n• Magic Cooldown\n• Max Psionic Energy</Isekai_Desc_INT_RoM>
+    <Isekai_Desc_WIS_RoM>\n\n[RoM]\n• Mana Regen\n• Magic Damage (Arcane)\n• Mana Cost</Isekai_Desc_WIS_RoM>
+    <Isekai_Desc_CHA_RoM>\n\n[RoM]\n• Summon Duration\n• Buff Duration</Isekai_Desc_CHA_RoM>
+    
+    <!-- Short Stat Descriptions (for compact view) -->
+    <Isekai_Desc_STR_Short>Melee damage • Carry capacity</Isekai_Desc_STR_Short>
+    <Isekai_Desc_VIT_Short>Health regen • Damage resist • Armor • Lifespan</Isekai_Desc_VIT_Short>
+    <Isekai_Desc_DEX_Short>Move speed • Accuracy • Dodge</Isekai_Desc_DEX_Short>
+    <Isekai_Desc_INT_Short>Research • Work speed • Craft quality</Isekai_Desc_INT_Short>
+    <Isekai_Desc_WIS_Short>Mental stability • Meditation • Psycasting</Isekai_Desc_WIS_Short>
+    <Isekai_Desc_CHA_Short>Trade prices • Social • Taming</Isekai_Desc_CHA_Short>
+    
+    <!-- ITab Section Headers -->
+    <Isekai_CoreAttributes>Core Attributes</Isekai_CoreAttributes>
+    <Isekai_CombatPerformance>Combat Performance</Isekai_CombatPerformance>
+    <Isekai_PassiveBonuses>Passive Bonuses</Isekai_PassiveBonuses>
+    <Isekai_ActiveSkills>Active Skills</Isekai_ActiveSkills>
+    <Isekai_ActiveAbilities>Active Abilities</Isekai_ActiveAbilities>
+    <Isekai_MagicSpells>Magic Spells</Isekai_MagicSpells>
+    <Isekai_ComingSoon>Coming Soon</Isekai_ComingSoon>
+    <Isekai_NoAbilitiesYet>No abilities unlocked yet</Isekai_NoAbilitiesYet>
+    <Isekai_AbilitiesHint1>Abilities will be unlocked through</Isekai_AbilitiesHint1>
+    <Isekai_AbilitiesHint2>constellation progress and class mastery.</Isekai_AbilitiesHint2>
+    
+    <!-- ITab Page Headers -->
+    <Isekai_PawnSkills>{0}'s Skills</Isekai_PawnSkills>
+    <Isekai_PawnFullStats>{0}'s Full Stats</Isekai_PawnFullStats>
+    <Isekai_PawnAbilities>{0}'s Abilities</Isekai_PawnAbilities>
+    
+    <!-- Combat Performance Labels -->
+    <Isekai_Combat_ATK>ATK</Isekai_Combat_ATK>
+    <Isekai_Combat_ACC>ACC</Isekai_Combat_ACC>
+    <Isekai_Combat_SPD>SPD</Isekai_Combat_SPD>
+    <Isekai_Combat_WRK>WRK</Isekai_Combat_WRK>
+    
+    <!-- Passive Bonus Labels -->
+    <Isekai_Passive_MeleePower>Melee Power</Isekai_Passive_MeleePower>
+    <Isekai_Passive_MeleePower_Desc>Derived from Strength. Increases melee attack damage.</Isekai_Passive_MeleePower_Desc>
+    <Isekai_Passive_Toughness>Toughness</Isekai_Passive_Toughness>
+    <Isekai_Passive_Toughness_Desc>Derived from Vitality. Increases damage resistance and durability.</Isekai_Passive_Toughness_Desc>
+    <Isekai_Passive_Evasion>Evasion</Isekai_Passive_Evasion>
+    <Isekai_Passive_Evasion_Desc>Derived from Dexterity. Increases dodge chance and agility.</Isekai_Passive_Evasion_Desc>
+    <Isekai_Passive_Focus>Focus</Isekai_Passive_Focus>
+    <Isekai_Passive_Focus_Desc>Derived from Intelligence. Increases work efficiency and precision.</Isekai_Passive_Focus_Desc>
+    <Isekai_Passive_Insight>Insight</Isekai_Passive_Insight>
+    <Isekai_Passive_Insight_Desc>Derived from Wisdom. Increases healing and spiritual awareness.</Isekai_Passive_Insight_Desc>
+    <Isekai_Passive_Presence>Presence</Isekai_Passive_Presence>
+    <Isekai_Passive_Presence_Desc>Derived from Charisma. Increases social impact and leadership.</Isekai_Passive_Presence_Desc>
+    
+    <!-- Stat Effect Labels -->
+    <Isekai_Effect_MeleeDamage>Melee Damage</Isekai_Effect_MeleeDamage>
+    <Isekai_Effect_CarryCapacity>Carry Capacity</Isekai_Effect_CarryCapacity>
+    <Isekai_Effect_MiningSpeed>Mining Speed</Isekai_Effect_MiningSpeed>
+    <Isekai_Effect_MaxHealth>Max Health</Isekai_Effect_MaxHealth>
+    <Isekai_Effect_HealthRegen>Health Regen</Isekai_Effect_HealthRegen>
+    <Isekai_Effect_PainResistance>Pain Resistance</Isekai_Effect_PainResistance>
+    <Isekai_Effect_MoveSpeed>Move Speed</Isekai_Effect_MoveSpeed>
+    <Isekai_Effect_RangedAttackSpeed>Ranged Attack Speed</Isekai_Effect_RangedAttackSpeed>
+    <Isekai_Effect_WorkSpeed>Work Speed</Isekai_Effect_WorkSpeed>
+    <Isekai_Effect_ResearchSpeed>Research Speed</Isekai_Effect_ResearchSpeed>
+    <Isekai_Effect_CraftingQuality>Crafting Quality</Isekai_Effect_CraftingQuality>
+    <Isekai_Effect_LearningRate>Learning Rate</Isekai_Effect_LearningRate>
+    <Isekai_Effect_HackingSpeed>Hacking Speed</Isekai_Effect_HackingSpeed>
+    <Isekai_Effect_MentalBreakResist>Mental Break Resist</Isekai_Effect_MentalBreakResist>
+    <Isekai_Effect_MeditationGain>Meditation Gain</Isekai_Effect_MeditationGain>
+    <Isekai_Effect_SocialImpact>Social Impact</Isekai_Effect_SocialImpact>
+    <Isekai_Effect_TradePriceImprove>Trade Price Improve</Isekai_Effect_TradePriceImprove>
+    <Isekai_Effect_SocialInfluence>Social Influence</Isekai_Effect_SocialInfluence>
+    <Isekai_Effect_RecruitChance>Recruit Chance</Isekai_Effect_RecruitChance>
+    
+    <!-- RimWorld of Magic compatibility effect labels (using RoM's own terminology) -->
+    <Isekai_Effect_RoM_MaxMana>Max Mana</Isekai_Effect_RoM_MaxMana>
+    <Isekai_Effect_RoM_ManaRegen>Mana Regen</Isekai_Effect_RoM_ManaRegen>
+    <Isekai_Effect_RoM_MaxStamina>Max Stamina</Isekai_Effect_RoM_MaxStamina>
+    <Isekai_Effect_RoM_StaminaRegen>Stamina Regen</Isekai_Effect_RoM_StaminaRegen>
+    <Isekai_Effect_RoM_MagicDamage>Magic Damage (Arcane)</Isekai_Effect_RoM_MagicDamage>
+    <Isekai_Effect_RoM_MightDamage>Might Damage</Isekai_Effect_RoM_MightDamage>
+    <Isekai_Effect_RoM_MagicCooldown>Magic Cooldown</Isekai_Effect_RoM_MagicCooldown>
+    <Isekai_Effect_RoM_MightCooldown>Might Cooldown</Isekai_Effect_RoM_MightCooldown>
+    <Isekai_Effect_RoM_ManaCost>Mana Cost</Isekai_Effect_RoM_ManaCost>
+    <Isekai_Effect_RoM_StaminaCost>Stamina Cost</Isekai_Effect_RoM_StaminaCost>
+    <Isekai_Effect_RoM_ChiMax>Max Chi (Monk)</Isekai_Effect_RoM_ChiMax>
+    <Isekai_Effect_RoM_PsionicMax>Max Psionic Energy</Isekai_Effect_RoM_PsionicMax>
+    <Isekai_Effect_RoM_SummonDuration>Summon Duration</Isekai_Effect_RoM_SummonDuration>
+    <Isekai_Effect_RoM_BuffDuration>Buff Duration</Isekai_Effect_RoM_BuffDuration>
+    
+    <!-- Rank Names -->
+    <Isekai_Rank_F>F</Isekai_Rank_F>
+    <Isekai_Rank_E>E</Isekai_Rank_E>
+    <Isekai_Rank_D>D</Isekai_Rank_D>
+    <Isekai_Rank_C>C</Isekai_Rank_C>
+    <Isekai_Rank_B>B</Isekai_Rank_B>
+    <Isekai_Rank_A>A</Isekai_Rank_A>
+    <Isekai_Rank_S>S</Isekai_Rank_S>
+    <Isekai_Rank_SS>SS</Isekai_Rank_SS>
+    <Isekai_Rank_SSS>SSS</Isekai_Rank_SSS>
+    
+    <!-- Rank Titles -->
+    <Isekai_Title_Awakened>Awakened</Isekai_Title_Awakened>
+    <Isekai_Title_Apprentice>Apprentice</Isekai_Title_Apprentice>
+    <Isekai_Title_Adventurer>Adventurer</Isekai_Title_Adventurer>
+    <Isekai_Title_Warrior>Warrior</Isekai_Title_Warrior>
+    <Isekai_Title_Champion>Champion</Isekai_Title_Champion>
+    <Isekai_Title_Hero>Hero</Isekai_Title_Hero>
+    <Isekai_Title_Legend>Legend</Isekai_Title_Legend>
+    <Isekai_Title_Monarch>Monarch</Isekai_Title_Monarch>
+    <Isekai_Title_Overlord>Overlord</Isekai_Title_Overlord>
+    
+    <!-- Floating Status Panel (v1.0.7 - Translation support) -->
+    <Isekai_Panel_Subtitle>Isekai Hero</Isekai_Panel_Subtitle>
+    <Isekai_Panel_Rank>RANK</Isekai_Panel_Rank>
+    <Isekai_Panel_EXP>EXP</Isekai_Panel_EXP>
+    <Isekai_Panel_AllocateStats>Allocate Stats</Isekai_Panel_AllocateStats>
+    <Isekai_Panel_LevelBadge>Lv{0}</Isekai_Panel_LevelBadge>
+    
+    <!-- Level Up Mote Text -->
+    <Isekai_LevelUpMote>LEVEL UP!</Isekai_LevelUpMote>
+    <Isekai_LevelMote>Lv.{0}</Isekai_LevelMote>
+    
+    <!-- Rank Display Suffix (e.g. "D-Rank") -->
+    <Isekai_RankWithSuffix>{0}-Rank</Isekai_RankWithSuffix>
+    
+    <!-- RimHUD Level Format -->
+    <Isekai_RimHUD_LevelFormat>Lv.{0}  [{1}] {2}</Isekai_RimHUD_LevelFormat>
+    
+    <!-- Settings Labels -->
+    <Isekai_Settings_Title>Isekai Leveling Settings</Isekai_Settings_Title>
+    <Isekai_Settings_RestartWarning>⚠ Note: Most settings require a game restart to take full effect.</Isekai_Settings_RestartWarning>
+    
+    <!-- General Settings Section -->
+    <Isekai_Settings_XPLevelingHeader>XP &amp; Leveling</Isekai_Settings_XPLevelingHeader>
+    <Isekai_Settings_XPMultiplier>XP Multiplier</Isekai_Settings_XPMultiplier>
+    <Isekai_Settings_SkillPointsPerLevel>Skill Points Per Level</Isekai_Settings_SkillPointsPerLevel>
+    <Isekai_Settings_EnableXPNotifications>Enable XP Notifications</Isekai_Settings_EnableXPNotifications>
+    <Isekai_Settings_EnableXPNotifications_Desc>Show floating text when pawns gain XP</Isekai_Settings_EnableXPNotifications_Desc>
+    <Isekai_Settings_EnableLevelUpNotifications>Enable Level Up Notifications</Isekai_Settings_EnableLevelUpNotifications>
+    <Isekai_Settings_EnableLevelUpNotifications_Desc>Show letter notifications when pawns level up</Isekai_Settings_EnableLevelUpNotifications_Desc>
+    <Isekai_Settings_UseLevelUpNotice>Use Notice Instead of Letter</Isekai_Settings_UseLevelUpNotice>
+    <Isekai_Settings_UseLevelUpNotice_Desc>Show a small corner notice instead of a letter for level up notifications. Less intrusive for frequent level ups.</Isekai_Settings_UseLevelUpNotice_Desc>
+    <Isekai_Settings_MaxLevel>Max Level</Isekai_Settings_MaxLevel>
+    <Isekai_Settings_MaxStatCap>Max Stat Value</Isekai_Settings_MaxStatCap>
+    <Isekai_Settings_MaxStatCap_Desc>Maximum value any stat (STR, VIT, DEX, etc.) can reach. Set to 9999 for unlimited.</Isekai_Settings_MaxStatCap_Desc>
+    <Isekai_Settings_MaxStatCap_Unlimited>Unlimited</Isekai_Settings_MaxStatCap_Unlimited>
+    <Isekai_Settings_StartingLevel>Starting Colonist Level</Isekai_Settings_StartingLevel>
+    <Isekai_Settings_StartingLevel_Desc>Starting level for new colonists. Set to 0 for random rank-based generation (default). Higher values give your colonists a head start. Adjust before starting a new game.</Isekai_Settings_StartingLevel_Desc>
+    <Isekai_Settings_StartingLevel_Random>Random (Rank-Based)</Isekai_Settings_StartingLevel_Random>
+    <Isekai_Settings_NewbornsUseRankRolling>Newborns Use Rank Rolling</Isekai_Settings_NewbornsUseRankRolling>
+    <Isekai_Settings_NewbornsUseRankRolling_Desc>When enabled, newborn babies use the same random rank rolling as other pawns instead of starting at level 1 / F-rank. Off by default — babies start blank and grow through XP.</Isekai_Settings_NewbornsUseRankRolling_Desc>
+    
+    <Isekai_Settings_MobRankingHeader>Mob Ranking</Isekai_Settings_MobRankingHeader>
+    <Isekai_Settings_ShowMobRanks>Show Mob Ranks</Isekai_Settings_ShowMobRanks>
+    <Isekai_Settings_ShowMobRanks_Desc>Display rank information in mob inspect panels</Isekai_Settings_ShowMobRanks_Desc>
+    <Isekai_Settings_ExcludeAnimals>Exclude Animals from Ranking</Isekai_Settings_ExcludeAnimals>
+    <Isekai_Settings_ExcludeAnimals_Desc>When enabled, animals will not receive mob ranks or rank-based stat bonuses. They will behave as vanilla.</Isekai_Settings_ExcludeAnimals_Desc>
+    <Isekai_Settings_ExcludeMechs>Exclude Mechanoids from Ranking</Isekai_Settings_ExcludeMechs>
+    <Isekai_Settings_ExcludeMechs_Desc>When enabled, mechanoids will not receive mob ranks or rank-based stat bonuses. They will behave as vanilla.</Isekai_Settings_ExcludeMechs_Desc>
+    <Isekai_Settings_ExcludeEntities>Exclude Anomaly Entities from Ranking</Isekai_Settings_ExcludeEntities>
+    <Isekai_Settings_ExcludeEntities_Desc>When enabled, Anomaly DLC entities (sightstealers, revenants, shamblers, chimeras, etc.) will not receive mob ranks or rank-based stat bonuses. They will behave as vanilla.</Isekai_Settings_ExcludeEntities_Desc>
+    <Isekai_Settings_TamedBonusRetention>Tamed Animal Rank Retention</Isekai_Settings_TamedBonusRetention>
+    <Isekai_Settings_TamedBonusRetention_Desc>How much of their rank bonuses (HP, armor, speed, damage, pain threshold) tamed animals keep. 0% = no bonuses (vanilla stats), 50% = half bonuses, 100% = full bonuses as if still wild.</Isekai_Settings_TamedBonusRetention_Desc>
+    <Isekai_Settings_TamedBonusRetention_None>None (Vanilla)</Isekai_Settings_TamedBonusRetention_None>
+    <Isekai_Settings_MobSpeedMultiplier>Mob Speed Multiplier</Isekai_Settings_MobSpeedMultiplier>
+    <Isekai_Settings_MobSpeedMultiplier_Desc>Controls how much ranked mobs get speed bonuses. 0.0 = no speed bonus, 1.0 = default (S=+50%), 2.0 = double bonus (S=+100%)</Isekai_Settings_MobSpeedMultiplier_Desc>
+    <Isekai_Settings_MobArmorMultiplier>Mob Armor Multiplier</Isekai_Settings_MobArmorMultiplier>
+    <Isekai_Settings_MobArmorMultiplier_Desc>Controls how much ranked mobs get armor bonuses. 0.0 = no armor bonus, 1.0 = default (S=+90%), 2.0 = double bonus (S=+180%)</Isekai_Settings_MobArmorMultiplier_Desc>
+    <Isekai_Settings_MobHealthMultiplier>Mob Health Multiplier</Isekai_Settings_MobHealthMultiplier>
+    <Isekai_Settings_MobHealthMultiplier_Desc>Controls how much ranked mobs get health bonuses. 0.0 = no health bonus (vanilla HP), 1.0 = default (S=5x), 2.0 = double bonus (S=9x)</Isekai_Settings_MobHealthMultiplier_Desc>
+    <Isekai_Settings_MobRankValueMultiplier>Mob Rank Market Value Multiplier</Isekai_Settings_MobRankValueMultiplier>
+    <Isekai_Settings_MobRankValueMultiplier_Desc>Controls how much ranked mobs get market value bonuses. 0.0 = no value bonus, 1.0 = default (SSS=10x), 2.0 = double bonus (SSS=19x)</Isekai_Settings_MobRankValueMultiplier_Desc>
+    <Isekai_Settings_PawnLevelValueMultiplier>Pawn Level Market Value Multiplier</Isekai_Settings_PawnLevelValueMultiplier>
+    <Isekai_Settings_PawnLevelValueMultiplier_Desc>Controls how much pawn levels affect market value. 0.0 = no value bonus, 1.0 = default (high level = 5x), 2.0 = double bonus (high level = 9x)</Isekai_Settings_PawnLevelValueMultiplier_Desc>
+    
+    <Isekai_Settings_RaidEnemyRanksHeader>Raid Enemy Ranks</Isekai_Settings_RaidEnemyRanksHeader>
+    <Isekai_Settings_EnableRaidRanking>Enable Raid Ranking</Isekai_Settings_EnableRaidRanking>
+    <Isekai_Settings_EnableRaidRanking_Desc>Assign ranks to raid enemies based on raid strength</Isekai_Settings_EnableRaidRanking_Desc>
+    <Isekai_Settings_RaidPointsMultiplier>Raid Points Multiplier</Isekai_Settings_RaidPointsMultiplier>
+    <Isekai_Settings_RaidPointsMultiplier_Desc>Lower = weaker raids. Reduce this if enemies are too strong for your colony.</Isekai_Settings_RaidPointsMultiplier_Desc>
+    <Isekai_Settings_RaidRankCapAtS>Cap Raids at S Rank</Isekai_Settings_RaidRankCapAtS>
+    <Isekai_Settings_RaidRankCapAtS_Desc>Normal raids max at S rank (SS/SSS reserved for special events)</Isekai_Settings_RaidRankCapAtS_Desc>
+    <Isekai_Settings_MaxRaidRank>Max Raid Rank</Isekai_Settings_MaxRaidRank>
+    <Isekai_Settings_MaxRaidRank_Desc>Maximum rank that can appear in normal raids. Lower this if high-rank raiders are overwhelming you. SS/SSS are always reserved for quests and special events.</Isekai_Settings_MaxRaidRank_Desc>
+    <Isekai_Settings_ClassicRNGRaids>Classic RNG Raids</Isekai_Settings_ClassicRNGRaids>
+    <Isekai_Settings_ClassicRNGRaids_Desc>Use classic chaotic variance - raids can be much stronger or weaker than expected. More exciting but can overwhelm early colonies!</Isekai_Settings_ClassicRNGRaids_Desc>
+    <Isekai_Settings_AdaptiveRaidRanks>Adaptive Raid Ranks</Isekai_Settings_AdaptiveRaidRanks>
+    <Isekai_Settings_AdaptiveRaidRanks_Desc>Clamp raid enemy ranks to within ±1 of your colony's strongest pawn. Prevents S-rank enemies from appearing in a new colony and D-rank threats in a late-game colony. Off by default.</Isekai_Settings_AdaptiveRaidRanks_Desc>
+    
+    <Isekai_Settings_MechanitorXPHeader>Mechanitor XP (Biotech)</Isekai_Settings_MechanitorXPHeader>
+    <Isekai_Settings_EnableMechanitorXP>Mechanitor Gets Mech Kill XP</Isekai_Settings_EnableMechanitorXP>
+    <Isekai_Settings_EnableMechanitorXP_Desc>Mechanitors receive XP when their controlled mechs deal damage or kill enemies</Isekai_Settings_EnableMechanitorXP_Desc>
+    <Isekai_Settings_EnableMechCreatureXP>Mechs Gain Creature XP</Isekai_Settings_EnableMechCreatureXP>
+    <Isekai_Settings_EnableMechCreatureXP_Desc>When disabled, mechanoid creatures will not gain any XP from combat, kills, or quest rewards. They will still receive rank injection but won't level up.</Isekai_Settings_EnableMechCreatureXP_Desc>
+    
+    <!-- Auto Assign -->
+    <Isekai_AutoAssign>Auto</Isekai_AutoAssign>
+    <Isekai_AutoAssign_Desc>Automatically distribute all available stat points. If a class is assigned, points are weighted towards the class's primary and secondary stats. Otherwise, points are distributed evenly.</Isekai_AutoAssign_Desc>
+  <Isekai_AutoDistribute>Auto-Distribute Stats</Isekai_AutoDistribute>
+  <Isekai_AutoDistribute_Desc>When enabled, stat points are automatically distributed on level-up. If a class is assigned, points are weighted towards primary and secondary stats. Otherwise, points are spread evenly.</Isekai_AutoDistribute_Desc>
+    <Isekai_Settings_CrossMapXPHeader>Kill XP Sharing</Isekai_Settings_CrossMapXPHeader>
+    <Isekai_Settings_ShareKillXPAcrossMaps>Share Kill XP Across Maps</Isekai_Settings_ShareKillXPAcrossMaps>
+    <Isekai_Settings_ShareKillXPAcrossMaps_Desc>When enabled, pawns who dealt damage to an enemy receive kill XP even if they are on a different map tile. When disabled, only pawns on the same map as the victim get kill XP. Mechanitor XP is not affected by this setting.</Isekai_Settings_ShareKillXPAcrossMaps_Desc>
+    
+    <!-- Guild Quest Settings -->
+    <Isekai_Settings_GuildQuestsHeader>Guild Quests</Isekai_Settings_GuildQuestsHeader>
+    <Isekai_Settings_EnableGuildQuests>Enable Guild Quests</Isekai_Settings_EnableGuildQuests>
+    <Isekai_Settings_EnableGuildQuests_Desc>Daily hunt quests with ranked creatures and rewards</Isekai_Settings_EnableGuildQuests_Desc>
+    <Isekai_Settings_GuildQuestFrequency>Quest Frequency</Isekai_Settings_GuildQuestFrequency>
+    <Isekai_Settings_GuildQuestFrequency_Desc>How often new guild quests appear</Isekai_Settings_GuildQuestFrequency_Desc>
+    <Isekai_Settings_GuildQuestFrequency_PerDay>{0}x per day</Isekai_Settings_GuildQuestFrequency_PerDay>
+    <Isekai_Settings_GuildQuestFrequency_Days>Every {0} days</Isekai_Settings_GuildQuestFrequency_Days>
+    <Isekai_Settings_MaxActiveGuildQuests>Max Available Quests</Isekai_Settings_MaxActiveGuildQuests>
+    <Isekai_Settings_MaxActiveGuildQuests_Desc>Maximum number of guild quests that can be waiting in the Available tab at once. New quests won't appear until old ones are accepted or expire.</Isekai_Settings_MaxActiveGuildQuests_Desc>
+    <Isekai_Settings_MinQuestRank>Minimum Quest Rank</Isekai_Settings_MinQuestRank>
+    <Isekai_Settings_MinQuestRank_Desc>Quests below this rank will not appear. Useful for reducing quest tab clutter at higher levels.</Isekai_Settings_MinQuestRank_Desc>
+    <Isekai_Settings_MinQuestRank_All>All</Isekai_Settings_MinQuestRank_All>
+    
+    <!-- Elite Mob Settings -->
+    <Isekai_Settings_EliteMobsHeader>Elite Mobs</Isekai_Settings_EliteMobsHeader>
+    <Isekai_Settings_ShowEliteMobTitles>Show Elite Mob Overlay</Isekai_Settings_ShowEliteMobTitles>
+    <Isekai_Settings_ShowEliteMobTitles_Desc>Display elite mob name plates, health bars, and hover effects. Disabling this completely skips all per-frame overlay checks, improving performance.</Isekai_Settings_ShowEliteMobTitles_Desc>
+    <Isekai_Settings_EnableTraitColors>Colored Trait Labels</Isekai_Settings_EnableTraitColors>
+    <Isekai_Settings_EnableTraitColors_Desc>Color isekai trait names by rarity in the character card (Gold = archetype, Purple = rare, Green = uncommon, Red = curse). Disable for plain white labels.</Isekai_Settings_EnableTraitColors_Desc>
+    
+    <!-- Quest Creature Mod Blacklist -->
+    <Isekai_Settings_QuestBlacklistHeader>Quest Creature Mod Blacklist</Isekai_Settings_QuestBlacklistHeader>
+    <Isekai_Settings_QuestBlacklistDesc>Exclude creatures from specific mods from appearing as quest targets. Enter comma-separated keywords that match the mod's name or package ID.</Isekai_Settings_QuestBlacklistDesc>
+    <Isekai_Settings_QuestBlacklistHint>Example: "ayameduki, alpha animals" — partial matches work. Check your mod list for the exact mod name.</Isekai_Settings_QuestBlacklistHint>
+    <Isekai_Settings_QuestBlacklistBuiltIn>Built-in exclusions (always active): Anomaly DLC entities, A RimWorld of Magic summons/constructs, larvae, vehicles.</Isekai_Settings_QuestBlacklistBuiltIn>
+    <Isekai_Settings_QuestWhitelistHeader>Quest Creature Mod Whitelist</Isekai_Settings_QuestWhitelistHeader>
+    <Isekai_Settings_QuestWhitelistDesc>When set, ONLY creatures and bounty targets from the listed mods can appear in hunts and bounties. Enter comma-separated keywords that match the mod's name or package ID. Leave empty for no restriction.</Isekai_Settings_QuestWhitelistDesc>
+    <Isekai_Settings_QuestWhitelistHint>Example: "alpha animals, megafauna" — partial matches work. Add "Core" to also allow vanilla creatures. The blacklist and built-in exclusions still apply on top.</Isekai_Settings_QuestWhitelistHint>
+    
+    <Isekai_Settings_ResetStatMultipliers>Reset All Stat Multipliers to Defaults</Isekai_Settings_ResetStatMultipliers>
+    
+    <Isekai_Settings_ResetWindowPosition>Reset Stats Window Position</Isekai_Settings_ResetWindowPosition>
+    <Isekai_Settings_WindowPositionReset>Stats window position reset to center.</Isekai_Settings_WindowPositionReset>
+    <Isekai_Settings_WindowPositionHeader>Stats Window Position</Isekai_Settings_WindowPositionHeader>
+    <Isekai_Settings_WindowPositionDesc>The Stats window can be dragged by clicking and holding the top area. Your position is saved automatically. Use the button below to reset to center if needed.</Isekai_Settings_WindowPositionDesc>
+    
+    <!-- Effects Settings Section -->
+    <Isekai_Settings_UIStyleHeader>Interface Style</Isekai_Settings_UIStyleHeader>
+    <Isekai_Settings_UseIsekaiUI>Custom Isekai Interface</Isekai_Settings_UseIsekaiUI>
+    <Isekai_Settings_UseIsekaiUI_Desc>Use the custom themed Isekai interface for status tabs and panels. Disable to use standard vanilla RimWorld UI style.</Isekai_Settings_UseIsekaiUI_Desc>
+    <Isekai_Settings_VisualEffectsHeader>Visual Effects Settings</Isekai_Settings_VisualEffectsHeader>
+    <Isekai_Settings_EnableManaCoreDrops>Enable Mana Core Drops</Isekai_Settings_EnableManaCoreDrops>
+    <Isekai_Settings_EnableManaCoreDrops_Desc>Toggle mana crystal drops from all ranked creatures (D rank and above). Uncheck to disable all mana core loot.</Isekai_Settings_EnableManaCoreDrops_Desc>
+    <Isekai_Settings_AutoAllowCrystalHauling>Auto-Allow Crystal Hauling</Isekai_Settings_AutoAllowCrystalHauling>
+    <Isekai_Settings_AutoAllowCrystalHauling_Desc>When enabled, mana cores and star fragments spawn allowed for hauling instead of forbidden. Useful for peaceful/community builder playstyles where pawns won't run into danger.</Isekai_Settings_AutoAllowCrystalHauling_Desc>
+    
+    <!-- Mana Core Usage -->
+    <Isekai_ManaCore_Source>Mana Core</Isekai_ManaCore_Source>
+    <Isekai_ManaCore_NoPawn>This pawn cannot absorb mana cores.</Isekai_ManaCore_NoPawn>
+    <Isekai_ManaCore_AbsorbAll>Absorb all mana cores ({0}, {1} XP)</Isekai_ManaCore_AbsorbAll>
+    <Isekai_ManaCore_BulkAbsorb>{0} absorbed {1} mana cores for {2} XP.</Isekai_ManaCore_BulkAbsorb>
+    
+    <Isekai_Settings_DraftedAuraHeader>Drafted Aura Effects (DBZ Style)</Isekai_Settings_DraftedAuraHeader>
+    <Isekai_Settings_DraftedAuraSubtext>Vertical energy flames with glow and particles</Isekai_Settings_DraftedAuraSubtext>
+    <Isekai_Settings_EnableDraftedAura>Enable Drafted Aura</Isekai_Settings_EnableDraftedAura>
+    <Isekai_Settings_EnableDraftedAura_Desc>Show energy aura around drafted pawns (B rank and above only)</Isekai_Settings_EnableDraftedAura_Desc>
+    <Isekai_Settings_AuraOpacity>Aura Opacity</Isekai_Settings_AuraOpacity>
+    <Isekai_Settings_AuraSizeMultiplier>Aura Size Multiplier</Isekai_Settings_AuraSizeMultiplier>
+    <Isekai_Settings_EnableAuraPulse>Enable Aura Pulse</Isekai_Settings_EnableAuraPulse>
+    <Isekai_Settings_EnableAuraPulse_Desc>Flames pulse and flicker dynamically</Isekai_Settings_EnableAuraPulse_Desc>
+    <Isekai_Settings_AuraPulseSpeed>Pulse Speed</Isekai_Settings_AuraPulseSpeed>
+    <Isekai_Settings_AuraUseFavoriteColor>Use Pawn's Favorite Color</Isekai_Settings_AuraUseFavoriteColor>
+    <Isekai_Settings_AuraUseFavoriteColor_Desc>When enabled, aura color will match the pawn's favorite color instead of the rank-based color scheme. Great for personal flair!</Isekai_Settings_AuraUseFavoriteColor_Desc>
+    <Isekai_AuraDisplay_Button>Aura: {0}</Isekai_AuraDisplay_Button>
+    <Isekai_AuraDisplay_Constellation>Constellation</Isekai_AuraDisplay_Constellation>
+    <Isekai_AuraDisplay_DefaultFlame>Default Flame</Isekai_AuraDisplay_DefaultFlame>
+    <Isekai_AuraDisplay_None>None</Isekai_AuraDisplay_None>
+    <Isekai_Settings_EnableConstellationAuraStyle>Constellation-Specific Auras</Isekai_Settings_EnableConstellationAuraStyle>
+    <Isekai_Settings_EnableConstellationAuraStyle_Desc>Each constellation gets its own aura palette, flame behavior, and a unique secondary effect (Paladin pillar, Sage runes, Mage glyphs, Crafter sparks, etc.). Rank still tints the accent at high tiers. Disable to use the plain rank-only aura.</Isekai_Settings_EnableConstellationAuraStyle_Desc>
+    
+    <!-- Stat Multiplier Settings -->
+    <Isekai_Settings_StatPointsPerLevel>Stat Points Per Level</Isekai_Settings_StatPointsPerLevel>
+    <Isekai_Settings_STRMultipliers>Strength (STR) Multipliers</Isekai_Settings_STRMultipliers>
+    <Isekai_Settings_DEXMultipliers>Dexterity (DEX) Multipliers</Isekai_Settings_DEXMultipliers>
+    <Isekai_Settings_VITMultipliers>Vitality (VIT) Multipliers</Isekai_Settings_VITMultipliers>
+    <Isekai_Settings_INTMultipliers>Intelligence (INT) Multipliers</Isekai_Settings_INTMultipliers>
+    <Isekai_Settings_WISMultipliers>Wisdom (WIS) Multipliers</Isekai_Settings_WISMultipliers>
+    <Isekai_Settings_CHAMultipliers>Charisma (CHA) Multipliers</Isekai_Settings_CHAMultipliers>
+    <Isekai_Settings_BonusPerPoint>% bonus per point above base 5</Isekai_Settings_BonusPerPoint>
+    <Isekai_Settings_MeleeDamage>Melee Damage</Isekai_Settings_MeleeDamage>
+    <Isekai_Settings_CarryCapacity>Carry Capacity</Isekai_Settings_CarryCapacity>
+    <Isekai_Settings_MiningSpeed>Mining Speed</Isekai_Settings_MiningSpeed>
+    <Isekai_Settings_MoveSpeed>Move Speed</Isekai_Settings_MoveSpeed>
+    <Isekai_Settings_WorkSpeed>Work Speed</Isekai_Settings_WorkSpeed>
+    <Isekai_Settings_RangedAttackSpeed>Ranged Attack Speed</Isekai_Settings_RangedAttackSpeed>
+    <Isekai_Settings_MaxHealth>Max Health</Isekai_Settings_MaxHealth>
+    <Isekai_Settings_HealthRegen>Health Regen</Isekai_Settings_HealthRegen>
+    <Isekai_Settings_ResearchSpeed>Research Speed</Isekai_Settings_ResearchSpeed>
+    <Isekai_Settings_LearningSpeed>Learning Speed</Isekai_Settings_LearningSpeed>
+    <Isekai_Settings_CraftingQuality>Crafting Quality Boost</Isekai_Settings_CraftingQuality>
+    <Isekai_Settings_ConstructionSpeed>Construction Speed</Isekai_Settings_ConstructionSpeed>
+    <Isekai_Settings_MeleeHitChance>Melee Hit Chance</Isekai_Settings_MeleeHitChance>
+    <Isekai_Settings_MeleeDodgeChance>Melee Dodge Chance</Isekai_Settings_MeleeDodgeChance>
+    <Isekai_Settings_ShootingAccuracy>Shooting Accuracy</Isekai_Settings_ShootingAccuracy>
+    <Isekai_Settings_HealthRegenFactor>Health Regen Factor</Isekai_Settings_HealthRegenFactor>
+    <Isekai_Settings_ToxicResistance>Toxic Resistance</Isekai_Settings_ToxicResistance>
+    <Isekai_Settings_ImmunityGainSpeed>Immunity Gain Speed</Isekai_Settings_ImmunityGainSpeed>
+    <Isekai_Settings_DamageReduction>Damage Reduction</Isekai_Settings_DamageReduction>
+    <Isekai_Settings_LifespanFactor>Lifespan Factor</Isekai_Settings_LifespanFactor>
+    <Isekai_Settings_RestRate>Rest Rate (Sleep Speed)</Isekai_Settings_RestRate>
+    <Isekai_Settings_RefinementComponent>Refinement Component Def</Isekai_Settings_RefinementComponent>
+    <Isekai_Settings_RefinementComponentDesc>ThingDef name of the component item refinement consumes. Change this if a mod (e.g. Medieval Overhaul) removes or disables industrial components — enter that mod's component defName. Invalid names fall back to ComponentIndustrial.</Isekai_Settings_RefinementComponentDesc>
+    <Isekai_Settings_GeneralWorkSpeed>General Work Speed</Isekai_Settings_GeneralWorkSpeed>
+    <Isekai_Settings_MentalBreakThreshold>Mental Break Threshold</Isekai_Settings_MentalBreakThreshold>
+    <Isekai_Settings_MeditationFocus>Meditation Focus</Isekai_Settings_MeditationFocus>
+    <Isekai_Settings_MedicalTendQuality>Medical Tend Quality</Isekai_Settings_MedicalTendQuality>
+    <Isekai_Settings_SurgerySuccess>Surgery Success Chance</Isekai_Settings_SurgerySuccess>
+    <Isekai_Settings_TrainAnimal>Train Animal Chance</Isekai_Settings_TrainAnimal>
+    <Isekai_Settings_AnimalGatherYield>Animal Gather Yield</Isekai_Settings_AnimalGatherYield>
+    <Isekai_Settings_PsychicSensitivity>Psychic Sensitivity (INT+WIS avg)</Isekai_Settings_PsychicSensitivity>
+    <Isekai_Settings_NeuralHeatLimit>Neural Heat Limit (VIT+WIS avg)</Isekai_Settings_NeuralHeatLimit>
+    <Isekai_Settings_NeuralHeatRecovery>Neural Heat Recovery</Isekai_Settings_NeuralHeatRecovery>
+    <Isekai_Settings_PsyfocusCost>Psyfocus Cost Reduction</Isekai_Settings_PsyfocusCost>
+    <Isekai_Settings_SocialImpact>Social Impact</Isekai_Settings_SocialImpact>
+    <Isekai_Settings_NegotiationAbility>Negotiation Ability</Isekai_Settings_NegotiationAbility>
+    <Isekai_Settings_TradePriceBonus>Trade Price Bonus</Isekai_Settings_TradePriceBonus>
+    <Isekai_Settings_ArrestSuccess>Arrest Success Chance</Isekai_Settings_ArrestSuccess>
+    <Isekai_Settings_ResetDefault>Reset to Default</Isekai_Settings_ResetDefault>
+    
+    <!-- Stat Effect Labels -->
+    <Isekai_Effect_ToxicResist>Toxic Resistance</Isekai_Effect_ToxicResist>
+    <Isekai_Effect_ImmunityGain>Immunity Gain</Isekai_Effect_ImmunityGain>
+    <Isekai_Effect_DamageReduction>Damage Reduction</Isekai_Effect_DamageReduction>
+    <Isekai_Effect_SharpArmor>Sharp Armor</Isekai_Effect_SharpArmor>
+    <Isekai_Effect_BluntArmor>Blunt Armor</Isekai_Effect_BluntArmor>
+    <Isekai_Effect_HeatArmor>Heat Armor</Isekai_Effect_HeatArmor>
+    <Isekai_Effect_PainThreshold>Pain Threshold</Isekai_Effect_PainThreshold>
+    <Isekai_Effect_BleedRate>Bleed Rate</Isekai_Effect_BleedRate>
+    <Isekai_Effect_RestRate>Rest Rate</Isekai_Effect_RestRate>
+    <Isekai_Effect_Lifespan>Lifespan</Isekai_Effect_Lifespan>
+    <Isekai_Effect_MeleeHit>Melee Hit Chance</Isekai_Effect_MeleeHit>
+    <Isekai_Effect_DodgeChance>Dodge Chance</Isekai_Effect_DodgeChance>
+    <Isekai_Effect_ShootingAccuracy>Shooting Accuracy</Isekai_Effect_ShootingAccuracy>
+    <Isekai_Effect_AimingDelay>Aiming Delay</Isekai_Effect_AimingDelay>
+    <Isekai_Effect_PsychicSensitivity>Psychic Sensitivity</Isekai_Effect_PsychicSensitivity>
+    <Isekai_Effect_NeuralHeatLimit>Neural Heat Limit</Isekai_Effect_NeuralHeatLimit>
+    <Isekai_Effect_NeuralRecovery>Neural Heat Recovery</Isekai_Effect_NeuralRecovery>
+    <Isekai_Effect_PsyfocusCost>Psyfocus Cost</Isekai_Effect_PsyfocusCost>
+    <Isekai_WIS_PsyfocusCostReduction>Isekai WIS: -{0}% psyfocus cost</Isekai_WIS_PsyfocusCostReduction>
+    <Isekai_Effect_TendQuality>Tend Quality</Isekai_Effect_TendQuality>
+    <Isekai_Effect_SurgerySuccess>Surgery Success</Isekai_Effect_SurgerySuccess>
+    <Isekai_Effect_TrainAnimal>Train Animal</Isekai_Effect_TrainAnimal>
+    <Isekai_Effect_GatherYield>Animal Gather &amp; Plant Harvest Yield</Isekai_Effect_GatherYield>
+    <!-- Creature stat window: extra effect labels + per-stat descriptions -->
+    <Isekai_Effect_DamageTaken>Damage Taken</Isekai_Effect_DamageTaken>
+    <Isekai_Effect_WildnessTraining>Wildness (Training)</Isekai_Effect_WildnessTraining>
+    <Isekai_Effect_WildnessTaming>Wildness (Taming)</Isekai_Effect_WildnessTaming>
+    <Isekai_Effect_XPGain>XP Gain</Isekai_Effect_XPGain>
+    <Isekai_Effect_MarketValue>Market Value</Isekai_Effect_MarketValue>
+    <Isekai_Effect_NuzzleChance>Nuzzle Chance</Isekai_Effect_NuzzleChance>
+    <Isekai_Effect_MentalBreakThreshold>Mental Break Threshold</Isekai_Effect_MentalBreakThreshold>
+    <Isekai_Effect_MeleeDodge>Melee Dodge</Isekai_Effect_MeleeDodge>
+    <Isekai_Effect_NaturalArmor>Natural Armor</Isekai_Effect_NaturalArmor>
+    <Isekai_CreatureDesc_STR>Increases melee damage and carry capacity.</Isekai_CreatureDesc_STR>
+    <Isekai_CreatureDesc_DEX>Improves movement speed, melee dodge chance, and melee hit chance.</Isekai_CreatureDesc_DEX>
+    <Isekai_CreatureDesc_VIT>Boosts max health, injury healing, natural armor, damage reduction, pain threshold, toxic resistance, immunity gain, rest efficiency, and bleed rate.</Isekai_CreatureDesc_VIT>
+    <Isekai_CreatureDesc_INT>Increases psychic sensitivity, lowers mental break threshold, and reduces wildness (easier to train).</Isekai_CreatureDesc_INT>
+    <Isekai_CreatureDesc_WIS>Increases XP gain speed. Higher WIS means faster leveling.</Isekai_CreatureDesc_WIS>
+    <Isekai_CreatureDesc_CHA>Increases market value, lowers wildness (easier to tame), and improves nuzzle chance.</Isekai_CreatureDesc_CHA>
+    <Isekai_StatNameOnly_STR>Strength</Isekai_StatNameOnly_STR>
+    <Isekai_StatNameOnly_DEX>Dexterity</Isekai_StatNameOnly_DEX>
+    <Isekai_StatNameOnly_VIT>Vitality</Isekai_StatNameOnly_VIT>
+    <Isekai_StatNameOnly_INT>Intelligence</Isekai_StatNameOnly_INT>
+    <Isekai_StatNameOnly_WIS>Wisdom</Isekai_StatNameOnly_WIS>
+    <Isekai_StatNameOnly_CHA>Charisma</Isekai_StatNameOnly_CHA>
+    <!-- Creature rank titles -->
+    <Isekai_RankTitle_Nation>World Threat</Isekai_RankTitle_Nation>
+    <Isekai_RankTitle_SSS>Apex Predator</Isekai_RankTitle_SSS>
+    <Isekai_RankTitle_SS>Alpha Beast</Isekai_RankTitle_SS>
+    <Isekai_RankTitle_S>Legendary</Isekai_RankTitle_S>
+    <Isekai_RankTitle_A>Deadly</Isekai_RankTitle_A>
+    <Isekai_RankTitle_B>Dangerous</Isekai_RankTitle_B>
+    <Isekai_RankTitle_C>Threatening</Isekai_RankTitle_C>
+    <Isekai_RankTitle_D>Common</Isekai_RankTitle_D>
+    <Isekai_RankTitle_E>Weak</Isekai_RankTitle_E>
+    <Isekai_RankTitle_F>Harmless</Isekai_RankTitle_F>
+    <Isekai_Effect_Negotiation>Negotiation</Isekai_Effect_Negotiation>
+    <Isekai_Effect_Taming>Taming</Isekai_Effect_Taming>
+    <Isekai_Effect_ArrestSuccess>Arrest Success</Isekai_Effect_ArrestSuccess>
+    <Isekai_Effect_GimmickTier>Class Gimmick Tier</Isekai_Effect_GimmickTier>
+    <Isekai_Effect_ClassPassive>Class Passive</Isekai_Effect_ClassPassive>
+    
+    <!-- RimWorld of Magic bonus types -->
+    <Isekai_Effect_RoM_MaxMana>Max Mana</Isekai_Effect_RoM_MaxMana>
+    <Isekai_Effect_RoM_ManaRegen>Mana Regen</Isekai_Effect_RoM_ManaRegen>
+    <Isekai_Effect_RoM_MagicDamage>Magic Damage</Isekai_Effect_RoM_MagicDamage>
+    <Isekai_Effect_RoM_MagicCooldown>Magic Cooldown</Isekai_Effect_RoM_MagicCooldown>
+    <Isekai_Effect_RoM_ManaCost>Mana Cost</Isekai_Effect_RoM_ManaCost>
+    <Isekai_Effect_RoM_MaxStamina>Max Stamina</Isekai_Effect_RoM_MaxStamina>
+    <Isekai_Effect_RoM_StaminaRegen>Stamina Regen</Isekai_Effect_RoM_StaminaRegen>
+    <Isekai_Effect_RoM_MightDamage>Might Damage</Isekai_Effect_RoM_MightDamage>
+    <Isekai_Effect_RoM_MightCooldown>Might Cooldown</Isekai_Effect_RoM_MightCooldown>
+    <Isekai_Effect_RoM_StaminaCost>Stamina Cost</Isekai_Effect_RoM_StaminaCost>
+    <Isekai_Effect_RoM_ChiMax>Chi Capacity</Isekai_Effect_RoM_ChiMax>
+    <Isekai_Effect_RoM_PsionicMax>Psionic Capacity</Isekai_Effect_RoM_PsionicMax>
+    <Isekai_Effect_RoM_SummonDuration>Summon Duration</Isekai_Effect_RoM_SummonDuration>
+    <Isekai_Effect_RoM_BuffDuration>Buff Duration</Isekai_Effect_RoM_BuffDuration>
+    <Isekai_Tier>Tier</Isekai_Tier>
+    
+    <!-- Button Labels -->
+    <Isekai_Confirm>Confirm</Isekai_Confirm>
+    <Isekai_ValueMultiplier>Value multiplier x{0}</Isekai_ValueMultiplier>
+
+    <!-- Character Creation Panel -->
+    <Isekai_CharCreate_Title>Isekai Stats</Isekai_CharCreate_Title>
+    <Isekai_CharCreate_Level>Lv.</Isekai_CharCreate_Level>
+    <Isekai_CharCreate_Reroll>Reroll Stats</Isekai_CharCreate_Reroll>
+
+    <!-- Quest/Hunt System -->
+    <!-- Quest Type Labels by Rank -->
+    <Isekai_QuestType_Hunt>Hunt</Isekai_QuestType_Hunt>
+    <Isekai_QuestType_Expedition>Expedition</Isekai_QuestType_Expedition>
+    <Isekai_QuestType_Raid>Raid</Isekai_QuestType_Raid>
+    <Isekai_QuestType_Bounty>Bounty</Isekai_QuestType_Bounty>
+    
+    <!-- Difficulty Recommendations by Rank -->
+    <Isekai_Difficulty_F>Suitable for any awakened adventurer.</Isekai_Difficulty_F>
+    <Isekai_Difficulty_E>Recommended: E-Rank adventurer or higher.</Isekai_Difficulty_E>
+    <Isekai_Difficulty_D>Recommended: D-Rank adventurer or a small party.</Isekai_Difficulty_D>
+    <Isekai_Difficulty_C>Recommended: C-Rank adventurer or a well-equipped party.</Isekai_Difficulty_C>
+    <Isekai_Difficulty_B>Recommended: B-Rank party with proper gear.</Isekai_Difficulty_B>
+    <Isekai_Difficulty_A>Recommended: A-Rank party or multiple B-Rank adventurers.</Isekai_Difficulty_A>
+    <Isekai_Difficulty_S>Required: Full party of A-Rank adventurers minimum.</Isekai_Difficulty_S>
+    <Isekai_Difficulty_SS>Required: Multiple S-Rank adventurers working together.</Isekai_Difficulty_SS>
+    <Isekai_Difficulty_SSS>Required: Elite team of S-Rank adventurers. Legendary threat.</Isekai_Difficulty_SSS>
+    
+    <!-- F-D Rank: HUNT (Local Map) -->
+    <Isekai_Quest_Offer_Label_Hunt>[Guild] {0}-Rank Hunt Contract</Isekai_Quest_Offer_Label_Hunt>
+    <Isekai_Quest_Offer_Text_Hunt><![CDATA[<color=#FFD700>━━━ ADVENTURER'S GUILD ━━━</color>
+
+A new hunt contract has been posted!
+
+Target: {1}
+Threat Level: {0}-Rank
+Bounty: {3} silver + {2} XP
+
+<color=#888888>Difficulty: Suitable for beginner to intermediate adventurers.</color>
+
+<color=#999999>The Guild has marked this creature for elimination. A simple job for aspiring hunters.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Quest_Offer_Text_Hunt>
+    <Isekai_Quest_Name_Hunt>[Guild] {0}-Rank Hunt: {1}</Isekai_Quest_Name_Hunt>
+    <Isekai_Quest_Description_Hunt><![CDATA[<color=#FFD700>━━━ HUNT CONTRACT ━━━</color>
+
+Target: {1} ({0}-Rank)
+
+<color=#888888>⚔ Difficulty: Suitable for beginner to intermediate adventurers.
+Any colonist with basic combat training can handle this.</color>
+
+Mission Briefing:
+A creature has been reported in the area. The Guild is offering a bounty for its elimination.
+
+Upon Completion:
+• {2} XP distributed among all hunters
+• {3} Silver bounty payment
+• Additional loot from the creature
+
+Accept this contract to summon the target to your hunting grounds.
+
+<color=#666666>— Adventurer's Guild</color>]]></Isekai_Quest_Description_Hunt>
+    <Isekai_Hunt_Started_Hunt>[GUILD] Hunt contract activated! Your target {1} ({0}-Rank) awaits.</Isekai_Hunt_Started_Hunt>
+    <Isekai_Hunt_Complete_Label_Hunt>[Guild] {0}-Rank Hunt Complete!</Isekai_Hunt_Complete_Label_Hunt>
+    <Isekai_Hunt_Complete_Text_Hunt><![CDATA[<color=#FFD700>━━━ CONTRACT FULFILLED ━━━</color>
+
+Well done, Hunter!
+
+You have successfully eliminated the {0}-Rank target.
+
+Rewards Claimed:
+• {1} XP <color=#888888>(distributed among colonists)</color>
+• {2} silver
+
+<color=#999999>The Guild takes note of your growing skill.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Hunt_Complete_Text_Hunt>
+    
+    <!-- B-A Rank: EXPEDITION (World Map) -->
+    <Isekai_Quest_Offer_Label_Expedition>[Guild] {0}-Rank Expedition Contract</Isekai_Quest_Offer_Label_Expedition>
+    <Isekai_Quest_Offer_Text_Expedition><![CDATA[<color=#FFD700>━━━ ADVENTURER'S GUILD ━━━</color>
+
+An expedition contract has been issued!
+
+Target: {1}
+Threat Level: {0}-Rank
+Bounty: {3} silver + {2} XP
+
+<color=#FFAA00>⚔ Difficulty: Recommended for B-Rank parties or multiple experienced adventurers.</color>
+
+<color=#999999>This creature has established territory beyond your borders. The Guild seeks experienced hunters willing to form an expedition and eliminate this threat.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Quest_Offer_Text_Expedition>
+    <Isekai_Quest_Name_Expedition>[Guild] {0}-Rank Expedition: {1}</Isekai_Quest_Name_Expedition>
+    <Isekai_Quest_Description_Expedition><![CDATA[<color=#FFD700>━━━ EXPEDITION CONTRACT ━━━</color>
+
+Target: {1} ({0}-Rank)
+Location: ~{4} tiles away
+
+<color=#FFAA00>⚔ Difficulty: Recommended for B-Rank adventurers or higher.
+Send a well-equipped party — solo attempts are risky.</color>
+
+Mission Briefing:
+A powerful creature has established territory in a distant region. The Guild is offering a substantial bounty for hunters willing to travel and eliminate this threat.
+
+Upon Completion:
+• {2} XP distributed among all hunters
+• {3} Silver bounty payment
+• Additional loot from the creature
+
+Form a caravan and travel to the marked location. The expedition begins upon arrival.
+
+<color=#666666>— Adventurer's Guild</color>]]></Isekai_Quest_Description_Expedition>
+    <Isekai_Hunt_Started_Expedition>[GUILD] Expedition contract activated! The {1} ({0}-Rank) awaits at the marked location.</Isekai_Hunt_Started_Expedition>
+    <Isekai_Hunt_SiteRevealed_Expedition>[GUILD] Contract accepted! The {1} ({0}-Rank) has been located. Form an expedition party and travel to the marked location.</Isekai_Hunt_SiteRevealed_Expedition>
+    <Isekai_Hunt_Complete_Label_Expedition>[Guild] {0}-Rank Expedition Complete!</Isekai_Hunt_Complete_Label_Expedition>
+    <Isekai_Hunt_Complete_Text_Expedition><![CDATA[<color=#FFD700>━━━ EXPEDITION SUCCESSFUL ━━━</color>
+
+Excellent work, Adventurer!
+
+Your expedition has successfully eliminated the {0}-Rank target.
+
+Rewards Claimed:
+• {1} XP <color=#888888>(distributed among colonists)</color>
+• {2} silver
+
+<color=#999999>Your reputation with the Guild grows stronger. More challenging contracts await.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Hunt_Complete_Text_Expedition>
+    
+    <!-- S-SSS Rank: RAID (World Map, Legendary) -->
+    <Isekai_Quest_Offer_Label_Raid>[Guild] {0}-Rank Raid Contract</Isekai_Quest_Offer_Label_Raid>
+    <Isekai_Quest_Offer_Text_Raid><![CDATA[<color=#FFD700>━━━ ADVENTURER'S GUILD ━━━</color>
+
+<color=#FF4444>⚠ URGENT: RAID CONTRACT ISSUED ⚠</color>
+
+Target: {1}
+Threat Level: {0}-Rank (EXTREME DANGER)
+Bounty: {3} silver + {2} XP
+
+<color=#FF6666>⚔ DIFFICULTY WARNING ⚔
+S-Rank: Requires a full party of A-Rank adventurers.
+SS-Rank: Requires multiple S-Rank adventurers.
+SSS-Rank: Requires an elite team of S-Rank adventurers. Legendary threat!</color>
+
+<color=#999999>A legendary creature terrorizes the region. The Guild issues this contract only to the most elite hunters. Assemble your strongest warriors — this is not a hunt, this is a raid.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild High Council</color>]]></Isekai_Quest_Offer_Text_Raid>
+    <Isekai_Quest_Name_Raid>[Guild] {0}-Rank Raid: {1}</Isekai_Quest_Name_Raid>
+    <Isekai_Quest_Description_Raid><![CDATA[<color=#FFD700>━━━ RAID CONTRACT ━━━</color>
+
+<color=#FF4444>THREAT LEVEL: EXTREME</color>
+
+Target: {1} ({0}-Rank)
+Location: ~{4} tiles away
+
+<color=#FF6666>⚔ DIFFICULTY REQUIREMENTS ⚔
+• S-Rank Raid: Full party of A-Rank adventurers minimum.
+• SS-Rank Raid: Multiple S-Rank adventurers working together.
+• SSS-Rank Raid: Elite team of S-Rank adventurers required. This is a legendary threat — prepare accordingly!</color>
+
+Mission Briefing:
+A legendary creature of immense power has been sighted. This is not a mere hunt — it is a raid against one of the most dangerous beings in the known world. Only the mightiest hunters should attempt this contract.
+
+Upon Completion:
+• {2} XP distributed among all hunters
+• {3} Silver bounty payment
+• Legendary loot from the creature
+
+Assemble your elite warriors. Bring your finest weapons and armor. Victory will cement your legend.
+
+<color=#666666>— Adventurer's Guild High Council</color>]]></Isekai_Quest_Description_Raid>
+    <Isekai_Hunt_Started_Raid>[GUILD] ⚔ RAID CONTRACT ACTIVATED ⚔ The legendary {1} ({0}-Rank) awaits your challenge!</Isekai_Hunt_Started_Raid>
+    <Isekai_Hunt_SiteRevealed_Raid>[GUILD] ⚔ RAID LOCATION REVEALED ⚔ The legendary {1} ({0}-Rank) awaits. Assemble your elite S-Rank warriors and march to glory!</Isekai_Hunt_SiteRevealed_Raid>
+    <Isekai_Hunt_Complete_Label_Raid>[Guild] {0}-Rank Raid Victorious!</Isekai_Hunt_Complete_Label_Raid>
+    <Isekai_Hunt_Complete_Text_Raid><![CDATA[<color=#FFD700>━━━ LEGENDARY VICTORY ━━━</color>
+
+<color=#FFD700>★ GLORY TO THE HUNTERS ★</color>
+
+Your raid has vanquished the legendary {0}-Rank creature!
+
+Rewards Claimed:
+• {1} XP <color=#888888>(distributed among colonists)</color>
+• {2} silver
+
+<color=#999999>Tales of your victory will echo through the ages. The Guild salutes your valor.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild High Council</color>]]></Isekai_Hunt_Complete_Text_Raid>
+    
+    <!-- Bounty Quest Keys (Hostile Pawn Elimination) -->
+    <Isekai_Quest_Offer_Label_Bounty>[Guild] {0}-Rank Bounty Contract</Isekai_Quest_Offer_Label_Bounty>
+    <Isekai_Quest_Offer_Text_Bounty><![CDATA[<color=#FFD700>━━━ ADVENTURER'S GUILD ━━━</color>
+
+<color=#FF8800>⚔ BOUNTY CONTRACT ISSUED ⚔</color>
+
+Target: {1}
+Threat Level: {0}-Rank
+Reward: {3} silver + {2} XP
+
+<color=#FF8800>⚔ This is a hostile combatant — expect armed resistance.</color>
+
+<color=#999999>A dangerous individual has been marked for elimination by the Guild. This target is a hostile combatant, armed and dangerous. Engage with caution.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Quest_Offer_Text_Bounty>
+    <Isekai_Quest_Name_Bounty>[Guild] {0}-Rank Bounty: {1}</Isekai_Quest_Name_Bounty>
+    <Isekai_Quest_Description_Bounty><![CDATA[<color=#FFD700>━━━ BOUNTY CONTRACT ━━━</color>
+
+<color=#FF8800>TARGET: HOSTILE COMBATANT</color>
+
+Target: {1} ({0}-Rank)
+
+<color=#FF8800>⚔ This target is armed and dangerous. Prepare for combat.</color>
+
+Mission Briefing:
+A hostile combatant has been marked for elimination. Unlike beast hunts, this target will fight back with weapons and tactics. Approach with a well-armed party.
+
+Upon Completion:
+• {2} XP distributed among all hunters
+• {3} Silver bounty payment
+• Additional loot from the target
+
+Accept this contract to engage the bounty target.
+
+<color=#666666>— Adventurer's Guild</color>]]></Isekai_Quest_Description_Bounty>
+    <Isekai_Hunt_Started_Bounty>[GUILD] Bounty contract activated! Your target {1} ({0}-Rank) has been located.</Isekai_Hunt_Started_Bounty>
+    <Isekai_Hunt_SiteRevealed_Bounty>[GUILD] Bounty contract accepted! The target {1} ({0}-Rank) has been located. Form a hunting party and travel to the marked location.</Isekai_Hunt_SiteRevealed_Bounty>
+    <Isekai_Hunt_Complete_Label_Bounty>[Guild] {0}-Rank Bounty Collected!</Isekai_Hunt_Complete_Label_Bounty>
+    <Isekai_Hunt_Complete_Text_Bounty><![CDATA[<color=#FFD700>━━━ BOUNTY COLLECTED ━━━</color>
+
+Target eliminated!
+
+You have successfully neutralized the {0}-Rank bounty target.
+
+Rewards Claimed:
+• {1} XP <color=#888888>(distributed among colonists)</color>
+• {2} silver
+
+<color=#999999>The Guild is impressed by your combat prowess. More bounty contracts await.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Hunt_Complete_Text_Bounty>
+    
+    <!-- Bounty Pack Quest Keys (B-A rank bounties spawn a squad of hostiles) -->
+    <!-- {0}=rank, {1}=creatureKind, {2}=packSize -->
+    <Isekai_Quest_Name_BountyPack>[Guild] {0}-Rank Bounty: {1} x{2}</Isekai_Quest_Name_BountyPack>
+    <Isekai_Quest_Offer_Label_BountyPack>[Guild] {0}-Rank Bounty Contract (Squad)</Isekai_Quest_Offer_Label_BountyPack>
+    <!-- {0}=rank, {1}=creatureKind, {2}=xp, {3}=silver, {4}=packSize -->
+    <Isekai_Quest_Offer_Text_BountyPack><![CDATA[<color=#FFD700>━━━ ADVENTURER'S GUILD ━━━</color>
+
+<color=#FF8800>⚔ BOUNTY CONTRACT ISSUED ⚔</color>
+
+Target: A squad of {4} {1}s
+Threat Level: {0}-Rank
+Reward: {3} silver + {2} XP
+
+<color=#FF8800>⚔ These are hostile combatants — expect heavy armed resistance.</color>
+
+<color=#999999>A group of dangerous individuals has been marked for elimination by the Guild. This is a squad elimination contract — all {4} targets must be neutralized. They are armed and dangerous. Bring a well-equipped party.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Quest_Offer_Text_BountyPack>
+    <!-- {0}=rank, {1}=creatureKind, {2}=xp, {3}=silver, {4}=distance, {5}=packSize -->
+    <Isekai_Quest_Description_BountyPack><![CDATA[<color=#FFD700>━━━ BOUNTY CONTRACT ━━━</color>
+
+<color=#FF8800>TARGET: HOSTILE SQUAD ({5} COMBATANTS)</color>
+
+Target: {5}x {1} ({0}-Rank)
+Distance: ~{4} tiles
+
+<color=#FF8800>⚔ This is a squad elimination contract. All targets must be neutralized.</color>
+
+Mission Briefing:
+A squad of {5} hostile combatants has been marked for elimination. Unlike solo bounties, you will face multiple armed enemies fighting as a group. Approach with a well-armed party and expect coordinated resistance.
+
+Upon Completion:
+• {2} XP distributed among all hunters
+• {3} Silver bounty payment
+• Additional loot from the targets
+
+Accept this contract to engage the bounty squad.
+
+<color=#666666>— Adventurer's Guild</color>]]></Isekai_Quest_Description_BountyPack>
+    <Isekai_Hunt_SiteRevealed_BountyPack>[GUILD] Bounty contract accepted! A squad of {2} {1} ({0}-Rank) has been located. Form a hunting party and travel to the marked location.</Isekai_Hunt_SiteRevealed_BountyPack>
+
+    <!-- Expedition Pack Quest Keys (B-A rank non-bounty expeditions spawn a pack of creatures) -->
+    <!-- {0}=rank, {1}=creatureKind, {2}=packSize -->
+    <Isekai_Quest_Name_ExpeditionPack>[Guild] {0}-Rank Expedition: {1} x{2}</Isekai_Quest_Name_ExpeditionPack>
+    <Isekai_Quest_Offer_Label_ExpeditionPack>[Guild] {0}-Rank Expedition Contract (Pack)</Isekai_Quest_Offer_Label_ExpeditionPack>
+    <!-- {0}=rank, {1}=creatureKind, {2}=xp, {3}=silver, {4}=packSize -->
+    <Isekai_Quest_Offer_Text_ExpeditionPack><![CDATA[<color=#FFD700>━━━ ADVENTURER'S GUILD ━━━</color>
+
+An expedition contract has been issued!
+
+Target: A pack of {4} {1}s
+Threat Level: {0}-Rank
+Bounty: {3} silver + {2} XP
+
+<color=#FFAA00>⚔ Difficulty: Multiple creatures — recommended for B-Rank parties or higher.</color>
+
+<color=#999999>A pack of dangerous creatures has established territory beyond your borders. The Guild seeks experienced hunters willing to form an expedition and eliminate the entire group.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Quest_Offer_Text_ExpeditionPack>
+    <!-- {0}=rank, {1}=creatureKind, {2}=xp, {3}=silver, {4}=distance, {5}=packSize -->
+    <Isekai_Quest_Description_ExpeditionPack><![CDATA[<color=#FFD700>━━━ EXPEDITION CONTRACT ━━━</color>
+
+<color=#FFAA00>TARGET: CREATURE PACK ({5} CREATURES)</color>
+
+Target: {5}x {1} ({0}-Rank)
+Location: ~{4} tiles away
+
+<color=#FFAA00>⚔ Difficulty: Multiple creatures — send a well-equipped party.
+Solo attempts are extremely risky.</color>
+
+Mission Briefing:
+A pack of {5} dangerous creatures has established territory in a distant region. The Guild is offering a substantial bounty for hunters willing to travel and eliminate the entire group.
+
+Upon Completion:
+• {2} XP distributed among all hunters
+• {3} Silver bounty payment
+• Additional loot from the creatures
+
+Form a caravan and travel to the marked location. The expedition begins upon arrival.
+
+<color=#666666>— Adventurer's Guild</color>]]></Isekai_Quest_Description_ExpeditionPack>
+    <Isekai_Hunt_SiteRevealed_ExpeditionPack>[GUILD] Expedition contract accepted! A pack of {2} {1} ({0}-Rank) has been located. Form an expedition party and travel to the marked location.</Isekai_Hunt_SiteRevealed_ExpeditionPack>
+
+    <!-- Legacy/Fallback keys (kept for compatibility) -->
+    <Isekai_Quest_Offer_Label>[Guild] {0}-Rank Hunt Contract</Isekai_Quest_Offer_Label>
+    <Isekai_Quest_Offer_Text><![CDATA[<color=#FFD700>━━━ ADVENTURER'S GUILD ━━━</color>
+
+A new hunt contract has been posted!
+
+Target: {1}
+Threat Level: {0}-Rank
+Bounty: {3} silver + {2} XP
+
+<color=#999999>The Guild has marked this creature for elimination. Accept the contract to begin your hunt.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Quest_Offer_Text>
+    <Isekai_Quest_Offer_Desc>Guild contract: Hunt {0}-rank {1} for bounty.</Isekai_Quest_Offer_Desc>
+    <Isekai_Hunt_Accept>Accept Contract</Isekai_Hunt_Accept>
+    <Isekai_Hunt_Decline>Decline</Isekai_Hunt_Decline>
+    <Isekai_Hunt_Postpone>Review Later</Isekai_Hunt_Postpone>
+    <Isekai_Hunt_Started>[GUILD] Contract activated! Your target {1} ({0}-Rank) awaits.</Isekai_Hunt_Started>
+    <Isekai_Hunt_NoMap>No valid location available.</Isekai_Hunt_NoMap>
+    <Isekai_Hunt_Deferred>Guild contract accepted. The target will appear when you arrive at a settlement.</Isekai_Hunt_Deferred>
+    <Isekai_Hunt_SpawnFailed>The creature could not be located. Contract voided.</Isekai_Hunt_SpawnFailed>
+    <Isekai_Hunt_Letter_Label>[Guild] {0}-Rank Target Spotted!</Isekai_Hunt_Letter_Label>
+    <Isekai_Hunt_Letter_Text><![CDATA[<color=#FFD700>━━━ ADVENTURER'S GUILD ━━━</color>
+
+Your contracted target has been located!
+
+Target: {1}
+Threat Level: {0}-Rank
+Bounty: {3} silver + {2} XP
+
+<color=#999999>The creature is nearby but not hostile... yet. You choose when to engage. Strike when you're ready to claim your bounty.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Hunt_Letter_Text>
+    <Isekai_Hunt_Complete_Label>[Guild] {0}-Rank Contract Complete!</Isekai_Hunt_Complete_Label>
+    <Isekai_Hunt_Complete_Text><![CDATA[<color=#FFD700>━━━ CONTRACT FULFILLED ━━━</color>
+
+Excellent work, Hunter!
+
+You have successfully eliminated the {0}-Rank target.
+
+Rewards Claimed:
+• {1} XP <color=#888888>(distributed among colonists)</color>
+• {2} silver
+
+<color=#999999>Your reputation with the Guild grows stronger. More challenging contracts await.</color>
+
+<color=#666666>— Sent by the Adventurer's Guild</color>]]></Isekai_Hunt_Complete_Text>
+    
+    <!-- Quest Tab Display -->
+    <Isekai_Quest_Name>[Guild] {0}-Rank Contract: {1}</Isekai_Quest_Name>
+    <Isekai_Quest_Description><![CDATA[<color=#FFD700>━━━ HUNT CONTRACT ━━━</color>
+
+Target: {1} ({0}-Rank)
+
+Mission Briefing:
+A creature has been reported in the area. The Guild is offering a bounty for its elimination.
+
+Upon Completion:
+• {2} XP distributed among all hunters
+• {3} Silver bounty payment
+• Additional loot from the creature
+
+Accept this contract to summon the target to your hunting grounds.
+
+<color=#666666>— Adventurer's Guild</color>]]></Isekai_Quest_Description>
+    <Isekai_Quest_Description_World><![CDATA[<color=#FFD700>━━━ EXPEDITION CONTRACT ━━━</color>
+
+Target: {1} ({0}-Rank)
+Location: ~{4} tiles away
+
+Mission Briefing:
+A powerful creature has established territory in a distant region. The Guild is offering a substantial bounty for hunters willing to travel and eliminate this threat.
+
+Upon Completion:
+• {2} XP distributed among all hunters
+• {3} Silver bounty payment
+• Additional loot from the creature
+
+Form a caravan and travel to the marked location. The mission begins upon arrival.
+
+<color=#666666>— Adventurer's Guild</color>]]></Isekai_Quest_Description_World>
+    <Isekai_Quest_Local_Pending>Awaiting acceptance... Target {0} will spawn on your map.</Isekai_Quest_Local_Pending>
+    <Isekai_Quest_Local_Deferred>Contract accepted. {0} will spawn when you arrive at a settlement.</Isekai_Quest_Local_Deferred>
+    <Isekai_Quest_World_Pending>Awaiting acceptance... Accept to reveal the {0}'s location.</Isekai_Quest_World_Pending>
+    <Isekai_Quest_World_Travel>Travel to {0} to begin the mission.</Isekai_Quest_World_Travel>
+    <Isekai_Quest_Target_Alive>Target: {0} (Alive)</Isekai_Quest_Target_Alive>
+    <Isekai_Quest_Target_Dead>Target: Eliminated ✓</Isekai_Quest_Target_Dead>
+    <Isekai_Quest_OfferExpiry>Contract offer expires in {0}</Isekai_Quest_OfferExpiry>
+    <Isekai_Quest_OfferExpiry_Tip>The Guild will reassign this contract if not accepted in time.</Isekai_Quest_OfferExpiry_Tip>
+    <Isekai_Quest_Expiry>Hunt contract completion deadline</Isekai_Quest_Expiry>
+    <Isekai_Quest_Expiry_Tip>The Guild requires timely completion of accepted contracts. Failure to complete within the deadline will result in contract cancellation.</Isekai_Quest_Expiry_Tip>
+    <Isekai_Quest_RewardDisplay>Bounty: {0} Silver + {1} XP</Isekai_Quest_RewardDisplay>
+    <Isekai_Quest_XPReward>✦ Bonus: {0} XP (distributed among all participants)</Isekai_Quest_XPReward>
+    <Isekai_Quest_LootRewards>Additional Spoils:</Isekai_Quest_LootRewards>
+    <Isekai_Hunt_Site_Label>[Guild] {0}-Rank Contract: {1}</Isekai_Hunt_Site_Label>
+    <Isekai_Hunt_SiteRevealed>[GUILD] Contract accepted! The {1} ({0}-Rank) has been located. Travel to the marked location to begin.</Isekai_Hunt_SiteRevealed>
+    <Isekai_Hunt_Appeared>⚔ COMBAT ALERT ⚔
+
+The {0}-Rank {1} has detected your presence! It's hostile — defend yourselves!</Isekai_Hunt_Appeared>
+    <Isekai_Hunt_Complete_CanLeave><![CDATA[<color=#FFD700>✓ CONTRACT COMPLETE</color>
+
+The target has been eliminated. Gather any spoils before departing. Your bounty will be delivered upon return.
+
+<color=#666666>— Adventurer's Guild</color>]]></Isekai_Hunt_Complete_CanLeave>
+    <Isekai_Reward_XP>{0} XP</Isekai_Reward_XP>
+    <Isekai_Reward_XP_Desc>Experience distributed among all participating hunters</Isekai_Reward_XP_Desc>
+    
+    <!-- Hunt Site Inspect Strings -->
+    <Isekai_Hunt_Site_Header>━━ ADVENTURER'S GUILD CONTRACT ━━</Isekai_Hunt_Site_Header>
+    <Isekai_Hunt_Site_Target>Target: {0}</Isekai_Hunt_Site_Target>
+    <Isekai_Hunt_Site_Rank>Threat Level: {0}-Rank</Isekai_Hunt_Site_Rank>
+    <Isekai_Hunt_Site_Rewards>Bounty: {0} silver + {1} XP</Isekai_Hunt_Site_Rewards>
+    <Isekai_Hunt_Site_Instructions>Send a caravan to begin the hunt.</Isekai_Hunt_Site_Instructions>
+    <Isekai_Hunt_ViewQuest>View Contract</Isekai_Hunt_ViewQuest>
+    <Isekai_Hunt_ViewQuestDesc>Open the quest tab to view this contract's details.</Isekai_Hunt_ViewQuestDesc>
+    <Isekai_Hunt_JumpToTarget>Jump to Target</Isekai_Hunt_JumpToTarget>
+    <Isekai_Hunt_JumpToTargetDesc>Jump camera to the {0} on the map</Isekai_Hunt_JumpToTargetDesc>
+    <Isekai_Hunt_TargetSpawned>Hunt Target: {0} has spawned at {1}. Click to jump to target.</Isekai_Hunt_TargetSpawned>
+    <Isekai_Hunt_Unknown>Unknown Location</Isekai_Hunt_Unknown>
+    <Isekai_Hunt_BeginHunt>Begin Hunt</Isekai_Hunt_BeginHunt>
+    
+    <!-- Pack Expedition Messages -->
+    <Isekai_Hunt_PackProgress>[Guild] Pack member defeated! {0} remaining.</Isekai_Hunt_PackProgress>
+    <Isekai_Hunt_PackStatus>Pack Status: {0}/{1} remaining</Isekai_Hunt_PackStatus>
+    
+    <!-- Guild Flavor -->
+    <Isekai_Guild_Signature>— Adventurer's Guild</Isekai_Guild_Signature>
+    <Isekai_Guild_Motto>Rise. Hunt. Conquer.</Isekai_Guild_Motto>
+    
+    <!-- Respec Orb (v1.0.7) -->
+    <Isekai_Respec_NoPawn>This pawn has no Isekai stats to reset.</Isekai_Respec_NoPawn>
+    <Isekai_Respec_NoPoints>This pawn has nothing to reset (no stat points or constellation nodes).</Isekai_Respec_NoPoints>
+    <Isekai_Respec_Success>{0} used a Respec Orb! {1} stat points returned for reallocation.</Isekai_Respec_Success>
+    <Isekai_Respec_Success_Full>{0} used a Respec Orb! {1} stat points and {2} constellation points returned. Class reset — choose a new constellation.</Isekai_Respec_Success_Full>
+    <Isekai_Respec_Effect>+{0} points returned!</Isekai_Respec_Effect>
+    <Isekai_Respec_LimitReached>{0} has already used all 3 constellation respecs.</Isekai_Respec_LimitReached>
+    <Isekai_TreeRespecRemaining>Respecs: {0}/3</Isekai_TreeRespecRemaining>
+    <Isekai_TreeRespecNone>No respecs remaining</Isekai_TreeRespecNone>
+    
+    <!-- Mech Scaling (v1.0.7) -->
+    <Isekai_Settings_MechScalingHeader>Mechanitor Mech Scaling</Isekai_Settings_MechScalingHeader>
+    <Isekai_Settings_MechScalingDesc>Player mechs inherit stat bonuses from their mechanitor's Isekai level and stats, making them scale with your progression.</Isekai_Settings_MechScalingDesc>
+    
+    <!-- RimHUD Integration (v1.0.75) -->
+    <Isekai_RimHUD_Rank>Isekai</Isekai_RimHUD_Rank>
+    <Isekai_RimHUD_XP>XP</Isekai_RimHUD_XP>
+    <Isekai_RimHUD_StatPoints>Stat Pts</Isekai_RimHUD_StatPoints>
+    <Isekai_RimHUD_Tooltip_Level>Level: {0}</Isekai_RimHUD_Tooltip_Level>
+    <Isekai_RimHUD_Tooltip_Rank>Rank: {0} — {1}</Isekai_RimHUD_Tooltip_Rank>
+    <Isekai_RimHUD_Tooltip_XP>XP: {0} / {1}</Isekai_RimHUD_Tooltip_XP>
+    <Isekai_RimHUD_Tooltip_StatPoints>Unspent Stat Points: {0}</Isekai_RimHUD_Tooltip_StatPoints>
+    <Isekai_RimHUD_Tooltip_Title>Active Title: {0}</Isekai_RimHUD_Tooltip_Title>
+    <Isekai_RimHUD_Tooltip_XPBar>XP Progress: {0} / {1} ({2}%)</Isekai_RimHUD_Tooltip_XPBar>
+    <Isekai_RimHUD_Tooltip_AllocateStats>This pawn has unspent stat points! Open the Isekai tab to allocate them.</Isekai_RimHUD_Tooltip_AllocateStats>
+    
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- World Boss System (v1.1.0)                              -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    
+    <!-- Quest Creation -->
+    <Isekai_WorldBoss_QuestName>&lt;color=#9933FF&gt;World Boss&lt;/color&gt;: {0}</Isekai_WorldBoss_QuestName>
+    <Isekai_WorldBoss_QuestDesc>&lt;color=#FF4444&gt;⚠ EMERGENCY GUILD ALERT ⚠&lt;/color&gt;\n\nA catastrophic entity has been detected — a &lt;color=#9933FF&gt;{0}&lt;/color&gt; of such immense power that it has been classified as &lt;color=#9933FF&gt;Nation-rank&lt;/color&gt;, a threat that could devastate entire settlements.\n\nThe Adventurer's Guild is offering an astronomical bounty for its elimination:\n  • &lt;color=#FFD700&gt;{1} XP&lt;/color&gt;\n  • &lt;color=#FFD700&gt;{2} Silver&lt;/color&gt;\n  • &lt;color=#FFD700&gt;Legendary equipment, archotech parts, and rare materials&lt;/color&gt;\n\nThe creature has been sighted approximately {3} tiles from your colony. You have &lt;color=#FF4444&gt;7 days&lt;/color&gt; to reach the site before the trail goes cold.\n\n&lt;color=#FF4444&gt;WARNING&lt;/color&gt;: &lt;color=#9933FF&gt;Nation-rank&lt;/color&gt; creatures possess overwhelming strength. Bring your strongest forces. Other factions may already be engaging the target.\n\n— The Adventurer's Guild, Emergency Division</Isekai_WorldBoss_QuestDesc>
+    
+    <!-- Notification Letter -->
+    <Isekai_WorldBoss_LetterLabel>&lt;color=#FF4444&gt;[GUILD]&lt;/color&gt; &lt;color=#9933FF&gt;World Boss&lt;/color&gt; Sighted!</Isekai_WorldBoss_LetterLabel>
+    <Isekai_WorldBoss_LetterText>&lt;color=#FF4444&gt;URGENT — EMERGENCY DISPATCH&lt;/color&gt;\n\nTo all &lt;color=#FFD700&gt;S-Rank&lt;/color&gt; and above adventurers:\n\nA creature of unimaginable power has been located — a &lt;color=#9933FF&gt;{0}&lt;/color&gt;, now classified as &lt;color=#9933FF&gt;Nation-rank&lt;/color&gt;. Its energy signature alone has set off every detection ward within a hundred-mile radius.\n\nThe creature has been spotted approximately {1} tiles from your position. The Guild is scrambling every available asset, but you are our best hope.\n\n&lt;color=#FF4444&gt;This is not a hunt. This is a war.&lt;/color&gt;\n\nProceed with extreme caution. Other factions have been alerted and may engage independently.\n\nBounty: &lt;color=#FFD700&gt;MAXIMUM CLASSIFICATION&lt;/color&gt;\n\n— Adventurer's Guild, Emergency Division</Isekai_WorldBoss_LetterText>
+    
+    <!-- Site -->
+    <Isekai_WorldBoss_SiteLabel>&lt;color=#9933FF&gt;World Boss&lt;/color&gt; Territory: {0}</Isekai_WorldBoss_SiteLabel>
+    <Isekai_WorldBoss_SiteRevealed>&lt;color=#FFD700&gt;[Guild]&lt;/color&gt; &lt;color=#9933FF&gt;World Boss&lt;/color&gt; territory marked on the world map! A &lt;color=#9933FF&gt;{0}&lt;/color&gt; of &lt;color=#9933FF&gt;Nation-rank&lt;/color&gt; awaits. Travel there before the trail goes cold.</Isekai_WorldBoss_SiteRevealed>
+    
+    <!-- Boss Arrival -->
+    <Isekai_WorldBoss_Arrived_Label>&lt;color=#9933FF&gt;The World Boss Awakens&lt;/color&gt;</Isekai_WorldBoss_Arrived_Label>
+    <Isekai_WorldBoss_Arrived_Text>The ground trembles. The air grows heavy.\n\n&lt;color=#9933FF&gt;{0}&lt;/color&gt; towers before you — a &lt;color=#9933FF&gt;Nation-rank&lt;/color&gt; entity of terrifying power. Its sheer presence makes the hairs on your neck stand on end.\n\n&lt;color=#FF4444&gt;This is the fight of your life. There is no retreat.&lt;/color&gt;\n\nFight with everything you have.</Isekai_WorldBoss_Arrived_Text>
+    
+    <!-- Faction Groups -->
+    <Isekai_WorldBoss_FactionArrived>{0} has sent &lt;color=#FFD700&gt;{1} warriors&lt;/color&gt; to engage the &lt;color=#9933FF&gt;World Boss&lt;/color&gt;!</Isekai_WorldBoss_FactionArrived>
+    <Isekai_WorldBoss_FactionAllied>&lt;color=#FFD700&gt;{0}&lt;/color&gt; fights alongside you against the &lt;color=#9933FF&gt;World Boss&lt;/color&gt;.</Isekai_WorldBoss_FactionAllied>
+    <Isekai_WorldBoss_FactionHostile>&lt;color=#FF4444&gt;{0} is hostile!&lt;/color&gt; They will attack both you and the &lt;color=#9933FF&gt;World Boss&lt;/color&gt;.</Isekai_WorldBoss_FactionHostile>
+    
+    <!-- Wave Spawning -->
+    <Isekai_WorldBoss_WaveTrigger_Label>&lt;color=#FF4444&gt;The World Boss Rages!&lt;/color&gt;</Isekai_WorldBoss_WaveTrigger_Label>
+    <Isekai_WorldBoss_WaveTrigger_Text>The &lt;color=#9933FF&gt;{0}&lt;/color&gt; lets out a deafening roar as its body pulses with raw energy!\n\nIts power is fracturing. Copies of the creature — smaller but still devastatingly powerful — are manifesting from the boss's overflowing energy.\n\n&lt;color=#FF4444&gt;S-Rank creatures are spawning! Hold the line!&lt;/color&gt;</Isekai_WorldBoss_WaveTrigger_Text>
+    <Isekai_WorldBoss_WaveSpawn>&lt;color=#FF4444&gt;[ALERT]&lt;/color&gt; Wave {2}: &lt;color=#FF4444&gt;{0}x S-Rank {1}&lt;/color&gt; have spawned from the &lt;color=#9933FF&gt;World Boss&lt;/color&gt;'s energy!</Isekai_WorldBoss_WaveSpawn>
+    
+    <!-- Boss Defeated -->
+    <Isekai_WorldBoss_Defeated>&lt;color=#FFD700&gt;[GUILD]&lt;/color&gt; &lt;color=#9933FF&gt;World Boss {0}&lt;/color&gt; has been &lt;color=#FFD700&gt;DEFEATED&lt;/color&gt;! An extraordinary victory! The Guild salutes your courage.</Isekai_WorldBoss_Defeated>
+    <Isekai_WorldBoss_Victory_Label>&lt;color=#9933FF&gt;World Boss {0}&lt;/color&gt; — &lt;color=#FFD700&gt;DEFEATED!&lt;/color&gt;</Isekai_WorldBoss_Victory_Label>
+    <Isekai_WorldBoss_Victory_Text>&lt;color=#FFD700&gt;[GUILD EMERGENCY — RESOLVED]&lt;/color&gt;\n\nThe &lt;color=#9933FF&gt;Nation-rank&lt;/color&gt; threat "&lt;color=#9933FF&gt;{0}&lt;/color&gt;" has been eliminated.\n\nThe Adventurer's Guild extends its highest honors to all who participated in this legendary hunt.\n\n&lt;color=#FFD700&gt;Rewards Distributed:&lt;/color&gt;\n• &lt;color=#FFD700&gt;{1} XP&lt;/color&gt; shared among all participating adventurers\n• &lt;color=#FFD700&gt;{2} silver&lt;/color&gt; recovered from the battlefield\n• &lt;color=#FFD700&gt;Legendary loot and rare materials have been secured&lt;/color&gt;\n\nThis victory will be remembered across nations. The Guild salutes your extraordinary courage.</Isekai_WorldBoss_Victory_Text>
+    
+    <!-- Quest Description States -->
+    <Isekai_WorldBoss_Pending>The Adventurer's Guild has detected a &lt;color=#9933FF&gt;{0}&lt;/color&gt; of &lt;color=#9933FF&gt;Nation rank&lt;/color&gt;. Accept this quest to receive the coordinates.</Isekai_WorldBoss_Pending>
+    <Isekai_WorldBoss_Travel>Travel to {0} and engage the &lt;color=#9933FF&gt;World Boss&lt;/color&gt;. &lt;color=#FF4444&gt;Time is running out.&lt;/color&gt;</Isekai_WorldBoss_Travel>
+    <Isekai_WorldBoss_Slain>The &lt;color=#9933FF&gt;Nation-rank {0}&lt;/color&gt; has been slain. &lt;color=#FFD700&gt;A legendary victory.&lt;/color&gt;</Isekai_WorldBoss_Slain>
+    <Isekai_WorldBoss_Fighting>&lt;color=#FF4444&gt;ENGAGING&lt;/color&gt;: &lt;color=#9933FF&gt;{0}&lt;/color&gt;\nBoss Health: {1}%</Isekai_WorldBoss_Fighting>
+    
+    <!-- Nation Rank Title -->
+    <Isekai_Rank_Nation>Nation</Isekai_Rank_Nation>
+    <Isekai_Rank_Nation_Title>World Boss</Isekai_Rank_Nation_Title>
+
+    <!-- Faction Reinforcements -->
+    <Isekai_WorldBoss_Reinforcement_Label>&lt;color=#FFD700&gt;Reinforcements Arrive!&lt;/color&gt;</Isekai_WorldBoss_Reinforcement_Label>
+    <Isekai_WorldBoss_Reinforcement_Text>&lt;color=#FFD700&gt;[GUILD BROADCAST]&lt;/color&gt;\n\nA group from {0} has arrived at the &lt;color=#9933FF&gt;World Boss&lt;/color&gt; battlefield to join the fight against &lt;color=#9933FF&gt;{1}&lt;/color&gt;.\n\n&lt;color=#FF4444&gt;The battle rages on!&lt;/color&gt;</Isekai_WorldBoss_Reinforcement_Text>
+
+    <!-- ═══ Constellation (v1.1.1) ═══ -->
+    <Isekai_PassivePoints>{0} Star Points</Isekai_PassivePoints>
+    <Isekai_PassiveAllocated>{0} Allocated</Isekai_PassiveAllocated>
+    <Isekai_PassiveRespec>Respec</Isekai_PassiveRespec>
+    <Isekai_TreeComingSoon>Coming soon!</Isekai_TreeComingSoon>
+    <Isekai_NoTreeData>No constellation data found</Isekai_NoTreeData>
+    <Isekai_NodeKeystone>KEYSTONE</Isekai_NodeKeystone>
+    <Isekai_NodeNotable>Notable Passive</Isekai_NodeNotable>
+    <Isekai_NodeMinor>Minor Passive</Isekai_NodeMinor>
+    <Isekai_NodeStart>Starting Node</Isekai_NodeStart>
+    <Isekai_NodeAllocated>Allocated</Isekai_NodeAllocated>
+    <Isekai_NodeCost>Cost: {0} point(s)</Isekai_NodeCost>
+
+    <!-- Detail Panel -->
+    <Isekai_DetailSelectNode>Select a node to view details</Isekai_DetailSelectNode>
+    <Isekai_DetailClickToAllocate>Click to allocate</Isekai_DetailClickToAllocate>
+    <Isekai_UnlockNode>Unlock Node</Isekai_UnlockNode>
+    <Isekai_DetailNotEnoughPoints>Not enough points</Isekai_DetailNotEnoughPoints>
+    <Isekai_DetailNotConnected>Not connected</Isekai_DetailNotConnected>
+    <Isekai_DetailTreeSummary>Constellation Summary</Isekai_DetailTreeSummary>
+    <Isekai_DetailNodes>Nodes</Isekai_DetailNodes>
+    <Isekai_DetailKeystones>Keystones</Isekai_DetailKeystones>
+    <Isekai_DetailPointsSpent>Points Spent</Isekai_DetailPointsSpent>
+    <Isekai_DetailPointsAvail>Points Available</Isekai_DetailPointsAvail>
+    <Isekai_DetailActiveBonuses>Active Bonuses:</Isekai_DetailActiveBonuses>
+    <Isekai_DetailNoBonuses>No bonuses yet</Isekai_DetailNoBonuses>
+    <Isekai_DetailClassPassive>Class Passive</Isekai_DetailClassPassive>
+    <Isekai_DetailGimmickLocked>Choose this class to activate</Isekai_DetailGimmickLocked>
+
+    <!-- Star Fragment -->
+    <Isekai_StarFragment_RequiresFragment>Requires: Absorbed Star Fragment (multiclass)</Isekai_StarFragment_RequiresFragment>
+    <Isekai_StarFragment_HasFragment>Multiclass Unlock: Ready ✓</Isekai_StarFragment_HasFragment>
+    <Isekai_RequiresDRank>Requires: D Rank (Level 11)</Isekai_RequiresDRank>
+
+    <!-- Settings -->
+    <Isekai_Settings_EnableStarFragmentDrops>Enable Star Fragment Drops</Isekai_Settings_EnableStarFragmentDrops>
+    <Isekai_Settings_EnableStarFragmentDrops_Desc>Star Fragments drop from elite S/SS/SSS ranked creatures and world bosses. When absorbed by an adventurer, each one grants 1 Star Point and 1 Multiclass Unlock for the Constellation tree.</Isekai_Settings_EnableStarFragmentDrops_Desc>
+    <Isekai_Settings_ConstellationHeader>Constellation</Isekai_Settings_ConstellationHeader>
+    <Isekai_Settings_ConstellationBonusMultiplier>Constellation Bonus Multiplier</Isekai_Settings_ConstellationBonusMultiplier>
+    <Isekai_Settings_ConstellationBonusMultiplier_Desc>Scales all stat bonuses from constellation nodes. At 0.50x, a +10% node gives +5%. At 2.00x, it gives +20%. ClassGimmickTier is unaffected.</Isekai_Settings_ConstellationBonusMultiplier_Desc>
+
+    <!-- ==================== ISEKAI TRAITS ==================== -->
+    <!-- Archetype Traits -->
+    <Isekai_Trait_Protagonist>Protagonist</Isekai_Trait_Protagonist>
+    <Isekai_Trait_Antagonist>Antagonist</Isekai_Trait_Antagonist>
+    <Isekai_Trait_Reincarnated>Reincarnated</Isekai_Trait_Reincarnated>
+    <Isekai_Trait_Regressor>Regressor</Isekai_Trait_Regressor>
+    <Isekai_Trait_SummonedHero>Summoned Hero</Isekai_Trait_SummonedHero>
+    
+    <!-- Growth Traits -->
+    <Isekai_Trait_NaturalTalent>Natural Talent</Isekai_Trait_NaturalTalent>
+    <Isekai_Trait_Prodigy>Prodigy</Isekai_Trait_Prodigy>
+    <Isekai_Trait_LateBloomer>Late Bloomer</Isekai_Trait_LateBloomer>
+    <Isekai_Trait_QuickLearner>Quick Learner</Isekai_Trait_QuickLearner>
+    <Isekai_Trait_SlowGrind>Slow Grind</Isekai_Trait_SlowGrind>
+    <Isekai_Trait_PowerSpike>Power Spike</Isekai_Trait_PowerSpike>
+    <Isekai_Trait_AwakenedPotential>Awakened Potential</Isekai_Trait_AwakenedPotential>
+    <Isekai_Trait_Genius>Genius</Isekai_Trait_Genius>
+    <Isekai_Trait_BattleManiac>Battle Maniac</Isekai_Trait_BattleManiac>
+    
+    <!-- Combat Traits -->
+    <Isekai_Trait_BerserkerBlood>Berserker Blood</Isekai_Trait_BerserkerBlood>
+    <Isekai_Trait_IronWill>Iron Will</Isekai_Trait_IronWill>
+    <Isekai_Trait_GlassCannon>Glass Cannon</Isekai_Trait_GlassCannon>
+    <Isekai_Trait_Fortress>Fortress</Isekai_Trait_Fortress>
+    <Isekai_Trait_ShadowStep>Shadow Step</Isekai_Trait_ShadowStep>
+    <Isekai_Trait_PredatorInstinct>Predator's Instinct</Isekai_Trait_PredatorInstinct>
+    <Isekai_Trait_Undying>Undying</Isekai_Trait_Undying>
+    
+    <!-- Stat Affinity Traits -->
+    <Isekai_Trait_Mighty>Mighty</Isekai_Trait_Mighty>
+    <Isekai_Trait_Agile>Agile</Isekai_Trait_Agile>
+    <Isekai_Trait_Resilient>Resilient</Isekai_Trait_Resilient>
+    <Isekai_Trait_Brilliant>Brilliant</Isekai_Trait_Brilliant>
+    <Isekai_Trait_Enlightened>Enlightened</Isekai_Trait_Enlightened>
+    <Isekai_Trait_SilverTongue>Silver Tongue</Isekai_Trait_SilverTongue>
+    
+    <!-- Utility Traits -->
+    <Isekai_Trait_MerchantEye>Merchant's Eye</Isekai_Trait_MerchantEye>
+    <Isekai_Trait_CraftsmanSoul>Craftsman's Soul</Isekai_Trait_CraftsmanSoul>
+    <Isekai_Trait_BeastWhisperer>Beast Whisperer</Isekai_Trait_BeastWhisperer>
+    <Isekai_Trait_HealerTouch>Healer's Touch</Isekai_Trait_HealerTouch>
+    <Isekai_Trait_Lucky>Lucky</Isekai_Trait_Lucky>
+    <Isekai_Trait_CursedLuck>Cursed Luck</Isekai_Trait_CursedLuck>
+    
+    <!-- Negative/Curse Traits -->
+    <Isekai_Trait_HollowCore>Hollow Core</Isekai_Trait_HollowCore>
+    <Isekai_Trait_FragileVessel>Fragile Vessel</Isekai_Trait_FragileVessel>
+    <Isekai_Trait_EchoOfDefeat>Echo of Defeat</Isekai_Trait_EchoOfDefeat>
+    <Isekai_Trait_SealedPower>Sealed Power</Isekai_Trait_SealedPower>
+    
+    <!-- Trait Item Names -->
+    <Isekai_Item_HerosAwakening>Hero's Awakening Scroll</Isekai_Item_HerosAwakening>
+    <Isekai_Item_HerosAwakening_Desc>An ancient scroll radiating golden light. When used, it awakens the Protagonist trait within a pawn, granting them x10 XP gain and +2 stat points per level at the cost of social standing.</Isekai_Item_HerosAwakening_Desc>
+    <Isekai_Item_ReincarnationCrystal>Reincarnation Crystal</Isekai_Item_ReincarnationCrystal>
+    <Isekai_Item_ReincarnationCrystal_Desc>A shimmering crystal containing memories from another life. When used, it resets the pawn's level and stats, then grants the Reincarnated trait — x5 XP gain, +10 star points, and accelerated constellation growth. Constellation tree progress is preserved.</Isekai_Item_ReincarnationCrystal_Desc>
+    <Isekai_Item_VillainsMask>Villain's Mask</Isekai_Item_VillainsMask>
+    <Isekai_Item_VillainsMask_Desc>A sinister mask radiating malevolent energy. When worn, it awakens the Antagonist trait — x8 XP gain and devastating combat power, but the wearer becomes reviled by all.</Isekai_Item_VillainsMask_Desc>
+    <Isekai_Item_SummoningCircle>Summoning Circle Scroll</Isekai_Item_SummoningCircle>
+    <Isekai_Item_SummoningCircle_Desc>A mystical scroll inscribed with otherworldly runes. Activating it tears open a rift between worlds, summoning a new colonist with the Summoned Hero trait. Does not affect the user.</Isekai_Item_SummoningCircle_Desc>
+    <Isekai_Item_RegressionOrb>Regression Orb</Isekai_Item_RegressionOrb>
+    <Isekai_Item_RegressionOrb_Desc>A temporal orb that sends one's consciousness backward. Grants the Regressor trait — x4 XP gain and free constellation respec at will.</Isekai_Item_RegressionOrb_Desc>
+    
+    <!-- Trait Messages -->
+    <Isekai_Trait_Awakened>{0} has awakened as a {1}!</Isekai_Trait_Awakened>
+    <Isekai_Trait_SealBroken>{0}'s sealed power has broken free! They surge with overwhelming energy!</Isekai_Trait_SealBroken>
+    <Isekai_Trait_Awakening>{0}'s dormant potential has finally awakened! All stats increased by 50%!</Isekai_Trait_Awakening>
+    <Isekai_Trait_UndyingSaved>{0} should have died, but the Undying trait saved them!</Isekai_Trait_UndyingSaved>
+    <Isekai_Trait_EchoActive>{0} learns from defeat — XP doubled for 3 days!</Isekai_Trait_EchoActive>
+    
+    <!-- Summoned Hero Spawn Messages -->
+    <Isekai_SummonHero_Title>A Hero Arrives — {0}!</Isekai_SummonHero_Title>
+    <Isekai_SummonHero_Text>A summoning circle has torn open a rift between worlds!\n\n{0} has been pulled from another dimension and joins your colony as a Summoned Hero.</Isekai_SummonHero_Text>
+    <Isekai_SummonHero_Mote>A Hero Has Been Summoned!</Isekai_SummonHero_Mote>
+    
+    <!-- Reincarnation Messages -->
+    <Isekai_Reincarnation_Reset>{0} has been reincarnated! Level and stats reset to base — constellation progress preserved.</Isekai_Reincarnation_Reset>
+    
+    <!-- Forge System -->
+    <Isekai_Forge_Title>Refinement Forge</Isekai_Forge_Title>
+    <Isekai_Forge_Disabled>The Forge System is disabled in mod settings.</Isekai_Forge_Disabled>
+    <Isekai_Forge_SelectEquipment>Select equipment to refine</Isekai_Forge_SelectEquipment>
+    <Isekai_Forge_Refinement>Refinement</Isekai_Forge_Refinement>
+    <Isekai_Forge_RefineButton>Refine</Isekai_Forge_RefineButton>
+    <Isekai_Forge_ConfirmRisky>Refinement above +5 risks item destruction!\n\nSuccess: {0}%\nDowngrade: {1}%\nDestruction: {2}%\n\nProceed?</Isekai_Forge_ConfirmRisky>
+    <Isekai_Forge_Success>Refinement successful! {0} is now +{1}.</Isekai_Forge_Success>
+    <Isekai_Forge_Downgrade>{0} failed refinement and was downgraded to +{1}.</Isekai_Forge_Downgrade>
+    <Isekai_Forge_Destroyed>{0} was destroyed during refinement!</Isekai_Forge_Destroyed>
+    <Isekai_Forge_Materials>Required Materials</Isekai_Forge_Materials>
+    <Isekai_Forge_SuccessRate>Success Rate</Isekai_Forge_SuccessRate>
+    <Isekai_Forge_DestroyRisk>Destruction Risk</Isekai_Forge_DestroyRisk>
+    
+    <!-- Runic Station -->
+    <Isekai_Rune_Title>Runic Station</Isekai_Rune_Title>
+    <Isekai_Rune_SelectEquipment>Select equipment to view rune slots</Isekai_Rune_SelectEquipment>
+    <Isekai_Rune_Slots>Rune Slots</Isekai_Rune_Slots>
+    <Isekai_Rune_EmptySlot>[ Empty Slot ]</Isekai_Rune_EmptySlot>
+    <Isekai_Rune_Available>Available Runes</Isekai_Rune_Available>
+    <Isekai_Rune_Apply>Apply</Isekai_Rune_Apply>
+    <Isekai_Rune_Remove>Remove</Isekai_Rune_Remove>
+    <Isekai_Rune_RemoveConfirm>Remove {0} from {1}?\n\nThe rune will be DESTROYED permanently.</Isekai_Rune_RemoveConfirm>
+    <Isekai_Rune_SlotsFull>Slots Full</Isekai_Rune_SlotsFull>
+    <Isekai_Rune_NoRunesAvailable>No compatible rune items found on the map. Craft runes at the Runic Station bills tab.</Isekai_Rune_NoRunesAvailable>
+    
+    <!-- Weapon Mastery -->
+    <Isekai_Mastery_Header>WEAPON MASTERY</Isekai_Mastery_Header>
+    <Isekai_Mastery_Novice>Novice</Isekai_Mastery_Novice>
+    <Isekai_Mastery_Apprentice>Apprentice</Isekai_Mastery_Apprentice>
+    <Isekai_Mastery_Journeyman>Journeyman</Isekai_Mastery_Journeyman>
+    <Isekai_Mastery_Expert>Expert</Isekai_Mastery_Expert>
+    <Isekai_Mastery_Master>Master</Isekai_Mastery_Master>
+    <Isekai_Mastery_Grandmaster>Grandmaster</Isekai_Mastery_Grandmaster>
+    
+    <!-- Forge Drops -->
+    <Isekai_Drop_ReinforcementCore>{0} dropped a Reinforcement Core!</Isekai_Drop_ReinforcementCore>
+    <Isekai_Drop_Rune>{0} dropped a {1}!</Isekai_Drop_Rune>
+    
+    <!-- Forge Building Gizmos -->
+    <Isekai_Gizmo_OpenForge>Open Forge</Isekai_Gizmo_OpenForge>
+    <Isekai_Gizmo_OpenForge_Desc>Open the Refinement Forge to refine weapons and armor.</Isekai_Gizmo_OpenForge_Desc>
+    <Isekai_Gizmo_OpenRunicStation>Runic Station</Isekai_Gizmo_OpenRunicStation>
+    <Isekai_Gizmo_OpenRunicStation_Desc>Open the Runic Station to apply or remove runes on equipment.</Isekai_Gizmo_OpenRunicStation_Desc>
+    
+    <!-- Float Menu -->
+    <Isekai_FloatMenu_OpenForge>Open Refinement Forge</Isekai_FloatMenu_OpenForge>
+    <Isekai_FloatMenu_OpenRunicStation>Open Runic Station</Isekai_FloatMenu_OpenRunicStation>
+    
+    <!-- Shared UI -->
+    <Isekai_UI_Search>Search...</Isekai_UI_Search>
+    <Isekai_UI_InStorage>In storage</Isekai_UI_InStorage>
+    
+    <!-- Rune Effect Display Names (info panel) -->
+    <Isekai_Effect_MeleeAttackSpeed>Melee Attack Speed</Isekai_Effect_MeleeAttackSpeed>
+    <Isekai_Effect_RangedAccuracy>Ranged Accuracy</Isekai_Effect_RangedAccuracy>
+    <Isekai_Effect_Lifesteal>Lifesteal</Isekai_Effect_Lifesteal>
+    <Isekai_Effect_StunChance>Stun Chance</Isekai_Effect_StunChance>
+    <Isekai_Effect_FireDamage>Fire Damage</Isekai_Effect_FireDamage>
+    <Isekai_Effect_SlowChance>Slow Chance</Isekai_Effect_SlowChance>
+    <Isekai_Effect_ArmorPenetration>Armor Penetration</Isekai_Effect_ArmorPenetration>
+    <Isekai_Effect_AoESplash>AoE Splash</Isekai_Effect_AoESplash>
+    <Isekai_Effect_RangedDamage>Ranged Damage</Isekai_Effect_RangedDamage>
+    <Isekai_Effect_MaxHealth>Max Health</Isekai_Effect_MaxHealth>
+    <Isekai_Effect_DodgeChance>Dodge Chance</Isekai_Effect_DodgeChance>
+    <Isekai_Effect_Resistance>Damage Reduction</Isekai_Effect_Resistance>
+    <Isekai_Effect_HealRate>Healing Rate</Isekai_Effect_HealRate>
+    <Isekai_Effect_MentalBreakReduce>Mental Break Threshold</Isekai_Effect_MentalBreakReduce>
+    <Isekai_Effect_ImmunityGain>Immunity Gain Speed</Isekai_Effect_ImmunityGain>
+    <Isekai_Effect_MoveSpeedEffect>Move Speed</Isekai_Effect_MoveSpeedEffect>
+    <Isekai_Effect_DamageReduction>Damage Reduction</Isekai_Effect_DamageReduction>
+    
+    <!-- Rune Effect Short Names (descriptions) -->
+    <Isekai_EffectShort_MeleeAttackSpeed>melee attack speed</Isekai_EffectShort_MeleeAttackSpeed>
+    <Isekai_EffectShort_RangedAccuracy>ranged accuracy</Isekai_EffectShort_RangedAccuracy>
+    <Isekai_EffectShort_Lifesteal>lifesteal</Isekai_EffectShort_Lifesteal>
+    <Isekai_EffectShort_StunChance>stun chance</Isekai_EffectShort_StunChance>
+    <Isekai_EffectShort_FireDamage>bonus fire damage</Isekai_EffectShort_FireDamage>
+    <Isekai_EffectShort_SlowChance>slow chance</Isekai_EffectShort_SlowChance>
+    <Isekai_EffectShort_ArmorPenetration>armor penetration</Isekai_EffectShort_ArmorPenetration>
+    <Isekai_EffectShort_AoESplash>AoE splash damage</Isekai_EffectShort_AoESplash>
+    <Isekai_EffectShort_RangedDamage>ranged damage</Isekai_EffectShort_RangedDamage>
+    <Isekai_EffectShort_MaxHealth>max health</Isekai_EffectShort_MaxHealth>
+    <Isekai_EffectShort_DodgeChance>dodge chance</Isekai_EffectShort_DodgeChance>
+    <Isekai_EffectShort_Resistance>damage reduction</Isekai_EffectShort_Resistance>
+    <Isekai_EffectShort_HealRate>healing rate</Isekai_EffectShort_HealRate>
+    <Isekai_EffectShort_MentalBreakReduce>mental break threshold</Isekai_EffectShort_MentalBreakReduce>
+    <Isekai_EffectShort_ImmunityGain>immunity gain speed</Isekai_EffectShort_ImmunityGain>
+    <Isekai_EffectShort_MoveSpeedEffect>move speed</Isekai_EffectShort_MoveSpeedEffect>
+    <Isekai_EffectShort_DamageReduction>damage reduction</Isekai_EffectShort_DamageReduction>
+    
+    <!-- Rune Description Format -->
+    <Isekai_RuneDesc_Format>{0}{1}% {2}</Isekai_RuneDesc_Format>
+    
+    <!-- CompForgeEnhancement Inspect Strings -->
+    <Isekai_Inspect_RefineInfo>Refinement: +{0} ({1})</Isekai_Inspect_RefineInfo>
+    <Isekai_Inspect_MeleeBonus>+{0}% dmg, -{1}% cd, -{2}% mass</Isekai_Inspect_MeleeBonus>
+    <Isekai_Inspect_RangedBonus>+{0}% dmg, -{1}% cd, +{2}% acc</Isekai_Inspect_RangedBonus>
+    <Isekai_Inspect_ArmorBonus>+{0}% armor, +{1}% spd, -{2}% mass</Isekai_Inspect_ArmorBonus>
+    <Isekai_Inspect_Runes>Runes ({0}/{1}): {2}</Isekai_Inspect_Runes>
+    <Isekai_Inspect_RuneSlots>Rune Slots: {0}/{1}</Isekai_Inspect_RuneSlots>
+    
+    <!-- CompForgeEnhancement Stat Entries -->
+    <Isekai_Stat_RefinedDesc>This item has been refined at the Refinement Forge to +{0}.</Isekai_Stat_RefinedDesc>
+    <Isekai_Stat_MeleeDmg>Melee Damage: +{0}%</Isekai_Stat_MeleeDmg>
+    <Isekai_Stat_AttackCooldown>Attack Cooldown: -{0}%</Isekai_Stat_AttackCooldown>
+    <Isekai_Stat_WeaponMass>Weapon Mass: -{0}%</Isekai_Stat_WeaponMass>
+    <Isekai_Stat_RangedDmg>Ranged Damage: +{0}%</Isekai_Stat_RangedDmg>
+    <Isekai_Stat_Cooldown>Cooldown: -{0}%</Isekai_Stat_Cooldown>
+    <Isekai_Stat_AccuracyStat>Accuracy: +{0}%</Isekai_Stat_AccuracyStat>
+    <Isekai_Stat_ArmorRating>Armor Rating: +{0}%</Isekai_Stat_ArmorRating>
+    <Isekai_Stat_MoveSpeedStat>Move Speed: +{0}%</Isekai_Stat_MoveSpeedStat>
+    <Isekai_Stat_ArmorMass>Armor Mass: -{0}%</Isekai_Stat_ArmorMass>
+    <Isekai_Stat_RefinementMaxHint>Refinement can be increased up to +10 at the Refinement Forge.</Isekai_Stat_RefinementMaxHint>
+    <Isekai_Stat_ForgeRefinement>Forge Refinement</Isekai_Stat_ForgeRefinement>
+    <Isekai_Stat_RuneSlotsDesc>This item has {0} rune slot(s). {1} currently in use.</Isekai_Stat_RuneSlotsDesc>
+    <Isekai_Stat_AppliedRunes>Applied runes:</Isekai_Stat_AppliedRunes>
+    <Isekai_Stat_RuneHint>Runes can be applied at a Runic Station.</Isekai_Stat_RuneHint>
+    <Isekai_Stat_TotalEffect>Total {0}: {1}</Isekai_Stat_TotalEffect>
+    <Isekai_Stat_Sources>Sources:</Isekai_Stat_Sources>
+    <Isekai_Stat_RuneLabel>Rune: {0}</Isekai_Stat_RuneLabel>
+    
+    <!-- Stat Explanation Strings -->
+    <Isekai_StatExp_RefineDmg>Refinement +{0}: +{1}%</Isekai_StatExp_RefineDmg>
+    <Isekai_StatExp_RefineCooldown>Refinement +{0}: -{1}% cooldown</Isekai_StatExp_RefineCooldown>
+    <Isekai_StatExp_RefineArmor>Forge refinement: +{0}%</Isekai_StatExp_RefineArmor>
+    <Isekai_StatExp_RefineArmorItem>Refinement +{0}: +{1}%</Isekai_StatExp_RefineArmorItem>
+    <Isekai_StatExp_RefineAccuracy>Refinement +{0}: +{1}% accuracy</Isekai_StatExp_RefineAccuracy>
+    <Isekai_StatExp_RefineMass>Refinement +{0}: -{1}% mass</Isekai_StatExp_RefineMass>
+    <Isekai_StatExp_RefineMoveSpeed>Forge refinement: +{0}% move speed</Isekai_StatExp_RefineMoveSpeed>
+    <Isekai_StatExp_RefineDurability>Refinement +{0}: +{1}% durability</Isekai_StatExp_RefineDurability>
+    <Isekai_StatExp_RefineRangedDmg>Refinement +{0}: +{1}% damage</Isekai_StatExp_RefineRangedDmg>
+    <Isekai_StatExp_Mastery>Weapon mastery: {0}</Isekai_StatExp_Mastery>
+    <Isekai_StatExp_RuneEnchant>Rune enchantment: {0}</Isekai_StatExp_RuneEnchant>
+    <Isekai_StatExp_RefineMarket>Refinement +{0}: +{1}%</Isekai_StatExp_RefineMarket>
+    <Isekai_StatExp_RuneMarket>Rune enchantments: +{0}%</Isekai_StatExp_RuneMarket>
+    
+    <!-- Window_Forge UI -->
+    <Isekai_Forge_SelectFromList>Select equipment\nfrom the list</Isekai_Forge_SelectFromList>
+    <Isekai_Forge_CannotEnhance>This item cannot be enhanced.</Isekai_Forge_CannotEnhance>
+    <Isekai_Forge_Quality>Quality: {0}</Isekai_Forge_Quality>
+    <Isekai_Forge_RefinementLevel>Refinement: +{0}</Isekai_Forge_RefinementLevel>
+    <Isekai_Forge_RefinementNone>Refinement: None</Isekai_Forge_RefinementNone>
+    <Isekai_Forge_MeleeDmgBonus>+{0}% melee damage</Isekai_Forge_MeleeDmgBonus>
+    <Isekai_Forge_MeleeCdBonus>-{0}% attack cooldown</Isekai_Forge_MeleeCdBonus>
+    <Isekai_Forge_WeaponMassBonus>-{0}% weapon mass</Isekai_Forge_WeaponMassBonus>
+    <Isekai_Forge_RangedDmgBonus>+{0}% ranged damage</Isekai_Forge_RangedDmgBonus>
+    <Isekai_Forge_CooldownBonus>-{0}% cooldown</Isekai_Forge_CooldownBonus>
+    <Isekai_Forge_AccuracyBonus>+{0}% accuracy</Isekai_Forge_AccuracyBonus>
+    <Isekai_Forge_WeaponMassBonus2>-{0}% weapon mass</Isekai_Forge_WeaponMassBonus2>
+    <Isekai_Forge_ArmorRatingBonus>+{0}% armor rating</Isekai_Forge_ArmorRatingBonus>
+    <Isekai_Forge_MoveSpeedBonus>+{0}% move speed</Isekai_Forge_MoveSpeedBonus>
+    <Isekai_Forge_ArmorMassBonus>-{0}% armor mass</Isekai_Forge_ArmorMassBonus>
+    <Isekai_Forge_RuneSlotsInfo>Rune Slots: {0}/{1}</Isekai_Forge_RuneSlotsInfo>
+    <Isekai_Forge_MaxRefinement>MAX REFINEMENT\n+10</Isekai_Forge_MaxRefinement>
+    <Isekai_Forge_RefineTo>Refine to +{0}</Isekai_Forge_RefineTo>
+    <Isekai_Forge_MaterialsLabel>Materials:</Isekai_Forge_MaterialsLabel>
+    <Isekai_Forge_SuccessLabel>Success: {0}%</Isekai_Forge_SuccessLabel>
+    <Isekai_Forge_DowngradeLabel>Downgrade: {0}%</Isekai_Forge_DowngradeLabel>
+    <Isekai_Forge_DestroyLabel>DESTROY: {0}%</Isekai_Forge_DestroyLabel>
+    <Isekai_Forge_MissingMaterials>Missing materials</Isekai_Forge_MissingMaterials>
+    <Isekai_Forge_ConfirmDestroy>Refining to +{0} has a {1}% chance to DESTROY the item.\n\nProceed?</Isekai_Forge_ConfirmDestroy>
+    <Isekai_Forge_Durability>Durability: {0}/{1} ({2}%)</Isekai_Forge_Durability>
+    <Isekai_Forge_NeedEssence>Need Mana Essence</Isekai_Forge_NeedEssence>
+    <Isekai_Forge_Repair>Repair</Isekai_Forge_Repair>
+    <Isekai_Forge_Repaired>Repaired!</Isekai_Forge_Repaired>
+    <Isekai_Forge_ResultSuccess>SUCCESS! +{0}</Isekai_Forge_ResultSuccess>
+    <Isekai_Forge_ResultDowngrade>Failed... →+{0}</Isekai_Forge_ResultDowngrade>
+    <Isekai_Forge_ResultDestroyed>DESTROYED!</Isekai_Forge_ResultDestroyed>
+    
+    <!-- Window_RunicStation UI -->
+    <Isekai_Rune_SelectFromList>Select equipment\nto view rune slots</Isekai_Rune_SelectFromList>
+    <Isekai_Rune_CannotHoldRunes>This item cannot hold runes.</Isekai_Rune_CannotHoldRunes>
+    <Isekai_Rune_TypeWeapon>Type: Weapon</Isekai_Rune_TypeWeapon>
+    <Isekai_Rune_TypeArmor>Type: Armor</Isekai_Rune_TypeArmor>
+    <Isekai_Rune_SlotsHeader>Rune Slots ({0}/{1})</Isekai_Rune_SlotsHeader>
+    <Isekai_Rune_RemoveButton>Remove</Isekai_Rune_RemoveButton>
+    <Isekai_Rune_RemoveWithName>Remove {0} (Destroyed)</Isekai_Rune_RemoveWithName>
+    <Isekai_Rune_SelectFirst>Select equipment first</Isekai_Rune_SelectFirst>
+    <Isekai_Rune_DevLabel>DEV</Isekai_Rune_DevLabel>
+</LanguageData>

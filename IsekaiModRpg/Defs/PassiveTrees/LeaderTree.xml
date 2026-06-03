@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════════╗
+        ║  LEADER CONSTELLATION — 56 Nodes, 5 Branches            ║
+        ║  Layout: Crown — Diplomacy(NW) / Commerce(NE) /         ║
+        ║          Governance(SW) / Command(SE) + Rally(N)         ║
+        ║                                                          ║
+        ║  Branches:                                               ║
+        ║   • DIPLOMACY   (NW) — Negotiation, SocialImpact        ║
+        ║   • COMMERCE    (NE) — TradePrice, Negotiation           ║
+        ║   • GOVERNANCE  (SW) — ArrestSuccess, MentalBreakThresh  ║
+        ║   • COMMAND     (SE) — Taming, TrainAnimal               ║
+        ║   • RALLY       (N)  — gimmick nodes + SocialImpact core ║
+        ║   + 5 cross-connectors between adjacent branches         ║
+        ╚══════════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Leader</defName>
+        <label>Leader</label>
+        <treeClass>Leader</treeClass>
+        <treeDescription>Natural commanders who amplify the colony's potential through sheer force of personality. Five constellations radiate from the leader's core — each representing a different dimension of authority. The larger the colony they command, the more effective their Rallying Presence becomes.</treeDescription>
+        <classGimmick>RallyingPresence</classGimmick>
+        <classGimmickName>Rallying Presence</classGimmickName>
+        <classGimmickDescription>The Leader's social effectiveness scales with colony size. More free colonists means stronger social impact, negotiation, and trade prices. Rallying Presence scales along the Rally Path. Tier 1 (Rallying Cry): +2% per colonist, max 8 counted (max +16%). Tier 2 (Battle Standard): +2.5% per colonist, max 12 counted (max +30%). Tier 3 (Champion's Aura): +3% per colonist, max 16 counted (max +48%). Tier 4 (Supreme Commander): +3.5% per colonist, max 20 counted (max +70%). The bigger the colony, the more powerful the Leader becomes.</classGimmickDescription>
+
+        <nodes>
+            <!-- ════════════ START NODE ════════════ -->
+            <li>
+                <nodeId>LD_Start</nodeId>
+                <label>Leader's Awakening</label>
+                <description>Others look to you when decisions need making. Your words carry weight, your presence commands attention, and even strangers feel the pull of your authority. Today you begin to understand why.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ DIPLOMACY (North-West) — Negotiation / SocialImpact ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>LD_DP1</nodeId>
+                <label>Smooth Talker</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-1.0</x><y>1.1</y>
+                <bonuses><li><bonusType>Negotiation</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP2</nodeId>
+                <label>Persuasive Words</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-2.0</x><y>2.3</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP_SilverTongue</nodeId>
+                <label>Silver Tongue</label>
+                <description>Your words slide past defenses like water through cracks. Where others argue, you persuade. Where others demand, you convince. Negotiations that seemed impossible become routine when you're at the table — because you always know exactly what the other party needs to hear.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-3.0</x><y>3.4</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0833</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP3</nodeId>
+                <label>Compelling Argument</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-4.0</x><y>4.5</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.0667</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP4</nodeId>
+                <label>Diplomatic Immunity</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-5.0</x><y>5.6</y>
+                <bonuses><li><bonusType>Negotiation</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP_MasterDiplomat</nodeId>
+                <label>Master Diplomat</label>
+                <description>You weave alliances from thin air and turn enemies into reluctant friends. Your diplomatic presence is so overwhelming that even the most hostile factions pause before refusing your proposals. Wars have been averted by a single conversation with you.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-6.0</x><y>6.8</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.1667</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP5</nodeId>
+                <label>Unrefusable Offer</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-7.0</x><y>7.9</y>
+                <bonuses><li><bonusType>Negotiation</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP_PeerlessEnvoy</nodeId>
+                <label>Peerless Envoy</label>
+                <description>Your reputation precedes you across the planet. Faction leaders speak your name with a mixture of respect and wariness, knowing that a conversation with you can reshape the political landscape overnight. Every word you speak carries the weight of absolute conviction.\n\nTRADEOFF: Your focus on words over weapons has dulled your combat edge.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>-8.0</x><y>9.0</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.3333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.2</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Diplomacy side branch (from Silver Tongue → NW flank) -->
+            <li>
+                <nodeId>LD_DP_S1</nodeId>
+                <label>Voice of Reason</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-4.3</x><y>2.4</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP_S2</nodeId>
+                <label>Calm Authority</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-5.6</x><y>1.4</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_DP_InspiringPresence</nodeId>
+                <label>Inspiring Presence</label>
+                <description>People don't just listen to you — they believe in you. Your mere presence elevates morale and stiffens resolve. Colonists who've spoken with you work harder, fight braver, and endure more — not because you ordered them to, but because they want to be worthy of the faith you show in them.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-6.8</x><y>0.3</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0667</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ COMMERCE (North-East) — TradePrice / Negotiation    ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>LD_CM1</nodeId>
+                <label>Haggler</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>1.0</x><y>1.1</y>
+                <bonuses><li><bonusType>TradePrice</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM2</nodeId>
+                <label>Market Sense</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>2.0</x><y>2.3</y>
+                <bonuses>
+                    <li><bonusType>TradePrice</bonusType><value>0.05</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM_ShrewdMerchant</nodeId>
+                <label>Shrewd Merchant</label>
+                <description>You instinctively know what things are worth — and more importantly, what people will pay for them. Every trade tilts in your favour through a combination of market knowledge, perfect timing, and that indefinable quality that makes people trust your judgment on value.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>3.0</x><y>3.4</y>
+                <bonuses>
+                    <li><bonusType>TradePrice</bonusType><value>0.1333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0833</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM3</nodeId>
+                <label>Fair Deal</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>4.0</x><y>4.5</y>
+                <bonuses>
+                    <li><bonusType>TradePrice</bonusType><value>0.0667</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM4</nodeId>
+                <label>Merchant Prince</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>5.0</x><y>5.6</y>
+                <bonuses><li><bonusType>TradePrice</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM_MarketMastery</nodeId>
+                <label>Market Mastery</label>
+                <description>The economy of the Rim bends to your understanding. You anticipate supply shortages before they happen, stockpile commodities at their lowest, and sell at peaks with uncanny timing. Traders who've dealt with you either respect your acumen or resent it — usually both.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>6.0</x><y>6.8</y>
+                <bonuses>
+                    <li><bonusType>TradePrice</bonusType><value>0.1667</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.1</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM5</nodeId>
+                <label>Golden Touch</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>7.0</x><y>7.9</y>
+                <bonuses><li><bonusType>TradePrice</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM_TradeBaron</nodeId>
+                <label>Trade Baron</label>
+                <description>You are the most formidable trader on the Rim. Caravans adjust their routes to visit your colony specifically, knowing that while you'll drive a hard bargain, the deals you broker are always fair enough to keep them coming back. Your colony grows wealthy not through conquest, but through commerce.\n\nTRADEOFF: Your mercantile obsession comes at the expense of hands-on productivity.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>8.0</x><y>9.0</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>TradePrice</bonusType><value>0.3333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.2</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Commerce side branch (from Shrewd Merchant → NE flank) -->
+            <li>
+                <nodeId>LD_CM_S1</nodeId>
+                <label>Bulk Deals</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>4.3</x><y>2.4</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM_S2</nodeId>
+                <label>Logistics Network</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>5.6</x><y>1.4</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CM_SupplyLines</nodeId>
+                <label>Supply Lines</label>
+                <description>Your network of trade contacts and supply chains is the envy of every settlement on the Rim. Materials flow to your colony at favourable rates, information about market shifts reaches you before anyone else, and your reputation as a reliable trading partner opens doors that silver alone cannot.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/crown</icon>
+                <x>6.8</x><y>0.3</y>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.1333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ GOVERNANCE (South-West) — ArrestSuccess / Mental    ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>LD_GV1</nodeId>
+                <label>Stern Gaze</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-0.6</x><y>-1.4</y>
+                <bonuses><li><bonusType>ArrestSuccess</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV2</nodeId>
+                <label>Iron Discipline</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-1.1</x><y>-2.8</y>
+                <bonuses>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.05</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV_IronAuthority</nodeId>
+                <label>Iron Authority</label>
+                <description>Your word is law — not through cruelty, but through an unshakeable certainty that brooks no argument. Prisoners break when you question them because they sense they cannot lie to you. Colonists obey your directives because they know you've already considered every alternative.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-1.7</x><y>-4.2</y>
+                <bonuses>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0833</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV3</nodeId>
+                <label>Warden's Insight</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-2.3</x><y>-5.6</y>
+                <bonuses>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV4</nodeId>
+                <label>Mental Fortress</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-2.8</x><y>-7.0</y>
+                <bonuses><li><bonusType>MentalBreakThreshold</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV_UnshakeableWill</nodeId>
+                <label>Unshakeable Will</label>
+                <description>Your mental composure is legendary. Threats, grief, hardship — none of it cracks your facade. This stoic resilience radiates outward, stabilising those around you. Prisoners wilt under your interrogations not from violence, but from the crushing weight of your certainty.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-3.4</x><y>-8.4</y>
+                <bonuses>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV5</nodeId>
+                <label>Absolute Order</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-3.9</x><y>-9.8</y>
+                <bonuses><li><bonusType>ArrestSuccess</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV_LawAndOrder</nodeId>
+                <label>Law and Order</label>
+                <description>You embody the rule of law. Prisoners cannot resist your authority, colonists cannot defy it, and even raiders hesitate when they see you standing firm. Your colony runs with the precision of a well-oiled machine because everyone knows their role — and everyone knows who's in charge.\n\nTRADEOFF: Your rigid discipline leaves little room for physical agility.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-4.5</x><y>-11.2</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.3333</value></li>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.2</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Governance side branch (from Iron Authority → SW flank) -->
+            <li>
+                <nodeId>LD_GV_S1</nodeId>
+                <label>Inner Peace</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-3.0</x><y>-3.5</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV_S2</nodeId>
+                <label>Unwavering</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-4.2</x><y>-2.8</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.05</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_GV_StoicResolve</nodeId>
+                <label>Stoic Resolve</label>
+                <description>Nothing breaks your composure. You've stared down raids, endured famine, and walked through the aftermath of battle without flinching. This iron will isn't just personal strength — it's a shield that protects your mind from the horrors that shatter lesser wills.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-5.5</x><y>-2.0</y>
+                <bonuses>
+                    <li><bonusType>MentalBreakThreshold</bonusType><value>0.1333</value></li>
+                    <li><bonusType>PainThreshold</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ COMMAND (South-East) — Taming / TrainAnimal          ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>LD_CO1</nodeId>
+                <label>Animal Rapport</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>0.6</x><y>-1.4</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO2</nodeId>
+                <label>Firm Hand</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>1.1</x><y>-2.8</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO_AlphaPresence</nodeId>
+                <label>Alpha Presence</label>
+                <description>Animals recognise in you the unmistakable bearing of a pack leader. Predators hesitate, herd animals follow, and even the most stubborn beasts bend to your authority. Your commands are obeyed not through force, but through an instinctive recognition of dominance.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>1.7</x><y>-4.2</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.1333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0833</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO3</nodeId>
+                <label>Bond Forger</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>2.3</x><y>-5.6</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.0667</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO4</nodeId>
+                <label>Drill Master</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>2.8</x><y>-7.0</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO_PackLeader</nodeId>
+                <label>Pack Leader</label>
+                <description>Your connection with animals transcends language. You read their body language as easily as a book, anticipate their needs before they feel them, and train them to perform feats that astound onlookers. In your hands, even the wildest beast becomes a loyal companion.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>3.4</x><y>-8.4</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.1667</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.1</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO5</nodeId>
+                <label>War Beast</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>3.9</x><y>-9.8</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO_BeastLord</nodeId>
+                <label>Beast Lord</label>
+                <description>You command animals the way a general commands soldiers. Your menagerie is a force multiplier that transforms a modest colony into an empire. Thrumbos kneel, bears stand guard, and wargs hunt on your command — each one an extension of your indomitable will.\n\nTRADEOFF: Your deep bond with beasts comes at the cost of human social finesse.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/trophy</icon>
+                <x>4.5</x><y>-11.2</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.3333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.2</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.1333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Command side branch (from Alpha Presence → SE flank) -->
+            <li>
+                <nodeId>LD_CO_S1</nodeId>
+                <label>Obedience</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>3.0</x><y>-3.5</y>
+                <bonuses>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.05</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO_S2</nodeId>
+                <label>Pasture Keeper</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>4.2</x><y>-2.8</y>
+                <bonuses>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_CO_LoyalCompanion</nodeId>
+                <label>Loyal Companion</label>
+                <description>The animals under your care don't just obey — they adore you. Their loyalty is absolute, their training impeccable, and their productivity far exceeds what anyone thought possible. Milk, wool, eggs — everything your livestock produces comes in abundance.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>5.5</x><y>-2.0</y>
+                <bonuses>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.1333</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0667</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ RALLY (North spine) — Gimmick Tiers + SocialImpact     ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>LD_RL1</nodeId>
+                <label>Commanding Voice</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_RL2</nodeId>
+                <label>Natural Charisma</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>0</x><y>3.5</y>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_RL_RallyingCry</nodeId>
+                <label>Rallying Cry</label>
+                <description>Your voice cuts through chaos. When you speak, colonists listen — not out of obligation, but because your words carry the weight of genuine conviction. The larger your colony grows, the more your presence amplifies its social cohesion.\n\n[GIMMICK TIER 1]: +2% social impact per colonist, max 8 counted (max +16%).</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>5.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0667</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_RL3</nodeId>
+                <label>Battle Standard</label>
+                <description>[GIMMICK TIER 2]: +2.5% per colonist, max 12 counted (max +30%).</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>0</x><y>6.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_RL4</nodeId>
+                <label>Champion's Aura</label>
+                <description>[GIMMICK TIER 3]: +3% per colonist, max 16 counted (max +48%).</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>0</x><y>8.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.05</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>LD_RL_SupremeCommander</nodeId>
+                <label>Supreme Commander</label>
+                <description>You are the beating heart of your colony. Every soul under your banner draws strength from your presence, and every new face that joins the cause amplifies your authority further. At the head of a thriving colony, your social influence becomes an unstoppable force. At Tier 4, every colonist is a testament to your leadership.\n\n[GIMMICK TIER 4]: +3.5% per colonist, max 20 counted (max +70%). Lead them all.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>0</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.1333</value></li>
+                    <li><bonusType>Negotiation</bonusType><value>0.0667</value></li>
+                    <li><bonusType>TradePrice</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Cross-connectors (all require both neighbours to be active) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <!-- Diplomacy (NW) ↔ Rally (N) -->
+            <li>
+                <nodeId>LD_Cross_DR</nodeId>
+                <label>Inspiring Words</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-1.5</x><y>4.4</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>Negotiation</bonusType><value>0.0333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Commerce (NE) ↔ Rally (N) -->
+            <li>
+                <nodeId>LD_Cross_CR</nodeId>
+                <label>Profitable Aura</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>1.5</x><y>4.4</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>TradePrice</bonusType><value>0.0333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Diplomacy (NW) ↔ Governance (SW) -->
+            <li>
+                <nodeId>LD_Cross_DG</nodeId>
+                <label>Benevolent Rule</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>-0.8</x><y>-0.2</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Commerce (NE) ↔ Command (SE) -->
+            <li>
+                <nodeId>LD_Cross_CC</nodeId>
+                <label>Resource Command</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>0.8</x><y>-0.2</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.0333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Governance (SW) ↔ Command (SE) -->
+            <li>
+                <nodeId>LD_Cross_GC</nodeId>
+                <label>Unified Front</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/handshake</icon>
+                <x>0</x><y>-4.8</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ArrestSuccess</bonusType><value>0.0333</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- Connection pairs (bidirectional, "A~B" format)             -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <connections>
+            <!-- Start → 5 branch gateways -->
+            <li>LD_Start~LD_DP1</li>
+            <li>LD_Start~LD_CM1</li>
+            <li>LD_Start~LD_GV1</li>
+            <li>LD_Start~LD_CO1</li>
+            <li>LD_Start~LD_RL1</li>
+
+            <!-- Diplomacy main path -->
+            <li>LD_DP1~LD_DP2</li>
+            <li>LD_DP2~LD_DP_SilverTongue</li>
+            <li>LD_DP_SilverTongue~LD_DP3</li>
+            <li>LD_DP3~LD_DP4</li>
+            <li>LD_DP4~LD_DP_MasterDiplomat</li>
+            <li>LD_DP_MasterDiplomat~LD_DP5</li>
+            <li>LD_DP5~LD_DP_PeerlessEnvoy</li>
+            <!-- Diplomacy side branch -->
+            <li>LD_DP_SilverTongue~LD_DP_S1</li>
+            <li>LD_DP_S1~LD_DP_S2</li>
+            <li>LD_DP_S2~LD_DP_InspiringPresence</li>
+
+            <!-- Commerce main path -->
+            <li>LD_CM1~LD_CM2</li>
+            <li>LD_CM2~LD_CM_ShrewdMerchant</li>
+            <li>LD_CM_ShrewdMerchant~LD_CM3</li>
+            <li>LD_CM3~LD_CM4</li>
+            <li>LD_CM4~LD_CM_MarketMastery</li>
+            <li>LD_CM_MarketMastery~LD_CM5</li>
+            <li>LD_CM5~LD_CM_TradeBaron</li>
+            <!-- Commerce side branch -->
+            <li>LD_CM_ShrewdMerchant~LD_CM_S1</li>
+            <li>LD_CM_S1~LD_CM_S2</li>
+            <li>LD_CM_S2~LD_CM_SupplyLines</li>
+
+            <!-- Governance main path -->
+            <li>LD_GV1~LD_GV2</li>
+            <li>LD_GV2~LD_GV_IronAuthority</li>
+            <li>LD_GV_IronAuthority~LD_GV3</li>
+            <li>LD_GV3~LD_GV4</li>
+            <li>LD_GV4~LD_GV_UnshakeableWill</li>
+            <li>LD_GV_UnshakeableWill~LD_GV5</li>
+            <li>LD_GV5~LD_GV_LawAndOrder</li>
+            <!-- Governance side branch -->
+            <li>LD_GV_IronAuthority~LD_GV_S1</li>
+            <li>LD_GV_S1~LD_GV_S2</li>
+            <li>LD_GV_S2~LD_GV_StoicResolve</li>
+
+            <!-- Command main path -->
+            <li>LD_CO1~LD_CO2</li>
+            <li>LD_CO2~LD_CO_AlphaPresence</li>
+            <li>LD_CO_AlphaPresence~LD_CO3</li>
+            <li>LD_CO3~LD_CO4</li>
+            <li>LD_CO4~LD_CO_PackLeader</li>
+            <li>LD_CO_PackLeader~LD_CO5</li>
+            <li>LD_CO5~LD_CO_BeastLord</li>
+            <!-- Command side branch -->
+            <li>LD_CO_AlphaPresence~LD_CO_S1</li>
+            <li>LD_CO_S1~LD_CO_S2</li>
+            <li>LD_CO_S2~LD_CO_LoyalCompanion</li>
+
+            <!-- Rally main path -->
+            <li>LD_RL1~LD_RL2</li>
+            <li>LD_RL2~LD_RL_RallyingCry</li>
+            <li>LD_RL_RallyingCry~LD_RL3</li>
+            <li>LD_RL3~LD_RL4</li>
+            <li>LD_RL4~LD_RL_SupremeCommander</li>
+
+            <!-- Cross-connectors -->
+            <li>LD_DP_SilverTongue~LD_Cross_DR</li>
+            <li>LD_Cross_DR~LD_RL_RallyingCry</li>
+            <li>LD_CM_ShrewdMerchant~LD_Cross_CR</li>
+            <li>LD_Cross_CR~LD_RL_RallyingCry</li>
+            <li>LD_DP1~LD_Cross_DG</li>
+            <li>LD_Cross_DG~LD_GV1</li>
+            <li>LD_CM1~LD_Cross_CC</li>
+            <li>LD_Cross_CC~LD_CO1</li>
+            <li>LD_GV_IronAuthority~LD_Cross_GC</li>
+            <li>LD_Cross_GC~LD_CO_AlphaPresence</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

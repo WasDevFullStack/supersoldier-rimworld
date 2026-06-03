@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ==================== FORGE REFINEMENT STAT PATCHES ==================== -->
+
+    <!-- Refinement: Melee Damage (+5% per refinement level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineMeleeDamage" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineMeleeDamage" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Ranged Cooldown (-4% per refinement level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="RangedWeapon_Cooldown"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="RangedWeapon_Cooldown"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineRangedCooldown" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="RangedWeapon_Cooldown"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineRangedCooldown" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Armor Rating - Sharp -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ArmorRating_Sharp"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Sharp"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineArmor" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Sharp"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineArmor" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Armor Rating - Blunt -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineArmor" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Blunt"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineArmor" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Armor Rating - Heat -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ArmorRating_Heat"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Heat"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineArmor" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ArmorRating_Heat"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineArmor" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Melee Attack Speed (cooldown reduction, -2% per level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineMeleeSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineMeleeSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Ranged Damage (+3% per level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="RangedWeapon_DamageMultiplier"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="RangedWeapon_DamageMultiplier"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineRangedDamage" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="RangedWeapon_DamageMultiplier"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineRangedDamage" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Ranged Accuracy (+2% per level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineRangedAccuracy" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineRangedAccuracy" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Weapon Mass Reduction (-1.5% per level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="Mass"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="Mass"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineWeaponMass" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="Mass"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineWeaponMass" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Armor Move Speed (+1.5% per level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineArmorMoveSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MoveSpeed"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineArmorMoveSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Equipment Durability (+10% MaxHitPoints per level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MaxHitPoints"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MaxHitPoints"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineArmorHP" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MaxHitPoints"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineArmorHP" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Refinement: Armor Mass Reduction (-2% per level) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="Mass"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="Mass"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RefineArmorMass" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="Mass"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RefineArmorMass" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- ==================== WEAPON MASTERY STAT PATCHES ==================== -->
+
+    <!-- Mastery: Melee Hit Chance -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeHitChance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeHitChance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_MasteryMeleeHitChance" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeHitChance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_MasteryMeleeHitChance" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Mastery: Melee Damage -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_MasteryMeleeDamage" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_MasteryMeleeDamage" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Mastery: Shooting Accuracy -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_MasteryShootingAccuracy" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ShootingAccuracyPawn"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_MasteryShootingAccuracy" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Mastery: Attack Speed (Aiming Delay for ranged, Melee Cooldown for melee) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_MasteryAttackSpeed" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AimingDelayFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_MasteryAttackSpeed" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- ==================== RUNE EFFECT STAT PATCHES ==================== -->
+
+    <!-- Rune: Fury — MeleeAttackSpeed (reduces melee cooldown) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>MeleeAttackSpeed</targetEffect>
+                    <isMultiplier>true</isMultiplier>
+                    <isReduction>true</isReduction>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeWeapon_CooldownMultiplier"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>MeleeAttackSpeed</targetEffect>
+                        <isMultiplier>true</isMultiplier>
+                        <isReduction>true</isReduction>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Devastation — RangedDamage (multiplies ranged damage) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="RangedWeapon_DamageMultiplier"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="RangedWeapon_DamageMultiplier"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>RangedDamage</targetEffect>
+                    <isMultiplier>true</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="RangedWeapon_DamageMultiplier"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>RangedDamage</targetEffect>
+                        <isMultiplier>true</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Precision — RangedAccuracy (applied to weapon accuracy stats so bonus is visible in weapon info panel) -->
+    <!-- AccuracyTouch (0-3 cells) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="AccuracyTouch"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AccuracyTouch"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>RangedAccuracy</targetEffect>
+                    <isMultiplier>false</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AccuracyTouch"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>RangedAccuracy</targetEffect>
+                        <isMultiplier>false</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    <!-- AccuracyShort (4-12 cells) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="AccuracyShort"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AccuracyShort"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>RangedAccuracy</targetEffect>
+                    <isMultiplier>false</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AccuracyShort"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>RangedAccuracy</targetEffect>
+                        <isMultiplier>false</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    <!-- AccuracyMedium (13-25 cells) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="AccuracyMedium"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AccuracyMedium"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>RangedAccuracy</targetEffect>
+                    <isMultiplier>false</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AccuracyMedium"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>RangedAccuracy</targetEffect>
+                        <isMultiplier>false</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+    <!-- AccuracyLong (26+ cells) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="AccuracyLong"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AccuracyLong"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>RangedAccuracy</targetEffect>
+                    <isMultiplier>false</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="AccuracyLong"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>RangedAccuracy</targetEffect>
+                        <isMultiplier>false</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Sharpness — ArmorPenetration -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeArmorPenetration"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeArmorPenetration"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>ArmorPenetration</targetEffect>
+                    <isMultiplier>true</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeArmorPenetration"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>ArmorPenetration</targetEffect>
+                        <isMultiplier>true</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Fortitude — MaxHealth -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MaxHitPoints"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MaxHitPoints"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>MaxHealth</targetEffect>
+                    <isMultiplier>true</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MaxHitPoints"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>MaxHealth</targetEffect>
+                        <isMultiplier>true</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Evasion — DodgeChance -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>DodgeChance</targetEffect>
+                    <isMultiplier>false</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDodgeChance"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>DodgeChance</targetEffect>
+                        <isMultiplier>false</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Regeneration — HealRate -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="InjuryHealingFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="InjuryHealingFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>HealRate</targetEffect>
+                    <isMultiplier>true</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="InjuryHealingFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>HealRate</targetEffect>
+                        <isMultiplier>true</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Vitality — ImmunityGain -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="ImmunityGainSpeedFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ImmunityGainSpeedFactor"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>ImmunityGain</targetEffect>
+                    <isMultiplier>true</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="ImmunityGainSpeedFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>ImmunityGain</targetEffect>
+                        <isMultiplier>true</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Swiftness — MoveSpeed -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>MoveSpeed</targetEffect>
+                    <isMultiplier>true</isMultiplier>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MoveSpeed"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>MoveSpeed</targetEffect>
+                        <isMultiplier>true</isMultiplier>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Rune: Warding — MentalBreakReduce (reduces mental break threshold) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MentalBreakThreshold"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MentalBreakThreshold"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                    <targetEffect>MentalBreakReduce</targetEffect>
+                    <isMultiplier>false</isMultiplier>
+                    <isReduction>true</isReduction>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MentalBreakThreshold"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_RuneEffect">
+                        <targetEffect>MentalBreakReduce</targetEffect>
+                        <isMultiplier>false</isMultiplier>
+                        <isReduction>true</isReduction>
+                    </li>
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- ==================== MARKET VALUE ==================== -->
+
+    <!-- Forge Refinement + Runes: MarketValue boost -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MarketValue"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MarketValue"]/parts</xpath>
+            <value>
+                <li Class="IsekaiLeveling.Forge.StatPart_ForgeMarketValue" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MarketValue"]</xpath>
+            <value>
+                <parts>
+                    <li Class="IsekaiLeveling.Forge.StatPart_ForgeMarketValue" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ==================== BUFF HEDIFFS ==================== -->
+    
+    <!-- Berserk Rage -->
+    <HediffDef>
+        <defName>Isekai_Berserk</defName>
+        <label>berserk rage</label>
+        <description>In a berserker fury, dealing increased damage but with reduced defense.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 0.3, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>raging</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.5</MeleeDamageFactor>
+                </statOffsets>
+                <statFactors>
+                    <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Arcane Shield -->
+    <HediffDef>
+        <defName>Isekai_Shield</defName>
+        <label>arcane shield</label>
+        <description>Protected by a magical barrier that absorbs damage.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.3, 0.7, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1200</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>shielded</label>
+                <statFactors>
+                    <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+                    <ArmorRating_Heat>1.5</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Regeneration -->
+    <HediffDef>
+        <defName>Isekai_Regeneration</defName>
+        <label>regenerating</label>
+        <description>Rapidly healing from wounds.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.3, 1, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+            <li Class="HediffCompProperties_HealPermanentWounds" />
+        </comps>
+        <stages>
+            <li>
+                <label>healing</label>
+                <naturalHealingFactor>5</naturalHealingFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Haste -->
+    <HediffDef>
+        <defName>Isekai_Haste</defName>
+        <label>haste</label>
+        <description>Moving with supernatural speed.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>900</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>accelerated</label>
+                <statOffsets>
+                    <MoveSpeed>2.0</MoveSpeed>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.5</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Inspired (from Leader's Inspire ability) -->
+    <HediffDef>
+        <defName>Isekai_Inspired</defName>
+        <label>inspired</label>
+        <description>Filled with renewed vigor and determination from an inspiring leader.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 0.3, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>inspired</label>
+                <statOffsets>
+                    <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+                    <MoveSpeed>0.5</MoveSpeed>
+                </statOffsets>
+                <statFactors>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ==================== PASSIVE BUFF HEDIFFS ==================== -->
+
+    <!-- Isekai Awakening - Applied when a pawn chooses their class -->
+    <HediffDef>
+        <defName>Isekai_Awakening</defName>
+        <label>isekai awakening</label>
+        <description>This pawn has awakened to their Isekai potential, gaining the ability to grow stronger through experience.</description>
+        <hediffClass>Hediff</hediffClass>
+        <defaultLabelColor>(0.7, 0.3, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <label>awakened</label>
+                <becomeVisible>true</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ==================== EARTH MAGIC HEDIFFS ==================== -->
+
+    <HediffDef>
+        <defName>Isekai_StoneSkin</defName>
+        <label>stone skin</label>
+        <description>Skin has taken on the toughness of stone, greatly increasing armor.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.6, 0.5, 0.4)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>hardened</label>
+                <statFactors>
+                    <ArmorRating_Sharp>1.75</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_EarthSense</defName>
+        <label>earth sense</label>
+        <description>Attuned to vibrations in the ground, sensing nearby movement.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.6, 0.5, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>sensing</label>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.3</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_KnockedDown</defName>
+        <label>knocked down</label>
+        <description>Knocked to the ground by a powerful tremor.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8, 0.4, 0.2)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>300</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>prone</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_MountainsEmbrace</defName>
+        <label>mountain's embrace</label>
+        <description>Protected by the spirit of the mountain, gaining immense durability.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.5, 0.4, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>embraced</label>
+                <statFactors>
+                    <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>2.5</ArmorRating_Blunt>
+                    <IncomingDamageFactor>0.7</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_AvatarOfStone</defName>
+        <label>avatar of stone</label>
+        <description>Transformed into a living stone avatar with immense power.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.4, 0.35, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>avatar</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.75</MeleeDamageFactor>
+                </statOffsets>
+                <statFactors>
+                    <ArmorRating_Sharp>3.0</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>3.0</ArmorRating_Blunt>
+                    <IncomingDamageFactor>0.5</IncomingDamageFactor>
+                    <MoveSpeed>0.8</MoveSpeed>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ==================== ICE MAGIC HEDIFFS ==================== -->
+
+    <HediffDef>
+        <defName>Isekai_GlacialArmor</defName>
+        <label>glacial armor</label>
+        <description>Encased in protective ice armor.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.6, 0.85, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2400</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>armored</label>
+                <statFactors>
+                    <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+                    <ArmorRating_Heat>2.0</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_Chilled</defName>
+        <label>chilled</label>
+        <description>Body temperature lowered, slowing movement.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.5, 0.7, 0.9)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>cold</label>
+                <statFactors>
+                    <MoveSpeed>0.8</MoveSpeed>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_Frostbitten</defName>
+        <label>frostbitten</label>
+        <description>Suffering from magical frostbite, severely slowed.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.4, 0.6, 0.9)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>900</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>frozen</label>
+                <statFactors>
+                    <MoveSpeed>0.5</MoveSpeed>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_IcePrison</defName>
+        <label>ice prison</label>
+        <description>Trapped in a prison of ice, unable to move.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.3, 0.5, 0.9)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>imprisoned</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0</setMax>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_DeepFreeze</defName>
+        <label>deep freeze</label>
+        <description>Frozen to the core by intense magical cold.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.2, 0.4, 0.8)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1200</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>frozen</label>
+                <statFactors>
+                    <MoveSpeed>0.3</MoveSpeed>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.4</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.3</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_IceShield</defName>
+        <label>ice shield</label>
+        <description>Protected by a barrier of magical ice.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.6, 0.9, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>shielded</label>
+                <statFactors>
+                    <ArmorRating_Sharp>1.4</ArmorRating_Sharp>
+                    <ArmorRating_Heat>2.0</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_SoothingBreeze</defName>
+        <label>soothing breeze</label>
+        <description>Surrounded by a cooling breeze that heals and refreshes.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.7, 0.9, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>refreshed</label>
+                <naturalHealingFactor>2</naturalHealingFactor>
+                <statOffsets>
+                    <ComfyTemperatureMax>20</ComfyTemperatureMax>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_AbsoluteZero</defName>
+        <label>absolute zero</label>
+        <description>Frozen to absolute zero, completely immobilized.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.1, 0.3, 0.7)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>frozen solid</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0</setMax>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0</setMax>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.3</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ==================== FIRE MAGIC HEDIFFS ==================== -->
+
+    <HediffDef>
+        <defName>Isekai_InnerFire</defName>
+        <label>inner fire</label>
+        <description>Burning with an inner flame that increases combat prowess.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 0.5, 0.2)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2400</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>burning</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.3</MeleeDamageFactor>
+                </statOffsets>
+                <statFactors>
+                    <ArmorRating_Heat>2.0</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_BurningInferno</defName>
+        <label>burning inferno</label>
+        <description>Engulfed in magical flames that empower attacks.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 0.3, 0.1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>infernal</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.5</MeleeDamageFactor>
+                </statOffsets>
+                <statFactors>
+                    <ArmorRating_Heat>3.0</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_FlameShield</defName>
+        <label>flame shield</label>
+        <description>Surrounded by a protective barrier of flames.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 0.6, 0.2)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>shielded</label>
+                <statFactors>
+                    <ArmorRating_Sharp>1.3</ArmorRating_Sharp>
+                    <ArmorRating_Heat>3.0</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_BlazingSpeed</defName>
+        <label>blazing speed</label>
+        <description>Moving with the speed of a raging fire.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 0.7, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1200</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>blazing</label>
+                <statOffsets>
+                    <MoveSpeed>3.0</MoveSpeed>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.4</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_PhoenixBlessing</defName>
+        <label>phoenix blessing</label>
+        <description>Blessed by the phoenix, will revive upon death.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 0.8, 0.2)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>18000</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>blessed</label>
+                <naturalHealingFactor>2</naturalHealingFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ==================== LIGHTNING MAGIC HEDIFFS ==================== -->
+
+    <HediffDef>
+        <defName>Isekai_Shocked</defName>
+        <label>shocked</label>
+        <description>Muscles spasming from electrical shock.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8, 0.8, 0.2)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>300</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>spasming</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.3</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_AMP</defName>
+        <label>amplified</label>
+        <description>Electrical energy coursing through the body, amplifying power.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.9, 0.9, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>amplified</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.3</MeleeDamageFactor>
+                    <MoveSpeed>1.0</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_Electrified</defName>
+        <label>electrified</label>
+        <description>Charged with electrical energy.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.7, 0.7, 0.1)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>charged</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_Overcharged</defName>
+        <label>overcharged</label>
+        <description>Supercharged with electrical power.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0.4)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1200</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>supercharged</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.5</MeleeDamageFactor>
+                    <MoveSpeed>2.0</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_Stunned</defName>
+        <label>stunned</label>
+        <description>Temporarily incapacitated by a powerful shock.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.6, 0.6, 0.1)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>180</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>incapacitated</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0</setMax>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_ElectricField</defName>
+        <label>electric field</label>
+        <description>Surrounded by a crackling electric field.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>electrified</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.25</MeleeDamageFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_StormAvatar</defName>
+        <label>storm avatar</label>
+        <description>Transformed into a living storm with incredible power.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>avatar</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.75</MeleeDamageFactor>
+                    <MoveSpeed>3.0</MoveSpeed>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.7</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ==================== LIGHT MAGIC HEDIFFS ==================== -->
+
+    <HediffDef>
+        <defName>Isekai_Blessed</defName>
+        <label>blessed</label>
+        <description>Blessed with divine light, gaining protection and healing.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0.8)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>blessed</label>
+                <naturalHealingFactor>2</naturalHealingFactor>
+                <statFactors>
+                    <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_ShieldOfLight</defName>
+        <label>shield of light</label>
+        <description>Protected by a radiant shield of divine light.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0.9)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>shielded</label>
+                <statFactors>
+                    <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_DivineProtection</defName>
+        <label>divine protection</label>
+        <description>Under the protection of divine power.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 0.95, 0.7)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>protected</label>
+                <statFactors>
+                    <IncomingDamageFactor>0.6</IncomingDamageFactor>
+                </statFactors>
+                <naturalHealingFactor>3</naturalHealingFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_AvatarOfLight</defName>
+        <label>avatar of light</label>
+        <description>Transformed into a radiant avatar of divine light.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>avatar</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.5</MeleeDamageFactor>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.5</IncomingDamageFactor>
+                </statFactors>
+                <naturalHealingFactor>5</naturalHealingFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ==================== SHADOW MAGIC HEDIFFS ==================== -->
+
+    <HediffDef>
+        <defName>Isekai_CloakedInShadows</defName>
+        <label>cloaked in shadows</label>
+        <description>Hidden within shadows, difficult to detect.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.3, 0.2, 0.4)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>cloaked</label>
+                <statOffsets>
+                    <MoveSpeed>1.0</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_Cursed</defName>
+        <label>cursed</label>
+        <description>Afflicted by a dark curse that weakens the body.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.4, 0.1, 0.5)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>afflicted</label>
+                <statFactors>
+                    <MoveSpeed>0.8</MoveSpeed>
+                    <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_Nightshade</defName>
+        <label>nightshade</label>
+        <description>Shrouded in dark energy that enhances stealth.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.2, 0.1, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2400</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>shrouded</label>
+                <statOffsets>
+                    <MoveSpeed>0.5</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_VeiledInShadows</defName>
+        <label>veiled in shadows</label>
+        <description>Completely hidden within shadow, nearly invisible.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.15, 0.1, 0.25)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1200</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>invisible</label>
+                <statOffsets>
+                    <MoveSpeed>1.5</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_MarkedForDeath</defName>
+        <label>marked for death</label>
+        <description>Marked by dark magic, taking increased damage.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.5, 0.1, 0.1)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>marked</label>
+                <statFactors>
+                    <IncomingDamageFactor>1.5</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Isekai_AvatarOfShadow</defName>
+        <label>avatar of shadow</label>
+        <description>Transformed into a living shadow with terrifying power.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.1, 0.05, 0.15)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>avatar</label>
+                <statOffsets>
+                    <MeleeDamageFactor>0.75</MeleeDamageFactor>
+                    <MoveSpeed>2.0</MoveSpeed>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.6</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

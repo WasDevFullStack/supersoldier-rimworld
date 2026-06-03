@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Dubs Bad Hygiene Compatibility Patches -->
+    <!-- Only applied when Dubs Bad Hygiene is active -->
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Bad Hygiene</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!-- Hygiene Rate Factor - WIS reduces hygiene need rate -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="HygieneRateFactor"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="HygieneRateFactor"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_IsekaiHygieneRate" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="HygieneRateFactor"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_IsekaiHygieneRate" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+                
+                <!-- Bladder Rate Factor - WIS reduces bladder need rate -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="BladderRateFactor"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="BladderRateFactor"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_IsekaiBladderRate" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="BladderRateFactor"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_IsekaiBladderRate" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

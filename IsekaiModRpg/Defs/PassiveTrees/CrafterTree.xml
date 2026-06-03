@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════════╗
+        ║  CRAFTER CONSTELLATION — 56 Nodes, 5 Branches           ║
+        ║  Layout: Plus/Star — Artifice(NW) / Engineering(NE) /   ║
+        ║          Endurance(SW) / Harvest(SE) + Mastercraft(N)    ║
+        ║                                                          ║
+        ║  Branches:                                               ║
+        ║   • ARTIFICE     (NW) — WorkSpeed, LearningSpeed        ║
+        ║   • ENGINEERING  (NE) — ResearchSpeed, WorkSpeed         ║
+        ║   • ENDURANCE    (SW) — RestRate, CarryCapacity          ║
+        ║   • HARVEST      (SE) — GatherYield, TrainAnimal         ║
+        ║   • MASTERCRAFT  (N)  — gimmick nodes + WorkSpeed core   ║
+        ║   + 5 cross-connectors between adjacent branches         ║
+        ╚══════════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Crafter</defName>
+        <label>Crafter</label>
+        <treeClass>Crafter</treeClass>
+        <treeDescription>Masters of creation who bend raw materials to their will. Five constellations radiate from the crafter's core — each honing a different facet of their boundless ingenuity. The higher your natural Crafting skill, the more Masterwork Insight amplifies your work speed.</treeDescription>
+        <classGimmick>MasterworkInsight</classGimmick>
+        <classGimmickName>Masterwork Insight</classGimmickName>
+        <classGimmickDescription>The Crafter's deep understanding of materials compounds with natural skill. Work speed scales with Crafting skill level — the higher their innate talent, the more the passive tree amplifies output. Masterwork Insight scales along the Mastercraft Path. Tier 1 (Apprentice's Eye): up to +15% at Crafting 20. Tier 2 (Journeyman's Hand): up to +30%. Tier 3 (Master's Touch): up to +50%. Tier 4 (Grand Master): up to +75%. Skill is the foundation — mastery is the reward.</classGimmickDescription>
+
+        <nodes>
+            <!-- ════════════ START NODE ════════════ -->
+            <li>
+                <nodeId>CR_Start</nodeId>
+                <label>Crafter's Awakening</label>
+                <description>You see the hidden potential in every raw material. Where others see stone, you see a fortress. Where they see ore, you see a masterwork blade. Today your hands begin to remember skills from another life.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ ARTIFICE (North-West) — WorkSpeed / LearningSpeed  ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>CR_AR1</nodeId>
+                <label>Steady Hands</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-1.4</x><y>0.9</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR2</nodeId>
+                <label>Practiced Motions</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-2.7</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR_MasterCraftsman</nodeId>
+                <label>Master Craftsman</label>
+                <description>Your hands move with almost supernatural precision. Every joint, every cut, every stitch falls exactly where it should. Materials seem to cooperate with your intent — wood bends without splitting, metal folds without cracking. Others watch your work and wonder if you've done this a thousand times before.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-4.1</x><y>2.6</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR3</nodeId>
+                <label>Refined Technique</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-5.4</x><y>3.5</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR4</nodeId>
+                <label>Fluid Assembly</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-6.8</x><y>4.4</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR_EfficientProcess</nodeId>
+                <label>Efficient Process</label>
+                <description>You have optimised every step of your workflow until not a single motion is wasted. Materials flow through your workstation in a continuous stream of creation. What takes others an hour, you accomplish in minutes — and your results are consistently superior.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-8.1</x><y>5.3</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR5</nodeId>
+                <label>Peerless Form</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-9.5</x><y>6.1</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR_ArtisanSupreme</nodeId>
+                <label>Artisan Supreme</label>
+                <description>You have transcended the boundary between craft and art. Every creation that leaves your hands is a testament to absolute mastery — functional, beautiful, and built to endure. Your workshop is a temple of productivity, and you are its high priest.\n\nTRADEOFF: Total dedication to the craft leaves little energy for haste.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-10.8</x><y>7.0</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.3333</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.2</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Artifice side branch (from Master Craftsman → NW flank) -->
+            <li>
+                <nodeId>CR_AR_S1</nodeId>
+                <label>Eager Student</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-5.4</x><y>1.5</y>
+                <bonuses>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR_S2</nodeId>
+                <label>Cross-Training</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-6.6</x><y>0.5</y>
+                <bonuses>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_AR_QuickStudy</nodeId>
+                <label>Quick Study</label>
+                <description>Knowledge sticks to you like iron filings to a magnet. Complex techniques that stump others for weeks click into place after a single demonstration. Your mind catalogues every method, every shortcut, every trick — building an ever-growing library of expertise.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>-7.9</x><y>-0.6</y>
+                <bonuses>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ ENGINEERING (North-East) — ResearchSpeed / WorkSpeed ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>CR_EN1</nodeId>
+                <label>Curious Mind</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>1.4</x><y>0.9</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN2</nodeId>
+                <label>Analytical Thinking</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>2.7</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN_Eureka</nodeId>
+                <label>Eureka</label>
+                <description>Breakthroughs come to you not through tedious trial and error, but through sudden flashes of insight. You see connections between disparate fields that others miss — metallurgy informs electronics, biology informs architecture. Each discovery cascades into the next.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>4.1</x><y>2.6</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN3</nodeId>
+                <label>Deep Analysis</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>5.4</x><y>3.5</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN4</nodeId>
+                <label>Technical Mastery</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>6.8</x><y>4.4</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN_Innovation</nodeId>
+                <label>Innovation</label>
+                <description>You don't just follow blueprints — you improve them. Every design that passes through your hands emerges better, more efficient, more elegant. Your modifications have a way of becoming the new standard, your shortcuts the new orthodoxy.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>8.1</x><y>5.3</y>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.1667</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN5</nodeId>
+                <label>Paradigm Shift</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>9.5</x><y>6.1</y>
+                <bonuses><li><bonusType>ResearchSpeed</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN_GrandArchitect</nodeId>
+                <label>Grand Architect</label>
+                <description>Your intellect has reached a plane where invention is effortless. Complex mechanisms unfold in your mind like origami — you see the solution before you understand the problem. The things you create push the boundaries of what anyone thought possible on this world.\n\nTRADEOFF: Genius-level focus comes at the cost of social awareness.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>10.8</x><y>7.0</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.3333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.2</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Engineering side branch (from Eureka → NE flank) -->
+            <li>
+                <nodeId>CR_EN_S1</nodeId>
+                <label>Practical Theory</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>5.4</x><y>1.5</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN_S2</nodeId>
+                <label>Resource Optimisation</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>6.6</x><y>0.5</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_EN_AppliedTheory</nodeId>
+                <label>Applied Theory</label>
+                <description>The gap between theory and practice has vanished for you. Every research breakthrough immediately translates into tangible improvements on the workbench. Your prototypes work on the first try because you've already solved every problem in your head.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>7.9</x><y>-0.6</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ ENDURANCE (South-West) — RestRate / CarryCapacity   ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>CR_ED1</nodeId>
+                <label>Strong Back</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>-1.4</x><y>-0.9</y>
+                <bonuses><li><bonusType>RestRate</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED2</nodeId>
+                <label>Steady Pace</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>-2.7</x><y>-1.8</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.05</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED_TirelessWorker</nodeId>
+                <label>Tireless Worker</label>
+                <description>Fatigue is a concept you've learned to negotiate with rather than obey. Your body has adapted to long hours at the forge and workbench — muscles that once cramped after an hour now carry you through entire day-long crafting sessions without complaint.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>-4.1</x><y>-2.6</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.1333</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.0833</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED3</nodeId>
+                <label>Enduring Focus</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>-5.4</x><y>-3.5</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.0667</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED4</nodeId>
+                <label>Pack Mule</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/dumbbell</icon>
+                <x>-6.8</x><y>-4.4</y>
+                <bonuses><li><bonusType>CarryCapacity</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED_IronConstitution</nodeId>
+                <label>Iron Constitution</label>
+                <description>Your body has become a machine built for sustained output. Sleep restores you in half the usual time, and you can haul materials that would stagger two ordinary colonists. The forge's heat, the workshop's dust, the mine's darkness — none of it slows you down.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>-8.1</x><y>-5.3</y>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.1667</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.1</value></li>
+                    <li><bonusType>MaxHealth</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED5</nodeId>
+                <label>Inexhaustible</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>-9.5</x><y>-6.1</y>
+                <bonuses><li><bonusType>RestRate</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED_PerpetualMotion</nodeId>
+                <label>Perpetual Motion</label>
+                <description>You are a living engine of productivity. Where others collapse from exhaustion, you simply shift to a different task. Your stamina is legendary — colonists tell stories about the time you worked for three days straight without sleeping and produced better results than anyone managed in a week.\n\nTRADEOFF: Your obsessive work ethic leaves little room for combat training.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-10.8</x><y>-7.0</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>RestRate</bonusType><value>0.3333</value></li>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.2</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeDamage</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Endurance side branch (from Tireless Worker → SW flank) -->
+            <li>
+                <nodeId>CR_ED_S1</nodeId>
+                <label>Heavy Lifter</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/dumbbell</icon>
+                <x>-5.4</x><y>-1.5</y>
+                <bonuses>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.05</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED_S2</nodeId>
+                <label>Courier's Stride</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/dumbbell</icon>
+                <x>-6.6</x><y>-0.5</y>
+                <bonuses>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.05</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_ED_BeastOfBurden</nodeId>
+                <label>Beast of Burden</label>
+                <description>You carry loads that would buckle a muffalo and move fast enough to make hauler bots jealous. Raw materials practically fly from stockpile to workbench when you're on the job — and you never seem to tire of it.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bed</icon>
+                <x>-7.9</x><y>0.6</y>
+                <bonuses>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ HARVEST (South-East) — GatherYield / TrainAnimal    ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>CR_HV1</nodeId>
+                <label>Green Thumb</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>1.4</x><y>-0.9</y>
+                <bonuses><li><bonusType>GatherYield</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV2</nodeId>
+                <label>Careful Harvest</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>2.7</x><y>-1.8</y>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.05</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV_NaturesBounty</nodeId>
+                <label>Nature's Bounty</label>
+                <description>The land yields its treasures willingly to you. Plants grow plumper, animals produce more, and resources seem to multiply under your careful stewardship. You understand the rhythm of growth and harvest — and you never take more than the land can spare.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>4.1</x><y>-2.6</y>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.1333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0833</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV3</nodeId>
+                <label>Abundant Fields</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>5.4</x><y>-3.5</y>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.0667</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV4</nodeId>
+                <label>Animal Whisperer</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>6.8</x><y>-4.4</y>
+                <bonuses><li><bonusType>TrainAnimal</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV_AbundantHarvest</nodeId>
+                <label>Abundant Harvest</label>
+                <description>Under your care, every field overflows with produce and every pasture teems with healthy livestock. You've learned to read subtle signs in soil and weather that others overlook — adjusting your methods to extract maximum yield from every season.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>8.1</x><y>-5.3</y>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.1667</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.1</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV5</nodeId>
+                <label>Overflowing Stores</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>9.5</x><y>-6.1</y>
+                <bonuses><li><bonusType>GatherYield</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV_Cornucopia</nodeId>
+                <label>Cornucopia</label>
+                <description>You are the embodiment of plenty. Every animal in your care produces beyond its natural limits, every plant you tend grows as if blessed by some forgotten harvest god. The colony's stores overflow with your work — famine is a word that loses its meaning when you're on the job.\n\nTRADEOFF: Your deep connection to nature leaves less mental bandwidth for pure research.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>10.8</x><y>-7.0</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.3333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.2</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Harvest side branch (from Nature's Bounty → SE flank) -->
+            <li>
+                <nodeId>CR_HV_S1</nodeId>
+                <label>Gentle Touch</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>5.4</x><y>-1.5</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV_S2</nodeId>
+                <label>Herd Mentality</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>6.6</x><y>-0.5</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_HV_BeastMaster</nodeId>
+                <label>Beast Master</label>
+                <description>Animals obey you with an almost unsettling eagerness. Wild creatures that snarl at others approach you with curiosity, and trained beasts perform feats under your guidance that their handlers thought impossible. Your bond with wildlife runs deeper than language.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>7.9</x><y>0.6</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.1333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0667</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ MASTERCRAFT (North spine) — Gimmick Tiers + WorkSpeed  ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>CR_MC1</nodeId>
+                <label>Inner Workshop</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_MC2</nodeId>
+                <label>Material Memory</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0</x><y>3.5</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_MC_ApprenticesEye</nodeId>
+                <label>Apprentice's Eye</label>
+                <description>You begin to see the hidden language in materials — the grain of the wood, the temper of the steel, the weave of the cloth. Your Crafting skill experience directly amplifies your work speed through an instinctive understanding that transcends mere technique.\n\n[GIMMICK TIER 1]: Up to +15% Work Speed at Crafting 20.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>5.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_MC3</nodeId>
+                <label>Journeyman's Hand</label>
+                <description>[GIMMICK TIER 2]: Up to +30% Work Speed at Crafting 20.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0</x><y>6.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_MC4</nodeId>
+                <label>Master's Touch</label>
+                <description>[GIMMICK TIER 3]: Up to +50% Work Speed at Crafting 20.</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0</x><y>8.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>CR_MC_GrandMaster</nodeId>
+                <label>Grand Master</label>
+                <description>You have achieved the ultimate synthesis of skill and insight. Your hands move with a purpose that transcends conscious thought — every creation is imbued with the full depth of your experience. At Crafting 20, the world bends to your workmanship like clay to a potter's wheel.\n\n[GIMMICK TIER 4]: Up to +75% Work Speed at Crafting 20. The pinnacle of the craft.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>0</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Cross-connectors (all require both neighbours to be active) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <!-- Artifice (NW) ↔ Mastercraft (N) -->
+            <li>
+                <nodeId>CR_Cross_AM</nodeId>
+                <label>Forge Wisdom</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-2.1</x><y>4.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>LearningSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Engineering (NE) ↔ Mastercraft (N) -->
+            <li>
+                <nodeId>CR_Cross_EM</nodeId>
+                <label>Inspired Design</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>2.1</x><y>4.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Artifice (NW) ↔ Endurance (SW) -->
+            <li>
+                <nodeId>CR_Cross_AE</nodeId>
+                <label>Sustained Craft</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-1.4</x><y>0.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>RestRate</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Engineering (NE) ↔ Harvest (SE) -->
+            <li>
+                <nodeId>CR_Cross_EH</nodeId>
+                <label>Field Research</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/brain</icon>
+                <x>1.4</x><y>0.0</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ResearchSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Endurance (SW) ↔ Harvest (SE) -->
+            <li>
+                <nodeId>CR_Cross_DH</nodeId>
+                <label>Working Hands</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/dumbbell</icon>
+                <x>0</x><y>-3.2</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>CarryCapacity</bonusType><value>0.0333</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- Connection pairs (bidirectional, "A~B" format)             -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <connections>
+            <!-- Start → 5 branch gateways -->
+            <li>CR_Start~CR_AR1</li>
+            <li>CR_Start~CR_EN1</li>
+            <li>CR_Start~CR_ED1</li>
+            <li>CR_Start~CR_HV1</li>
+            <li>CR_Start~CR_MC1</li>
+
+            <!-- Artifice main path -->
+            <li>CR_AR1~CR_AR2</li>
+            <li>CR_AR2~CR_AR_MasterCraftsman</li>
+            <li>CR_AR_MasterCraftsman~CR_AR3</li>
+            <li>CR_AR3~CR_AR4</li>
+            <li>CR_AR4~CR_AR_EfficientProcess</li>
+            <li>CR_AR_EfficientProcess~CR_AR5</li>
+            <li>CR_AR5~CR_AR_ArtisanSupreme</li>
+            <!-- Artifice side branch -->
+            <li>CR_AR_MasterCraftsman~CR_AR_S1</li>
+            <li>CR_AR_S1~CR_AR_S2</li>
+            <li>CR_AR_S2~CR_AR_QuickStudy</li>
+
+            <!-- Engineering main path -->
+            <li>CR_EN1~CR_EN2</li>
+            <li>CR_EN2~CR_EN_Eureka</li>
+            <li>CR_EN_Eureka~CR_EN3</li>
+            <li>CR_EN3~CR_EN4</li>
+            <li>CR_EN4~CR_EN_Innovation</li>
+            <li>CR_EN_Innovation~CR_EN5</li>
+            <li>CR_EN5~CR_EN_GrandArchitect</li>
+            <!-- Engineering side branch -->
+            <li>CR_EN_Eureka~CR_EN_S1</li>
+            <li>CR_EN_S1~CR_EN_S2</li>
+            <li>CR_EN_S2~CR_EN_AppliedTheory</li>
+
+            <!-- Endurance main path -->
+            <li>CR_ED1~CR_ED2</li>
+            <li>CR_ED2~CR_ED_TirelessWorker</li>
+            <li>CR_ED_TirelessWorker~CR_ED3</li>
+            <li>CR_ED3~CR_ED4</li>
+            <li>CR_ED4~CR_ED_IronConstitution</li>
+            <li>CR_ED_IronConstitution~CR_ED5</li>
+            <li>CR_ED5~CR_ED_PerpetualMotion</li>
+            <!-- Endurance side branch -->
+            <li>CR_ED_TirelessWorker~CR_ED_S1</li>
+            <li>CR_ED_S1~CR_ED_S2</li>
+            <li>CR_ED_S2~CR_ED_BeastOfBurden</li>
+
+            <!-- Harvest main path -->
+            <li>CR_HV1~CR_HV2</li>
+            <li>CR_HV2~CR_HV_NaturesBounty</li>
+            <li>CR_HV_NaturesBounty~CR_HV3</li>
+            <li>CR_HV3~CR_HV4</li>
+            <li>CR_HV4~CR_HV_AbundantHarvest</li>
+            <li>CR_HV_AbundantHarvest~CR_HV5</li>
+            <li>CR_HV5~CR_HV_Cornucopia</li>
+            <!-- Harvest side branch -->
+            <li>CR_HV_NaturesBounty~CR_HV_S1</li>
+            <li>CR_HV_S1~CR_HV_S2</li>
+            <li>CR_HV_S2~CR_HV_BeastMaster</li>
+
+            <!-- Mastercraft main path -->
+            <li>CR_MC1~CR_MC2</li>
+            <li>CR_MC2~CR_MC_ApprenticesEye</li>
+            <li>CR_MC_ApprenticesEye~CR_MC3</li>
+            <li>CR_MC3~CR_MC4</li>
+            <li>CR_MC4~CR_MC_GrandMaster</li>
+
+            <!-- Cross-connectors -->
+            <li>CR_AR_MasterCraftsman~CR_Cross_AM</li>
+            <li>CR_Cross_AM~CR_MC_ApprenticesEye</li>
+            <li>CR_EN_Eureka~CR_Cross_EM</li>
+            <li>CR_Cross_EM~CR_MC_ApprenticesEye</li>
+            <li>CR_AR1~CR_Cross_AE</li>
+            <li>CR_Cross_AE~CR_ED1</li>
+            <li>CR_EN1~CR_Cross_EH</li>
+            <li>CR_Cross_EH~CR_HV1</li>
+            <li>CR_ED_TirelessWorker~CR_Cross_DH</li>
+            <li>CR_Cross_DH~CR_HV_NaturesBounty</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

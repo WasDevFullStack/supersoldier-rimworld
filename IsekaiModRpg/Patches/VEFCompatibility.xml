@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Vanilla Expanded Framework Compatibility Patches -->
+    <!-- Only applied when Vanilla Expanded Framework is active -->
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Expanded Framework</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!-- STR affects VEF Mass Carry Capacity (caravan carry weight) -->
+                <!-- VEF adds VEF_MassCarryCapacity which controls how much mass a pawn can carry in caravans -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="VEF_MassCarryCapacity"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="VEF_MassCarryCapacity"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Stats.StatPart_IsekaiCarryMass" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="VEF_MassCarryCapacity"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Stats.StatPart_IsekaiCarryMass" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  ARMOR RUNES (max 3 per apparel)          -->
+    <!-- ══════════════════════════════════════════ -->
+
+    <!-- Fortitude: +25% max hit points -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Fortitude</defName>
+        <label>Rune of Fortitude</label>
+        <description>A sturdy rune that reinforces the structure of any armor, greatly increasing its durability.</description>
+        <category>Armor</category>
+        <effectType>MaxHealth</effectType>
+        <magnitude>0.25</magnitude>
+        <runeColor>(0.5, 0.4, 0.2)</runeColor>
+        <statDescription>+25% max hit points</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Evasion: +5% melee dodge chance -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Evasion</defName>
+        <label>Rune of Evasion</label>
+        <description>A swift rune that makes the wearer lighter on their feet, improving dodge chance in melee.</description>
+        <category>Armor</category>
+        <effectType>DodgeChance</effectType>
+        <magnitude>0.05</magnitude>
+        <runeColor>(0.4, 0.9, 0.55)</runeColor>
+        <statDescription>+5% melee dodge chance</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Resistance: +5% damage reduction (all) -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Resistance</defName>
+        <label>Rune of Resistance</label>
+        <description>A dense rune that hardens worn armor, absorbing a portion of all incoming damage.</description>
+        <category>Armor</category>
+        <effectType>DamageReduction</effectType>
+        <magnitude>0.05</magnitude>
+        <runeColor>(0.6, 0.6, 0.65)</runeColor>
+        <statDescription>+5% damage reduction</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Regeneration: +10% injury healing factor -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Regeneration</defName>
+        <label>Rune of Regeneration</label>
+        <description>A pulsating green rune that hastens the natural healing of wounds.</description>
+        <category>Armor</category>
+        <effectType>HealRate</effectType>
+        <magnitude>0.10</magnitude>
+        <runeColor>(0.3, 0.85, 0.3)</runeColor>
+        <statDescription>+10% injury healing speed</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Warding: -5% mental break threshold -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Warding</defName>
+        <label>Rune of Warding</label>
+        <description>A calming rune that protects the wearer's mind, lowering their mental break threshold.</description>
+        <category>Armor</category>
+        <effectType>MentalBreakReduce</effectType>
+        <magnitude>0.05</magnitude>
+        <runeColor>(0.7, 0.5, 0.9)</runeColor>
+        <statDescription>-5% mental break threshold</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Vitality: +10% immunity gain speed -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Vitality</defName>
+        <label>Rune of Vitality</label>
+        <description>A warm rune that bolsters the body's defenses, speeding immunity development against disease.</description>
+        <category>Armor</category>
+        <effectType>ImmunityGain</effectType>
+        <magnitude>0.10</magnitude>
+        <runeColor>(1.0, 0.8, 0.3)</runeColor>
+        <statDescription>+10% immunity gain speed</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Swiftness: +8% move speed -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Swiftness</defName>
+        <label>Rune of Swiftness</label>
+        <description>A light rune that enhances the wearer's agility, granting greater movement speed.</description>
+        <category>Armor</category>
+        <effectType>MoveSpeed</effectType>
+        <magnitude>0.08</magnitude>
+        <runeColor>(0.3, 0.7, 1.0)</runeColor>
+        <statDescription>+8% move speed</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+    <!-- Bulwark: +8% damage reduction (stacks with Resistance) -->
+    <IsekaiLeveling.Forge.RuneDef>
+        <defName>Isekai_RuneDef_Bulwark</defName>
+        <label>Rune of Bulwark</label>
+        <description>A massive protective rune that greatly reduces all damage taken. Stacks with Resistance.</description>
+        <category>Armor</category>
+        <effectType>DamageReduction</effectType>
+        <magnitude>0.08</magnitude>
+        <runeColor>(0.35, 0.35, 0.45)</runeColor>
+        <statDescription>+8% damage reduction</statDescription>
+    </IsekaiLeveling.Forge.RuneDef>
+
+</Defs>

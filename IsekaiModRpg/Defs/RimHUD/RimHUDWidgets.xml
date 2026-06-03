@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+    RimHUD Custom Widget Definitions for Isekai Leveling
+    These Defs are discovered by RimHUD via DefDatabase and use reflection
+    to call static methods on the specified defClass. No RimHUD assembly reference needed.
+    
+    MayRequire ensures these are only loaded when RimHUD is active.
+    
+    Widget types:
+    - CustomValueDef: Shows a label/value pair (Level & Rank, Stat Points)
+    - CustomBarDef: Shows a progress bar (XP Progress)
+    
+    Users can add these widgets to their RimHUD layout via:
+    RimHUD Settings > Content > Add Third Party
+-->
+<Defs>
+
+    <!-- Level & Rank display: "Lv.42 [A] Hero" -->
+    <RimHUD.CustomValueDef MayRequire="Jaxe.RimHUD">
+        <defName>Isekai_LevelRank</defName>
+        <label>Isekai Level &amp; Rank</label>
+        <textStyle>Regular</textStyle>
+        <defClass>IsekaiLeveling.Compatibility.RimHUD_IsekaiLevelRank</defClass>
+        <apiVersion>1</apiVersion>
+    </RimHUD.CustomValueDef>
+
+    <!-- XP Progress bar -->
+    <RimHUD.CustomBarDef MayRequire="Jaxe.RimHUD">
+        <defName>Isekai_XPProgress</defName>
+        <label>Isekai XP</label>
+        <textStyle>Small</textStyle>
+        <colorStyle>LowToMain</colorStyle>
+        <defClass>IsekaiLeveling.Compatibility.RimHUD_IsekaiXPBar</defClass>
+        <apiVersion>1</apiVersion>
+    </RimHUD.CustomBarDef>
+
+    <!-- Stat Points Available (only visible when > 0) -->
+    <RimHUD.CustomValueDef MayRequire="Jaxe.RimHUD">
+        <defName>Isekai_StatPoints</defName>
+        <label>Isekai Stat Points</label>
+        <textStyle>Small</textStyle>
+        <defClass>IsekaiLeveling.Compatibility.RimHUD_IsekaiStatPoints</defClass>
+        <apiVersion>1</apiVersion>
+    </RimHUD.CustomValueDef>
+
+</Defs>

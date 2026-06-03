@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    RimWorld of Magic — Mana Core / Magicite Conversion Recipes
+    Only applied when "A RimWorld of Magic" is loaded.
+    
+    All recipes use the Isekai Refinement Forge (Isekai_Forge).
+    Conversion has intentional value loss to prevent arbitrage.
+    
+    ══════════════════════════════════════════
+    CORE → MAGICITE (Decrafting / Extraction)
+    ══════════════════════════════════════════
+    Cores sacrifice XP potential to yield raw magicyte.
+    ~25-33% market value lost in the process.
+    
+      Small Core  (30sv)  → 4  Magicyte  (20sv)
+      Mana Core   (100sv) → 15 Magicyte  (75sv)
+      Big Core    (500sv) → 75 Magicyte  (375sv)
+      Huge Core   (1500sv)→ 225 Magicyte (1125sv)
+    
+    ══════════════════════════════════════════
+    MAGICITE → CORE (Synthesis / Condensing)
+    ══════════════════════════════════════════
+    Creating XP-granting cores from cheap material costs
+    a significant premium (~25-33% overpay).
+    
+      8   Magicyte (40sv)   → Small Core  (30sv)
+      25  Magicyte (125sv)  → Mana Core   (100sv)
+      125 Magicyte (625sv)  → Big Core    (500sv)
+      400 Magicyte (2000sv) → Huge Core   (1500sv)
+    
+    ══════════════════════════════════════════
+    ESSENCE ↔ MAGICITE
+    ══════════════════════════════════════════
+    Bridge between the two crafting currencies.
+    
+      1  Essence (150sv) → 20 Magicyte (100sv)  ~33% loss
+      35 Magicyte (175sv) → 1 Essence (150sv)   ~17% premium
+-->
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods><li>A RimWorld of Magic</li></mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- ═══════════════════════════════════ -->
+                <!--  CORE → MAGICITE (Extraction)      -->
+                <!-- ═══════════════════════════════════ -->
+
+                <!-- Small Mana Core → 4 Raw Magicyte -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_ExtractMagicyte_Small</defName>
+                            <label>extract magicyte from small mana core</label>
+                            <description>Shatter a small mana core to extract raw magicyte crystals. The core's latent XP energy is lost, but the arcane material can be used for RoM gem crafting.</description>
+                            <jobString>Extracting magicyte from small mana core.</jobString>
+                            <workAmount>400</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>Isekai_SmallManaCore</li></thingDefs></filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>Isekai_SmallManaCore</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <RawMagicyte>4</RawMagicyte>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- Mana Core → 15 Raw Magicyte -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_ExtractMagicyte_Regular</defName>
+                            <label>extract magicyte from mana core</label>
+                            <description>Shatter a mana core to extract raw magicyte crystals. A significant amount of magical resonance is lost in the process, but yields a respectable quantity of raw magicyte.</description>
+                            <jobString>Extracting magicyte from mana core.</jobString>
+                            <workAmount>600</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>Isekai_ManaCore</li></thingDefs></filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>Isekai_ManaCore</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <RawMagicyte>15</RawMagicyte>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- Big Mana Core → 75 Raw Magicyte -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_ExtractMagicyte_Big</defName>
+                            <label>extract magicyte from big mana core</label>
+                            <description>Shatter a big mana core to extract a large quantity of raw magicyte crystals. The core's immense magical energy disperses rapidly — only the crystalline residue remains.</description>
+                            <jobString>Extracting magicyte from big mana core.</jobString>
+                            <workAmount>800</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>Isekai_BigManaCore</li></thingDefs></filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>Isekai_BigManaCore</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <RawMagicyte>75</RawMagicyte>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- Huge Mana Core → 225 Raw Magicyte -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_ExtractMagicyte_Huge</defName>
+                            <label>extract magicyte from huge mana core</label>
+                            <description>Shatter a huge mana core to extract an enormous quantity of raw magicyte crystals. The sheer volume of arcane energy within makes the extraction volatile — much is lost to uncontrolled discharge, but what remains is invaluable.</description>
+                            <jobString>Extracting magicyte from huge mana core.</jobString>
+                            <workAmount>1200</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>Isekai_HugeManaCore</li></thingDefs></filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>Isekai_HugeManaCore</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <RawMagicyte>225</RawMagicyte>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════ -->
+                <!--  MAGICITE → CORE (Synthesis)       -->
+                <!-- ═══════════════════════════════════ -->
+
+                <!-- 8 Raw Magicyte → Small Mana Core -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_SynthesizeCore_Small</defName>
+                            <label>synthesize small mana core from magicyte</label>
+                            <description>Condense raw magicyte crystals into a small mana core. The process is inefficient — much of the arcane energy dissipates during compression — but the resulting core retains enough power to grant XP when absorbed.</description>
+                            <jobString>Synthesizing small mana core.</jobString>
+                            <workAmount>600</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>RawMagicyte</li></thingDefs></filter>
+                                    <count>8</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>RawMagicyte</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Isekai_SmallManaCore>1</Isekai_SmallManaCore>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- 25 Raw Magicyte → Mana Core -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_SynthesizeCore_Regular</defName>
+                            <label>synthesize mana core from magicyte</label>
+                            <description>Condense a large quantity of raw magicyte into a mana core. Requires careful magical alignment — the conversion is wasteful, but the resulting core pulses with concentrated energy.</description>
+                            <jobString>Synthesizing mana core.</jobString>
+                            <workAmount>800</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>RawMagicyte</li></thingDefs></filter>
+                                    <count>25</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>RawMagicyte</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Isekai_ManaCore>1</Isekai_ManaCore>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- 125 Raw Magicyte → Big Mana Core -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_SynthesizeCore_Big</defName>
+                            <label>synthesize big mana core from magicyte</label>
+                            <description>Force-compress a massive quantity of raw magicyte into a big mana core. The forge strains under the arcane pressure — significant energy bleeds off as heat and light — but the core that emerges blazes with power.</description>
+                            <jobString>Synthesizing big mana core.</jobString>
+                            <workAmount>1200</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>RawMagicyte</li></thingDefs></filter>
+                                    <count>125</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>RawMagicyte</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Isekai_BigManaCore>1</Isekai_BigManaCore>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- 400 Raw Magicyte → Huge Mana Core -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_SynthesizeCore_Huge</defName>
+                            <label>synthesize huge mana core from magicyte</label>
+                            <description>Push the Refinement Forge to its absolute limits, compressing an extraordinary quantity of raw magicyte into a huge mana core. The process is violent and horribly wasteful — raw magic arcs through the air and scorches nearby surfaces — but the resulting core is a masterwork of condensed arcane power.</description>
+                            <jobString>Synthesizing huge mana core.</jobString>
+                            <workAmount>2000</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>RawMagicyte</li></thingDefs></filter>
+                                    <count>400</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>RawMagicyte</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Isekai_HugeManaCore>1</Isekai_HugeManaCore>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- ═══════════════════════════════════ -->
+                <!--  ESSENCE ↔ MAGICITE                -->
+                <!-- ═══════════════════════════════════ -->
+
+                <!-- 1 Mana Essence → 20 Raw Magicyte -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_EssenceToMagicyte</defName>
+                            <label>dissolve mana essence into magicyte</label>
+                            <description>Break down a vial of refined mana essence into raw magicyte crystals. The refinement process isn't fully reversible — some energy is lost — but the resulting magicyte is perfectly usable for RoM gem crafting.</description>
+                            <jobString>Dissolving mana essence into magicyte.</jobString>
+                            <workAmount>400</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>Isekai_ManaEssence</li></thingDefs></filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>Isekai_ManaEssence</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <RawMagicyte>20</RawMagicyte>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- 35 Raw Magicyte → 1 Mana Essence -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>Isekai_MagicyteToEssence</defName>
+                            <label>refine magicyte into mana essence</label>
+                            <description>Purify and concentrate raw magicyte crystals into a vial of mana essence — the key ingredient for Isekai rune crafting. The refinement process consumes a significant excess of raw material.</description>
+                            <jobString>Refining magicyte into mana essence.</jobString>
+                            <workAmount>600</workAmount>
+                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_Machining</soundWorking>
+                            <ingredients>
+                                <li>
+                                    <filter><thingDefs><li>RawMagicyte</li></thingDefs></filter>
+                                    <count>35</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs><li>RawMagicyte</li></thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Isekai_ManaEssence>1</Isekai_ManaEssence>
+                            </products>
+                            <recipeUsers>
+                                <li>Isekai_Forge</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>

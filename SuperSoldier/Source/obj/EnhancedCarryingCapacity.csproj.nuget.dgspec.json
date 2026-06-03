@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj": {}
   },
   "projects": {
-    "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj": {
       "version": "1.0.3",
       "restore": {
-        "projectUniqueName": "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj",
         "projectName": "EnhancedCarryingCapacity",
-        "projectPath": "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\EnhancedCarryingCapacity.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Was\\supersoldier-rimworld\\SuperSoldier\\Source\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

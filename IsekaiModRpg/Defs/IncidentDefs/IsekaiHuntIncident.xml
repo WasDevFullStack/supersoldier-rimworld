@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Isekai Hunt Incident - spawns ranked creature to hunt -->
+    <IncidentDef>
+        <defName>Isekai_HuntSpawn</defName>
+        <label>isekai hunt</label>
+        <category>GiveQuest</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>IsekaiLeveling.Quests.IncidentWorker_IsekaiHunt</workerClass>
+        <baseChance>15.0</baseChance>
+        <minRefireDays>0.5</minRefireDays>
+        <earliestDay>3</earliestDay>
+    </IncidentDef>
+
+</Defs>

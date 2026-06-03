@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- ==================== ISEKAI SOCIAL THOUGHTS ==================== -->
+
+    <!-- Antagonist Presence: All pawns dislike being around Antagonists -->
+    <ThoughtDef>
+        <defName>Isekai_AntagonistPresence</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>IsekaiLeveling.ThoughtWorker_AntagonistOpinion</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>unsettling presence</label>
+                <description>Something about {0} fills me with dread. Their very presence radiates malice.</description>
+                <baseOpinionOffset>-25</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- ==================== ISEKAI MOOD THOUGHTS ==================== -->
+
+    <!-- Summoned Hero: Displacement from home world weighs on them -->
+    <ThoughtDef>
+        <defName>Isekai_SummonedHeroDisplacement</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>IsekaiLeveling.ThoughtWorker_IsekaiTraitMood</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>displaced from home</label>
+                <description>I was torn from my world to be someone else's hero. I never asked for this.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Lucky: Good fortune boosts spirits -->
+    <ThoughtDef>
+        <defName>Isekai_LuckyMood</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>IsekaiLeveling.ThoughtWorker_IsekaiTraitMood</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>feeling lucky</label>
+                <description>I have a good feeling about today. Things always seem to work out for me.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Cursed Luck: Constant misfortune is depressing -->
+    <ThoughtDef>
+        <defName>Isekai_CursedMood</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>IsekaiLeveling.ThoughtWorker_IsekaiTraitMood</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>cursed by fate</label>
+                <description>Bad luck follows me everywhere. Something terrible is bound to happen soon.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Undying: Touched by Death - permanent mood penalty for cheating death -->
+    <ThoughtDef>
+        <defName>Isekai_TouchedByDeath</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>IsekaiLeveling.ThoughtWorker_IsekaiTraitMood</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>touched by death</label>
+                <description>I've felt death's cold embrace. Fate won't let me die, but the memory lingers.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

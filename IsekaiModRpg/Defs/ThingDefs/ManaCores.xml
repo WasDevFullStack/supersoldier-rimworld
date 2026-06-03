@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Base abstract for all mana cores -->
+    <ThingDef Name="IsekaiManaCoreBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>true</useHitPoints>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <stackLimit>75</stackLimit>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+        <pathCost>14</pathCost>
+        <thingCategories>
+            <li>ItemsMisc</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <!-- CompUsable provides the right-click "Absorb mana core" option.
+                 Paired with CompProperties_UseEffectManaCore on each tier (below)
+                 which actually grants the XP. The float-menu code in
+                 CompUseEffect_ManaCore also surfaces an "Absorb all" option
+                 when the stack has 2+ cores. -->
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Absorb mana core</useLabel>
+            </li>
+        </comps>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>Sellable</li>
+        </tradeTags>
+        <tradeability>All</tradeability>
+    </ThingDef>
+
+    <!-- Small Mana Core - F and E rank drops, worth 50 silver, 1,000 XP -->
+    <ThingDef ParentName="IsekaiManaCoreBase">
+        <defName>Isekai_SmallManaCore</defName>
+        <label>small mana core</label>
+        <description>A tiny crystallized fragment of mana extracted from a slain creature. It pulses with a faint blue glow. While not very powerful, it still holds enough magical essence to strengthen an adventurer.
+
+Absorbing this core grants 1,000 XP.</description>
+        <graphicData>
+            <texPath>Things/Item/ManaCore/SmallManaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>50</MarketValue>
+            <Mass>0.05</Mass>
+            <Beauty>3</Beauty>
+        </statBases>
+        <comps>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectManaCore">
+                <xpAmount>1000</xpAmount>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Mana Core - D and C rank drops, worth 150 silver, 3,000 XP -->
+    <ThingDef ParentName="IsekaiManaCoreBase">
+        <defName>Isekai_ManaCore</defName>
+        <label>mana core</label>
+        <description>A crystallized fragment of mana extracted from a slain creature. It glows with a steady blue light and hums softly when touched. The concentrated magical energy within can significantly empower an adventurer.
+
+Absorbing this core grants 3,000 XP.</description>
+        <graphicData>
+            <texPath>Things/Item/ManaCore/ManaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>150</MarketValue>
+            <Mass>0.1</Mass>
+            <Beauty>8</Beauty>
+        </statBases>
+        <comps>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectManaCore">
+                <xpAmount>3000</xpAmount>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Big Mana Core - B and A rank drops, worth 500 silver, 10,000 XP -->
+    <ThingDef ParentName="IsekaiManaCoreBase">
+        <defName>Isekai_BigManaCore</defName>
+        <label>big mana core</label>
+        <description>A large crystallized core of concentrated mana. It radiates a brilliant blue light and emanates warmth. Extracted from powerful creatures, the sheer energy within can propel an adventurer past their current limits.
+
+Absorbing this core grants 10,000 XP.</description>
+        <graphicData>
+            <texPath>Things/Item/ManaCore/BigManaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>500</MarketValue>
+            <Mass>0.2</Mass>
+            <Beauty>15</Beauty>
+        </statBases>
+        <comps>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectManaCore">
+                <xpAmount>10000</xpAmount>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Huge Mana Core - S, SS, SSS rank drops, worth 1500 silver, 30,000 XP -->
+    <ThingDef ParentName="IsekaiManaCoreBase">
+        <defName>Isekai_HugeManaCore</defName>
+        <label>huge mana core</label>
+        <description>An enormous crystallized core of pure, concentrated mana. It blazes with an intense azure light that casts dancing shadows, and the air around it crackles with magical energy. Only the mightiest creatures yield such treasures. The overwhelming energy within can catapult an adventurer several levels beyond their current strength.
+
+Absorbing this core grants 30,000 XP.</description>
+        <graphicData>
+            <texPath>Things/Item/ManaCore/HugeManaCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <MarketValue>1500</MarketValue>
+            <Mass>0.4</Mass>
+            <Beauty>30</Beauty>
+        </statBases>
+        <comps>
+            <li Class="IsekaiLeveling.CompProperties_UseEffectManaCore">
+                <xpAmount>30000</xpAmount>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

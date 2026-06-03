@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>ISEKAI RPG LEVELING</name>
+    <author>Jelly Creative</author>
+    <packageId>JellyCreative.IsekaiLeveling</packageId>
+    <url>https://github.com/JellyCreative/IsekaiLeveling</url>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <description>
+ISEKAI RPG LEVELING SYSTEM  -  v1.1.6
+
+Your pawns have been transported to the Rim... but they brought something special with them - the ability to level up like heroes from another world!
+
+CORE FEATURES
+- RPG Stats: STR, DEX, VIT, INT, WIS, CHA - allocate stat points on level up
+- XP System: Gain XP from combat, crafting, research, social, and more
+- Rank System: F, E, D, C, B, A, S, SS, SSS ranks with unique bonuses
+- Combat Auras: High-rank pawns (B+) display colorful energy auras in combat
+- Mob Ranking: All creatures ranked by power - fight stronger foes for more XP
+- Mana Core Drops: Enemies drop valuable mana cores based on their rank
+- Rank Traits: Social bonuses and roleplay flavor based on power level
+- Psycast Integration: WIS affects neural heat, psychic sensitivity, and more
+
+STAT EFFECTS
+- STR: Melee damage, carry capacity
+- VIT: Health regen, damage reduction, armor, rest rate
+- DEX: Move speed, dodge, accuracy
+- INT: Research speed, learning speed, work speed
+- WIS: Mental stability, medical skill, animal handling, psycast abilities
+- CHA: Social impact, trade prices, tame chance, arrest success
+
+COMBAT AURAS (B-Rank and above)
+- B Rank: White/Silver
+- A Rank: Blue
+- S Rank: Gold
+- SS Rank: Orange/Red
+- SSS Rank: Violet/Purple
+
+MANA CORE VALUES
+- Small Mana Core: 50 silver (F-E ranks)
+- Mana Core: 150 silver (D-C ranks)
+- Big Mana Core: 500 silver (B-A ranks)
+- Huge Mana Core: 1500 silver (S-SSS ranks)
+
+COMPATIBILITY
+- Combat Extended, Vanilla Expanded, VPE compatible
+- Safe to add mid-save
+- Royalty DLC: Optional (adds psychic stat bonuses)
+- Ideology, Biotech, Anomaly: Fully compatible
+
+REQUIREMENTS
+- Harmony
+
+See Steam Workshop page for full details!
+
+Made by Jelly Creative
+    </description>
+    
+    <!-- Steam Workshop description with BBCode formatting -->
+    <descriptionsByVersion>
+        <li>
+            <version>Steam</version>
+            <description>
+[h1]Isekai RPG Leveling System[/h1]
+
+Your pawns have been transported to the Rim... but they brought something special with them - the ability to level up like heroes from another world!
+
+[h2]Core Features[/h2]
+[list]
+[*] [b]RPG Stats System[/b] - STR, DEX, VIT, INT, WIS, CHA - allocate stat points on level up!
+[*] [b]XP and Leveling[/b] - Gain XP from combat, crafting, research, social, and more
+[*] [b]Rank System[/b] - F, E, D, C, B, A, S, SS, SSS ranks
+[*] [b]Rank Traits[/b] - Unique bonuses granted at certain ranks
+[*] [b]Stat Attribution Window[/b] - Beautiful UI to spend stat points with detailed tooltips for theorycraft
+[*] [b]Combat Auras[/b] - Show off your power with colorful auras based on rank
+[*] [b]VPE Integration and other mods[/b] - WIS stat affects psycast abilities
+[*] [b]Mob Ranking System[/b] - Enemies have ranks too! Fight stronger foes for more XP
+[*] [b]Mod Settings[/b] - Customize XP rates, stat points per level, aura appearance, and more
+[*] [b]Rank Titles[/b] - Awakened, Apprentice, Adventurer, Warrior, Champion, Hero, Legend, Monarch, Overlord
+[/list]
+
+
+[h2]Stat Effects[/h2]
+
+[b]STR (Strength)[/b] - Physical power and raw muscle
+[list]
+[*] Melee Damage (+2% per point)
+[*] Carry Capacity (+2% per point)
+[/list]
+
+[b]VIT (Vitality)[/b] - Constitution and toughness
+[list]
+[*] Health Regeneration (+2% per point)
+[*] Toxic Resistance (+1% per point)
+[*] Incoming Damage Reduction (-1% per point)
+[*] Natural Armor: Sharp, Blunt, Heat (+0.5% per point)
+[*] Pain Shock Threshold (+1% per point)
+[*] Rest Rate (+1.5% per point)
+[*] Neural Heat Limit (shared with WIS)
+[/list]
+
+[b]DEX (Dexterity)[/b] - Agility and precision
+[list]
+[*] Move Speed (+2% per point)
+[*] Melee Dodge Chance (+1% per point)
+[*] Shooting Accuracy (+1.5% per point)
+[*] Melee Hit Chance (+0.8% per point)
+[*] Aiming Delay (-1% per point)
+[/list]
+
+[b]INT (Intelligence)[/b] - Mental acuity and learning
+[list]
+[*] Research Speed (+2% per point)
+[*] Work Speed (+2% per point)
+[*] Learning Speed (+2% per point)
+[*] Psychic Sensitivity (shared with WIS)
+[/list]
+
+[b]WIS (Wisdom)[/b] - Insight and mental fortitude
+[list]
+[*] Mental Break Threshold (-1% per point, harder to break)
+[*] Meditation Focus Gain (+1.5% per point)
+[*] Medical Tend Quality (+1% per point)
+[*] Surgery Success Chance (+1.5% per point)
+[*] Train Animal Chance (+1.5% per point)
+[*] Animal Gather Yield (+1% per point)
+[*] Psychic Sensitivity (shared with INT)
+[*] Neural Heat Limit (shared with VIT)
+[*] Neural Heat Recovery (+1.5% per point)
+[*] Psyfocus Cost Reduction (-0.8% per point)
+[/list]
+
+[b]CHA (Charisma)[/b] - Social influence and presence
+[list]
+[*] Social Impact (+1.5% per point)
+[*] Negotiation Ability (+1% per point)
+[*] Trade Price Improvement (+1.5% per point)
+[*] Tame Animal Chance (+1% per point)
+[*] Arrest Success Chance (+0.5% per point)
+[/list]
+
+[h2]Combat Auras[/h2]
+High-rank pawns (B+) display impressive energy auras when in combat! Allows for quick visual identification of powerful allies and enemies on the battlefield.
+[list]
+[*] [b]B Rank[/b] - White/Silver aura
+[*] [b]A Rank[/b] - Blue aura
+[*] [b]S Rank[/b] - Gold aura
+[*] [b]SS Rank[/b] - Orange/Red aura
+[*] [b]SSS Rank[/b] - Violet/Purple aura
+[/list]
+Enemies and allies also display their auras when in combat!
+
+[h2]XP System[/h2]
+Gain experience through various activities:
+
+[b]Combat XP[/b]
+[list]
+[*] Kill XP scales with enemy rank (F: 30 XP to SSS: 2000 XP)
+[*] Elite enemies give +50% bonus XP
+[*] [b]Shared XP[/b]: When multiple pawns attack the same enemy, XP is distributed based on damage contribution (minimum 20% for participants)
+[*] Small XP bonus for dealing damage
+[/list]
+
+[b]Work XP[/b]
+[list]
+[*] Crafting: 15 XP per task
+[*] Research: 15 XP per session
+[*] Building: 8 XP per structure
+[*] Medical/Tending: 35 XP
+[*] Surgery: 50 XP
+[*] Animal training: 10 XP
+[*] Harvesting: 5 XP
+[*] Mining: 5 XP
+[*] Cooking: 10 XP
+[*] Art creation: 20 XP
+[/list]
+
+[b]Social and Other[/b]
+[list]
+[*] Successful social interactions: 5-15 XP
+[*] Recruiting prisoners: 25 XP
+[*] Taming animals: 15 XP
+[*] Meditation (psycasts): 8 XP per session
+[*] Using psycast abilities: XP based on entropy cost
+[/list]
+
+[h2]Mob Ranking System[/h2]
+All creatures in the game are automatically assigned a rank based on their combat threat level:
+
+[b]Creature Rank Examples[/b]
+[list]
+[*] [b]F-Rank (Harmless)[/b] - Squirrels, rats, chickens
+[*] [b]E-Rank (Weak)[/b] - Dogs, deer, small animals
+[*] [b]D-Rank (Common)[/b] - Camels, horses, boars
+[*] [b]C-Rank (Threatening)[/b] - Wolves, cougars
+[*] [b]B-Rank (Dangerous)[/b] - Bears, panthers
+[*] [b]A-Rank (Deadly)[/b] - Elephants, rhinoceros
+[*] [b]S-Rank (Legendary)[/b] - Thrumbos, megasloths
+[*] [b]SS-Rank (Alpha Beast)[/b] - Rare elite variants
+[*] [b]SSS-Rank (Apex Predator)[/b] - Extremely rare, godlike creatures
+[/list]
+
+[b]Elite Creatures[/b]
+Creatures ranked B and above are considered Elite and display special titles based on their power level! These dangerous foes are marked with descriptive epithets to warn you of their strength.
+[list]
+[*] [b]B-Rank (Dangerous)[/b] - "Savage" or "Fierce" - 1.3x damage, 1.5x health, +10% armor
+[*] [b]A-Rank (Deadly)[/b] - "Ferocious" or "Brutal" - 1.6x damage, 2.0x health, +20% armor
+[*] [b]S-Rank (Legendary)[/b] - "Apex" or "Alpha" - 2.0x damage, 2.5x health, +35% armor
+[*] [b]SS-Rank (Alpha Beast)[/b] - "Mythic" or "Primordial" - 2.2x damage, 3.0x health, +45% armor
+[*] [b]SSS-Rank (Apex Predator)[/b] - "Legendary" or "Godlike" - 2.5x damage, 3.5x health, +50% armor
+[/list]
+Elite creatures also drop higher tier mana cores and give significantly more XP when killed! Elite title display can be toggled in mod settings.
+
+[b]Rank Stat Bonuses[/b]
+Higher rank creatures are significantly stronger:
+[list]
+[*] Damage: F (0.7x) to SSS (2.5x)
+[*] Health: F (0.7x) to SSS (3.5x)
+[*] Armor: F (-10%) to SSS (+50%)
+[*] Speed: F (0.9x) to SSS (1.4x)
+[/list]
+
+[h2]Mana Core Drops[/h2]
+Creatures drop mana cores when killed, based on their rank:
+
+[b]Small Mana Core (50 silver)[/b]
+[list]
+[*] F-Rank: Low chance, 1 core
+[*] E-Rank: Medium chance, 1-2 cores
+[/list]
+
+[b]Mana Core (150 silver)[/b]
+[list]
+[*] D-Rank: Low chance, 1 core
+[*] C-Rank: 50% chance, 1-2 cores
+[/list]
+
+[b]Big Mana Core (500 silver)[/b]
+[list]
+[*] B-Rank: 40% chance, 1 core
+[*] A-Rank: 70% chance, 1-2 cores
+[/list]
+
+[b]Huge Mana Core (1500 silver)[/b]
+[list]
+[*] S-Rank: 50% chance, 1 core
+[*] SS-Rank: 80% chance, 1-2 cores
+[*] SSS-Rank: 100% chance, 1-3 cores
+[/list]
+
+[h2]Guild Quest System[/h2]
+The Adventurer's Guild delivers daily hunt contracts! Accept quests to hunt powerful creatures for XP, silver bounties, and valuable loot.
+
+[b]Hunt Quests (F-D Rank)[/b]
+[list]
+[*] Target spawns on your home map
+[*] Quick encounters for beginners
+[*] Immediate combat engagement
+[/list]
+
+[b]Expedition Quests (B-A Rank)[/b]
+[list]
+[*] Pack hunts on world map sites
+[*] B-Rank: 3-5 creatures | A-Rank: 5-8 creatures
+[*] All pack members must be killed to complete
+[*] Form a caravan and bring your hunting party!
+[/list]
+
+[b]Raid Quests (S-SSS Rank)[/b]
+[list]
+[*] Legendary single boss encounters
+[*] World map expeditions (15-50 tiles away)
+[*] Endgame challenges with massive rewards
+[/list]
+
+[b]Quest Rewards[/b]
+[list]
+[*] XP based on creature rank
+[*] Silver bounties (50-2000+ silver)
+[*] Random loot: weapons, armor, components, valuables
+[*] Reward quality scales with quest difficulty
+[/list]
+
+[h2]Rank Traits (Roleplay)[/h2]
+Your pawns receive a trait based on their rank that affects social interactions:
+
+[b]F-Rank[/b]
+"The weakest classification. Others look down on them with pity or contempt."
+[list]
+[*] Beauty: -0.5 | Social Impact: -30% | Trade Prices: -10%
+[*] Market Value: 0.5x | More likely to be targeted in social fights
+[/list]
+
+[b]E-Rank[/b]
+"Below average but not completely worthless. Often overlooked."
+[list]
+[*] Beauty: -0.25 | Social Impact: -15%
+[*] Market Value: 0.75x
+[/list]
+
+[b]D-Rank[/b]
+"Thoroughly average. Neither stands out nor falls behind."
+[list]
+[*] No bonuses or penalties - baseline
+[/list]
+
+[b]C-Rank[/b]
+"A competent person above the common masses. Commands modest respect."
+[list]
+[*] Beauty: +0.25 | Social Impact: +10%
+[*] Market Value: 1.5x
+[/list]
+
+[b]B-Rank[/b]
+"A skilled veteran worthy of respect. Their reputation precedes them."
+[list]
+[*] Beauty: +0.5 | Social Impact: +25% | Trade Prices: +5%
+[*] Market Value: 2.5x | Less likely to be in social fights
+[/list]
+
+[b]A-Rank[/b]
+"Among the finest in existence. Their presence commands attention."
+[list]
+[*] Beauty: +1.0 | Social Impact: +50% | Arrest: +15%
+[*] Market Value: 5x
+[/list]
+
+[b]S-Rank[/b]
+"A hero of incredible power. Their name is spoken with reverence."
+[list]
+[*] Beauty: +1.5 | Social Impact: +75% | Arrest: +25%
+[*] Market Value: 10x
+[/list]
+
+[b]SS-Rank[/b]
+"A demigod walking among mortals. Entire nations would pay any price for their loyalty."
+[list]
+[*] Beauty: +2.0 | Social Impact: +100% | Arrest: +40%
+[*] Market Value: 25x
+[/list]
+
+[b]SSS-Rank[/b]
+"The absolute apex of existence. A god among mortals. Kingdoms would fall to possess them."
+[list]
+[*] Beauty: +3.0 | Social Impact: +150% | Arrest: +60%
+[*] Market Value: 100x | Almost never involved in social fights
+[/list]
+
+[h2]Psycast Integration[/h2]
+Works with vanilla psycasts! WIS affects:
+[list]
+[*] Psychic Sensitivity
+[*] Neural Heat Limit
+[*] Neural Heat Recovery
+[*] Psyfocus Cost
+[/list]
+
+[h2]Mod Settings[/h2]
+[list]
+[*] XP multiplier
+[*] Stat points per level
+[*] Aura opacity and size
+[*] Enable/disable floating panels
+[*] And more!
+[/list]
+
+[h2]Compatibility[/h2]
+[list]
+[*] Compatible with Combat Extended
+[*] Compatible with Vanilla Expanded mods
+[*] Compatible with Vanilla Psycasts Expanded
+[*] Safe to add mid-save
+[/list]
+
+[h2]Requirements[/h2]
+[list]
+[*] Harmony (required)
+[/list]
+
+[hr][/hr]
+Made by Jelly Creative
+            </description>
+        </li>
+    </descriptionsByVersion>
+    <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>Ludeon.RimWorld.Ideology</li>
+        <li>Ludeon.RimWorld.Biotech</li>
+        <li>Ludeon.RimWorld.Anomaly</li>
+        <li>brrainz.harmony</li>
+        <li>void.charactereditor</li> <!-- Character Editor compatibility -->
+        <li>Jaxe.RimHUD</li> <!-- RimHUD custom widgets -->
+    </loadAfter>
+    <loadBefore>
+        <!-- SimpleSidearms must load AFTER Isekai so its melee auto-switch Harmony patches
+             wrap our stat/combat patches correctly. Reversing this order breaks SS. -->
+        <li>petetimessix.simplesidearms</li>
+    </loadBefore>
+    <incompatibleWith>
+        <!-- Add any known incompatible mods here -->
+    </incompatibleWith>
+</ModMetaData>

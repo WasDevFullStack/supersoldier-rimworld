@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Simple Sidearms Compatibility Patches -->
+    <!-- Only applied when Simple Sidearms is active -->
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Simple Sidearms</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!-- Weapon Swap Speed - DEX increases weapon swap speed -->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/StatDef[defName="WeaponSwapSpeed"]/parts</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="WeaponSwapSpeed"]/parts</xpath>
+                        <value>
+                            <li Class="IsekaiLeveling.Compatibility.StatPart_IsekaiWeaponSwapSpeed" />
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/StatDef[defName="WeaponSwapSpeed"]</xpath>
+                        <value>
+                            <parts>
+                                <li Class="IsekaiLeveling.Compatibility.StatPart_IsekaiWeaponSwapSpeed" />
+                            </parts>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

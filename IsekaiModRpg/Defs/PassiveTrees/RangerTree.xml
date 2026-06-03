@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--
+        ╔══════════════════════════════════════════════════════╗
+        ║  RANGER CONSTELLATION — 56 Nodes, 5 Branches        ║
+        ║  Layout: Arrowhead — Marksman(NW) / Stalker(NE) /   ║
+        ║          Trapper(SW) / Beastmaster(SE) + Hawkeye(N) ║
+        ║                                                      ║
+        ║  Branches:                                           ║
+        ║   • MARKSMAN    (NW) — ShootingAccuracy, AimingDelay ║
+        ║   • STALKER     (NE) — MoveSpeed, MeleeDodge         ║
+        ║   • TRAPPER     (SW) — WorkSpeed, ShootingAccuracy   ║
+        ║   • BEASTMASTER (SE) — Taming, TrainAnimal, Gather   ║
+        ║   • HAWKEYE     (N)  — gimmick nodes + DEX core      ║
+        ║   + 5 cross-connectors between adjacent branches     ║
+        ╚══════════════════════════════════════════════════════╝
+    -->
+    <IsekaiLeveling.SkillTree.PassiveTreeDef>
+        <defName>PassiveTree_Ranger</defName>
+        <label>Ranger</label>
+        <treeClass>Ranger</treeClass>
+        <treeDescription>Veterans of the wild who blend marksmanship with survival instinct. Five constellations radiate from the ranger's core — each honing a different edge of their deadly craft. Lock onto prey and let Predator Focus sharpen every successive shot.</treeDescription>
+        <classGimmick>PredatorFocus</classGimmick>
+        <classGimmickName>Predator Focus</classGimmickName>
+        <classGimmickDescription>Consecutive ranged hits on the same target stack focus marks, each boosting Shooting Accuracy. Switching targets resets stacks to 1 on the new prey. Predator Focus scales along the Hawkeye Path. Tier 1 (Keen Eye): max 3 stacks, +4% accuracy each (max +12%). Tier 2 (Focused Aim): max 4 stacks, +5% each (max +20%). Tier 3 (Lethal Precision): max 5 stacks, +6% each (max +30%). Tier 4 (Apex Predator): max 7 stacks, +7% each (max +49%). Focus fire to devastate.</classGimmickDescription>
+
+        <nodes>
+            <!-- ════════════ START NODE ════════════ -->
+            <li>
+                <nodeId>RG_Start</nodeId>
+                <label>Ranger's Awakening</label>
+                <description>The forest speaks to those who listen. Today you learn its first lesson: patience kills more surely than any blade.</description>
+                <nodeType>Start</nodeType>
+                <icon>SkillTree/Icons/star</icon>
+                <x>0</x><y>0</y>
+                <cost>0</cost>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ MARKSMAN (North-West) — ShootingAccuracy / AimingDelay ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>RG_MS1</nodeId>
+                <label>Steady Aim</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-0.5</x><y>1.6</y>
+                <bonuses><li><bonusType>ShootingAccuracy</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS2</nodeId>
+                <label>Breath Control</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-1</x><y>3.2</y>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.05</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS_EagleEye</nodeId>
+                <label>Eagle Eye</label>
+                <description>Your eye has been trained to pick out vital targets at distances most marksmen would consider impossible. The mechanics of wind, drop, and lead have become second nature — leaving your conscious mind free to focus on timing.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-1.6</x><y>4.8</y>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.1333</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS3</nodeId>
+                <label>Zeroed In</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-1.8</x><y>6.3</y>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0667</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS4</nodeId>
+                <label>Killing Range</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-2.1</x><y>7.8</y>
+                <bonuses><li><bonusType>ShootingAccuracy</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS_DeadShot</nodeId>
+                <label>Dead Shot</label>
+                <description>You no longer aim at targets. You aim at specific points on specific organs. The question is never whether you hit — it's where, and how much it will hurt.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-2.3</x><y>9.3</y>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.1667</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.1</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS5</nodeId>
+                <label>One Bullet</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-2.4</x><y>10.7</y>
+                <bonuses><li><bonusType>ShootingAccuracy</bonusType><value>0.0833</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS_Deadeye</nodeId>
+                <label>Deadeye</label>
+                <description>There is no longer hesitation between seeing and firing. Your body has become a single unified system: eye, hand, weapon, target, impact. The shot is released before the conscious mind even registers the opportunity.\n\nTRADEOFF: Reflexive precision dulls close-quarters instincts.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-2.6</x><y>12.1</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.3333</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.2</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Marksman side branch (from Eagle Eye → NW flank) -->
+            <li>
+                <nodeId>RG_MS_S1</nodeId>
+                <label>Quick Draw</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-3.3</x><y>5</y>
+                <bonuses>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS_S2</nodeId>
+                <label>Rapid Acquisition</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-4.7</x><y>5.4</y>
+                <bonuses>
+                    <li><bonusType>AimingDelay</bonusType><value>0.05</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_MS_Sniper</nodeId>
+                <label>Sniper's Nest</label>
+                <description>Patience refined into lethality. You select your position with the same care others reserve for choosing a weapon. By the time you fire, the outcome is already decided.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-6</x><y>5.8</y>
+                <bonuses>
+                    <li><bonusType>AimingDelay</bonusType><value>0.1333</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.1</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ STALKER (North-East) — MoveSpeed / MeleeDodge ▓▓      -->
+            <!-- ══════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>RG_SK1</nodeId>
+                <label>Light Step</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>0.5</x><y>1.6</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK2</nodeId>
+                <label>Soft Footing</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>1</x><y>3.2</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK_SwiftShadow</nodeId>
+                <label>Swift Shadow</label>
+                <description>You move through undergrowth without disturbing a leaf. In combat, targets track empty air where you used to be. Speed isn't about running faster — it's about being somewhere else before anyone notices you've left.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>1.6</x><y>4.8</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0833</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK3</nodeId>
+                <label>Evasive Stride</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>1.8</x><y>6.3</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK4</nodeId>
+                <label>Blur</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>2.1</x><y>7.8</y>
+                <bonuses><li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK_Phantom</nodeId>
+                <label>Phantom</label>
+                <description>Your silhouette is a suggestion. Enemies fire at afterimages. By the time their weapons cycle, you've relocated, re-aimed, and put two rounds into something vital.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>2.3</x><y>9.3</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK5</nodeId>
+                <label>Flicker</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>2.4</x><y>10.7</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK_Windstrider</nodeId>
+                <label>Windstrider</label>
+                <description>You don't walk. You flow. Terrain that slows others barely registers. In combat, you reposition with a fluidity that borders on precognitive. The battlefield is your hunting ground, and you dominate every sightline simultaneously.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>2.6</x><y>12.1</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.3333</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.2</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.1333</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Stalker side branch (from Swift Shadow → NE flank) -->
+            <li>
+                <nodeId>RG_SK_S1</nodeId>
+                <label>Fleet Footed</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>3.3</x><y>5</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.05</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK_S2</nodeId>
+                <label>Terrain Mastery</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>4.7</x><y>5.4</y>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_SK_GhostStep</nodeId>
+                <label>Ghost Step</label>
+                <description>You have mastered the art of being present without being noticed. In the field, you move through hostile territory like water through stone — silently, inevitably, gone before anyone realizes you were there.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/shoe-prints</icon>
+                <x>6</x><y>5.8</y>
+                <bonuses>
+                    <li><bonusType>MeleeDodge</bonusType><value>0.1333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0833</value></li>
+                    <li><bonusType>DamageReduction</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ TRAPPER (South-West) — WorkSpeed / ShootingAccuracy ▓▓    -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>RG_TR1</nodeId>
+                <label>Practical Hands</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-1.1</x><y>-1.3</y>
+                <bonuses><li><bonusType>WorkSpeed</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR2</nodeId>
+                <label>Wire &amp; Rope</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-2.3</x><y>-2.5</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR_Fieldcraft</nodeId>
+                <label>Fieldcraft</label>
+                <description>Years in the wild have taught you that survival is 90% preparation and 10% execution. Your traps are efficient, your campsites defensible, your routines optimized. Nothing is wasted — not time, not materials, not ammunition.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-3.5</x><y>-3.7</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0833</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR3</nodeId>
+                <label>Resourceful</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-4.4</x><y>-4.9</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR4</nodeId>
+                <label>Efficient Methods</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-5.4</x><y>-6.0</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.05</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR_LandMaster</nodeId>
+                <label>Land Master</label>
+                <description>The terrain is your arsenal. You read the ground the way scholars read books — every hillock, every gully, every treeline is a potential advantage. Your constructions integrate seamlessly with the landscape, and your kill zones are works of art.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-6.4</x><y>-7.1</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.1333</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.1</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR5</nodeId>
+                <label>Kill Box Architect</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>-7.3</x><y>-8.2</y>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR_MasterTrapper</nodeId>
+                <label>Master Trapper</label>
+                <description>Your territory is a deathtrap disguised as open land. Every path funnels, every clearing is pre-sighted, and every trap is positioned with geometric precision. Enemies don't invade your perimeter — they enter your kill zone.\n\nTRADEOFF: Obsessive preparation erodes social warmth.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>-8.3</x><y>-9.2</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.3</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.1667</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.1333</value></li>
+                    <li><bonusType>SocialImpact</bonusType><value>-0.0667</value></li>
+                </bonuses>
+            </li>
+            <!-- Trapper side branch (from Fieldcraft → SW flank) -->
+            <li>
+                <nodeId>RG_TR_S1</nodeId>
+                <label>Snare Expert</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-5.1</x><y>-3.1</y>
+                <bonuses>
+                    <li><bonusType>AimingDelay</bonusType><value>0.05</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR_S2</nodeId>
+                <label>Ambush Instinct</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-6.6</x><y>-2.8</y>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.05</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_TR_Camouflage</nodeId>
+                <label>Natural Camouflage</label>
+                <description>You don't hide. You become part of the landscape. The distinction is important — anyone can crouch behind a rock. You become the rock. Your stillness is so complete that prey walks within arm's reach.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>-8.0</x><y>-2.4</y>
+                <bonuses>
+                    <li><bonusType>AimingDelay</bonusType><value>0.1</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0833</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ BEASTMASTER (South-East) — Taming / TrainAnimal / Gather ▓▓ -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>RG_BM1</nodeId>
+                <label>Animal Affinity</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>1.1</x><y>-1.3</y>
+                <bonuses><li><bonusType>Taming</bonusType><value>0.05</value></li></bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM2</nodeId>
+                <label>Nature's Bond</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>2.3</x><y>-2.5</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM_PackLeader</nodeId>
+                <label>Pack Leader</label>
+                <description>Animals don't obey you because they've been broken. They follow you because they recognize authority in your posture, your scent, the way you move. You are the alpha — and they know it instinctively.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>3.5</x><y>-3.7</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.1</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0833</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM3</nodeId>
+                <label>Husbandry</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>4.4</x><y>-4.9</y>
+                <bonuses>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM4</nodeId>
+                <label>Flourishing Herd</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>5.4</x><y>-6.0</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM_WildHeart</nodeId>
+                <label>Wild Heart</label>
+                <description>You speak a language older than words. Animals that would gore anyone else nuzzle against your palm. The colony's livestock have never been healthier, their yields never higher. Even the predators outside the walls give you a wide, respectful berth.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>6.4</x><y>-7.1</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.1333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.1</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0833</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM5</nodeId>
+                <label>Primal Command</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>7.3</x><y>-8.2</y>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.0667</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM_AlphaHunter</nodeId>
+                <label>Alpha Hunter</label>
+                <description>Every animal in the colony recognizes you as the apex. Wild thrumbos that terrify seasoned hunters lower their heads when you approach. Your pack fights with coordinated lethality, your herds produce abundantly, and nothing on four legs defies you.\n\nYou are the apex predator — even without a weapon.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/chess-knight</icon>
+                <x>8.3</x><y>-9.2</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>Taming</bonusType><value>0.3333</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.25</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.1667</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.1</value></li>
+                </bonuses>
+            </li>
+            <!-- Beastmaster side branch (from Pack Leader → SE flank) -->
+            <li>
+                <nodeId>RG_BM_S1</nodeId>
+                <label>Gentle Handler</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/feather-pointed</icon>
+                <x>5.1</x><y>-3.1</y>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.05</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM_S2</nodeId>
+                <label>Breeding Stock</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>6.6</x><y>-2.8</y>
+                <bonuses>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.05</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_BM_AnimalWhisper</nodeId>
+                <label>Animal Whisperer</label>
+                <description>There is a wordless conversation happening between you and every animal within earshot. You read their moods as easily as reading a book. The result: calmer herds, faster training, and yields that consistently exceed expectations.</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/paw</icon>
+                <x>8.0</x><y>-2.4</y>
+                <bonuses>
+                    <li><bonusType>GatherYield</bonusType><value>0.1</value></li>
+                    <li><bonusType>TrainAnimal</bonusType><value>0.0833</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- ▓▓ HAWKEYE PATH (North spine) — Gimmick Tiers + DEX core ▓▓  -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <li>
+                <nodeId>RG_HE1</nodeId>
+                <label>Focused Tracking</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>0</x><y>1.8</y>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0333</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_HE2</nodeId>
+                <label>Tunnel Vision</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>0</x><y>3.2</y>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0333</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_HE_KeenEye</nodeId>
+                <label>Keen Eye</label>
+                <description>Your eyes lock onto targets with predatory intensity. Consecutive shots on the same prey tighten your aim as your body maps distance, movement, and rhythm. The longer you focus, the more lethal you become.\n\n[GIMMICK TIER 1]: Max 3 stacks, +4% accuracy per stack (max +12%).</description>
+                <nodeType>Notable</nodeType>
+                <icon>SkillTree/Icons/bolt</icon>
+                <x>0</x><y>4.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0667</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_HE3</nodeId>
+                <label>Focused Aim</label>
+                <description>[GIMMICK TIER 2]: Max 4 stacks, +5% accuracy each (max +20%).</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>0</x><y>6.3</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.05</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_HE4</nodeId>
+                <label>Lethal Precision</label>
+                <description>[GIMMICK TIER 3]: Max 5 stacks, +6% accuracy each (max +30%).</description>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>0</x><y>7.8</y>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.05</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.05</value></li>
+                </bonuses>
+            </li>
+            <li>
+                <nodeId>RG_HE_ApexPredator</nodeId>
+                <label>Apex Predator</label>
+                <description>The hunt is over. You are no longer learning to track, aim, and kill — you have been doing it so long that the prey never had a chance. Every shot lands. Every target falls. The rimworld's deadliest creatures flee from you now.\n\n[GIMMICK TIER 4]: Max 7 stacks, +7% accuracy each (max +49%). Sustained fire turns you into a ballistic nightmare.</description>
+                <nodeType>Keystone</nodeType>
+                <icon>SkillTree/Icons/explosion</icon>
+                <x>0</x><y>9.6</y>
+                <cost>3</cost>
+                <bonuses>
+                    <li><bonusType>ClassGimmickTier</bonusType><value>1</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.1333</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.1</value></li>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0667</value></li>
+                </bonuses>
+            </li>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Cross-connectors (all require both neighbours to be active) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <!-- Marksman (NW) ↔ Hawkeye (N) — mid-branch bridge -->
+            <li>
+                <nodeId>RG_Cross_MH</nodeId>
+                <label>Precision Hunter</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-0.8</x><y>4.5</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0333</value></li>
+                    <li><bonusType>AimingDelay</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Stalker (NE) ↔ Hawkeye (N) — mid-branch bridge -->
+            <li>
+                <nodeId>RG_Cross_SH</nodeId>
+                <label>Swift Predator</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>0.8</x><y>4.5</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Marksman (NW) ↔ Trapper (SW) — upper gateway bridge -->
+            <li>
+                <nodeId>RG_Cross_MT</nodeId>
+                <label>Prepared Shooter</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/crosshairs</icon>
+                <x>-1.8</x><y>0.4</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>ShootingAccuracy</bonusType><value>0.0333</value></li>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+            <!-- Stalker (NE) ↔ Beastmaster (SE) — upper gateway bridge -->
+            <li>
+                <nodeId>RG_Cross_SB</nodeId>
+                <label>Wild Runner</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/person-running</icon>
+                <x>1.8</x><y>0.4</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>MoveSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>Taming</bonusType><value>0.0167</value></li>
+                </bonuses>
+            </li>
+            <!-- Trapper (SW) ↔ Beastmaster (SE) — lower bridge -->
+            <li>
+                <nodeId>RG_Cross_TB</nodeId>
+                <label>Wilderness Expert</label>
+                <nodeType>Minor</nodeType>
+                <icon>SkillTree/Icons/gavel</icon>
+                <x>0.0</x><y>-3.6</y>
+                <requireAllConnected>true</requireAllConnected>
+                <bonuses>
+                    <li><bonusType>WorkSpeed</bonusType><value>0.0333</value></li>
+                    <li><bonusType>GatherYield</bonusType><value>0.0333</value></li>
+                </bonuses>
+            </li>
+        </nodes>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- Connection pairs (bidirectional, "A~B" format)             -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <connections>
+            <!-- Start → 5 branch gateways -->
+            <li>RG_Start~RG_MS1</li>
+            <li>RG_Start~RG_SK1</li>
+            <li>RG_Start~RG_TR1</li>
+            <li>RG_Start~RG_BM1</li>
+            <li>RG_Start~RG_HE1</li>
+
+            <!-- Marksman main path -->
+            <li>RG_MS1~RG_MS2</li>
+            <li>RG_MS2~RG_MS_EagleEye</li>
+            <li>RG_MS_EagleEye~RG_MS3</li>
+            <li>RG_MS3~RG_MS4</li>
+            <li>RG_MS4~RG_MS_DeadShot</li>
+            <li>RG_MS_DeadShot~RG_MS5</li>
+            <li>RG_MS5~RG_MS_Deadeye</li>
+            <!-- Marksman side branch -->
+            <li>RG_MS_EagleEye~RG_MS_S1</li>
+            <li>RG_MS_S1~RG_MS_S2</li>
+            <li>RG_MS_S2~RG_MS_Sniper</li>
+
+            <!-- Stalker main path -->
+            <li>RG_SK1~RG_SK2</li>
+            <li>RG_SK2~RG_SK_SwiftShadow</li>
+            <li>RG_SK_SwiftShadow~RG_SK3</li>
+            <li>RG_SK3~RG_SK4</li>
+            <li>RG_SK4~RG_SK_Phantom</li>
+            <li>RG_SK_Phantom~RG_SK5</li>
+            <li>RG_SK5~RG_SK_Windstrider</li>
+            <!-- Stalker side branch -->
+            <li>RG_SK_SwiftShadow~RG_SK_S1</li>
+            <li>RG_SK_S1~RG_SK_S2</li>
+            <li>RG_SK_S2~RG_SK_GhostStep</li>
+
+            <!-- Trapper main path -->
+            <li>RG_TR1~RG_TR2</li>
+            <li>RG_TR2~RG_TR_Fieldcraft</li>
+            <li>RG_TR_Fieldcraft~RG_TR3</li>
+            <li>RG_TR3~RG_TR4</li>
+            <li>RG_TR4~RG_TR_LandMaster</li>
+            <li>RG_TR_LandMaster~RG_TR5</li>
+            <li>RG_TR5~RG_TR_MasterTrapper</li>
+            <!-- Trapper side branch -->
+            <li>RG_TR_Fieldcraft~RG_TR_S1</li>
+            <li>RG_TR_S1~RG_TR_S2</li>
+            <li>RG_TR_S2~RG_TR_Camouflage</li>
+
+            <!-- Beastmaster main path -->
+            <li>RG_BM1~RG_BM2</li>
+            <li>RG_BM2~RG_BM_PackLeader</li>
+            <li>RG_BM_PackLeader~RG_BM3</li>
+            <li>RG_BM3~RG_BM4</li>
+            <li>RG_BM4~RG_BM_WildHeart</li>
+            <li>RG_BM_WildHeart~RG_BM5</li>
+            <li>RG_BM5~RG_BM_AlphaHunter</li>
+            <!-- Beastmaster side branch -->
+            <li>RG_BM_PackLeader~RG_BM_S1</li>
+            <li>RG_BM_S1~RG_BM_S2</li>
+            <li>RG_BM_S2~RG_BM_AnimalWhisper</li>
+
+            <!-- Hawkeye main path -->
+            <li>RG_HE1~RG_HE2</li>
+            <li>RG_HE2~RG_HE_KeenEye</li>
+            <li>RG_HE_KeenEye~RG_HE3</li>
+            <li>RG_HE3~RG_HE4</li>
+            <li>RG_HE4~RG_HE_ApexPredator</li>
+
+            <!-- Cross-connectors -->
+            <li>RG_MS_EagleEye~RG_Cross_MH</li>
+            <li>RG_Cross_MH~RG_HE_KeenEye</li>
+            <li>RG_SK_SwiftShadow~RG_Cross_SH</li>
+            <li>RG_Cross_SH~RG_HE_KeenEye</li>
+            <li>RG_MS1~RG_Cross_MT</li>
+            <li>RG_Cross_MT~RG_TR1</li>
+            <li>RG_SK1~RG_Cross_SB</li>
+            <li>RG_Cross_SB~RG_BM1</li>
+            <li>RG_TR_Fieldcraft~RG_Cross_TB</li>
+            <li>RG_Cross_TB~RG_BM_PackLeader</li>
+        </connections>
+    </IsekaiLeveling.SkillTree.PassiveTreeDef>
+</Defs>

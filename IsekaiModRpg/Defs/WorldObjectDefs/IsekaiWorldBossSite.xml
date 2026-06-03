@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- 
+    SitePartDef for World Boss encounter sites.
+    Uses the Raid texture for a suitably dramatic world map appearance.
+    -->
+    <SitePartDef>
+        <defName>Isekai_WorldBossGrounds</defName>
+        <label>world boss territory</label>
+        <description>The Adventurer's Guild has identified a catastrophic creature prowling this area. Only the strongest should approach.</description>
+        <workerClass>RimWorld.SitePartWorker</workerClass>
+        <wantsThreatPoints>false</wantsThreatPoints>
+        <gravShipsCanLandOn>true</gravShipsCanLandOn>
+        
+        <!-- Reuse Raid texture for dramatic world map appearance -->
+        <siteTexture>World/Sites/Isekai_Raid</siteTexture>
+        <expandingIconTexture>World/Sites/Isekai_Raid</expandingIconTexture>
+        
+        <tags>
+            <li>Isekai_WorldBoss</li>
+        </tags>
+    </SitePartDef>
+</Defs>
