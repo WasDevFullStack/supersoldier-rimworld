@@ -135,13 +135,8 @@ namespace IsekaiLeveling.Patches
         
         private static void OpenStatusPanel(Pawn pawn)
         {
-            // Get screen position to the RIGHT of the pawn
-            Vector3 screenPos3D = Find.Camera.WorldToScreenPoint(pawn.DrawPos);
-            // Position to the right of pawn with small gap, vertically centered
-            Vector2 screenPos = new Vector2(screenPos3D.x + 40f, Screen.height - screenPos3D.y - 170f);
-            
-            // Open the Stats Attribution window in quick mode (no pause, easily dismissable)
-            Find.WindowStack.Add(new Window_StatsAttribution(pawn, screenPos, quickMode: true));
+            // Open the Stats Attribution window in quick mode at screen center
+            Find.WindowStack.Add(new Window_StatsAttribution(pawn, null, quickMode: true));
         }
     }
 

@@ -147,6 +147,12 @@ namespace IsekaiLeveling.UI
                 windowRect.x = pos.x;
                 windowRect.y = pos.y;
             }
+            // Quick mode should always open centered on screen
+            else if (quickMode)
+            {
+                windowRect.x = (Verse.UI.screenWidth - windowRect.width) / 2f;
+                windowRect.y = (Verse.UI.screenHeight - windowRect.height) / 2f;
+            }
             // Otherwise, check for saved position from settings (useful for small monitors)
             else if (IsekaiMod.Settings != null && 
                      IsekaiMod.Settings.StatsWindowX >= 0 && 
@@ -156,6 +162,11 @@ namespace IsekaiLeveling.UI
                 float maxY = Verse.UI.screenHeight - windowRect.height;
                 windowRect.x = Mathf.Clamp(IsekaiMod.Settings.StatsWindowX, 0f, maxX);
                 windowRect.y = Mathf.Clamp(IsekaiMod.Settings.StatsWindowY, 0f, maxY);
+            }
+            else
+            {
+                windowRect.x = (Verse.UI.screenWidth - windowRect.width) / 2f;
+                windowRect.y = (Verse.UI.screenHeight - windowRect.height) / 2f;
             }
         }
         
